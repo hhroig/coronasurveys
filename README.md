@@ -2,7 +2,7 @@
 
 ## Motivation
 
-The world is suffering a pandemic by the COVID-19 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptompts compatible with COVID-19 with reasonable level of accuracy is useful.
+The world is suffering a pandemic by the COVID-19 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
 
 ## Objective
  
