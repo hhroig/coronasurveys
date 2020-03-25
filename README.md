@@ -65,4 +65,8 @@ Chile
 
 License
 
+We will make all the data available here. The data of the first collection of surveys will be available shorly.
+
+In the midtime, you access some aggregated results at https://docs.google.com/spreadsheets/d/1dn8o8xSuBQTQYzMhKvqoxzWe4FXGbY1MpehyUM4gnwk/edit#gid=1914437865
+
 All the data in this project i distributed under the Open Data Commons Attribution License.
