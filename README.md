@@ -19,53 +19,64 @@ Research Team
 The study is conducted by a team led by the Research Professor Antonio Fernández Anta, and formed by a set of international researchers from multiple institutions:
 
 
-Carlos Baquero
-U. Minho & INESC TEC
+Carlos Baquero,
+U. Minho & INESC TEC,
 Portugal
 
-Annette Bieniusa
-U. Kaiserslautern
+Annette Bieniusa,
+U. Kaiserslautern,
 Germany
 
-Paolo Casari
-University of Trento
+Paolo Casari,
+University of Trento,
 Italy
 
-Ignacio Castro
-QMUL
+Ignacio Castro,
+QMUL,
 UK
 
-Chryssis Georgiou
-U. Cyprus
+Chryssis Georgiou,
+U. Cyprus,
 Cyprus
 
-Davide Frey
-Inria Rennes
+Davide Frey,
+Inria Rennes,
 France
 
-Raquel Menezes
-U. Minho
+Augusto Garcia-Agundez,
+TU Darmstadt,
+Germany
+
+Raquel Menezes,
+U. Minho,
 Portugal
 
-Esteban Moro
-UC3M & MIT
+Esteban Moro,
+UC3M & MIT,
 Spain & USA
 
-Nicolas Nicolaou
-Algolysis Ltd
+Nicolas Nicolaou,
+Algolysis Ltd,
 Cyprus
 
-Paul Patras
-U. Edinburgh
+Paul Patras,
+U. Edinburgh,
 UK
 
-Efstathios Stavrakis
-Algolysis Ltd
+Efstathios Stavrakis,
+Algolysis Ltd,
 Cyprus
 
-Christopher Thraves
-U. Concepción
+Christopher Thraves,
+U. Concepción,
 Chile
+
+Collaborators
+
+Lin Wang
+
+
+
 
 License
 
