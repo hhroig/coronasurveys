@@ -43,6 +43,10 @@ Davide Frey
 Inria Rennes
 France
 
+Raquel Menezes
+U. Minho
+Portugal
+
 Esteban Moro
 UC3M & MIT
 Spain & USA
