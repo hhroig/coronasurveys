@@ -1,5 +1,37 @@
 # @CoronaSurveys: Monitoring of COVID-19 incidence via open polls
 
+## Latest Surveys
+
+Please vote!!
+
+Argentina: 
+https://docs.google.com/forms/d/e/1FAIpQLSdcOOCZmCi8uwWmAFkmrFiPugb4rnFjVEtWN5lPQmlbHkeT2A/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
+
+Chile:
+https://docs.google.com/forms/d/e/1FAIpQLSe_5sJmCmAI0ekflhlHMylqx-eXEjJhSc9sVwz844MHdLzREg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
+
+Cyprus: TBA
+
+France: TBA
+
+Germany:
+https://docs.google.com/forms/d/e/1FAIpQLSfikLu7KkcDycLy-nldqfmUsTv36usUOhkmetZ9JHQmsWxq5w/viewform?entry.630726203=Ganz+Deutschland&entry.1861642347=100&entry.1525448731=0&fbclid=IwAR27_JWbJ0nPKPrBZMjnQGu8XjGRoN31nlf5Phz66fZ_85dcCjZyrxu8ygw
+
+Japan:
+https://docs.google.com/forms/d/e/1FAIpQLScXEW3CxwKO-b5trXdy6O1jVWS9RjZqIk0WQQgv__xSHDmMgw/viewform?entry.832879185=%E5%85%A8%E5%9B%BD&entry.983950942=100&entry.1350381930=0%C3%A7
+
+Spain:
+https://docs.google.com/forms/d/e/1FAIpQLScJ6XdAgvESUYcR0xIxK3i8AQRWOfBp7AjPEyNxJo12uYckLg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
+
+Portugal: TBA
+
+UK:
+https://docs.google.com/forms/d/e/1FAIpQLSeE_c3OwixgPI6ThdS6umYYBDbbih_AgziGM22CdC7IRDZJ7Q/viewform?entry.630726203=Entire%20country&entry.1861642347=100&entry.1525448731=0
+
+USA
+https://docs.google.com/forms/d/e/1FAIpQLSdvDyzGRqiCjiJEn8H4aQ4rUDq4hVmp4opZKtwn9x4gUJabWw/viewform?entry.630726203=Entire+country&entry.1861642347=100&entry.1525448731=0
+
+
 ## Motivation
 
 The world is suffering a pandemic by the COVID-19 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
@@ -94,4 +126,5 @@ All the data in this project is distributed under the Open Data Commons Attribut
 See also the twitter and facebook links:
 
 Twitter: https://twitter.com/coronasurveys
+
 Facebook: https://www.facebook.com/groups/209076966867175/
