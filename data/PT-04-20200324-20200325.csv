@@ -1,32 +1,32 @@
-Timestamp,"Por favor, escolha um distrito/região.",Quantas pessoas conhece nessa área geográfica?,"De acordo com o seu conhecimento, quantas destas pessoas apresentam sintomas compatíveis com COVID-19 (ou foram diagnosticadas com esta doença)?"
-3/24/2020 12:52:32,Braga,2000,3
-3/24/2020 12:57:09,Braga,50,0
-3/24/2020 13:00:31,Aveiro,200,0
-3/24/2020 13:17:47,Todo o país,100,0
-3/24/2020 13:20:12,Porto,25,1
-3/24/2020 13:22:00,Porto,500,0
-3/24/2020 13:26:42,Porto,40,3
-3/24/2020 13:51:31,Todo o país,100,0
-3/24/2020 13:58:42,Braga,100,1
-3/24/2020 14:07:47,Todo o país,100,2
-3/24/2020 14:08:23,Porto,60,3
-3/24/2020 14:10:02,Braga,100,0
-3/24/2020 14:44:50,Braga,100,0
-3/24/2020 14:53:18,Braga,50,50
-3/24/2020 15:00:05,Braga,20,0
-3/24/2020 15:08:28,Porto,1000,0
-3/24/2020 15:53:48,Braga,5000,1
-3/24/2020 18:50:53,Porto,100,0
-3/24/2020 19:58:48,Porto,100,0
-3/24/2020 20:25:35,Porto,50,0
-3/24/2020 20:47:46,Braga,100,1
-3/24/2020 21:34:35,Todo o país,100,0
-3/24/2020 22:17:17,Porto,60,0
-3/24/2020 23:53:38,Porto,500,1
-3/25/2020 1:39:35,Porto,100,1
-3/25/2020 10:53:32,Vila Real,5,0
-3/25/2020 12:26:48,Braga,50,0
-3/25/2020 12:59:06,Porto,150,1
-3/25/2020 14:34:23,Porto,100,0
-3/25/2020 14:59:57,Braga,1000,2
-3/25/2020 15:02:05,Braga,1500,13
+"Timestamp","Por favor, escolha um distrito/região.","Quantas pessoas conhece nessa área geográfica?","De acordo com o seu conhecimento, quantas destas pessoas apresentam sintomas compatíveis com COVID-19 (ou foram diagnosticadas com esta doença)?"
+"2020/03/24 12:52:32 PM GMT","Braga","2000","3"
+"2020/03/24 12:57:08 PM GMT","Braga","50","0"
+"2020/03/24 1:00:31 PM GMT","Aveiro","200","0"
+"2020/03/24 1:17:47 PM GMT","Todo o país","100","0"
+"2020/03/24 1:20:11 PM GMT","Porto","25","1"
+"2020/03/24 1:22:00 PM GMT","Porto","500","0"
+"2020/03/24 1:26:41 PM GMT","Porto","40","3"
+"2020/03/24 1:51:31 PM GMT","Todo o país","100","0"
+"2020/03/24 1:58:42 PM GMT","Braga","100","1"
+"2020/03/24 2:07:46 PM GMT","Todo o país","100","2"
+"2020/03/24 2:08:22 PM GMT","Porto","60","3"
+"2020/03/24 2:10:01 PM GMT","Braga","100","0"
+"2020/03/24 2:44:50 PM GMT","Braga","100","0"
+"2020/03/24 2:53:17 PM GMT","Braga","50","50"
+"2020/03/24 3:00:04 PM GMT","Braga","20","0"
+"2020/03/24 3:08:27 PM GMT","Porto","1000","0"
+"2020/03/24 3:53:48 PM GMT","Braga","5000","1"
+"2020/03/24 6:50:52 PM GMT","Porto","100","0"
+"2020/03/24 7:58:47 PM GMT","Porto","100","0"
+"2020/03/24 8:25:34 PM GMT","Porto","50","0"
+"2020/03/24 8:47:45 PM GMT","Braga","100","1"
+"2020/03/24 9:34:34 PM GMT","Todo o país","100","0"
+"2020/03/24 10:17:17 PM GMT","Porto","60","0"
+"2020/03/24 11:53:37 PM GMT","Porto","500","1"
+"2020/03/25 1:39:34 AM GMT","Porto","100","1"
+"2020/03/25 10:53:31 AM GMT","Vila Real","5","0"
+"2020/03/25 12:26:47 PM GMT","Braga","50","0"
+"2020/03/25 12:59:06 PM GMT","Porto","150","1"
+"2020/03/25 2:34:22 PM GMT","Porto","100","0"
+"2020/03/25 2:59:57 PM GMT","Braga","1000","2"
+"2020/03/25 3:02:05 PM GMT","Braga","1500","13"
