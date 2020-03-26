@@ -88,3 +88,10 @@ We will make all the data available here. The data of the first collection of su
 In the midtime, you access some aggregated results at https://docs.google.com/spreadsheets/d/1dn8o8xSuBQTQYzMhKvqoxzWe4FXGbY1MpehyUM4gnwk/edit#gid=1914437865
 
 All the data in this project is distributed under the Open Data Commons Attribution License.
+
+## See Also
+
+See also the twitter and facebook links:
+
+Twitter: https://twitter.com/coronasurveys
+Facebook: https://www.facebook.com/groups/209076966867175/
