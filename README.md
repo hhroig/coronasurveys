@@ -128,3 +128,7 @@ See also the twitter and facebook links:
 Twitter: https://twitter.com/coronasurveys
 
 Facebook: https://www.facebook.com/groups/209076966867175/
+
+In the news:
+
+- El Pais: https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
