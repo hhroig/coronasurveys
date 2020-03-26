@@ -30,7 +30,7 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
                 file = paste0("outliers_removed/", file_name, "_", "outliers_max_ratio.txt"),
                 append = T) # write out outliers based on max_Ratio
     n_maxratio_outliers <- sum(dt$ratio >= max_ratio)
-    dt <- dt[dt$ratio < maxratio, ]
+    dt <- dt[dt$ratio < max_ratio, ]
   }else{
     n_maxratio_outliers <- 0
   }
@@ -42,9 +42,12 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
   mean_reach <- mean(dt$reach)
   cases_per_reach <-sum(dt$cases)/sum(dt$reach)
   
-  naif_cases<- population * cases_per_reach * correction_factor
+  naif_cases<- country_population * cases_per_reach * correction_factor
   
-  return(list(estimated_cases = naif_cases,
+  return(list(mean_cases = mean_cases,
+              mean_reach = mean_reach,
+              cases_per_reach = cases_per_reach,
+              estimated_cases = naif_cases,
               cases_breakdown = table(dt$cases),
               cases_breakdown_region = table(dt$region, dt$cases),
               n_reach_outliers = n_reach_outliers,
@@ -59,6 +62,9 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
 estimates_spain_pool6 <- estimate_cases(file_path = "../data/ES-06-20200322-20200323.csv", country_population = 46754778)
 
 # check results
+estimates_spain_pool6$mean_cases 
+estimates_spain_pool6$mean_reach
+estimates_spain_pool6$cases_per_reach
 estimates_spain_pool6$estimated_cases 
 estimates_spain_pool6$cases_breakdown # table of frequency of cases, good for bar chart
 estimates_spain_pool6$cases_breakdown_region # table of frequency of cases, by region
