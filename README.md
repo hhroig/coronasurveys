@@ -10,7 +10,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSdcOOCZmCi8uwWmAFkmrFiPugb4rnFjVEtWN5lP
 Chile:
 https://docs.google.com/forms/d/e/1FAIpQLSe_5sJmCmAI0ekflhlHMylqx-eXEjJhSc9sVwz844MHdLzREg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
 
-Cyprus: TBA
+Cyprus: https://docs.google.com/forms/d/e/1FAIpQLSf2X1SFhKLSquNKYtJ48xtSGxaj4d8qx9UQ0NwlIcn_roOT3w/viewform?fbclid=IwAR3pNzlmZf0_mCVpcF1gerryJfgyrDCITbsbgC1D6CrjSazPvyvkd3SU__g
 
 France: TBA
 
