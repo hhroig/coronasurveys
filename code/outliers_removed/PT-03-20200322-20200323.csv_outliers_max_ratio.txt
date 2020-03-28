@@ -1,0 +1,12 @@
+"date" "region" "reach" "cases" "ratio"
+"68" "2020/03/22 10:19:01 PM GMT" "Braga" 3 2 0.666666666666667
+"76" "2020/03/22 10:32:30 PM GMT" "Beja" 5 5 1
+"date" "region" "reach" "cases" "ratio"
+"68" "2020/03/22 10:19:01 PM GMT" "Braga" 3 2 0.666666666666667
+"76" "2020/03/22 10:32:30 PM GMT" "Beja" 5 5 1
+"date" "region" "reach" "cases" "ratio"
+"68" "2020/03/22 10:19:01 PM GMT" "Braga" 3 2 0.666666666666667
+"76" "2020/03/22 10:32:30 PM GMT" "Beja" 5 5 1
+"date" "region" "reach" "cases" "ratio"
+"68" "2020/03/22 10:19:01 PM GMT" "Braga" 3 2 0.666666666666667
+"76" "2020/03/22 10:32:30 PM GMT" "Beja" 5 5 1

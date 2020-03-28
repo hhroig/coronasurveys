@@ -1,0 +1,2 @@
+"date" "region" "reach" "cases" "ratio"
+"40" "2020/03/26 12:26:01 PM GMT+1" "Andalucía" 1 1 1
