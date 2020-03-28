@@ -26,14 +26,14 @@ Another technique, based on the same corrections for delay, but using an overall
 
 \section{Crowdsourcing with Open Anonymous Surveys}
 
-The $@$CoronaSurveys effort is based on crowdsourcing data collection, in a way that avoids querying the citizens about their particular health status and identity. Participants answer for a given geographical area, which can be a whole country or a region within a country. They answer two simple questions: 
+The $@$CoronaSurveys effort is based on crowdsourcing data collection, in a way that avoids querying the citizens about their particular health status and identity. Participants have to fill a simple survey with three questions (we currently use Google Forms). In the first question participants select a geographical area, which can be a whole country or a region within a country. Then, they answer two simple questions: 
 
 \begin{itemize}
 \item How many people do you know in this geographical area? (Please, consider only people whose current health status you likely know.)
 \item As far as you know, how many of the above have symptoms compatible with COVID-19 (or were diagnosed with the disease)?
 \end{itemize}
 
-By not asking any personal information we aim to protect users privacy, and having just two questions aims to simplify the answering process. This will hopefully increase the participation. However, the lack of detailed information of the participants makes the estimation process challenging. We do not control the spread of the survey nor the adequate coverage of regions, age groups and other parameters. Somewhat suprisingly, even given these limitations, we can still obtain a rough estimate and see that it is not far from those obtained with other techniques. One reason for this may be that each participant is typically reporting on the health status of a large sample (hundreds), which increases significantly the coverage of the survey. Obvious advantages of this approach are that it is very simple to deploy and can give very timely results.
+By not asking any personal information we aim at protecting the participant's privacy, and having just two questions aims to simplify the answering process. This will hopefully increase the participation. However, the lack of detailed information of the participants makes the estimation process challenging. We do not control the spread of the survey nor the adequate coverage of regions, age groups and other parameters. Somewhat surprisingly, even given these limitations, we can still obtain a rough estimate and see that it is not far from those obtained with other techniques. One reason for this may be that each participant is typically reporting on the health status of a large sample (hundreds), which increases significantly the coverage of the survey. Obvious advantages of this approach are that it is very simple to deploy and can give very timely results.
 
 The process to obtain the estimate of cases is as follows.
 Survey responses are cleaned by identifying and removing outliers. These are answers unusually large in terms of the range of persons that the respondent declares to know (we remove entries outside 1.5 times the interquartile range above the upper quartile), and the ratio of symptomatic people reported (we remove entries above $30\%$ of reporting). The latter are removed because we aim at surveying the general population that is not in particular high contact with symptomatic cases. Once the data is clean, we use it to obtain an estimate of the percentage of cases in the population that are known to the respondents. Then, we naively extrapolate this ratio to the whole country population.
@@ -42,9 +42,9 @@ Our initial surveys were done on Twitter and did not ask for how many people are
 
 In the following sections we show the results we obtain for the two countries, Portugal and Spain. 
 
-\section{The Portuguese data}
+\section{Estimating the Number of COVID-19 Cases in Portugal}
 
-Portuguese data on fatality and confirmed cases was obtained in \url{https://github.com/dssg-pt/covid19pt-data}, a public repository that helps disseminated the official DGS daily data.
+Portuguese data on fatality and confirmed cases was obtained from \url{https://github.com/dssg-pt/covid19pt-data}, a public repository that helps disseminated the official DGS daily data.
 
 \begin{figure}
 \begin{center}
@@ -54,14 +54,14 @@ Portuguese data on fatality and confirmed cases was obtained in \url{https://git
 \label{pt}
 \end{figure}
 
-In Figure~\ref{pt} the solid line represents how many confirmed cases have been reported. The dashed line is the fatality number multiplied by 400, while the solid dots $\bullet$ indicate the more precise estimate from the corrected case fatality rates and compensating for the estimated coverage of testing. Finally, the diamond $\diamond$ represents our estimates from the two initial Twitter surveys and the triangles $\triangle$ the results from the subsequent two surveys via Google Forms. 
+In Figure~\ref{pt} a comparison of the number of cases accounted for or estimated with the described techniques is presented. The solid line plots the number of officially reported confirmed cases. The dashed line is obtained by multiplying the number of fatalities by 400, while the solid dots $\bullet$ indicate the more precise estimate from the corrected case fatality rates, and compensating for the estimated coverage of testing. Finally, the diamond $\diamond$ represents our estimates from the two initial Twitter surveys, and the triangles $\triangle$ the results from the subsequent two more complete open surveys. 
 
-As we can see the anonymous surveys, by $@$CoronaSurveys, tend to estimate more cases, likely over-estimating, but still follow the overall tendency and even might be closer to the order of magnitude of the true numbers than the official reports. 
+As we can see, the anonymous surveys, by $@$CoronaSurveys, tend to estimate more cases, likely over-estimating. In any case, these estimates still follow the overall tendency, and seem to be closer to the order of magnitude of the true numbers than the official reports. 
 %On March 26, in Portugal, the official cases were 4268, the cCFR was reporting 25662 and our survey indicated 69839.  
 
-\section{The Spanish data}
+\section{Estimating the Number of COVID-19 Cases in Spain}
 
-Spanish data was obtained from the European Center for Disease Control in \url{https://www.ecdc.europa.eu/}, with public information about COVID-19 cases across the World. 
+Spanish data was obtained from the European Center for Disease Control, at \url{https://www.ecdc.europa.eu/}, which aggregates public information about COVID-19 cases across the World. 
 
 \begin{figure}
 \begin{center}
@@ -71,7 +71,7 @@ Spanish data was obtained from the European Center for Disease Control in \url{h
 \label{sp}
 \end{figure}
 
-For the Spanish case, see Figure~\ref{sp}, there is a even wider gap between cases predicted by fatality numbers and the reported cases. We include data points from one twitter survey and three subsequent Google Forms surveys. Surprisingly, the results from $@$CoronaSurveys are very close to the fatality based estimators, while providing still slightly higher estimates. 
+For the Spanish case (see Figure~\ref{sp}) there is an even wider gap between the number of cases predicted from fatality numbers and the reported cases. For the estimates based on open surveys, we include data points from one Twitter survey and three subsequent Google Forms surveys as described in the previous section. Surprisingly, the results from $@$CoronaSurveys are very close to the fatality-based estimators, while providing still slightly higher estimates. 
 
 \section{Discussion}
 
