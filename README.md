@@ -57,6 +57,8 @@ Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Expla
 
 Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
 
+Hiroshi Nishiura et al. Early Epidemiological Assessment of the Virulence of Emerging Infectious Diseases: A Case Study of an Influenza Pandemic. Plos One. August 31, 2009. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852
+
 James Gorman. The Coronavirus, by the Numbers. The New York Times, Match 5th, 2020. https://www.nytimes.com/2020/03/05/health/coronavirus-deaths-rates.html
 
 Kiko Llaneras. Los números del coronavirus: ¿Cuántos infectados hay realmente en España? El País, March 28th, 2020. https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
