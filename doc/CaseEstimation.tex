@@ -13,16 +13,16 @@ Official numbers of confirmed cases are periodically issued by each country's he
 Unfortunately, upon the pandemic outbreak is it usually the case that there is lack of available laboratory tests, and other material and human resources. Hence, it is not possible to test all potential cases, and some eligibility criteria is applied to decide who is tested.
 Under these circumstances, the evolution of official confirmed cases might not represent the total number of cases (see \url{https://www.nature.com/articles/d41586-020-00760-8}).  
 
-This motivates the need at other probing techniques, beyong laboratory testing, that may bring in information about the potential numbers of cases. In fact, in is very likely that the true numbers might only be known in the future, once serological surveys are done (as done in prior outbreaks \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050770}. However, any rought estimate that is within one order of magnitude of the real number will be better than being almost in the dark.
+This motivates the need at other probing techniques, beyong laboratory testing, that may bring in information about the potential numbers of cases. In fact, it is very likely that the true numbers might only be known in the future, once serological surveys are done (as done in prior outbreaks \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050770}. However, any rought estimate that is within one order of magnitude of the real number will be better than being almost in the dark.
 
-In the rest of this document we propose a new approach to estimate the number of cases with COVID-19 symptoms, which is based on using crowdsourcing with opne anonymous surveys to obtain indirect information. We compare the values obtained with this new approach with other approaches that infer current cases from the case fatality series.
+In the rest of this document we propose a new approach to estimate the number of cases with COVID-19 symptoms, which is based on using crowdsourcing with open anonymous surveys to obtain indirect information. We compare the values obtained with this new approach with other approaches that infer current cases from the case fatality series.
 
 \section{Delay-adjusted case fatality ratio}
 
 If we look at the current number of fatalities and divide it with the current number of confirmed cases, we obtain a naive case fatality ratio (CFR). However this metric does not take into account the number of cases with known outcomes, since recent cases will still evolve into fatalities and recoveries. By estimating the true number of cases with known outcomes, it is possible to obtain a corrected case fatality ratio (cCFR), as in \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852}, that takes into account the average delay from symptoms to death.  
 
 Since the corrected denominator (cases with known outcomes) is reduced, the cCFR is higher than the naive CFR during a growing outbreak. A high cCFR is typically an indicator of lack of coverage in laboratory testing. If we assume, in general, that the disease will have similar case fatality rates in different countries it is possible use the known fatality ratio from Wuhan, China, currently at $1.38\%$
-to compare with the obtained cCFR and estimate the percentage of coverage in different countries. This is done in \url{https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html} and, for instance, the projected coverage in Portugal and Spain is $19\%$ and $4.7\%$. These values can in turn be used to correct the number of reported confirmed cases in each country and estimate the likely true number of cases, thus probing the iceberg that lurks under water.
+to compare with the obtained cCFR and estimate the percentage of coverage in different countries. This is done in \url{https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html} and, for instance, the projected coverage in Portugal and Spain is $19\%$ and $4.7\%$, respectively. These values can in turn be used to correct the number of reported confirmed cases in each country and estimate the likely true number of cases, thus probing the iceberg that lurks under water.
 
 Another technique, based on the same corrections for delay, but using an overall gross value for estimating the true cases from the mortality rate is simply obtained by multiplying the cumulative mortality by 400. See \url{https://www.nature.com/articles/d41586-020-00760-8}. We will use both techniques for estimation in each country.
 
@@ -36,7 +36,7 @@ The $@$CoronaSurveys effort is based on crowdsourcing data in a way that avoids 
 \end{itemize}
 
 By not asking any personal information we aim to protect users privacy and having just two questions aims to make the process easy and repeatable with few effort from respondents. However the lack of more detailed information also makes the estimation process more challenging. We also do not control the spread of the survey and the adequate coverage of regions, age groups and other parameters.
-Given this limitations, we can still obtain a gross estimate and see how it compares with other techniques. The obvious advantage is that this approach is very simple to deploy and can give very timely results. 
+Given these limitations, we can still obtain a gross estimate and see how it compares with other techniques. The obvious advantage is that this approach is very simple to deploy and can give very timely results. 
 
 Surveyed responses are cleaned by identifying and removing outliers, in terms of the range of persons that the respondent declares to know (we remove entries outside 1.5 times the interquartile range above the upper quartile), and the ratio of symptomatic people reported (we remove entries above $30\%$ of reporting). We aim to survey the general population, that is not in particular high contact with symptomatic cases. Once the data is processed we obtain an estimate of the percentage of cases in the population that is known to the respondents and can naively extrapolate this ratio to the whole country population. 
 
@@ -51,15 +51,15 @@ Portuguese data on fatality and confirmed cases was obtained in \url{https://git
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=.9\linewidth]{EstPTMar26.pdf}
+\includegraphics[width=.9\linewidth]{EstPTMar28.pdf}
 \end{center}
-\caption{Case estimates for Portugal, March 26th 2020.}
+\caption{Case estimates for Portugal, March 28th 2020.}
 \label{pt}
 \end{figure}
 
 In Figure~\ref{pt} the solid line represents how many confirmed cases have been reported. The dashed line is the fatality number multiplied by 400, while the solid dots $\bullet$ indicate the more precise estimate from the corrected case fatality rates and compensating for the estimated coverage of testing. Finally, the diamond $\diamond$ represents our estimates from the two initial Twitter surveys and the triangles $\triangle$ the results from the subsequent two surveys via Google Forms. 
 
-As we can see the anonymous surveys, by $@$CoronaSurveys, tend to estimate more cases, likely over-estimating, but still follow the overall tendency and surprisingly might be closer to the order of magnitude of the true numbers than the official reports. 
+As we can see the anonymous surveys, by $@$CoronaSurveys, tend to estimate more cases, likely over-estimating, but still follow the overall tendency and even might be closer to the order of magnitude of the true numbers than the official reports. 
 %On March 26, in Portugal, the official cases were 4268, the cCFR was reporting 25662 and our survey indicated 69839.  
 
 \section{The Spanish data}
