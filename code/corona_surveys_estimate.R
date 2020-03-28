@@ -1,5 +1,5 @@
 estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", country_population = 46754778,
-                           max_ratio = .3, correction_factor = 0.65) {
+                           max_ratio = .3, correction_factor = 1) {
   # read data
   dt <- read.csv(file_path)
   names(dt) <- c("date","region","reach","cases")
