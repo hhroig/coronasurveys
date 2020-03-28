@@ -27,15 +27,37 @@ Another technique, based on the same corrections, but using an overall gross val
 
 \section{Crowdsourcing with anonymous surveys}
 
+The $@$CoronaSurveys effort is based on crowdsourcing data in a way that avoids querying the users about their particular health status and identity. Participants can answer for a whole country or a region within a country. They answer two simple questions: 
+
+\begin{itemize}
+\item How many people do you know in this geographical area? (Please, consider only people whose current health status you likely know.)
+\item As far as you know, how many of the above have symptoms compatible with COVID-19 (or were diagnosed with the disease)?
+\end{itemize}
+
+By not asking any personal information we aim to protect users privacy and having just two questions aims to make the process easy and repeatable with few effort from respondents. However the lack of mode detailed information also makes the estimation process more challenging. We also do not control the spread of the survey and the adequate coverage of regions, age groups and other parameters.
+Given this limitations, we can still obtain a gross estimate and see how it compares with other techniques. The obvious advantage is that this approach is very simple to deploy and can give very timely results. 
+
+Surveyed responses are cleaned by identifying and removing outliers, in terms of the range of persons that the respondent declares to know, and the ratio of symptomatic people reported. We aim to survey the general population, that is not in particular high contact with symptomatic cases. Once the data is processed we obtain an estimate of the percentage of cases in the population that is known to the respondents and can naively extrapolate this ratio to the whole country population. 
+
+
+Our initial surveys were done on Twitter and did not ask for how many people are known to the respondents. For those the reach was set to 150, which is the Dunbar number, characterization the expected number of persons with whom one can maintain stable social relationships \url{https://en.wikipedia.org/wiki/Dunbar%27s_number}. 
+
+In the following sections we show some results by country. 
+
 \section{The Portuguese data}
 
 Portuguese data on fatality and confirmed cases was obtained in \url{https://github.com/dssg-pt/covid19pt-data}, a public repository that helps disseminated the official DGS daily data.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=.8\linewidth]{EstPTMar26.pdf}
+\includegraphics[width=.9\linewidth]{EstPTMar26.pdf}
 \end{center}
 \end{figure}
+
+In the figure (log scale), the solid line represents how many confirmed cases have been reported. The dashed line is the fatality number multiplied by 400, while the solid dots $\bullet$ indicate the more precise estimate from the corrected case fatality rates and compensating for the estimated coverage of testing. Finally, the diamond $\diamond$ represents our estimates from the two initial Twitter surveys and the triangles $\triangle$ the results from the subsequent two surveys via Google Forms. 
+
+As we can see the anonymous surveys, by $@$CoronaSurveys,  tend to estimate more cases, likely over-estimating, but still follow the overall tendency and surprisingly might be closer to the order of magnitude of the true numbers than the official reports. 
+%On March 26, in Portugal, the official cases were 4268, the cCFR was reporting 25662 and our survey indicated 69839.  
 
 \section{The Spanish data}
 
