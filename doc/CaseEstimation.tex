@@ -13,7 +13,7 @@ Official numbers of confirmed cases are periodically issued by each country's he
 Unfortunately, upon the pandemic outbreak is it usually the case that there is lack of available laboratory tests, and other material and human resources. Hence, it is not possible to test all potential cases, and some eligibility criteria is applied to decide who is tested.
 Under these circumstances, the evolution of official confirmed cases might not represent the total number of cases (see \url{https://www.nature.com/articles/d41586-020-00760-8}).  
 
-This motivates the need at other probing techniques, beyong laboratory testing, that may bring in information about the potential numbers of cases. In fact, it is very likely that the true numbers might only be known in the future, once serological surveys are done (as done in prior outbreaks \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050770}. However, any rough estimate that is within one order of magnitude of the real number will be better than being almost in the dark.
+This motivates the need of other probing techniques, beyond laboratory testing, that may bring in information about the potential numbers of cases. In fact, it is very likely that the true numbers might only be known in the future, once serological surveys are done (as done in prior outbreaks \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050770}. However, any rough estimate that is within one order of magnitude of the real number will be better than being almost in the dark.
 
 In the rest of this document we propose a new approach to estimate the number of cases with COVID-19 symptoms, which is based on using crowdsourcing with open anonymous surveys to obtain indirect information. We compare this new approach with approaches that infer current cases from the case fatality series for two particular countries, Portugal and Spain.
 
@@ -26,22 +26,21 @@ Another technique, based on the same corrections for delay, but using an overall
 
 \section{Crowdsourcing with Open Anonymous Surveys}
 
-The $@$CoronaSurveys effort is based on crowdsourcing data in a way that avoids querying the users about their particular health status and identity. Participants can answer for a whole country or a region within a country. They answer two simple questions: 
+The $@$CoronaSurveys effort is based on crowdsourcing data collection, in a way that avoids querying the citizens about their particular health status and identity. Participants answer for a given geographical area, which can be a whole country or a region within a country. They answer two simple questions: 
 
 \begin{itemize}
 \item How many people do you know in this geographical area? (Please, consider only people whose current health status you likely know.)
 \item As far as you know, how many of the above have symptoms compatible with COVID-19 (or were diagnosed with the disease)?
 \end{itemize}
 
-By not asking any personal information we aim to protect users privacy and having just two questions aims to make the process easy and repeatable with few effort from respondents. However the lack of more detailed information also makes the estimation process more challenging. We also do not control the spread of the survey and the adequate coverage of regions, age groups and other parameters.
-Given these limitations, we can still obtain a gross estimate and see how it compares with other techniques. The obvious advantage is that this approach is very simple to deploy and can give very timely results. 
+By not asking any personal information we aim to protect users privacy, and having just two questions aims to simplify the answering process. This will hopefully increase the participation. However, the lack of detailed information of the participants makes the estimation process challenging. We do not control the spread of the survey nor the adequate coverage of regions, age groups and other parameters. Somewhat suprisingly, even given these limitations, we can still obtain a rough estimate and see that it is not far from those obtained with other techniques. One reason for this may be that each participant is typically reporting on the health status of a large sample (hundreds), which increases significantly the coverage of the survey. Obvious advantages of this approach are that it is very simple to deploy and can give very timely results.
 
-Surveyed responses are cleaned by identifying and removing outliers, in terms of the range of persons that the respondent declares to know (we remove entries outside 1.5 times the interquartile range above the upper quartile), and the ratio of symptomatic people reported (we remove entries above $30\%$ of reporting). We aim to survey the general population, that is not in particular high contact with symptomatic cases. Once the data is processed we obtain an estimate of the percentage of cases in the population that is known to the respondents and can naively extrapolate this ratio to the whole country population. 
+The process to obtain the estimate of cases is as follows.
+Survey responses are cleaned by identifying and removing outliers. These are answers unusually large in terms of the range of persons that the respondent declares to know (we remove entries outside 1.5 times the interquartile range above the upper quartile), and the ratio of symptomatic people reported (we remove entries above $30\%$ of reporting). The latter are removed because we aim at surveying the general population that is not in particular high contact with symptomatic cases. Once the data is clean, we use it to obtain an estimate of the percentage of cases in the population that are known to the respondents. Then, we naively extrapolate this ratio to the whole country population.
 
+Our initial surveys were done on Twitter and did not ask for how many people are known to the respondents. For those, the number of known people was set to 150, which is the Dunbar number (\url{https://en.wikipedia.org/wiki/Dunbar%27s_number}), the expected number of persons with whom one maintains stable social relationships. 
 
-Our initial surveys were done on Twitter and did not ask for how many people are known to the respondents. For those the reach was set to 150, which is the Dunbar number, characterizing the expected number of persons with whom one can maintain stable social relationships \url{https://en.wikipedia.org/wiki/Dunbar%27s_number}. 
-
-In the following sections we show some results for the two countries. 
+In the following sections we show the results we obtain for the two countries, Portugal and Spain. 
 
 \section{The Portuguese data}
 
