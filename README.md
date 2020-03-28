@@ -23,7 +23,7 @@ https://docs.google.com/forms/d/e/1FAIpQLScXEW3CxwKO-b5trXdy6O1jVWS9RjZqIk0WQQgv
 Spain:
 https://docs.google.com/forms/d/e/1FAIpQLScJ6XdAgvESUYcR0xIxK3i8AQRWOfBp7AjPEyNxJo12uYckLg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
 
-Portugal: TBA
+Portugal: https://docs.google.com/forms/d/e/1FAIpQLSc-BBbAsn6tL1HGnzP1PasaTpgFNTDbsz_QtNMB-ONCpnJGCA/viewform?usp=pp_url&entry.669676341=Todo+o+pa%C3%ADs&entry.1913824203=100&entry.2077258757=0
 
 UK:
 https://docs.google.com/forms/d/e/1FAIpQLSeE_c3OwixgPI6ThdS6umYYBDbbih_AgziGM22CdC7IRDZJ7Q/viewform?entry.630726203=Entire%20country&entry.1861642347=100&entry.1525448731=0
