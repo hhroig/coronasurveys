@@ -42,9 +42,21 @@ The objective of this study is the collection and publication of data concerning
 
 ## Methodology
 
-The study will periodically issue open surveys in different countries to which any person can answer. In these surveys we will ask every participant to report how many people he/she knows that have shown symptoms compatible with a COVID-19 infection. We will additionally ask for other indirect data, like the number of people he/she knows.
- 
-We will not ask for any private information of any participant in the poll. The data is collected anonymously and cannot be backtraced to the participant in the poll.
+The study will periodically issue open surveys in different countries to which any person can answer. In these surveys we will ask every participant to report how many people he/she knows that have shown symptoms compatible with a COVID-19 infection. We will additionally ask for other indirect data, like the number of people he/she knows. We will not ask for any private information of any participant in the poll. The data is collected anonymously and cannot be backtraced to the participant in the poll.
+
+The data colected will be cleaned and processed in order to provide estimates of the number of persons with symptoms compatible with COVID-19 in the different countries, and its evolution over time. While these estimates are not expected to be fully accurate, they will hopefully be in the same order of magnitude as the real value. The estimates will be contrasted with other estimates and any data available, to validate its accuracy
+
+### Other Methods to Estimate the Number of Cases
+
+Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Explainer, March 13th, 2020. https://www.nature.com/articles/d41586-020-00760-8
+
+Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
+
+James Gorman. The Coronavirus, by the Numbers. The New York Times, Match 5th, 2020. https://www.nytimes.com/2020/03/05/health/coronavirus-deaths-rates.html
+
+Kiko Llaneras. Los números del coronavirus: ¿Cuántos infectados hay realmente en España? El País, March 28th, 2020. https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
+
+Antonio J. Durán. ¿Cómo estimar el número de infectados reales por covid-19? Los casos de Andalucía e Italia. Blog IMUS, March 23rd, 2020. http://institucional.us.es/blogimus/2020/03/como-estimar-el-numero-de-infectados-reales-por-covid-19-el-caso-de-andalucia-e-italia/
 
 ## Research Team
 
@@ -91,6 +103,10 @@ Nicolas Nicolaou,
 Algolysis Ltd,
 Cyprus
 
+Oluwasegun Ojo,
+IMDEA Networks & UC3M,
+Spain
+
 Paul Patras,
 U. Edinburgh,
 UK
@@ -98,6 +114,10 @@ UK
 Efstathios Stavrakis,
 Algolysis Ltd,
 Cyprus
+
+Pelayo Vallina,
+IMDEA Networks & UC3M,
+Spain
 
 Christopher Thraves,
 U. Concepción,
