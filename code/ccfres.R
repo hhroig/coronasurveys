@@ -76,10 +76,10 @@ survey_gforms<-rep(NaN,size)
 #survey[25]=15/(45*276)*populationPT #20 Mar
 survey_twitter[78]<-(66.13/(85*150))*populationSP #16 Mar
 #survey_twitter[25]<-15/(45*150)*populationSP #20 Mar
-
 survey_gforms[85]<-1408474 #23 Mar cf=1, pool 6
-
 survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
+survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
+
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
 plot(data$obitos*400,log="y",ylim=c(1,10000000),type="l",xlab="Days",main="Different estimates of SARS-COV2 cases in Spain",ylab="Total cases",lty=4)

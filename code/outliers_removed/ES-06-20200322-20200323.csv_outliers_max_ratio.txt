@@ -70,3 +70,9 @@
 "214" "2020/03/22 10:18:04 PM GMT+1" "Comunidad de Madrid" 3 2 0.666666666666667
 "216" "2020/03/22 10:35:07 PM GMT+1" "Comunidad de Madrid" 2 1 0.5
 "223" "2020/03/23 12:05:07 AM GMT+1" "Andalucía" 1 1 1
+"date" "region" "reach" "cases" "ratio"
+"123" "2020/03/22 4:44:21 PM GMT+1" "Comunidad de Madrid" 100 30 0.3
+"164" "2020/03/22 6:58:36 PM GMT+1" "Castilla-La Mancha" 7 4 0.571428571428571
+"214" "2020/03/22 10:18:04 PM GMT+1" "Comunidad de Madrid" 3 2 0.666666666666667
+"216" "2020/03/22 10:35:07 PM GMT+1" "Comunidad de Madrid" 2 1 0.5
+"223" "2020/03/23 12:05:07 AM GMT+1" "Andalucía" 1 1 1
