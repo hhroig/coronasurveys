@@ -48,6 +48,11 @@ The data colected will be cleaned and processed in order to provide estimates of
 
 ### Other Methods to Estimate the Number of Cases
 
+Ryosuke Omori, Kenji Mizumoto, Hiroshi Nishiura.
+Ascertainment rate of novel coronavirus disease (COVID-19) in Japan.
+medRXid, March 10th, 2020.
+https://www.medrxiv.org/content/10.1101/2020.03.09.20033183v1
+
 Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Explainer, March 13th, 2020. https://www.nature.com/articles/d41586-020-00760-8
 
 Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
