@@ -16,7 +16,7 @@ Please vote!!
 
   (links to) https://docs.google.com/forms/d/e/1FAIpQLSf2X1SFhKLSquNKYtJ48xtSGxaj4d8qx9UQ0NwlIcn_roOT3w/viewform?fbclid=IwAR3pNzlmZf0_mCVpcF1gerryJfgyrDCITbsbgC1D6CrjSazPvyvkd3SU__g
 
-- France: TBA
+- France: https://tinyurl.com/coronasurveysfrance
 
 - Germany: https://tinyurl.com/coronasurveysgermany
 
