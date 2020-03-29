@@ -1,5 +1,11 @@
 # @CoronaSurveys: Monitoring of COVID-19 incidence via open polls
 
+## Latest Reports
+
+**First report with the estimates of COVID-19 cases in Spain and Portugal**
+
+[Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
+
 ## Latest Surveys
 
 Please vote!!
