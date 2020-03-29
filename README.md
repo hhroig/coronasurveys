@@ -8,7 +8,11 @@
 
 ![Estimates for Portugal](doc/EstPTMar28.jpg)
 
+Case estimates for Portugal, March 28th 2020. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
+
 ![Estimates for Spain](doc/EstSPMar28.jpg)
+
+Case estimates for Spain, March 28th 2020. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
 
 ## Latest Surveys
 
