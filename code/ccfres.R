@@ -74,7 +74,9 @@ survey_gforms<-rep(NaN,size)
 #position 89 is March 28 results about March 27 cases
 #survey[23]=(11/(63*276))*populationPT #18 Mar
 #survey[25]=15/(45*276)*populationPT #20 Mar
+survey_twitter[76]<-(374.05/(762*150))*populationSP #14 Mar
 survey_twitter[78]<-(66.13/(85*150))*populationSP #16 Mar
+survey_twitter[80]<-(116.16/(120*150))*populationSP #16 Mar
 #survey_twitter[25]<-15/(45*150)*populationSP #20 Mar
 survey_gforms[85]<-1408474 #23 Mar cf=1, pool 6
 survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
