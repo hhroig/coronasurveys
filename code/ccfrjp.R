@@ -78,7 +78,7 @@ survey_gforms[89]<-337019 #27 Mar cf=1, pool 1
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
-plot(data$obitos*400,log="y",ylim=c(1,1000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of SARS-COV2 cases in Japan",ylab="Total cases",lty=4)
+plot(data$obitos*400,log="y",ylim=c(1,1000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Japan",ylab="Total cases",lty=4)
 lines(data$confirmados)
 points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
