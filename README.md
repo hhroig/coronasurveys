@@ -158,15 +158,15 @@ Christopher Thraves,
 U. Concepción,
 Chile
 
+Lin Wang,
+Vrije Universiteit Amsterdam,
+Netherlands
+
 ## Collaborators
 
 Natalie Soto
 
 Yuichi Tanaka
-
-Lin Wang
-
-
 
 ## Data Availability and License
 
