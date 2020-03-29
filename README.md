@@ -22,7 +22,8 @@ Greece: https://docs.google.com/forms/d/e/1FAIpQLSe4L3M3ocrcnDOilc8uQKKRse-DxMy9
 Japan:
 https://docs.google.com/forms/d/e/1FAIpQLScXEW3CxwKO-b5trXdy6O1jVWS9RjZqIk0WQQgv__xSHDmMgw/viewform?entry.832879185=%E5%85%A8%E5%9B%BD&entry.983950942=100&entry.1350381930=0%C3%A7
 
-Spain:
+Spain: https://tinyurl.com/coronasurveysspain
+
 https://docs.google.com/forms/d/e/1FAIpQLScJ6XdAgvESUYcR0xIxK3i8AQRWOfBp7AjPEyNxJo12uYckLg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
 
 Portugal: https://docs.google.com/forms/d/e/1FAIpQLSc-BBbAsn6tL1HGnzP1PasaTpgFNTDbsz_QtNMB-ONCpnJGCA/viewform?usp=pp_url&entry.669676341=Todo+o+pa%C3%ADs&entry.1913824203=100&entry.2077258757=0
