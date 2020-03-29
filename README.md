@@ -1,55 +1,38 @@
 # @CoronaSurveys: Monitoring of COVID-19 incidence via open polls
 
+## Latest Reports
+
+**First report with the estimates of COVID-19 cases in Spain and Portugal**
+
+[Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
+
 ## Latest Surveys
 
 Please vote!!
 
 - Argentina: https://tinyurl.com/coronasurveysargentina
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSdcOOCZmCi8uwWmAFkmrFiPugb4rnFjVEtWN5lPQmlbHkeT2A/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
-
 - Chile: https://tinyurl.com/coronasurveyschile
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSe_5sJmCmAI0ekflhlHMylqx-eXEjJhSc9sVwz844MHdLzREg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
-
 - Cyprus: https://tinyurl.com/coronasurveyscyprus
-
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSf2X1SFhKLSquNKYtJ48xtSGxaj4d8qx9UQ0NwlIcn_roOT3w/viewform?fbclid=IwAR3pNzlmZf0_mCVpcF1gerryJfgyrDCITbsbgC1D6CrjSazPvyvkd3SU__g
 
 - France: https://tinyurl.com/coronasurveysfrance
 
 - Germany: https://tinyurl.com/coronasurveysgermany
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSfikLu7KkcDycLy-nldqfmUsTv36usUOhkmetZ9JHQmsWxq5w/viewform?entry.630726203=Ganz+Deutschland&entry.1861642347=100&entry.1525448731=0&fbclid=IwAR27_JWbJ0nPKPrBZMjnQGu8XjGRoN31nlf5Phz66fZ_85dcCjZyrxu8ygw
-
 - Greece: https://tinyurl.com/coronasurveysgreece
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSe4L3M3ocrcnDOilc8uQKKRse-DxMy9jK6RUPkzuc9fPI0uZg/viewform?usp=pp_url&entry.630726203=%CE%BF%CE%BB%CF%8C%CE%BA%CE%BB%CE%B7%CF%81%CE%B7+%CE%B7+%CF%87%CF%8E%CF%81%CE%B1&entry.1861642347=100&entry.1525448731=0
-
 - Italy: https://tinyurl.com/coronasurveysitaly
-  
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSdbAv7CZ3KCIwU4zPRJZddmICtmc0sm_P4roxhfDNMc18HfzA/viewform?usp=sf_link
 
 - Japan: https://tinyurl.com/coronasurveysjapan
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLScXEW3CxwKO-b5trXdy6O1jVWS9RjZqIk0WQQgv__xSHDmMgw/viewform?entry.832879185=%E5%85%A8%E5%9B%BD&entry.983950942=100&entry.1350381930=0%C3%A7
-
 - Spain: https://tinyurl.com/coronasurveysspain
-
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLScJ6XdAgvESUYcR0xIxK3i8AQRWOfBp7AjPEyNxJo12uYckLg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
 
 - Portugal: https://tinyurl.com/coronasurveysportugal
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSc-BBbAsn6tL1HGnzP1PasaTpgFNTDbsz_QtNMB-ONCpnJGCA/viewform?usp=pp_url&entry.669676341=Todo+o+pa%C3%ADs&entry.1913824203=100&entry.2077258757=0
-
 - UK: https://tinyurl.com/coronasurveysuk
 
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSeE_c3OwixgPI6ThdS6umYYBDbbih_AgziGM22CdC7IRDZJ7Q/viewform?entry.630726203=Entire%20country&entry.1861642347=100&entry.1525448731=0
-
 - USA: https://tinyurl.com/coronasurveysusa
-
-  (links to) https://docs.google.com/forms/d/e/1FAIpQLSdvDyzGRqiCjiJEn8H4aQ4rUDq4hVmp4opZKtwn9x4gUJabWw/viewform?entry.630726203=Entire+country&entry.1861642347=100&entry.1525448731=0
-
 
 ## Motivation
 
