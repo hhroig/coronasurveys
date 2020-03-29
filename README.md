@@ -16,7 +16,7 @@ Please vote!!
 
   (links to) https://docs.google.com/forms/d/e/1FAIpQLSf2X1SFhKLSquNKYtJ48xtSGxaj4d8qx9UQ0NwlIcn_roOT3w/viewform?fbclid=IwAR3pNzlmZf0_mCVpcF1gerryJfgyrDCITbsbgC1D6CrjSazPvyvkd3SU__g
 
-- France: TBA
+- France: https://tinyurl.com/coronasurveysfrance
 
 - Germany: https://tinyurl.com/coronasurveysgermany
 
@@ -25,6 +25,10 @@ Please vote!!
 - Greece: https://tinyurl.com/coronasurveysgreece
 
   (links to) https://docs.google.com/forms/d/e/1FAIpQLSe4L3M3ocrcnDOilc8uQKKRse-DxMy9jK6RUPkzuc9fPI0uZg/viewform?usp=pp_url&entry.630726203=%CE%BF%CE%BB%CF%8C%CE%BA%CE%BB%CE%B7%CF%81%CE%B7+%CE%B7+%CF%87%CF%8E%CF%81%CE%B1&entry.1861642347=100&entry.1525448731=0
+
+- Italy: https://tinyurl.com/coronasurveysitaly
+  
+  (links to) https://docs.google.com/forms/d/e/1FAIpQLSdbAv7CZ3KCIwU4zPRJZddmICtmc0sm_P4roxhfDNMc18HfzA/viewform?usp=sf_link
 
 - Japan: https://tinyurl.com/coronasurveysjapan
 
@@ -49,7 +53,7 @@ Please vote!!
 
 ## Motivation
 
-The world is suffering a pandemic by the COVID-19 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
+The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
 
 ## Objective
  
@@ -69,6 +73,11 @@ medRXid, March 10th, 2020.
 https://www.medrxiv.org/content/10.1101/2020.03.09.20033183v1
 
 Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Explainer, March 13th, 2020. https://www.nature.com/articles/d41586-020-00760-8
+
+Alberto Fernández.
+Coronavirus en España (I): Razones para Actuar con Urgencia y Contundencia.
+Medium, Marc h 15th, 2020.
+https://medium.com/@albertofffernandez/coronavirus-en-espa%C3%B1a-i-razones-para-actuar-con-urgencia-y-contundencia-bba8eafa12f
 
 Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
 
