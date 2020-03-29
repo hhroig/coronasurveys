@@ -74,6 +74,11 @@ https://www.medrxiv.org/content/10.1101/2020.03.09.20033183v1
 
 Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Explainer, March 13th, 2020. https://www.nature.com/articles/d41586-020-00760-8
 
+Alberto Fernández.
+Coronavirus en España (I): Razones para Actuar con Urgencia y Contundencia.
+Medium, Marc h 15th, 2020.
+https://medium.com/@albertofffernandez/coronavirus-en-espa%C3%B1a-i-razones-para-actuar-con-urgencia-y-contundencia-bba8eafa12f
+
 Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
 
 Hiroshi Nishiura et al. Early Epidemiological Assessment of the Virulence of Emerging Infectious Diseases: A Case Study of an Influenza Pandemic. Plos One. August 31, 2009. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852
