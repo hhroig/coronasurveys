@@ -26,6 +26,10 @@ Please vote!!
 
   (links to) https://docs.google.com/forms/d/e/1FAIpQLSe4L3M3ocrcnDOilc8uQKKRse-DxMy9jK6RUPkzuc9fPI0uZg/viewform?usp=pp_url&entry.630726203=%CE%BF%CE%BB%CF%8C%CE%BA%CE%BB%CE%B7%CF%81%CE%B7+%CE%B7+%CF%87%CF%8E%CF%81%CE%B1&entry.1861642347=100&entry.1525448731=0
 
+- Italy: https://tinyurl.com/coronasurveysitaly
+  
+  (links to) https://docs.google.com/forms/d/e/1FAIpQLSdbAv7CZ3KCIwU4zPRJZddmICtmc0sm_P4roxhfDNMc18HfzA/viewform?usp=sf_link
+
 - Japan: https://tinyurl.com/coronasurveysjapan
 
   (links to) https://docs.google.com/forms/d/e/1FAIpQLScXEW3CxwKO-b5trXdy6O1jVWS9RjZqIk0WQQgv__xSHDmMgw/viewform?entry.832879185=%E5%85%A8%E5%9B%BD&entry.983950942=100&entry.1350381930=0%C3%A7
@@ -49,7 +53,7 @@ Please vote!!
 
 ## Motivation
 
-The world is suffering a pandemic by the COVID-19 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
+The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
 
 ## Objective
  
