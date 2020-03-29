@@ -11,7 +11,9 @@ Please vote!!
 - Chile:
 https://docs.google.com/forms/d/e/1FAIpQLSe_5sJmCmAI0ekflhlHMylqx-eXEjJhSc9sVwz844MHdLzREg/viewform?entry.630726203=Todo+el+pa%C3%ADs&entry.1861642347=100&entry.1525448731=0
 
-- Cyprus: https://docs.google.com/forms/d/e/1FAIpQLSf2X1SFhKLSquNKYtJ48xtSGxaj4d8qx9UQ0NwlIcn_roOT3w/viewform?fbclid=IwAR3pNzlmZf0_mCVpcF1gerryJfgyrDCITbsbgC1D6CrjSazPvyvkd3SU__g
+- Cyprus: https://tinyurl.com/coronasurveyscyprus
+
+  (links to) https://docs.google.com/forms/d/e/1FAIpQLSf2X1SFhKLSquNKYtJ48xtSGxaj4d8qx9UQ0NwlIcn_roOT3w/viewform?fbclid=IwAR3pNzlmZf0_mCVpcF1gerryJfgyrDCITbsbgC1D6CrjSazPvyvkd3SU__g
 
 - France: TBA
 
@@ -29,11 +31,13 @@ https://docs.google.com/forms/d/e/1FAIpQLScXEW3CxwKO-b5trXdy6O1jVWS9RjZqIk0WQQgv
 
 - Portugal: https://docs.google.com/forms/d/e/1FAIpQLSc-BBbAsn6tL1HGnzP1PasaTpgFNTDbsz_QtNMB-ONCpnJGCA/viewform?usp=pp_url&entry.669676341=Todo+o+pa%C3%ADs&entry.1913824203=100&entry.2077258757=0
 
-- UK:
-https://docs.google.com/forms/d/e/1FAIpQLSeE_c3OwixgPI6ThdS6umYYBDbbih_AgziGM22CdC7IRDZJ7Q/viewform?entry.630726203=Entire%20country&entry.1861642347=100&entry.1525448731=0
+- UK: https://tinyurl.com/coronasurveysuk
 
-- USA
-https://docs.google.com/forms/d/e/1FAIpQLSdvDyzGRqiCjiJEn8H4aQ4rUDq4hVmp4opZKtwn9x4gUJabWw/viewform?entry.630726203=Entire+country&entry.1861642347=100&entry.1525448731=0
+  (links to) https://docs.google.com/forms/d/e/1FAIpQLSeE_c3OwixgPI6ThdS6umYYBDbbih_AgziGM22CdC7IRDZJ7Q/viewform?entry.630726203=Entire%20country&entry.1861642347=100&entry.1525448731=0
+
+- USA: https://tinyurl.com/coronasurveysusa
+
+  (links to) https://docs.google.com/forms/d/e/1FAIpQLSdvDyzGRqiCjiJEn8H4aQ4rUDq4hVmp4opZKtwn9x4gUJabWw/viewform?entry.630726203=Entire+country&entry.1861642347=100&entry.1525448731=0
 
 
 ## Motivation
