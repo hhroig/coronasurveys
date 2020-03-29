@@ -6,9 +6,9 @@
 
 [Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
 
-![Estimates for Portugal](docs/EstPTMar28.pdf)
+![Estimates for Portugal](docs/EstPTMar28.jpg)
 
-![Estimates for Spain](docs/EstSPMar28.pdf)
+![Estimates for Spain](docs/EstSPMar28.jpg)
 
 ## Latest Surveys
 
