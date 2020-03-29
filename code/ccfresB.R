@@ -46,7 +46,7 @@ url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geogra
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
-data<-data[data$geoId=="JP",]
+data<-data[data$geoId=="ES",]
 data<-list(confirmados=cumsum(rev(data$cases)),obitos=cumsum(rev(data$deaths)))
 
 size=length(data$confirmados)
@@ -68,25 +68,34 @@ for (rr in 0:(size-1))
 #fraction_reported=cCFRBaseline / (ccfr$cCFR*100) 
 
 
-populationJP<-1.27*10^8
+populationSP<-46754778
 survey_twitter<-rep(NaN,size)
 survey_gforms<-rep(NaN,size)
 
 #position 89 is March 28 results about March 27 cases
-#survey_twitter[76]<-(374.05/(762*150))*populationSP #14 Mar
-survey_gforms[89]<-337019 #27 Mar cf=1, pool 1
+#survey[23]=(11/(63*276))*populationPT #18 Mar
+#survey[25]=15/(45*276)*populationPT #20 Mar
+survey_twitter[76]<-(374.05/(762*150))*populationSP #14 Mar
+survey_twitter[78]<-(66.13/(85*150))*populationSP #16 Mar
+survey_twitter[80]<-(116.16/(120*150))*populationSP #16 Mar
+#survey_twitter[25]<-15/(45*150)*populationSP #20 Mar
+survey_gforms[85]<-1408474 #23 Mar cf=1, pool 6
+survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
+survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
-plot(data$obitos*400,log="y",ylim=c(1,1000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Japan",ylab="Total cases",lty=4)
+plot(data$obitos*400,log="y",xlim=c(40,size), ylim=c(1,10000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Spain",ylab="Total cases",lty=4)
 lines(data$confirmados)
 points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
 points(est_ccfr,pch=20)
-axis(side = 2, at = 10^seq(0, 6),labels=c("1","10","100","1,000","10,000","100,000","1,000,000"))
-abline(h=1000000,lty="dotted"); abline(h=100000,lty="dotted"); abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
+
+axis(side = 2, at = 10^seq(0, 7),labels=c("1","10","100","1,000","10,000","100,000","1,000,000","10,000,000"))
+abline(h=10000000,lty="dotted"); abline(h=1000000,lty="dotted"); abline(h=100000,lty="dotted"); abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
 axis(side=1,at=c(47,57,67,77,87),labels=c("Feb 14","Feb 24","Mar 5","Mar 15","Mar 25"))
 abline(v=47,lty="dotted"); abline(v=57,lty="dotted"); abline(v=67,lty="dotted"); abline(v=77,lty="dotted"); abline(v=87,lty="dotted");
+
 
 
 ### alternative plot with legend using ggplot2  
@@ -125,10 +134,10 @@ ggplot(data = dt_plot2, mapping = aes(x = days, y = value)) +
   #ylim(0, 100000) +
   scale_y_continuous(trans='log10', label = scientific_10,
                      breaks = 10^seq(0, 7)) +
-  scale_x_continuous(breaks = c(37, 47,57,67,77,87),
-                     labels = c("Feb 4", "Feb 14","Feb 24","Mar 5","Mar 15","Mar 25"),
-                     limits = c(20, 90)) +
-  ggtitle("Different estimates of COVID−19 cases in Japan") +
+  scale_x_continuous(breaks = c(47,57,67,77,87),
+                     labels = c("Feb 14","Feb 24","Mar 5","Mar 15","Mar 25"),
+                     limits = c(40, size)) +
+  ggtitle("Different estimates of COVID−19 cases in Spain") +
   theme_bw()+
   theme(axis.text = element_text(size = 15),
         axis.title = element_text(size = 15), 
@@ -144,3 +153,6 @@ ggplot(data = dt_plot2, mapping = aes(x = days, y = value)) +
                         values = c("solid", "dashed"),
                         breaks = c("confirmados", "obitos_400"),
                         label = c("infections", "deaths"))
+  
+  
+  

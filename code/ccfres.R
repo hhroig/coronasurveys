@@ -91,3 +91,26 @@ points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
 points(est_ccfr,pch=20)
 
+
+
+library(ggplot2)
+obitos_400 <- data$obitos*400
+obitos_400[obitos_400 == 0] <- NA
+dt_plot <- data.frame(obitos_400 = obitos_400,
+                      confirmados = data$confirmados, 
+                      est_ccfr = est_ccfr,
+                      days = 1:length(obitos_400))
+scientific_10 <- function(x) {
+  parse(text=gsub("e", " %*% 10^", scales::scientific_format()(x)))
+}
+
+ggplot(data = dt_plot, mapping = aes(x = days)) +
+  geom_line(mapping = aes(y = confirmados)) +
+  geom_line(mapping = aes(y = obitos_400), linetype = "dashed") +
+  ylab("Total Cases") + 
+  xlab("Days") +
+  #xlim(15, 30) +
+  #ylim(0, 100000) +
+  scale_y_continuous(trans='log10', label = scientific_10) +
+  ggtitle("Different estimates of COVID−19 cases in Spain") +
+  theme_bw()
