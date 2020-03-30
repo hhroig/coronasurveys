@@ -6,6 +6,13 @@
 
 [Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
 
+Case estimates for Portugal and Spain, March 28th 2020. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
+
+![Estimates for Portugal](doc/EstPTMar28.jpg)
+
+![Estimates for Spain](doc/EstSPMar28.jpg)
+
+
 ## Latest Surveys
 
 Please vote!!
@@ -125,6 +132,10 @@ Oluwasegun Ojo,
 IMDEA Networks & UC3M,
 Spain
 
+Antonio Ortega,
+USC,
+USA
+
 Paul Patras,
 U. Edinburgh,
 UK
@@ -133,13 +144,17 @@ Efstathios Stavrakis,
 Algolysis Ltd,
 Cyprus
 
-Pelayo Vallina,
-IMDEA Networks & UC3M,
-Spain
+Yuichi Tanaka,
+Tokyo University of Agriculture and Technology,
+Japan
 
 Christopher Thraves,
 U. Concepción,
 Chile
+
+Pelayo Vallina,
+IMDEA Networks & UC3M,
+Spain
 
 Lin Wang,
 Vrije Universiteit Amsterdam,
@@ -149,7 +164,7 @@ Netherlands
 
 Natalie Soto
 
-Yuichi Tanaka
+Rodrigo Irarrazaval
 
 ## Data Availability and License
 
