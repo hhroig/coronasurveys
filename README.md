@@ -12,7 +12,7 @@ Case estimates for Portugal, Spain, and Cyprus, March 29th 2020. Solid line is o
 
 ![Estimates for Spain](doc/EstSPMar29.jpg)
 
-![Estimates for Spain](doc/EstCYMar29.pdf)
+![Estimates for Cyprus](doc/EstCYMar29.jpg)
 
 ## Latest Surveys
 
