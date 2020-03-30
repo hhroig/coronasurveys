@@ -70,8 +70,8 @@ for (rr in 0:(size-1))
 
 
 populationCY<-1189265
-survey_twitter<-rep(NaN,size)
-survey_gforms<-rep(NaN,size)
+survey_twitter<-rep(NaN,size+1)
+survey_gforms<-rep(NaN,size+1)
 
 #position 18 is March 28 results about March 27 cases
 #survey[23]=(11/(63*276))*populationPT #18 Mar
@@ -81,18 +81,19 @@ survey_twitter[8]<-(4.03/(36*150))*populationCY #17 Mar
 #survey_twitter[80]<-(116.16/(120*150))*populationSP #16 Mar
 #survey_twitter[25]<-15/(45*150)*populationSP #20 Mar
 survey_gforms[15]<-7031 #24 Mar cf=1, pool 3
+survey_gforms[19]<-2267 #28 Mar cf=1, pool 3
 #survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
 #survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
-plot(data$obitos*400,log="y", ylim=c(1,10000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Cyprus",ylab="Total cases",lty=4)
+plot(data$obitos*400,log="y", xlim=c(1,size+1), ylim=c(1,10000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Cyprus",ylab="Total cases",lty=4)
 lines(data$confirmados)
 points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
 points(est_ccfr,pch=20)
 axis(side = 2, at = 10^seq(0, 4),labels=c("1","10","100","1,000","10,000"))
 abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
-axis(side=1,at=c(47,57,67,77,87),labels=c("Feb 14","Feb 24","Mar 5","Mar 15","Mar 25"))
-abline(v=47,lty="dotted"); abline(v=57,lty="dotted"); abline(v=67,lty="dotted"); abline(v=77,lty="dotted"); abline(v=87,lty="dotted");
+axis(side=1,at=c(6,11,16),labels=c("Mar 15","Mar 20","Mar 25"))
+abline(v=6,lty="dotted"); abline(v=11,lty="dotted"); abline(v=16,lty="dotted"); 
 

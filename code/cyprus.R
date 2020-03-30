@@ -1,6 +1,6 @@
 source("corona_surveys_estimate.R")
 
-# test for spain
+# test for cyprus
 
 estimates_cyprus_pool2 <- estimate_cases(file_path = "../data/CY-02-20200320-20200321.csv", country_population = 1189265)
 estimates_cyprus_pool3 <- estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265)
