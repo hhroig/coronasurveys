@@ -82,10 +82,11 @@ survey_twitter[80]<-(116.16/(120*150))*populationSP #16 Mar
 survey_gforms[85]<-1408474 #23 Mar cf=1, pool 6
 survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
 survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
+survey_gforms[90]<-2125610 #28 Mar cf=1, pool 9
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
-plot(data$obitos*400,log="y",xlim=c(40,size), ylim=c(1,10000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Spain",ylab="Total cases",lty=4)
+plot(data$obitos*400,log="y",xlim=c(40,size+1), ylim=c(1,10000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in Spain",ylab="Total cases",lty=4)
 lines(data$confirmados)
 points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
