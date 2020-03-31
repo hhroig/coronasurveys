@@ -32,6 +32,8 @@ Please complete your country survey!!
 
 - Japan: https://tinyurl.com/coronasurveysjapan
 
+- Netherlands: https://tinyurl.com/coronasurveynetherlands
+
 - Spain: https://tinyurl.com/coronasurveysspain
 
 - Portugal: https://tinyurl.com/coronasurveysportugal
