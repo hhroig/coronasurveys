@@ -11,11 +11,11 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
   
   
   # remove outliers from the reach column
-  reach_cutoff <-min(boxplot(dt$reach, plot = F)$out)
-  if(sum(dt$reach >= reach_cutoff) > 0 ){
-    write.table(dt[dt$reach >= reach_cutoff, ],
-                file = paste0("outliers_removed/", file_name, "_", "outliers_reach.txt"),
-                append = T) # write out outliers from reach column to the ouliers removed folder
+  reach_cutoff <-(boxplot.stats(dt$reach)$stats[5]) # changed cutoff to upper fence
+  if(sum(dt$reach > reach_cutoff) > 0 ){
+   # write.table(dt[dt$reach >= reach_cutoff, ],
+   #             file = paste0("outliers_removed/", file_name, "_", "outliers_reach.txt"),
+   #              append = T) # write out outliers from reach column to the ouliers removed folder
     n_reach_outliers <- sum(dt$reach >= reach_cutoff) #number of outliers removed based on reach
     dt <- dt[dt$reach < reach_cutoff, ]
   }else{
@@ -26,9 +26,9 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
   # remove outliers based on max ratio of 0.3
   dt$ratio <- dt$cases/dt$reach
   if(sum(dt$ratio >= max_ratio) > 0 ){
-    write.table(dt[dt$ratio >= max_ratio, ],
-                file = paste0("outliers_removed/", file_name, "_", "outliers_max_ratio.txt"),
-                append = T) # write out outliers based on max_Ratio
+    #write.table(dt[dt$ratio >= max_ratio, ],
+    #            file = paste0("outliers_removed/", file_name, "_", "outliers_max_ratio.txt"),
+    #            append = T) # write out outliers based on max_Ratio
     n_maxratio_outliers <- sum(dt$ratio >= max_ratio)
     dt <- dt[dt$ratio < max_ratio, ]
   }else{
