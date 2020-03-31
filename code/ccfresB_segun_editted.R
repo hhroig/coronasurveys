@@ -48,8 +48,10 @@ data <- read_excel(tf)
 
 data<-data[data$geoId=="ES",]
 dt <- data[rev(1:nrow(data)),]
-
+dt$cum_cases <- cumsum(dt$cases)
 data<-list(confirmados=cumsum(rev(data$cases)),obitos=cumsum(rev(data$deaths)))
+data$obitos <- c(data$obitos, 7340 )
+data$confirmados <- c(data$confirmados, 85195 )
 
 size=length(data$confirmados)
 est_ccfr<-rep(NaN,size)
@@ -69,6 +71,7 @@ for (rr in 0:(size-1)){
     
     est_ccfr[last]<-data$confirmados[last]*1/fraction_reported
 }
+
 #data2 <- list(confirmados=diff(data$confirmados),obitos=diff(data$obitos))
 #ccfr<-scale_cfr(data2, delay_fun = hospitalisation_to_death_truncated)
 #
@@ -82,16 +85,16 @@ survey_gforms<-rep(NaN,size)
 #position 89 is March 28 results about March 27 cases
 #survey[23]=(11/(63*276))*populationPT #18 Mar
 #survey[25]=15/(45*276)*populationPT #20 Mar
-survey_twitter[75]<-(374.05/(762*150))*populationSP #14 Mar
-survey_twitter[77]<-(66.13/(85*150))*populationSP #16 Mar
-survey_twitter[79]<-(116.16/(120*150))*populationSP #18 Mar
+survey_twitter[76]<-(374.05/(762*150))*populationSP #14 Mar
+survey_twitter[78]<-(66.13/(85*150))*populationSP #16 Mar
+survey_twitter[80]<-(116.16/(120*150))*populationSP #18 Mar
 #survey_twitter[25]<-15/(45*150)*populationSP #20 Mar
-survey_gforms[84]<-1408474 #23 Mar cf=1, pool 6 # Mar 23 is row 84
-survey_gforms[86]<-1689103 #25 Mar cf=1, pool 7
-survey_gforms[88]<-2061923 #27 Mar cf=1, pool 8
-survey_gforms[89]<-2125610 #28 Mar cf=1, pool 9
-survey_gforms[90]<-2400167 #29 Mar cf=1, poll 10
-survey_gforms[91]<-2361650 #30 Mar cf=1, poll 11
+survey_gforms[85]<-1408474 #23 Mar cf=1, pool 6 # Mar 23 is row 84
+survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
+survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
+survey_gforms[90]<-2125610 #28 Mar cf=1, pool 9
+survey_gforms[91]<-2400167 #29 Mar cf=1, poll 10
+survey_gforms[92]<-2361650 #30 Mar cf=1, poll 11
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
@@ -103,13 +106,19 @@ points(est_ccfr,pch=20)
 
 axis(side = 2, at = 10^seq(0, 7),labels=c("1","10","100","1,000","10,000","100,000","1,000,000","10,000,000"))
 abline(h=10000000,lty="dotted"); abline(h=1000000,lty="dotted"); abline(h=100000,lty="dotted"); abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
-axis(side=1,at=c(46,56,66,76, 86),labels=c("Feb 14","Feb 24","Mar 5","Mar 15","Mar 25"))
-abline(v=46,lty="dotted");
-abline(v=56,lty="dotted");
-abline(v=66,lty="dotted");
-abline(v=76,lty="dotted");
-abline(v=86,lty="dotted");
+axis(side=1,at=c(47,57,67,77,87),labels=c("Feb 14","Feb 24","Mar 5","Mar 15","Mar 25"))
+abline(v=47,lty="dotted");
+abline(v=57,lty="dotted");
+abline(v=67,lty="dotted");
+abline(v=77,lty="dotted");
+abline(v=87,lty="dotted");
 
+
+write.csv(data.frame(confirmados = data$confirmados,
+                     obitos_400 = data$obitos, 
+                     survey_twitter = survey_twitter,
+                     survey_gforms = survey_gforms,
+                     est_ccfr = est_ccfr), "esp_mar30_plot.csv")
 
 
 ### alternative plot with legend using ggplot2  
