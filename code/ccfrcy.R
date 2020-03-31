@@ -69,21 +69,20 @@ for (rr in 0:(size-1))
 #fraction_reported=cCFRBaseline / (ccfr$cCFR*100) 
 
 
-populationCY<-1189265
+populationCY<-1189265-300000
 survey_twitter<-rep(NaN,size+1)
 survey_gforms<-rep(NaN,size+1)
 
 #position 18 is March 28 results about March 27 cases
-#survey[23]=(11/(63*276))*populationPT #18 Mar
-#survey[25]=15/(45*276)*populationPT #20 Mar
 survey_twitter[8]<-(4.03/(36*150))*populationCY #17 Mar
-#survey_twitter[78]<-(66.13/(85*150))*populationSP #16 Mar
-#survey_twitter[80]<-(116.16/(120*150))*populationSP #16 Mar
-#survey_twitter[25]<-15/(45*150)*populationSP #20 Mar
-survey_gforms[15]<-7031 #24 Mar cf=1, pool 3
-survey_gforms[19]<-2267 #28 Mar cf=1, pool 3
-#survey_gforms[87]<-1689103 #25 Mar cf=1, pool 7
-#survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
+
+#survey_gforms[15]<-7031 #24 Mar cf=1, pool 3
+#24 Mar cf=1, pool 3
+survey_gforms[15]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+#survey_gforms[19]<-2267 
+#28 Mar cf=1, pool 4
+survey_gforms[19]<-estimate_cases(file_path = "../data/CY-04-20200327-20200328.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
