@@ -32,7 +32,7 @@ Please complete your country survey!!
 
 - Japan: https://tinyurl.com/coronasurveysjapan
 
-- Netherlands: https://tinyurl.com/coronasurveynetherlands
+- Netherlands: https://tinyurl.com/coronasurveysnetherlands
 
 - Spain: https://tinyurl.com/coronasurveysspain
 
