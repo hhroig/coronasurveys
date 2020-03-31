@@ -42,7 +42,7 @@ scale_cfr <- function(data_1_in, death_incidence, delay_fun){
 
 
 #url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
-url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-28.xlsx"
+url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-30.xlsx"
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
@@ -74,14 +74,27 @@ survey_twitter<-rep(NaN,size+1)
 survey_gforms<-rep(NaN,size+1)
 
 #position 18 is March 28 results about March 27 cases
-survey_twitter[8]<-(4.03/(36*150))*populationCY #17 Mar
+survey_twitter[8]<-(4/(36*150))*populationCY #17 Mar
+#dunbar
+#21 Mar Cf=1, poll 2
+survey_gforms[12]<-estimate_cases(file_path = "../data/CY-02-20200320-20200321.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+#25 Mar cf=1, poll 3
+survey_gforms[16]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+#28 Mar cf=1, poll 4
+survey_gforms[19]<-estimate_cases(file_path = "../data/CY-04-20200327-20200328.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+#30 Mar cf=1, poll 5
+survey_gforms[21]<-estimate_cases(file_path = "../data/CY-05-20200329-20200330.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
 
-#survey_gforms[15]<-7031 #24 Mar cf=1, pool 3
-#24 Mar cf=1, pool 3
-survey_gforms[15]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
-#survey_gforms[19]<-2267 
-#28 Mar cf=1, pool 4
-survey_gforms[19]<-estimate_cases(file_path = "../data/CY-04-20200327-20200328.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+#estimated
+#21 Mar Cf=1, poll 2
+#survey_gforms[12]<-estimate_cases(file_path = "../data/CY-02-20200320-20200321e.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+#25 Mar cf=1, poll 3
+#survey_gforms[16]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+#28 Mar cf=1, poll 4
+#survey_gforms[19]<-estimate_cases(file_path = "../data/CY-04-20200327-20200328.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+#30 Mar cf=1, poll 5
+#survey_gforms[21]<-estimate_cases(file_path = "../data/CY-05-20200329-20200330.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+
 
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
@@ -93,6 +106,7 @@ points(survey_gforms,pch=24)
 points(est_ccfr,pch=20)
 axis(side = 2, at = 10^seq(0, 4),labels=c("1","10","100","1,000","10,000"))
 abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
-axis(side=1,at=c(6,11,16),labels=c("Mar 15","Mar 20","Mar 25"))
-abline(v=6,lty="dotted"); abline(v=11,lty="dotted"); abline(v=16,lty="dotted"); 
+axis(side=1,at=c(6,11,16,21),labels=c("Mar 15","Mar 20","Mar 25","Mar 30"))
+abline(v=6,lty="dotted"); abline(v=11,lty="dotted"); abline(v=16,lty="dotted");abline(v=21,lty="dotted");  
+#6,11,16,19
 
