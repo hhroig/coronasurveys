@@ -81,3 +81,16 @@ Timestamp,Region,Reach,Cases
 "2020/03/30 04:49:07 PM UTC",California,25,
 "2020/03/30 05:02:48 PM UTC",California,80,
 "2020/03/30 06:29:21 PM UTC",California,100,
+"2020/03/31 10:58:48 AM UTC",Massachusetts,10,1
+"2020/03/31 07:54:11 PM UTC",Kansas,100,
+"2020/03/31 10:04:10 PM UTC","Entire country",1,
+"2020/04/01 04:45:18 AM UTC",Louisiana,20,2
+"2020/04/01 09:39:42 AM UTC",California,50,
+"2020/04/01 01:52:46 PM UTC",Massachusetts,14,
+"2020/04/01 01:55:45 PM UTC",Massachusetts,2,1
+"2020/04/01 01:56:05 PM UTC",Massachusetts,50,
+"2020/04/01 02:01:05 PM UTC",Massachusetts,2,
+"2020/04/01 02:24:07 PM UTC",Massachusetts,100,7
+"2020/04/01 02:29:23 PM UTC",Massachusetts,50,2
+"2020/04/01 02:48:15 PM UTC",Massachusetts,50,
+"2020/04/01 04:17:30 PM UTC",Massachusetts,6000000,6600
