@@ -26,6 +26,8 @@ Please complete your country survey!!
 
 - Cyprus: https://tinyurl.com/coronasurveyscyprus
 
+- Ecuador: https://tinyurl.com/coronasurveysecuador
+
 - France: https://tinyurl.com/coronasurveysfrance
 
 - Germany: https://tinyurl.com/coronasurveysgermany
@@ -189,14 +191,18 @@ All the data in this project is distributed under the Open Data Commons Attribut
 
 In the news:
 
-- EFE: https://www.efe.com/efe/espana/destacada/un-estudio-cifra-en-mas-de-2-millones-los-casos-covid-19-espana/10011-4210630
+- EFE (April 1st, 2020): https://www.efe.com/efe/espana/destacada/un-estudio-cifra-en-mas-de-2-millones-los-casos-covid-19-espana/10011-4210630
 
-- El Pais: https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
+- EFE (April 1st, 2020): https://www.efe.com/efe/espana/efefuturo/un-estudio-cifra-en-mas-de-2-millones-los-casos-covid-19-espana/50000905-4210665?fbclid=IwAR1OHlWSJbjdM7LPDmAYMbMllTxDhrQr_hid_yR5d9Z1zZalCvjyWjti4fw
+
+- El Pais (March 25th, 2020): https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
 
 ## Contact
 
 Twitter: https://twitter.com/coronasurveys
 
 Facebook: https://www.facebook.com/groups/209076966867175/
+
+Instagram: https://www.instagram.com/coronasurveys/
 
 E-mail: coronasurveys@gmail.com
