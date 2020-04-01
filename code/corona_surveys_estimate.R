@@ -45,12 +45,14 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
   
   naif_cases<- country_population * cases_per_reach * correction_factor
   dunbar_cases<- country_population * (sum(dt$cases)/dunbar_reach) * correction_factor
+  prop_cases <- country_population* mean(dt$cases/dt$reach) * correction_factor
   
   return(list(mean_cases = mean_cases,
               mean_reach = mean_reach,
               cases_per_reach = cases_per_reach,
               estimated_cases = naif_cases,
               dunbar_cases = dunbar_cases,
+              prop_cases = prop_cases,
               cases_breakdown = table(dt$cases),
               cases_breakdown_region = table(dt$region, dt$cases),
               n_reach_outliers = n_reach_outliers,

@@ -84,7 +84,7 @@ survey_gforms[36]<-estimate_cases(file_path = "../data/PT-06-20200329-20200331.c
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
-plot(data$obitos*400,log="y",xlim=c(5,size+1), ylim=c(1,120000),yaxt="n",xaxt="n", type="l",xlab="Days",main="Different estimates of COVID-19 cases in Portugal",ylab="Total cases",lty=4)
+plot(data$obitos*400,log="y",xlim=c(5,size+1), ylim=c(1,120000),yaxt="n",xaxt="n", type="l",xlab="Days",main="@CoronaSurveys estimates of COVID-19 cases in Portugal",ylab="Total cases",lty=4)
 lines(data$confirmados)
 points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
