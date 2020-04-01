@@ -1,3 +1,9 @@
+calculate_CI <- function(p_est, level, pop_size) {
+  z <- qnorm(level+(1-level)/2)
+  se <- sqrt(p_est*(1-p_est))/sqrt(pop_size)
+  return(list(low=p_est-z*se, upp=p_est+z*se, error=z*se))
+}
+
 estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", country_population = 46754778,
                            max_ratio = .3, correction_factor = 1) {
   # read data
@@ -43,6 +49,9 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
   dunbar_reach <- 150*nrow(dt)
   cases_per_reach <-sum(dt$cases)/sum(dt$reach)
   
+  
+  out <- calculate_CI(p_est=cases_per_reach, level=0.95, pop_size=sum(dt$reach))
+  
   naif_cases<- country_population * cases_per_reach * correction_factor
   dunbar_cases<- country_population * (sum(dt$cases)/dunbar_reach) * correction_factor
   prop_cases <- country_population* mean(dt$cases/dt$reach) * correction_factor
@@ -50,6 +59,7 @@ estimate_cases <- function(file_path = "../data/ES-06-20200322-20200323.csv", co
   return(list(mean_cases = mean_cases,
               mean_reach = mean_reach,
               cases_per_reach = cases_per_reach,
+              error=out$error*country_population*correction_factor,
               estimated_cases = naif_cases,
               dunbar_cases = dunbar_cases,
               prop_cases = prop_cases,
