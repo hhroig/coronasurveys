@@ -203,4 +203,6 @@ Twitter: https://twitter.com/coronasurveys
 
 Facebook: https://www.facebook.com/groups/209076966867175/
 
+Instagram: https://www.instagram.com/coronasurveys/
+
 E-mail: coronasurveys@gmail.com
