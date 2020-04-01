@@ -42,7 +42,7 @@ scale_cfr <- function(data_1_in, death_incidence, delay_fun){
 
 
 #url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
-url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-30.xlsx"
+url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-31.xlsx"
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
@@ -69,7 +69,7 @@ for (rr in 0:(size-1))
 #fraction_reported=cCFRBaseline / (ccfr$cCFR*100) 
 
 
-populationCY<-1189265-300000
+populationCY<-890900
 survey_twitter<-rep(NaN,size+1)
 survey_gforms<-rep(NaN,size+1)
 
@@ -77,17 +77,17 @@ survey_gforms<-rep(NaN,size+1)
 survey_twitter[8]<-(4/(36*150))*populationCY #17 Mar
 #dunbar
 #21 Mar Cf=1, poll 2
-survey_gforms[12]<-estimate_cases(file_path = "../data/CY-02-20200320-20200321.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+survey_gforms[12]<-estimate_cases(file_path = "../data/CY-02-20200320-20200321.csv", country_population = 890900, correction_factor = 1)$dunbar_cases
 #25 Mar cf=1, poll 3
-survey_gforms[16]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+survey_gforms[16]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 890900, correction_factor = 1)$dunbar_cases
 #28 Mar cf=1, poll 4
-survey_gforms[19]<-estimate_cases(file_path = "../data/CY-04-20200327-20200328.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+survey_gforms[19]<-estimate_cases(file_path = "../data/CY-04-20200327-20200328.csv", country_population = 890900, correction_factor = 1)$dunbar_cases
 #30 Mar cf=1, poll 5
-survey_gforms[21]<-estimate_cases(file_path = "../data/CY-05-20200329-20200330.csv", country_population = 1189265-300000, correction_factor = 1)$dunbar_cases
+survey_gforms[21]<-estimate_cases(file_path = "../data/CY-05-20200329-20200330.csv", country_population = 890900, correction_factor = 1)$dunbar_cases
 
 #estimated
 #21 Mar Cf=1, poll 2
-#survey_gforms[12]<-estimate_cases(file_path = "../data/CY-02-20200320-20200321e.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
+#survey_gforms[12]<-estimate_cases(file_path = "../data/CY-02-20200320-20200321.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
 #25 Mar cf=1, poll 3
 #survey_gforms[16]<-estimate_cases(file_path = "../data/CY-03-20200323-20200325.csv", country_population = 1189265-300000, correction_factor = 1)$estimated_cases
 #28 Mar cf=1, poll 4
