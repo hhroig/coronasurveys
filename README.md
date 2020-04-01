@@ -189,6 +189,8 @@ All the data in this project is distributed under the Open Data Commons Attribut
 
 In the news:
 
+- EFE: https://www.efe.com/efe/espana/destacada/un-estudio-cifra-en-mas-de-2-millones-los-casos-covid-19-espana/10011-4210630
+
 - El Pais: https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
 
 ## Contact
