@@ -1,83 +1,83 @@
 Timestamp,Region,Reach,Cases
-"2020/03/22 7:50:27 PM GMT+1",Massachusetts,200,
-"2020/03/22 8:12:49 PM GMT+1",Maryland,100,
-"2020/03/22 8:16:08 PM GMT+1",IllinoisIndiana,20,1
-"2020/03/22 8:21:30 PM GMT+1",Florida,10,1
-"2020/03/22 8:56:57 PM GMT+1",Massachusetts,100,2
-"2020/03/22 9:07:48 PM GMT+1",IllinoisIndiana,100,
-"2020/03/22 9:25:50 PM GMT+1",Maryland,100,
-"2020/03/22 9:50:37 PM GMT+1",Massachusetts,100,
-"2020/03/22 9:55:08 PM GMT+1",Massachusetts,20,
-"2020/03/22 9:58:00 PM GMT+1",Massachusetts,75,5
-"2020/03/22 10:00:12 PM GMT+1","North Carolina",150,
-"2020/03/22 10:02:26 PM GMT+1","New Jersey",100,3
-"2020/03/22 10:06:43 PM GMT+1",Louisiana,100,1
-"2020/03/22 10:10:28 PM GMT+1","Rhode Island",150,
-"2020/03/22 10:17:24 PM GMT+1",California,100,
-"2020/03/22 10:19:54 PM GMT+1","New York",500,
-"2020/03/22 10:54:12 PM GMT+1",Massachusetts,50,
-"2020/03/22 11:02:23 PM GMT+1",Massachusetts,30,
-"2020/03/22 11:21:11 PM GMT+1","South Carolina",100,
-"2020/03/22 11:59:39 PM GMT+1",Michigan,45,2
-"2020/03/23 12:07:44 AM GMT+1",California,100,
-"2020/03/23 1:10:10 AM GMT+1",Illinois,300,10
-"2020/03/23 1:34:48 AM GMT+1",Massachusetts,80,1
-"2020/03/23 1:41:43 AM GMT+1",California,12,
-"2020/03/23 1:42:06 AM GMT+1","New York",50,
-"2020/03/23 1:42:36 AM GMT+1",Florida,10,
-"2020/03/23 1:43:51 AM GMT+1",Colorado,30,1
-"2020/03/23 1:50:13 AM GMT+1",Virginia,20,4
-"2020/03/23 1:50:54 AM GMT+1",Virginia,50,1
-"2020/03/23 1:53:45 AM GMT+1","New York",40,3
-"2020/03/23 1:53:49 AM GMT+1",Arizona,500,
-"2020/03/23 2:00:05 AM GMT+1",Florida,200,
-"2020/03/23 2:15:10 AM GMT+1",Florida,50,2
-"2020/03/23 2:18:04 AM GMT+1",California,100,5
-"2020/03/23 4:13:13 AM GMT+1",Massachusetts,100,
-"2020/03/23 4:26:03 AM GMT+1","New York",300,2
-"2020/03/23 4:35:24 AM GMT+1",Arkansas,10,
-"2020/03/23 5:04:19 AM GMT+1",Missouri,4,
-"2020/03/23 7:13:21 AM GMT+1",Arizona,25,
-"2020/03/23 7:24:51 AM GMT+1",Oregon,75,10
-"2020/03/23 7:46:03 AM GMT+1",Maryland,30,5
-"2020/03/23 8:46:20 AM GMT+1",California,106,20
-"2020/03/23 8:49:11 AM GMT+1",Utah,12,1
-"2020/03/23 9:23:50 AM GMT+1",California,400,
-"2020/03/23 11:04:52 AM GMT+1","New York",1000,3
-"2020/03/23 12:06:28 PM GMT+1",Kansas,300,
-"2020/03/23 12:23:38 PM GMT+1",Ohio,20,
-"2020/03/23 2:21:02 PM GMT+1","Entire country",100,
-"2020/03/23 4:11:09 PM GMT+1","New Hampshire",100,
-"2020/03/23 4:14:45 PM GMT+1","New Jersey",100,
-"2020/03/23 10:45:26 PM GMT+1",Indiana,21,
-"2020/03/24 12:26:54 PM GMT+1",Massachusetts,50,
-"2020/03/24 1:20:19 PM GMT+1",Massachusetts,100,
-"2020/03/24 1:22:57 PM GMT+1",Pennsylvania,30,2
-"2020/03/24 1:52:13 PM GMT+1","New Jersey",100,
-"2020/03/25 10:08:48 PM GMT+1",Virginia,20,
-"2020/03/25 10:09:53 PM GMT+1",Massachusetts,100,
-"2020/03/25 10:10:53 PM GMT+1",Virginia,100,10
-"2020/03/25 10:35:51 PM GMT+1",Illinois,100,10
-"2020/03/26 8:09:18 AM GMT+1","New York",100,
-"2020/03/26 1:50:33 PM GMT+1",Indiana,7,
-"2020/03/27 6:26:50 AM GMT+1",Utah,150,1
-"2020/03/27 7:08:34 PM GMT+1",Connecticut,100,1
-"2020/03/29 3:27:05 AM GMT+2",Massachusetts,5,
-"2020/03/29 5:27:05 AM GMT+2",Oregon,1,
-"2020/03/29 10:54:55 AM GMT+2","South Carolina",100,
-"2020/03/29 11:17:33 AM GMT+2","New Jersey",10,
-"2020/03/30 1:03:47 AM GMT+2",Michigan,80,
-"2020/03/30 1:22:44 AM GMT+2",California,50,
-"2020/03/30 1:33:53 AM GMT+2",California,100,
-"2020/03/30 1:39:47 AM GMT+2",California,4,
-"2020/03/30 2:17:32 AM GMT+2",California,100,3
-"2020/03/30 2:20:11 AM GMT+2",California,100,
-"2020/03/30 2:41:06 AM GMT+2",Hawaii,10,
-"2020/03/30 2:41:31 AM GMT+2",Georgia,20,
-"2020/03/30 3:13:47 AM GMT+2",Arizona,6,
-"2020/03/30 3:42:32 AM GMT+2",California,30,
-"2020/03/30 4:58:00 AM GMT+2",California,100,
-"2020/03/30 1:19:02 PM GMT+2","New York",20,3
-"2020/03/30 6:49:07 PM GMT+2",California,25,
-"2020/03/30 7:02:48 PM GMT+2",California,80,
-"2020/03/30 8:29:21 PM GMT+2",California,100,
+"2020/03/22 06:50:27 PM UTC",Massachusetts,200,
+"2020/03/22 07:12:49 PM UTC",Maryland,100,
+"2020/03/22 07:16:08 PM UTC",IllinoisIndiana,20,1
+"2020/03/22 07:21:30 PM UTC",Florida,10,1
+"2020/03/22 07:56:57 PM UTC",Massachusetts,100,2
+"2020/03/22 08:07:48 PM UTC",IllinoisIndiana,100,
+"2020/03/22 08:25:50 PM UTC",Maryland,100,
+"2020/03/22 08:50:37 PM UTC",Massachusetts,100,
+"2020/03/22 08:55:08 PM UTC",Massachusetts,20,
+"2020/03/22 08:58:00 PM UTC",Massachusetts,75,5
+"2020/03/22 09:00:12 PM UTC","North Carolina",150,
+"2020/03/22 09:02:26 PM UTC","New Jersey",100,3
+"2020/03/22 09:06:43 PM UTC",Louisiana,100,1
+"2020/03/22 09:10:28 PM UTC","Rhode Island",150,
+"2020/03/22 09:17:24 PM UTC",California,100,
+"2020/03/22 09:19:54 PM UTC","New York",500,
+"2020/03/22 09:54:12 PM UTC",Massachusetts,50,
+"2020/03/22 10:02:23 PM UTC",Massachusetts,30,
+"2020/03/22 10:21:11 PM UTC","South Carolina",100,
+"2020/03/22 10:59:39 PM UTC",Michigan,45,2
+"2020/03/22 11:07:44 PM UTC",California,100,
+"2020/03/23 12:10:10 AM UTC",Illinois,300,10
+"2020/03/23 12:34:48 AM UTC",Massachusetts,80,1
+"2020/03/23 12:41:43 AM UTC",California,12,
+"2020/03/23 12:42:06 AM UTC","New York",50,
+"2020/03/23 12:42:36 AM UTC",Florida,10,
+"2020/03/23 12:43:51 AM UTC",Colorado,30,1
+"2020/03/23 12:50:13 AM UTC",Virginia,20,4
+"2020/03/23 12:50:54 AM UTC",Virginia,50,1
+"2020/03/23 12:53:45 AM UTC","New York",40,3
+"2020/03/23 12:53:49 AM UTC",Arizona,500,
+"2020/03/23 01:00:05 AM UTC",Florida,200,
+"2020/03/23 01:15:10 AM UTC",Florida,50,2
+"2020/03/23 01:18:04 AM UTC",California,100,5
+"2020/03/23 03:13:13 AM UTC",Massachusetts,100,
+"2020/03/23 03:26:03 AM UTC","New York",300,2
+"2020/03/23 03:35:24 AM UTC",Arkansas,10,
+"2020/03/23 04:04:19 AM UTC",Missouri,4,
+"2020/03/23 06:13:21 AM UTC",Arizona,25,
+"2020/03/23 06:24:51 AM UTC",Oregon,75,10
+"2020/03/23 06:46:03 AM UTC",Maryland,30,5
+"2020/03/23 07:46:20 AM UTC",California,106,20
+"2020/03/23 07:49:11 AM UTC",Utah,12,1
+"2020/03/23 08:23:50 AM UTC",California,400,
+"2020/03/23 10:04:52 AM UTC","New York",1000,3
+"2020/03/23 11:06:28 AM UTC",Kansas,300,
+"2020/03/23 11:23:38 AM UTC",Ohio,20,
+"2020/03/23 01:21:02 PM UTC","Entire country",100,
+"2020/03/23 03:11:09 PM UTC","New Hampshire",100,
+"2020/03/23 03:14:45 PM UTC","New Jersey",100,
+"2020/03/23 09:45:26 PM UTC",Indiana,21,
+"2020/03/24 11:26:54 AM UTC",Massachusetts,50,
+"2020/03/24 12:20:19 PM UTC",Massachusetts,100,
+"2020/03/24 12:22:57 PM UTC",Pennsylvania,30,2
+"2020/03/24 12:52:13 PM UTC","New Jersey",100,
+"2020/03/25 09:08:48 PM UTC",Virginia,20,
+"2020/03/25 09:09:53 PM UTC",Massachusetts,100,
+"2020/03/25 09:10:53 PM UTC",Virginia,100,10
+"2020/03/25 09:35:51 PM UTC",Illinois,100,10
+"2020/03/26 07:09:18 AM UTC","New York",100,
+"2020/03/26 12:50:33 PM UTC",Indiana,7,
+"2020/03/27 05:26:50 AM UTC",Utah,150,1
+"2020/03/27 06:08:34 PM UTC",Connecticut,100,1
+"2020/03/29 01:27:05 AM UTC",Massachusetts,5,
+"2020/03/29 03:27:05 AM UTC",Oregon,1,
+"2020/03/29 08:54:55 AM UTC","South Carolina",100,
+"2020/03/29 09:17:33 AM UTC","New Jersey",10,
+"2020/03/29 11:03:47 PM UTC",Michigan,80,
+"2020/03/29 11:22:44 PM UTC",California,50,
+"2020/03/29 11:33:53 PM UTC",California,100,
+"2020/03/29 11:39:47 PM UTC",California,4,
+"2020/03/30 12:17:32 AM UTC",California,100,3
+"2020/03/30 12:20:11 AM UTC",California,100,
+"2020/03/30 12:41:06 AM UTC",Hawaii,10,
+"2020/03/30 12:41:31 AM UTC",Georgia,20,
+"2020/03/30 01:13:47 AM UTC",Arizona,6,
+"2020/03/30 01:42:32 AM UTC",California,30,
+"2020/03/30 02:58:00 AM UTC",California,100,
+"2020/03/30 11:19:02 AM UTC","New York",20,3
+"2020/03/30 04:49:07 PM UTC",California,25,
+"2020/03/30 05:02:48 PM UTC",California,80,
+"2020/03/30 06:29:21 PM UTC",California,100,
