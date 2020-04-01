@@ -1,20 +1,24 @@
 # @CoronaSurveys: Monitoring of COVID-19 incidence via open polls
 
-## Latest Reports
+## Motivation
 
-**First report with the estimates of COVID-19 cases in Spain and Portugal**
+The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
 
-[Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
+## Objective
 
-Latest case estimates for Portugal and Spain. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
+The objective of this study is the collection and publication of data concerning the number of people that show symptoms compatible with COVID-19 in different countries. Hopefully, this data will be useful to estimate the number of infected persons with the COVID-19 virus at a given point in time in these countries, and the evolution of this number over time.
 
-![Estimates for Portugal](doc/EstPTMar29.jpg)
+## How you can help
 
-![Estimates for Spain](doc/EstSPMar30.png)
+Please complete one of our surveys! Choose your country of residence and tell us about the number of cases (suspected or confirmed) you know about. No personal information is stored in these surveys. Because each of us can provide information about the situation among our direct contacts, in aggregate we are able to get rough estimates of total cases.
+
+Because we are tracking the evolution of this epidemic over time, once you have completed the survey, please remember to come back and update the survey every day. And finally, you can help us by asking your friends, colleagues and relatives to complete the survey as well!
+
+Thank you!
 
 ## Latest Surveys
 
-Please vote!!
+Please complete your country survey!!  
 
 - Argentina: https://tinyurl.com/coronasurveysargentina
 
@@ -32,6 +36,8 @@ Please vote!!
 
 - Japan: https://tinyurl.com/coronasurveysjapan
 
+- Netherlands: https://tinyurl.com/coronasurveysnetherlands
+
 - Spain: https://tinyurl.com/coronasurveysspain
 
 - Portugal: https://tinyurl.com/coronasurveysportugal
@@ -40,13 +46,19 @@ Please vote!!
 
 - USA: https://tinyurl.com/coronasurveysusa
 
-## Motivation
 
-The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
+## Latest Reports
 
-## Objective
- 
-The objective of this study is the collection and publication of data concerning the number of people that show symptoms compatible with COVID-19 in different countries. Hopefully, this data will be useful to estimate the number of infected persons with the COVID-19 virus at a given point in time in these countries, and the evolution of this number over time.
+**First report with the estimates of COVID-19 cases in Spain and Portugal**
+
+[Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
+
+Latest case estimates for Portugal and Spain. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
+
+![Estimates for Portugal](doc/EstPTMar29.jpg)
+
+![Estimates for Spain](doc/EstSPMar30.png)
+
 
 ## Methodology
 
