@@ -26,6 +26,8 @@ Please complete your country survey!!
 
 - Cyprus: https://tinyurl.com/coronasurveyscyprus
 
+- Ecuador: https://tinyurl.com/coronasurveysecuador
+
 - France: https://tinyurl.com/coronasurveysfrance
 
 - Germany: https://tinyurl.com/coronasurveysgermany
