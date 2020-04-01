@@ -1,6 +1,7 @@
 #install.packages("readxl")
 library(readxl)
 library(httr)
+source("corona_surveys_estimate.R")
 
 zmeanHDT <- 13
 zsdHDT <- 12.7
@@ -42,7 +43,7 @@ scale_cfr <- function(data_1_in, death_incidence, delay_fun){
 
 
 #url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
-url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-30.xlsx"
+url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-04-01.xlsx"
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
@@ -95,6 +96,8 @@ survey_gforms[89]<-2061923 #27 Mar cf=1, pool 8
 survey_gforms[90]<-2125610 #28 Mar cf=1, pool 9
 survey_gforms[91]<-2400167 #29 Mar cf=1, poll 10
 survey_gforms[92]<-2361650 #30 Mar cf=1, poll 11
+survey_gforms[93] <- estimate_cases(file_path = "../data/ES-12-20200331-20200401.csv", country_population = 46754778)$estimated_cases  #31 Mar cf=1, poll 11
+
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
