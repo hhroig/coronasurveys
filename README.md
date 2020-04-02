@@ -194,6 +194,8 @@ All the data in this project is distributed under the Open Data Commons Attribut
 
 In the news:
 
+- madri+d (April 2nd, 2020): https://www.madrimasd.org/notiweb/noticias/un-investigador-imdea-networks-cifra-en-mas-dos-millones-los-casos-sintomaticos-actuales-covid-19-en-espana#utm_source=notiweb_newsletter&utm_medium=email&utm_campaign=noti1_02apr20
+
 - EFE (April 1st, 2020): https://www.efe.com/efe/espana/destacada/un-estudio-cifra-en-mas-de-2-millones-los-casos-covid-19-espana/10011-4210630
 
 - EFE (April 1st, 2020): https://www.efe.com/efe/espana/efefuturo/un-estudio-cifra-en-mas-de-2-millones-los-casos-covid-19-espana/50000905-4210665?fbclid=IwAR1OHlWSJbjdM7LPDmAYMbMllTxDhrQr_hid_yR5d9Z1zZalCvjyWjti4fw
