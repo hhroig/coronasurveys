@@ -138,10 +138,31 @@ plot(data$deaths*400,log="y", xlim=c(45,size+3), ylim=c(1,2000000),yaxt="n",xaxt
 lines(data$cases)
 data$cases
 # uncomment one of the four lines below
-#points(estimates_fr_day_d,pch=21) # by day with dunbar number
-#points(estimates_fr_poll_d,pch=22) # by poll with dunbar number
-points(estimates_fr_day_e,pch=23) # by day with average reach
-#points(estimates_fr_poll_e,pch=24) # by poll with average reach
+# points(estimates_fr_day_d,pch=21); legend("bottomright", 
+#                                           legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByDay-Dunbar"), 
+#                                           lty = c(1,4,0,0), 
+#                                           pch = c(NA,NA,20,21),
+#                                           #bty = "n", 
+#                                           text.col = "black") # by day with dunbar number
+# points(estimates_fr_poll_d,pch=22) ;legend("bottomright",
+#                                         legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByPoll-Dunbar"),
+#                                         lty = c(1,4,0,0),
+#                                         pch = c(NA,NA,20,22),
+#                                         #bty = "n",
+#                                         text.col = "black") # by poll with dunbar number
+# points(estimates_fr_day_e,pch=23);legend("bottomright",
+#                                          legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByDay-Reach"),
+#                                          lty = c(1,4,0,0),
+#                                          pch = c(NA,NA,20,23),
+#                                          #bty = "n",
+#                                          text.col = "black") # by day with average reach
+
+points(estimates_fr_poll_e,pch=24) ;legend("bottomright",
+                                          legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByPoll-Reach"),
+                                          lty = c(1,4,0,0),
+                                          pch = c(NA,NA,20,24),
+                                          #bty = "n",
+                                          text.col = "black") # by poll with average reach
 
 
 points(est_ccfr,pch=20)
@@ -151,7 +172,5 @@ axis(side=1,at=c(78,83,88,93),labels=c("Mar 15","Mar 20","Mar 25","Mar 30"))
 abline(v=78,lty="dotted"); abline(v=83,lty="dotted"); abline(v=88,lty="dotted");abline(v=93,lty="dotted")  
 #6,11,16,19
 
-
- 
 
 
