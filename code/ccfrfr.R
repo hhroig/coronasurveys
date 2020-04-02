@@ -42,7 +42,7 @@ scale_cfr <- function(data_1_in, death_incidence, delay_fun){
 
 
 #url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
-url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-31.xlsx"
+url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-04-02.xlsx"
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
@@ -82,43 +82,43 @@ estimates_fr_day_e<-rep(NaN,size+1)
 #survey_twitter[8]<-(4/(36*150))*populationFR #17 Mar
 #dunbar
 #23 mar
-estimates_fr_poll_d[85] <- estimate_cases(file_path = "../data/FR-01-20200322-20200323.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_poll_d[86] <- estimate_cases(file_path = "../data/FR-01-20200322-20200323.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #30 mar
-estimates_fr_poll_d[92] <- estimate_cases(file_path = "../data/FR-02-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_poll_d[93] <- estimate_cases(file_path = "../data/FR-02-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #1 apr
-estimates_fr_poll_d[94] <- estimate_cases(file_path = "../data/FR-03-20200330-20200401.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_poll_d[95] <- estimate_cases(file_path = "../data/FR-03-20200330-20200401.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #23 mar
-estimates_fr_poll_e[85] <- estimate_cases(file_path = "../data/FR-01-20200322-20200323.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_poll_e[86] <- estimate_cases(file_path = "../data/FR-01-20200322-20200323.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #30 mar
-estimates_fr_poll_e[92] <- estimate_cases(file_path = "../data/FR-02-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_poll_e[93] <- estimate_cases(file_path = "../data/FR-02-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #1 apr
-estimates_fr_poll_e[94] <- estimate_cases(file_path = "../data/FR-03-20200330-20200401.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_poll_e[95] <- estimate_cases(file_path = "../data/FR-03-20200330-20200401.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 
 #22 mar
-estimates_fr_day_d[84] <- estimate_cases(file_path = "../data/byDay/FR-01-20200322-20200322.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_day_d[85] <- estimate_cases(file_path = "../data/byDay/FR-01-20200322-20200322.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #23 mar
-estimates_fr_day_d[85] <- estimate_cases(file_path = "../data/byDay/FR-02-20200323-20200323.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_day_d[86] <- estimate_cases(file_path = "../data/byDay/FR-02-20200323-20200323.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #29 mar
-estimates_fr_day_d[91] <- estimate_cases(file_path = "../data/byDay/FR-03-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_day_d[92] <- estimate_cases(file_path = "../data/byDay/FR-03-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #30 mar
-estimates_fr_day_d[92] <- estimate_cases(file_path = "../data/byDay/FR-04-20200330-20200330.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_day_d[93] <- estimate_cases(file_path = "../data/byDay/FR-04-20200330-20200330.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #31 mar
-estimates_fr_day_d[93] <- estimate_cases(file_path = "../data/byDay/FR-05-20200331-20200331.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_day_d[94] <- estimate_cases(file_path = "../data/byDay/FR-05-20200331-20200331.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 #1 apr
-estimates_fr_day_d[94] <- estimate_cases(file_path = "../data/byDay/FR-06-20200401-20200401.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
+estimates_fr_day_d[95] <- estimate_cases(file_path = "../data/byDay/FR-06-20200401-20200401.csv", country_population = francePopulation, correction_factor = 1)$dunbar_cases
 
 #22 mar
-estimates_fr_day_e[84] <- estimate_cases(file_path = "../data/byDay/FR-01-20200322-20200322.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_day_e[85] <- estimate_cases(file_path = "../data/byDay/FR-01-20200322-20200322.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #23 mar
-estimates_fr_day_e[85] <- estimate_cases(file_path = "../data/byDay/FR-02-20200323-20200323.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_day_e[86] <- estimate_cases(file_path = "../data/byDay/FR-02-20200323-20200323.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #29 mar
-estimates_fr_day_e[91] <- estimate_cases(file_path = "../data/byDay/FR-03-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_day_e[92] <- estimate_cases(file_path = "../data/byDay/FR-03-20200329-20200329.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #30 mar
-estimates_fr_day_e[92] <- estimate_cases(file_path = "../data/byDay/FR-04-20200330-20200330.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_day_e[93] <- estimate_cases(file_path = "../data/byDay/FR-04-20200330-20200330.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #31 mar
-estimates_fr_day_e[93] <- estimate_cases(file_path = "../data/byDay/FR-05-20200331-20200331.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_day_e[94] <- estimate_cases(file_path = "../data/byDay/FR-05-20200331-20200331.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 #1 apr
-estimates_fr_day_e[94] <- estimate_cases(file_path = "../data/byDay/FR-06-20200401-20200401.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
+estimates_fr_day_e[95] <- estimate_cases(file_path = "../data/byDay/FR-06-20200401-20200401.csv", country_population = francePopulation, correction_factor = 1)$estimated_cases
 
 #estimated
 #21 Mar Cf=1, poll 2
@@ -140,15 +140,15 @@ data$cases
 # uncomment one of the four lines below
 #points(estimates_fr_day_d,pch=21) # by day with dunbar number
 #points(estimates_fr_poll_d,pch=22) # by poll with dunbar number
-#points(estimates_fr_day_e,pch=23) # by day with average reach
-points(estimates_fr_poll_e,pch=24) # by poll with average reach
+points(estimates_fr_day_e,pch=23) # by day with average reach
+#points(estimates_fr_poll_e,pch=24) # by poll with average reach
 
 
 points(est_ccfr,pch=20)
 axis(side = 2, at = 10^seq(0, 6),labels=c("1","10","100","1,000","10,000","100,000","1000,000"))
 abline(h=1000000,lty="dotted");abline(h=100000,lty="dotted");abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
-axis(side=1,at=c(77,82,87,92),labels=c("Mar 15","Mar 20","Mar 25","Mar 30"))
-abline(v=77,lty="dotted"); abline(v=82,lty="dotted"); abline(v=87,lty="dotted");abline(v=92,lty="dotted")  
+axis(side=1,at=c(78,83,88,93),labels=c("Mar 15","Mar 20","Mar 25","Mar 30"))
+abline(v=78,lty="dotted"); abline(v=83,lty="dotted"); abline(v=88,lty="dotted");abline(v=93,lty="dotted")  
 #6,11,16,19
 
 
