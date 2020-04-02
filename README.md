@@ -70,27 +70,30 @@ The data colected will be cleaned and processed in order to provide estimates of
 
 ### Other Methods to Estimate the Number of Cases
 
-Ryosuke Omori, Kenji Mizumoto, Hiroshi Nishiura.
+- Hiroshi Nishiura et al. Early Epidemiological Assessment of the Virulence of Emerging Infectious Diseases: A Case Study of an Influenza Pandemic. Plos One. August 31, 2009. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852
+
+- James Gorman. The Coronavirus, by the Numbers. The New York Times, March 5th, 2020. https://www.nytimes.com/2020/03/05/health/coronavirus-deaths-rates.html
+
+- Ryosuke Omori, Kenji Mizumoto, Hiroshi Nishiura.
 Ascertainment rate of novel coronavirus disease (COVID-19) in Japan.
 medRXid, March 10th, 2020.
 https://www.medrxiv.org/content/10.1101/2020.03.09.20033183v1
 
-Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Explainer, March 13th, 2020. https://www.nature.com/articles/d41586-020-00760-8
+- Amy Maxmen. How much is coronavirus spreading under the radar? Nature News Explainer, March 13th, 2020. https://www.nature.com/articles/d41586-020-00760-8
 
-Alberto Fernández.
+- Alberto Fernández.
 Coronavirus en España (I): Razones para Actuar con Urgencia y Contundencia.
 Medium, Marc h 15th, 2020.
 https://medium.com/@albertofffernandez/coronavirus-en-espa%C3%B1a-i-razones-para-actuar-con-urgencia-y-contundencia-bba8eafa12f
 
-Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
+- Timothy W Russell et al. Using a delay-adjusted case fatality ratio to estimate under-reporting. CMMID Repository, March 22nd, 2020. https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html
 
-Hiroshi Nishiura et al. Early Epidemiological Assessment of the Virulence of Emerging Infectious Diseases: A Case Study of an Influenza Pandemic. Plos One. August 31, 2009. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852
+- Antonio J. Durán. ¿Cómo estimar el número de infectados reales por covid-19? Los casos de Andalucía e Italia. Blog IMUS, March 23rd, 2020. http://institucional.us.es/blogimus/2020/03/como-estimar-el-numero-de-infectados-reales-por-covid-19-el-caso-de-andalucia-e-italia/
 
-James Gorman. The Coronavirus, by the Numbers. The New York Times, Match 5th, 2020. https://www.nytimes.com/2020/03/05/health/coronavirus-deaths-rates.html
+- Kiko Llaneras. Los números del coronavirus: ¿Cuántos infectados hay realmente en España? El País, March 28th, 2020. https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
 
-Kiko Llaneras. Los números del coronavirus: ¿Cuántos infectados hay realmente en España? El País, March 28th, 2020. https://elpais.com/politica/2020/03/24/actualidad/1585077503_994849.html
-
-Antonio J. Durán. ¿Cómo estimar el número de infectados reales por covid-19? Los casos de Andalucía e Italia. Blog IMUS, March 23rd, 2020. http://institucional.us.es/blogimus/2020/03/como-estimar-el-numero-de-infectados-reales-por-covid-19-el-caso-de-andalucia-e-italia/
+- Flaxman et al. Estimating the number of infections and the impact of nonpharmaceutical interventions on COVID-19 in 11 European countries. March 30th, 2020.
+https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-Europe-estimates-and-NPI-impact-30-03-2020.pdf
 
 ## Research Team
 
