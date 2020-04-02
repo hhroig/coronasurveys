@@ -53,7 +53,7 @@ data<-list(confirmados=c(0,cumsum(rev(data$cases))),obitos=c(0,cumsum(rev(data$d
 size=length(data$confirmados)
 est_ccfr<-rep(NaN,size)
 
-for (rr in 0:(size-1))
+for (rr in 0:(size-2))
 {
     last <- size-rr
     data2 <- list(confirmados=diff(data$confirmados[1:last]),obitos=diff(data$obitos[1:last]))
