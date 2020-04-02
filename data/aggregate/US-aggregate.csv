@@ -1,96 +1,105 @@
 Timestamp,Region,Reach,Cases
-"2020/03/22 06:50:27 PM UTC",Massachusetts,200,
-"2020/03/22 07:12:49 PM UTC",Maryland,100,
+"2020/03/22 06:50:27 PM UTC",Massachusetts,200,0
+"2020/03/22 07:12:49 PM UTC",Maryland,100,0
 "2020/03/22 07:16:08 PM UTC",IllinoisIndiana,20,1
 "2020/03/22 07:21:30 PM UTC",Florida,10,1
 "2020/03/22 07:56:57 PM UTC",Massachusetts,100,2
-"2020/03/22 08:07:48 PM UTC",IllinoisIndiana,100,
-"2020/03/22 08:25:50 PM UTC",Maryland,100,
-"2020/03/22 08:50:37 PM UTC",Massachusetts,100,
-"2020/03/22 08:55:08 PM UTC",Massachusetts,20,
+"2020/03/22 08:07:48 PM UTC",IllinoisIndiana,100,0
+"2020/03/22 08:25:50 PM UTC",Maryland,100,0
+"2020/03/22 08:50:37 PM UTC",Massachusetts,100,0
+"2020/03/22 08:55:08 PM UTC",Massachusetts,20,0
 "2020/03/22 08:58:00 PM UTC",Massachusetts,75,5
-"2020/03/22 09:00:12 PM UTC","North Carolina",150,
+"2020/03/22 09:00:12 PM UTC","North Carolina",150,0
 "2020/03/22 09:02:26 PM UTC","New Jersey",100,3
 "2020/03/22 09:06:43 PM UTC",Louisiana,100,1
-"2020/03/22 09:10:28 PM UTC","Rhode Island",150,
-"2020/03/22 09:17:24 PM UTC",California,100,
-"2020/03/22 09:19:54 PM UTC","New York",500,
-"2020/03/22 09:54:12 PM UTC",Massachusetts,50,
-"2020/03/22 10:02:23 PM UTC",Massachusetts,30,
-"2020/03/22 10:21:11 PM UTC","South Carolina",100,
+"2020/03/22 09:10:28 PM UTC","Rhode Island",150,0
+"2020/03/22 09:17:24 PM UTC",California,100,0
+"2020/03/22 09:19:54 PM UTC","New York",500,0
+"2020/03/22 09:54:12 PM UTC",Massachusetts,50,0
+"2020/03/22 10:02:23 PM UTC",Massachusetts,30,0
+"2020/03/22 10:21:11 PM UTC","South Carolina",100,0
 "2020/03/22 10:59:39 PM UTC",Michigan,45,2
-"2020/03/22 11:07:44 PM UTC",California,100,
+"2020/03/22 11:07:44 PM UTC",California,100,0
 "2020/03/23 12:10:10 AM UTC",Illinois,300,10
 "2020/03/23 12:34:48 AM UTC",Massachusetts,80,1
-"2020/03/23 12:41:43 AM UTC",California,12,
-"2020/03/23 12:42:06 AM UTC","New York",50,
-"2020/03/23 12:42:36 AM UTC",Florida,10,
+"2020/03/23 12:41:43 AM UTC",California,12,0
+"2020/03/23 12:42:06 AM UTC","New York",50,0
+"2020/03/23 12:42:36 AM UTC",Florida,10,0
 "2020/03/23 12:43:51 AM UTC",Colorado,30,1
 "2020/03/23 12:50:13 AM UTC",Virginia,20,4
 "2020/03/23 12:50:54 AM UTC",Virginia,50,1
 "2020/03/23 12:53:45 AM UTC","New York",40,3
-"2020/03/23 12:53:49 AM UTC",Arizona,500,
-"2020/03/23 01:00:05 AM UTC",Florida,200,
+"2020/03/23 12:53:49 AM UTC",Arizona,500,0
+"2020/03/23 01:00:05 AM UTC",Florida,200,0
 "2020/03/23 01:15:10 AM UTC",Florida,50,2
 "2020/03/23 01:18:04 AM UTC",California,100,5
-"2020/03/23 03:13:13 AM UTC",Massachusetts,100,
+"2020/03/23 03:13:13 AM UTC",Massachusetts,100,0
 "2020/03/23 03:26:03 AM UTC","New York",300,2
-"2020/03/23 03:35:24 AM UTC",Arkansas,10,
-"2020/03/23 04:04:19 AM UTC",Missouri,4,
-"2020/03/23 06:13:21 AM UTC",Arizona,25,
+"2020/03/23 03:35:24 AM UTC",Arkansas,10,0
+"2020/03/23 04:04:19 AM UTC",Missouri,4,0
+"2020/03/23 06:13:21 AM UTC",Arizona,25,0
 "2020/03/23 06:24:51 AM UTC",Oregon,75,10
 "2020/03/23 06:46:03 AM UTC",Maryland,30,5
 "2020/03/23 07:46:20 AM UTC",California,106,20
 "2020/03/23 07:49:11 AM UTC",Utah,12,1
-"2020/03/23 08:23:50 AM UTC",California,400,
+"2020/03/23 08:23:50 AM UTC",California,400,0
 "2020/03/23 10:04:52 AM UTC","New York",1000,3
-"2020/03/23 11:06:28 AM UTC",Kansas,300,
-"2020/03/23 11:23:38 AM UTC",Ohio,20,
-"2020/03/23 01:21:02 PM UTC","Entire country",100,
-"2020/03/23 03:11:09 PM UTC","New Hampshire",100,
-"2020/03/23 03:14:45 PM UTC","New Jersey",100,
-"2020/03/23 09:45:26 PM UTC",Indiana,21,
-"2020/03/24 11:26:54 AM UTC",Massachusetts,50,
-"2020/03/24 12:20:19 PM UTC",Massachusetts,100,
+"2020/03/23 11:06:28 AM UTC",Kansas,300,0
+"2020/03/23 11:23:38 AM UTC",Ohio,20,0
+"2020/03/23 01:21:02 PM UTC","Entire country",100,0
+"2020/03/23 03:11:09 PM UTC","New Hampshire",100,0
+"2020/03/23 03:14:45 PM UTC","New Jersey",100,0
+"2020/03/23 09:45:26 PM UTC",Indiana,21,0
+"2020/03/24 11:26:54 AM UTC",Massachusetts,50,0
+"2020/03/24 12:20:19 PM UTC",Massachusetts,100,0
 "2020/03/24 12:22:57 PM UTC",Pennsylvania,30,2
-"2020/03/24 12:52:13 PM UTC","New Jersey",100,
-"2020/03/25 09:08:48 PM UTC",Virginia,20,
-"2020/03/25 09:09:53 PM UTC",Massachusetts,100,
+"2020/03/24 12:52:13 PM UTC","New Jersey",100,0
+"2020/03/25 09:08:48 PM UTC",Virginia,20,0
+"2020/03/25 09:09:53 PM UTC",Massachusetts,100,0
 "2020/03/25 09:10:53 PM UTC",Virginia,100,10
 "2020/03/25 09:35:51 PM UTC",Illinois,100,10
-"2020/03/26 07:09:18 AM UTC","New York",100,
-"2020/03/26 12:50:33 PM UTC",Indiana,7,
+"2020/03/26 07:09:18 AM UTC","New York",100,0
+"2020/03/26 12:50:33 PM UTC",Indiana,7,0
 "2020/03/27 05:26:50 AM UTC",Utah,150,1
 "2020/03/27 06:08:34 PM UTC",Connecticut,100,1
-"2020/03/29 01:27:05 AM UTC",Massachusetts,5,
-"2020/03/29 03:27:05 AM UTC",Oregon,1,
-"2020/03/29 08:54:55 AM UTC","South Carolina",100,
-"2020/03/29 09:17:33 AM UTC","New Jersey",10,
-"2020/03/29 11:03:47 PM UTC",Michigan,80,
-"2020/03/29 11:22:44 PM UTC",California,50,
-"2020/03/29 11:33:53 PM UTC",California,100,
-"2020/03/29 11:39:47 PM UTC",California,4,
+"2020/03/29 01:27:05 AM UTC",Massachusetts,5,0
+"2020/03/29 03:27:05 AM UTC",Oregon,1,0
+"2020/03/29 08:54:55 AM UTC","South Carolina",100,0
+"2020/03/29 09:17:33 AM UTC","New Jersey",10,0
+"2020/03/29 11:03:47 PM UTC",Michigan,80,0
+"2020/03/29 11:22:44 PM UTC",California,50,0
+"2020/03/29 11:33:53 PM UTC",California,100,0
+"2020/03/29 11:39:47 PM UTC",California,4,0
 "2020/03/30 12:17:32 AM UTC",California,100,3
-"2020/03/30 12:20:11 AM UTC",California,100,
-"2020/03/30 12:41:06 AM UTC",Hawaii,10,
-"2020/03/30 12:41:31 AM UTC",Georgia,20,
-"2020/03/30 01:13:47 AM UTC",Arizona,6,
-"2020/03/30 01:42:32 AM UTC",California,30,
-"2020/03/30 02:58:00 AM UTC",California,100,
+"2020/03/30 12:20:11 AM UTC",California,100,0
+"2020/03/30 12:41:06 AM UTC",Hawaii,10,0
+"2020/03/30 12:41:31 AM UTC",Georgia,20,0
+"2020/03/30 01:13:47 AM UTC",Arizona,6,0
+"2020/03/30 01:42:32 AM UTC",California,30,0
+"2020/03/30 02:58:00 AM UTC",California,100,0
 "2020/03/30 11:19:02 AM UTC","New York",20,3
-"2020/03/30 04:49:07 PM UTC",California,25,
-"2020/03/30 05:02:48 PM UTC",California,80,
-"2020/03/30 06:29:21 PM UTC",California,100,
+"2020/03/30 04:49:07 PM UTC",California,25,0
+"2020/03/30 05:02:48 PM UTC",California,80,0
+"2020/03/30 06:29:21 PM UTC",California,100,0
 "2020/03/31 10:58:48 AM UTC",Massachusetts,10,1
-"2020/03/31 07:54:11 PM UTC",Kansas,100,
-"2020/03/31 10:04:10 PM UTC","Entire country",1,
+"2020/03/31 07:54:11 PM UTC",Kansas,100,0
+"2020/03/31 10:04:10 PM UTC","Entire country",1,0
 "2020/04/01 04:45:18 AM UTC",Louisiana,20,2
-"2020/04/01 09:39:42 AM UTC",California,50,
-"2020/04/01 01:52:46 PM UTC",Massachusetts,14,
+"2020/04/01 09:39:42 AM UTC",California,50,0
+"2020/04/01 01:52:46 PM UTC",Massachusetts,14,0
 "2020/04/01 01:55:45 PM UTC",Massachusetts,2,1
-"2020/04/01 01:56:05 PM UTC",Massachusetts,50,
-"2020/04/01 02:01:05 PM UTC",Massachusetts,2,
+"2020/04/01 01:56:05 PM UTC",Massachusetts,50,0
+"2020/04/01 02:01:05 PM UTC",Massachusetts,2,0
 "2020/04/01 02:24:07 PM UTC",Massachusetts,100,7
 "2020/04/01 02:29:23 PM UTC",Massachusetts,50,2
-"2020/04/01 02:48:15 PM UTC",Massachusetts,50,
+"2020/04/01 02:48:15 PM UTC",Massachusetts,50,0
 "2020/04/01 04:17:30 PM UTC",Massachusetts,6000000,6600
+"2020/04/01 08:03:43 PM UTC",Massachusetts,20,1
+"2020/04/01 09:14:30 PM UTC",California,30,0
+"2020/04/01 10:37:22 PM UTC",Massachusetts,50,0
+"2020/04/02 12:00:47 AM UTC",California,30,0
+"2020/04/02 02:35:15 AM UTC",Massachusetts,50,0
+"2020/04/02 03:57:10 AM UTC",Virginia,100,0
+"2020/04/02 04:41:27 AM UTC",Maryland,100,0
+"2020/04/02 11:02:03 AM UTC","New Jersey",100,0
+"2020/04/02 12:21:07 PM UTC",Texas,7,0

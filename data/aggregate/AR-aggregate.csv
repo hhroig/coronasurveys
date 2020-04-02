@@ -1,50 +1,51 @@
 Timestamp,Region,Reach,Cases
-"2020/03/24 02:47:42 AM UTC","Ciudad Autónoma de Buenos Aires",1000,
+"2020/03/24 02:47:42 AM UTC","Ciudad Autónoma de Buenos Aires",1000,0
 "2020/03/24 01:36:39 PM UTC","Ciudad Autónoma de Buenos Aires",100,1
-"2020/03/24 01:41:56 PM UTC","Ciudad Autónoma de Buenos Aires",10,
-"2020/03/24 01:42:03 PM UTC","Ciudad Autónoma de Buenos Aires",110,
-"2020/03/24 02:25:10 PM UTC","Ciudad Autónoma de Buenos Aires",100,
-"2020/03/24 02:29:32 PM UTC","Ciudad Autónoma de Buenos Aires",50,
-"2020/03/24 02:36:43 PM UTC","Ciudad Autónoma de Buenos Aires",100,
-"2020/03/24 02:37:01 PM UTC","Provincia de Córdoba",50,
-"2020/03/24 02:38:36 PM UTC","Ciudad Autónoma de Buenos Aires",10,
-"2020/03/24 02:42:24 PM UTC","Provincia de Buenos Aires",20,
-"2020/03/24 02:44:36 PM UTC","Ciudad Autónoma de Buenos Aires",60,
-"2020/03/24 02:47:32 PM UTC","Provincia de Buenos Aires",100,
-"2020/03/24 03:04:16 PM UTC","Ciudad Autónoma de Buenos Aires"," 150",
-"2020/03/24 03:04:46 PM UTC","Provincia de Buenos Aires","60 ",
-"2020/03/24 03:06:35 PM UTC","Ciudad Autónoma de Buenos Aires",15,
+"2020/03/24 01:41:56 PM UTC","Ciudad Autónoma de Buenos Aires",10,0
+"2020/03/24 01:42:03 PM UTC","Ciudad Autónoma de Buenos Aires",110,0
+"2020/03/24 02:25:10 PM UTC","Ciudad Autónoma de Buenos Aires",100,0
+"2020/03/24 02:29:32 PM UTC","Ciudad Autónoma de Buenos Aires",50,0
+"2020/03/24 02:36:43 PM UTC","Ciudad Autónoma de Buenos Aires",100,0
+"2020/03/24 02:37:01 PM UTC","Provincia de Córdoba",50,0
+"2020/03/24 02:38:36 PM UTC","Ciudad Autónoma de Buenos Aires",10,0
+"2020/03/24 02:42:24 PM UTC","Provincia de Buenos Aires",20,0
+"2020/03/24 02:44:36 PM UTC","Ciudad Autónoma de Buenos Aires",60,0
+"2020/03/24 02:47:32 PM UTC","Provincia de Buenos Aires",100,0
+"2020/03/24 03:04:16 PM UTC","Ciudad Autónoma de Buenos Aires",150,0
+"2020/03/24 03:04:46 PM UTC","Provincia de Buenos Aires",60,0
+"2020/03/24 03:06:35 PM UTC","Ciudad Autónoma de Buenos Aires",15,0
 "2020/03/24 03:06:39 PM UTC","Provincia de Buenos Aires",120,1
-"2020/03/24 03:23:53 PM UTC","Provincia de Córdoba",100,
-"2020/03/24 03:25:23 PM UTC","Ciudad Autónoma de Buenos Aires",40,
-"2020/03/24 03:28:10 PM UTC","Ciudad Autónoma de Buenos Aires",60,
-"2020/03/24 03:28:27 PM UTC","Provincia de Buenos Aires",500,
-"2020/03/24 03:28:32 PM UTC","Provincia de Buenos Aires",500,
-"2020/03/24 03:29:11 PM UTC","Ciudad Autónoma de Buenos Aires",150,
-"2020/03/24 03:30:43 PM UTC","Provincia de Buenos Aires",100,
-"2020/03/24 03:30:56 PM UTC","Ciudad Autónoma de Buenos Aires",Wt,25
-"2020/03/24 03:32:38 PM UTC","Provincia de Buenos Aires",15,
-"2020/03/24 03:34:06 PM UTC","Provincia de Buenos Aires",100,
-"2020/03/24 03:35:04 PM UTC","Provincia de Buenos Aires",6,
-"2020/03/24 03:54:53 PM UTC","Ciudad Autónoma de Buenos Aires",80,
-"2020/03/24 05:36:04 PM UTC","Ciudad Autónoma de Buenos Aires",300,
-"2020/03/24 09:22:48 PM UTC","Ciudad Autónoma de Buenos Aires",250,
-"2020/03/24 10:22:43 PM UTC","Provincia de Buenos Aires",30,
-"2020/03/25 12:53:27 AM UTC","Provincia de Buenos Aires",500,
-"2020/03/25 01:07:57 AM UTC","Provincia del Neuquén",20,
-"2020/03/25 09:07:04 PM UTC","Ciudad Autónoma de Buenos Aires",110,
-"2020/03/25 09:08:33 PM UTC","Ciudad Autónoma de Buenos Aires",15,
-"2020/03/25 09:15:08 PM UTC","Provincia de Buenos Aires",100,
-"2020/03/25 09:39:40 PM UTC","Provincia de Buenos Aires",100,
-"2020/03/25 09:40:44 PM UTC","Provincia de Buenos Aires",30,
-"2020/03/25 09:49:18 PM UTC","Provincia de Buenos Aires",30,
-"2020/03/25 09:50:00 PM UTC","Provincia de Buenos Aires",100,
-"2020/03/25 10:05:17 PM UTC","Ciudad Autónoma de Buenos Aires",70,
-"2020/03/25 11:22:13 PM UTC","Provincia de Buenos Aires",1000,
-"2020/03/26 04:42:37 AM UTC","Provincia de Buenos Aires",10000,00
+"2020/03/24 03:23:53 PM UTC","Provincia de Córdoba",100,0
+"2020/03/24 03:25:23 PM UTC","Ciudad Autónoma de Buenos Aires",40,0
+"2020/03/24 03:28:10 PM UTC","Ciudad Autónoma de Buenos Aires",60,0
+"2020/03/24 03:28:27 PM UTC","Provincia de Buenos Aires",500,0
+"2020/03/24 03:28:32 PM UTC","Provincia de Buenos Aires",500,0
+"2020/03/24 03:29:11 PM UTC","Ciudad Autónoma de Buenos Aires",150,0
+"2020/03/24 03:30:43 PM UTC","Provincia de Buenos Aires",100,0
+"2020/03/24 03:30:56 PM UTC","Ciudad Autónoma de Buenos Aires",0,25
+"2020/03/24 03:32:38 PM UTC","Provincia de Buenos Aires",15,0
+"2020/03/24 03:34:06 PM UTC","Provincia de Buenos Aires",100,0
+"2020/03/24 03:35:04 PM UTC","Provincia de Buenos Aires",6,0
+"2020/03/24 03:54:53 PM UTC","Ciudad Autónoma de Buenos Aires",80,0
+"2020/03/24 05:36:04 PM UTC","Ciudad Autónoma de Buenos Aires",300,0
+"2020/03/24 09:22:48 PM UTC","Ciudad Autónoma de Buenos Aires",250,0
+"2020/03/24 10:22:43 PM UTC","Provincia de Buenos Aires",30,0
+"2020/03/25 12:53:27 AM UTC","Provincia de Buenos Aires",500,0
+"2020/03/25 01:07:57 AM UTC","Provincia del Neuquén",20,0
+"2020/03/25 09:07:04 PM UTC","Ciudad Autónoma de Buenos Aires",110,0
+"2020/03/25 09:08:33 PM UTC","Ciudad Autónoma de Buenos Aires",15,0
+"2020/03/25 09:15:08 PM UTC","Provincia de Buenos Aires",100,0
+"2020/03/25 09:39:40 PM UTC","Provincia de Buenos Aires",100,0
+"2020/03/25 09:40:44 PM UTC","Provincia de Buenos Aires",30,0
+"2020/03/25 09:49:18 PM UTC","Provincia de Buenos Aires",30,0
+"2020/03/25 09:50:00 PM UTC","Provincia de Buenos Aires",100,0
+"2020/03/25 10:05:17 PM UTC","Ciudad Autónoma de Buenos Aires",70,0
+"2020/03/25 11:22:13 PM UTC","Provincia de Buenos Aires",1000,0
+"2020/03/26 04:42:37 AM UTC","Provincia de Buenos Aires",10000,0
 "2020/03/28 01:56:09 PM UTC","Provincia de Buenos Aires",300,3
 "2020/03/30 01:25:36 PM UTC","Ciudad Autónoma de Buenos Aires",100,1
-"2020/03/30 01:26:32 PM UTC","Ciudad Autónoma de Buenos Aires",50,
-"2020/03/30 01:36:58 PM UTC","Ciudad Autónoma de Buenos Aires",20,
-"2020/03/30 01:59:28 PM UTC","Provincia de Santa Fe",100,
+"2020/03/30 01:26:32 PM UTC","Ciudad Autónoma de Buenos Aires",50,0
+"2020/03/30 01:36:58 PM UTC","Ciudad Autónoma de Buenos Aires",20,0
+"2020/03/30 01:59:28 PM UTC","Provincia de Santa Fe",100,0
 "2020/04/01 03:22:55 PM UTC","Provincia de Córdoba",20,2
+"2020/04/01 10:18:50 PM UTC","Provincia de Buenos Aires",100,0
