@@ -511,3 +511,5 @@ Timestamp,Region,Reach,Cases
 "2020/03/30 11:00:50 AM UTC",Veneto,10,0
 "2020/03/30 01:45:45 PM UTC",Marche,30,0
 "2020/03/30 01:46:39 PM UTC",Piemonte,30,0
+"2020/04/02 11:32:38 AM UTC",Emilia-Romagna,50,1
+"2020/04/02 12:31:22 PM UTC",Emilia-Romagna,350,2
