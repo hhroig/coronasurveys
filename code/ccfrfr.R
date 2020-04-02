@@ -134,9 +134,32 @@ estimates_fr_day_e[95] <- estimate_cases(file_path = "../data/byDay/FR-06-202004
 
 #est_ccfr[size]<-data$confirmados[size]*1/fraction_reported
 
-plot(data$deaths*400,log="y", xlim=c(45,size+3), ylim=c(1,2000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in France",ylab="Total cases",lty=4)
-lines(data$cases)
-data$cases
+
+createPlot <- function (baselineData, estimates, ptype, legendString, filename){
+  pdf(filename)
+  plot(baselineData$deaths*400,log="y", xlim=c(45,size+3), ylim=c(1,2000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in France",ylab="Total cases",lty=4)
+  lines(baselineData$cases)
+  baselineData$cases
+  data$cases
+  points(estimates, pch=ptype); legend("bottomright", 
+                                       legend = c("Confirmed", "Fatalities*400", "CCFR", paste("Coronasurveys ",legendString)), 
+                                       lty = c(1,4,0,0), 
+                                       pch = c(NA,NA,20,ptype),
+                                       #bty = "n", 
+                                       text.col = "black") # by day with dunbar number
+  points(est_ccfr,pch=20)
+  axis(side = 2, at = 10^seq(0, 6),labels=c("1","10","100","1,000","10,000","100,000","1000,000"))
+  abline(h=1000000,lty="dotted");abline(h=100000,lty="dotted");abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
+  axis(side=1,at=c(78,83,88,93),labels=c("Mar 15","Mar 20","Mar 25","Mar 30"))
+  abline(v=78,lty="dotted"); abline(v=83,lty="dotted"); abline(v=88,lty="dotted");abline(v=93,lty="dotted")  
+  dev.off()
+}
+
+createPlot(baselineData = data, estimates = estimates_fr_day_d, ptype = 21, legendString ="ByDay-Dunbar", filename="../doc/EstFRApr1DayDun.pdf")
+createPlot(baselineData = data, estimates = estimates_fr_poll_d, ptype = 22, legendString ="ByPoll-Dunbar", filename="../doc/EstFRApr1PollDun.pdf")
+createPlot(baselineData = data, estimates = estimates_fr_day_e, ptype = 23, legendString ="ByDay-Reach", filename="../doc/EstFRApr1DayEst.pdf")
+createPlot(baselineData = data, estimates = estimates_fr_poll_e, ptype = 24, legendString ="ByPoll-Reach", filename="../doc/EstFRApr1PollEst.pdf")
+
 # uncomment one of the four lines below
 # points(estimates_fr_day_d,pch=21); legend("bottomright", 
 #                                           legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByDay-Dunbar"), 
@@ -157,19 +180,15 @@ data$cases
 #                                          #bty = "n",
 #                                          text.col = "black") # by day with average reach
 
-points(estimates_fr_poll_e,pch=24) ;legend("bottomright",
-                                          legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByPoll-Reach"),
-                                          lty = c(1,4,0,0),
-                                          pch = c(NA,NA,20,24),
-                                          #bty = "n",
-                                          text.col = "black") # by poll with average reach
+# points(estimates_fr_poll_e,pch=24) ;legend("bottomright",
+#                                           legend = c("Confirmed", "Death*400", "CCFR", "FrancePolls ByPoll-Reach"),
+#                                           lty = c(1,4,0,0),
+#                                           pch = c(NA,NA,20,24),
+#                                           #bty = "n",
+#                                           text.col = "black") # by poll with average reach
 
 
-points(est_ccfr,pch=20)
-axis(side = 2, at = 10^seq(0, 6),labels=c("1","10","100","1,000","10,000","100,000","1000,000"))
-abline(h=1000000,lty="dotted");abline(h=100000,lty="dotted");abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
-axis(side=1,at=c(78,83,88,93),labels=c("Mar 15","Mar 20","Mar 25","Mar 30"))
-abline(v=78,lty="dotted"); abline(v=83,lty="dotted"); abline(v=88,lty="dotted");abline(v=93,lty="dotted")  
+
 #6,11,16,19
 
 
