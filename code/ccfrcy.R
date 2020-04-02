@@ -115,7 +115,7 @@ axis(side=1,at=c(6,11,16,21,23),labels=c("Mar 15","Mar 20","Mar 25","Mar 30","Ap
 abline(v=6,lty="dotted"); abline(v=11,lty="dotted"); abline(v=16,lty="dotted"); abline(v=21,lty="dotted"); abline(v=23,lty="dotted");
 
 legend("topleft", 
-       legend = c("Confirmed", "Deaths*400", "CCFR", "CyprusPolls"), 
+       legend = c("Confirmed cases", "Estimate based on Fatalities", "Estimate based on Fatality ratio", "Estimate based on Coronasurveys"), 
        lty = c(1,2,0,0), 
        pch = c(NA,NA,20,24),
        #bty = "n", 
