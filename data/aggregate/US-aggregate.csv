@@ -96,3 +96,8 @@ Timestamp,Region,Reach,Cases
 "2020/04/01 04:17:30 PM UTC",Massachusetts,6000000,6600
 "2020/04/01 08:03:43 PM UTC",Massachusetts,20,1
 "2020/04/01 09:14:30 PM UTC",California,30,
+"2020/04/01 10:37:22 PM UTC",Massachusetts,50,
+"2020/04/02 12:00:47 AM UTC",California,30,
+"2020/04/02 02:35:15 AM UTC",Massachusetts,50,
+"2020/04/02 03:57:10 AM UTC",Virginia,100,
+"2020/04/02 04:41:27 AM UTC",Maryland,100,
