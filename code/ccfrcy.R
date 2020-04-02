@@ -107,10 +107,22 @@ plot(data$obitos*400,log="y", xlim=c(1,size+1), ylim=c(1,10000),yaxt="n",xaxt="n
 lines(data$confirmados)
 points(survey_twitter,pch=23)
 points(survey_gforms,pch=24)
+print(survey_gforms)
 points(est_ccfr,pch=20)
 axis(side = 2, at = 10^seq(0, 4),labels=c("1","10","100","1,000","10,000"))
 abline(h=10000,lty="dotted"); abline(h=1000,lty="dotted"); abline(h=100,lty="dotted"); abline(h=10,lty="dotted")
 axis(side=1,at=c(6,11,16,21,23),labels=c("Mar 15","Mar 20","Mar 25","Mar 30","Apr 1"))
 abline(v=6,lty="dotted"); abline(v=11,lty="dotted"); abline(v=16,lty="dotted"); abline(v=21,lty="dotted"); abline(v=23,lty="dotted");
 
+legend("topleft", 
+       legend = c("Confirmed cases", "Estimate based on Fatalities", "Estimate based on Fatality ratio", "Estimate based on Coronasurveys"), 
+       lty = c(1,2,0,0), 
+       pch = c(NA,NA,20,24),
+       #bty = "n", 
+       text.col = "black")
 
+
+print(data$confirmados)
+print(data$obitos*400)
+print(est_ccfr)
+print(survey_gforms)
