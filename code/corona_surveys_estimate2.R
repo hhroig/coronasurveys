@@ -69,7 +69,7 @@ estimate_cases_aggregate <- function(file_path = "../data/aggregate/ES-aggregate
     n_reach_outliers <- 0
   }
   
-  # remove outliers based on max ratio of 0.3
+  # remove outliers based on max ratio of   0.3
   dt$ratio <- dt$cases/dt$reach
   dt2 <- dt[is.finite(dt$ratio), ]  # discard cases with zero reach
   n_zero_reach_outliers <- sum(!is.finite(dt$ratio)) 
@@ -133,6 +133,7 @@ plot_estimates <- function(country_geoid = "ES",
   dt <- data[rev(1:nrow(data)),]
   dt$cum_cases <- cumsum(dt$cases)
   dt$cum_deaths <- cumsum(dt$deaths)
+  dt$cum_deaths_400 <- dt$cum_deaths * 400
   dt$date <- gsub("-", "/", dt$dateRep)
   ndt <- nrow(dt)
   est_ccfr <- rep(NA, ndt)
@@ -144,15 +145,14 @@ plot_estimates <- function(country_geoid = "ES",
     est_ccfr[i] <- dt$cum_cases[i]*1/fraction_reported
   }
   
-  survey_gforms<-rep(NaN, ndt)
   survey_gforms_estimate <- estimate_cases_aggregate(file_path = file_path,
                                                      country_population = country_population,
                                                      max_ratio = max_ratio,
                                                      correction_factor = correction_factor)$dt_estimates
   
+  dt$est_ccfr <- est_ccfr
   # combine dt and survey forms estimates
   dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
-  
   # combine with survey twitter
   if (country_geoid == "ES"){
     dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
@@ -163,14 +163,10 @@ plot_estimates <- function(country_geoid = "ES",
       select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:survey_twitter)
   } else{
     dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:sample_size)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:sample_size, est_ccfr)
   }
-  if(dir.exists(paste0("../data/PlotData/", country_geoid))){
-    write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "/plot_estimates_", country_geoid,"_", est_date, ".csv"))
-  }else{
-    dir.create(paste0("../data/PlotData/", country_geoid))
-    write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "/plot_estimates_", country_geoid,"_", est_date, ".csv"))
-  }
+  
+  write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "-", "estimates.csv"))
 }
 
 # usage...generate and write data to plotdata folder
