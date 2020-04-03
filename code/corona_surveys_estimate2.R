@@ -157,6 +157,7 @@ plot_estimates <- function(country_geoid = "ES",
   if (country_geoid == "ES"){
     dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
       select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:survey_twitter)
+    
   } else if(country_geoid == "PT"){
     dt_res <- full_join(dt_res, survey_twitter_pt, by = "date") %>% 
       select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:survey_twitter)
@@ -164,25 +165,28 @@ plot_estimates <- function(country_geoid = "ES",
     dt_res <- dt_res %>% 
       select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:sample_size)
   }
-  return(dt_res)
+  if(dir.exists(paste0("../data/PlotData/", country_geoid))){
+    write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "/plot_estimates_", country_geoid,"_", est_date, ".csv"))
+  }else{
+    dir.create(paste0("../data/PlotData/", country_geoid))
+    write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "/plot_estimates_", country_geoid,"_", est_date, ".csv"))
+  }
 }
 
 # usage...generate and write data to plotdata folder
 # Spain
-dt <- plot_estimates(est_date = "2020-04-02")
-write.csv(dt, "../data/PlotData/ES/plot_estimates_esp_2020_04_02.csv")
+plot_estimates(est_date = "2020-04-02")
 
 # Portugal
-dt2 <- plot_estimates(est_date = "2020-04-02", country_geoid = "PT",
+plot_estimates(est_date = "2020-04-02", country_geoid = "PT",
                      country_population = 10261075)
-write.csv(dt2, "../data/PlotData/PT/plot_estimates_pt_2020_04_02.csv")
+
 # Cyprus
-dt3 <- plot_estimates(est_date = "2020-04-02", country_geoid = "CY",
+plot_estimates(est_date = "2020-04-02", country_geoid = "CY",
                      country_population = 890900)
-write.csv(dt3, "../data/PlotData/CY/plot_estimates_cy_2020_04_02.csv")
+
 # France
-dt4 <- plot_estimates(est_date = "2020-04-02", country_geoid = "FR",
+plot_estimates(est_date = "2020-04-02", country_geoid = "FR",
                      country_population = 66987244)
-write.csv(dt4, "../data/PlotData/FR/plot_estimates_fr_2020_04_02.csv")
 
 
