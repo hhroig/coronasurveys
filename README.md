@@ -1,17 +1,16 @@
 # @CoronaSurveys: Monitoring COVID-19 incidence via open polls
 
+## [**Click here for links to all our country surveys**](surveys.md)
+
 ## Motivation
 
 The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
-
 
 ## How you can help
 
 Please complete one of our surveys! Choose your country of residence and tell us about the number of cases (suspected or confirmed) you know about. No personal information is stored in these surveys. Because each of us can provide information about the situation among our direct contacts, in aggregate we are able to get rough estimates of total cases.
 
 Please complete your country survey!!  Because we are tracking the evolution of this epidemic over time, once you have completed the survey, please remember to come back and update the survey every day. And finally, you can help us by asking your friends, colleagues and relatives to complete the survey as well! Thank you!
-
-## [**Click here for links to all our country surveys**](surveys.md)
 
 ## Objective
 
