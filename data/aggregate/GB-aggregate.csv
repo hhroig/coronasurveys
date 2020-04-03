@@ -145,3 +145,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/01 10:10:30 AM UTC","City of Edinburgh",6,1
 "2020/04/02 04:26:13 PM UTC",Antrim,20,3
 "2020/04/02 04:32:00 PM UTC","City of Edinburgh",30,3
+"2020/04/02 10:12:58 PM UTC","City of Edinburgh",23,2
+"2020/04/03 04:07:26 AM UTC","Entire country",500,0

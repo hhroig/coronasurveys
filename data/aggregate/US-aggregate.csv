@@ -108,3 +108,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/02 05:30:04 PM UTC",California,30,0
 "2020/04/02 05:49:22 PM UTC",California,10,1
 "2020/04/02 06:17:06 PM UTC","New Jersey",100,2
+"2020/04/02 10:06:14 PM UTC",California,50,0
+"2020/04/02 11:34:28 PM UTC",Massachusetts,50,0
+"2020/04/03 12:07:58 AM UTC",Michigan,50,0
+"2020/04/03 01:37:05 AM UTC","New Jersey",10,2

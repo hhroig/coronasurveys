@@ -128,3 +128,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/02 12:39:56 PM UTC","35 Ille-et-Vilaine",20,0
 "2020/04/02 06:30:16 PM UTC","91 Essonne",50,8
 "2020/04/02 07:17:48 PM UTC","35 Ille-et-Vilaine",150,1
+"2020/04/02 08:44:13 PM UTC","Toute la France",30,5
+"2020/04/02 08:59:52 PM UTC","91 Essonne",60,2
+"2020/04/02 09:30:11 PM UTC","75 Paris",40,3
+"2020/04/02 10:17:32 PM UTC","33 Gironde",50,0
