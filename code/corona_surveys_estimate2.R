@@ -156,14 +156,14 @@ plot_estimates <- function(country_geoid = "ES",
   # combine with survey twitter
   if (country_geoid == "ES"){
     dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:survey_twitter)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths,est_ccfr, mean_cases:survey_twitter)
     
   } else if(country_geoid == "PT"){
     dt_res <- full_join(dt_res, survey_twitter_pt, by = "date") %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:survey_twitter)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, est_ccfr, mean_cases:survey_twitter)
   } else{
     dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, mean_cases:sample_size, est_ccfr)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, est_ccfr, mean_cases:sample_size, est_ccfr)
   }
   
   write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "-", "estimates.csv"))
@@ -171,18 +171,18 @@ plot_estimates <- function(country_geoid = "ES",
 
 # usage...generate and write data to plotdata folder
 # Spain
-plot_estimates(est_date = "2020-04-02")
+plot_estimates(est_date = "2020-04-03")
 
 # Portugal
-plot_estimates(est_date = "2020-04-02", country_geoid = "PT",
+plot_estimates(est_date = "2020-04-03", country_geoid = "PT",
                      country_population = 10261075)
 
 # Cyprus
-plot_estimates(est_date = "2020-04-02", country_geoid = "CY",
+plot_estimates(est_date = "2020-04-03", country_geoid = "CY",
                      country_population = 890900)
 
 # France
-plot_estimates(est_date = "2020-04-02", country_geoid = "FR",
+plot_estimates(est_date = "2020-04-03", country_geoid = "FR",
                      country_population = 66987244)
 
 
