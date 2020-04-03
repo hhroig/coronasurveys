@@ -114,3 +114,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/03 01:37:05 AM UTC","New Jersey",10,2
 "2020/04/03 07:08:31 AM UTC",California,50,3
 "2020/04/03 10:50:44 AM UTC","South Carolina",100,0
+"2020/04/03 06:36:13 PM UTC",California,100,2
+"2020/04/03 07:36:03 PM UTC",Washington,30,1
