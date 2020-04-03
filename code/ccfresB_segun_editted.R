@@ -43,18 +43,30 @@ scale_cfr <- function(data_1_in, death_incidence, delay_fun){
 
 
 #url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
-url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-04-01.xlsx"
+url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-04-02.xlsx"
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
 data<-data[data$geoId=="ES",]
 dt <- data[rev(1:nrow(data)),]
 dt$cum_cases <- cumsum(dt$cases)
+dt$cum_deaths <- cumsum(dt$deaths)
+
+ndt <- nrow(dt)
+est_ccfr2 <- rep(NA, ndt)
+
+for (i in ndt : 1) {
+  data2t <- dt[1:i, c("cases", "deaths")]
+  ccfr <- scale_cfr(data2t, delay_fun = hospitalisation_to_death_truncated)
+  fraction_reported <- cCFRBaseline / (ccfr$cCFR*100)
+  est_ccfr2[i] <- dt$cum_cases[i]*1/fraction_reported
+}
+
+
 data<-list(confirmados=cumsum(rev(data$cases)),obitos=cumsum(rev(data$deaths)))
-
-
 size=length(data$confirmados)
 est_ccfr<-rep(NaN,size)
+
 
 for (rr in 0:(size-1)){
   cat("working on rr =, ", rr, "\n")
@@ -65,12 +77,19 @@ for (rr in 0:(size-1)){
       data2 <- data.frame(confirmados = diff(data$confirmados[1:last]), obitos=diff(data$obitos[1:last]))
     }
     
-    ccfr<-scale_cfr(data2, delay_fun = hospitalisation_to_death_truncated)
+    ccfr <- scale_cfr(data2, delay_fun = hospitalisation_to_death_truncated)
     
     fraction_reported=cCFRBaseline / (ccfr$cCFR*100)
     
     est_ccfr[last]<-data$confirmados[last]*1/fraction_reported
 }
+
+
+
+
+
+
+
 
 #data2 <- list(confirmados=diff(data$confirmados),obitos=diff(data$obitos))
 #ccfr<-scale_cfr(data2, delay_fun = hospitalisation_to_death_truncated)
