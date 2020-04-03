@@ -163,7 +163,7 @@ plot_estimates <- function(country_geoid = "ES",
       select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, est_ccfr, mean_cases:survey_twitter)
   } else{
     dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, est_ccfr, mean_cases:sample_size, est_ccfr)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, est_ccfr, mean_cases:sample_size)
   }
   
   write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "-", "estimates.csv"))
