@@ -1,0 +1,93 @@
+# Welsh translations for coronasurveys-social-plot package.
+# Copyright (C) 2020 THE coronasurveys-social-plot'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the coronasurveys-social-plot package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: coronasurveys-social-plot 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-03 10:54-0700\n"
+"PO-Revision-Date: 2020-04-03 10:54-0700\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: overall_plot.py:74
+msgid ""
+"Want to help? Complete the survey at \n"
+" coronasurveys.org!"
+msgstr ""
+
+#: overall_plot.py:81
+msgid "in the World"
+msgstr ""
+
+#: overall_plot.py:83
+msgid "in Argentina"
+msgstr ""
+
+#: overall_plot.py:85
+msgid "in Chile"
+msgstr ""
+
+#: overall_plot.py:87
+msgid "in Cyprus"
+msgstr ""
+
+#: overall_plot.py:89
+msgid "in Germany"
+msgstr ""
+
+#: overall_plot.py:91
+msgid "in Ecuador"
+msgstr ""
+
+#: overall_plot.py:93 overall_plot.py:97
+msgid "in Spain"
+msgstr ""
+
+#: overall_plot.py:95
+msgid "in France"
+msgstr ""
+
+#: overall_plot.py:99
+msgid "in the United Kingdom"
+msgstr ""
+
+#: overall_plot.py:101
+msgid "in Greece"
+msgstr ""
+
+#: overall_plot.py:103
+msgid "in Italy"
+msgstr ""
+
+#: overall_plot.py:105
+msgid "in Japan"
+msgstr ""
+
+#: overall_plot.py:107
+msgid "in the Netherlands"
+msgstr ""
+
+#: overall_plot.py:109
+msgid "in Portugal"
+msgstr ""
+
+#: overall_plot.py:111
+msgid "in the USA"
+msgstr ""
+
+#: overall_plot.py:113
+msgid "CoronaSurveys Responses "
+msgstr ""
+
+#: overall_plot.py:118
+msgid ""
+"You can contribute here\n"
+"with your responses!"
+msgstr ""
