@@ -1,6 +1,6 @@
 ## To compile a figure
 
-To using a country's data whose code is `<CC>`:
+To create a plot run the following, where `<CC>` is the country code:
 ```bash
 LANG=<LANG> ./estimates_plot.py -c <CC> 
 ```
@@ -16,4 +16,4 @@ LANG=<LANG> ./estimates_plot.py -c <CC>
 ```bash
 LANG=<LANG> ./estimates_plot.py
 ```
-or 
+
