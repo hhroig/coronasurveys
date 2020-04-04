@@ -1,0 +1,5 @@
+"tag","name","description","links"
+"cases","Confirmed Cases","Number of confirmed COVID-19 cases, data from the European Centre for Disease Prevention and Control","https://www.ecdc.europa.eu/en"
+"estimated_cases","@CoronaSurveys Poll Estimate","Number of cases, estimated from polls after outlier removal and considering a weighted average of each reported proportion",""
+"prop_cases","@CoronaSurveys Poll Estimate","Number of cases, estimated from polls after outlier removal and considering a simple average of each reported proportion",""
+"dunbar_cases","@CoronaSurveys Poll Estimate","Number of cases, estimated from polls after outlier removal and considering a standard (Dunbar number) number of acquaintances from each respondent",""

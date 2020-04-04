@@ -41,8 +41,8 @@ scale_cfr <- function(data_1_in, death_incidence, delay_fun){
 }
 
 
-#url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
-url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-04-02.xlsx"
+url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
+#url <- "https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-04-02.xlsx"
 GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
 data <- read_excel(tf)
 
@@ -139,8 +139,6 @@ createPlot <- function (baselineData, estimates, ptype, legendString, filename){
   pdf(filename)
   plot(baselineData$deaths*400,log="y", xlim=c(45,size+3), ylim=c(1,2000000),yaxt="n",xaxt="n",type="l",xlab="Days",main="Different estimates of COVID-19 cases in France",ylab="Total cases",lty=4)
   lines(baselineData$cases)
-  baselineData$cases
-  data$cases
   points(estimates, pch=ptype); legend("bottomright", 
                                        legend = c("Confirmed", "Fatalities*400", "CCFR", paste("Coronasurveys ",legendString)), 
                                        lty = c(1,4,0,0), 
