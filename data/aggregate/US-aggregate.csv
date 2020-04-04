@@ -119,3 +119,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/03 10:03:47 PM UTC",Massachusetts,20,0
 "2020/04/03 10:08:17 PM UTC",Massachusetts,20,1
 "2020/04/03 11:59:03 PM UTC",Virginia,30,2
+"2020/04/04 02:46:42 PM UTC",Florida,20,0
+"2020/04/04 04:39:55 PM UTC",California,30,0
