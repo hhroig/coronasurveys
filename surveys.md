@@ -27,6 +27,8 @@
 
 - USA: https://tinyurl.com/coronasurveysusa
 
+- Venezuela: https://tinyurl.com/coronasurveysvenezuela
+
 Follow us on:
 
 Twitter: https://twitter.com/coronasurveys
