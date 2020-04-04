@@ -83,10 +83,6 @@ Ignacio Castro,
 QMUL,
 UK
 
-Chryssis Georgiou,
-U. Cyprus,
-Cyprus
-
 Davide Frey,
 Inria Rennes,
 France
@@ -98,6 +94,14 @@ Germany
 Angeliki Gazi,
 Panteion University of Social and Political Sciences,
 Greece
+
+Chryssis Georgiou,
+U. Cyprus,
+Cyprus
+
+Benjamin Girault,
+USC,
+USA
 
 Raquel Menezes,
 U. Minho,
