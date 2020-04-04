@@ -1,6 +1,8 @@
 
 - Argentina: https://tinyurl.com/coronasurveysargentina
 
+- Australia: https://preview.tinyurl.com/coronasurveysaustralia
+
 - Chile: https://tinyurl.com/coronasurveyschile
 
 - Cyprus: https://tinyurl.com/coronasurveyscyprus
