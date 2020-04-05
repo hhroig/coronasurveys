@@ -54,12 +54,11 @@ ccfrisgtzero=(df['est_ccfr'] > 0)
 #exit
 ## Plot Settings
 
-lighter = 1.5
-figcolor=(40/255, 87/255, 128/255)
-#figcolor=(27/255 * lighter, 54/255 * lighter, 93/255 * lighter)
-#figcolor=(28/255 * lighter, 66/255 * lighter, 32/255 * lighter)
-#figcolor=(63/255 * lighter,42/255 * lighter,86/255 * lighter)
-#figcolor=(93/255, 62/255, 128/255)
+#figcolor=(40/255, 87/255, 128/255)
+#figcolor=(27/255, 54/255, 93/255)
+#figcolor=(28/255, 66/255, 32/255)
+#figcolor=(63/255, 42/255, 86/255)
+figcolor=(93/255, 62/255, 128/255)
 sns.set(rc={'axes.facecolor': figcolor,
             'figure.facecolor': figcolor,
             'grid.color': 'black',
