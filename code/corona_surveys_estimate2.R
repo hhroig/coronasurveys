@@ -48,10 +48,10 @@ calculate_ci <- function(p_est, level, pop_size) {
   return(list(low=p_est-z*se, upp=p_est+z*se, error=z*se))
 }
 estimate_cases_aggregate <- function(file_path = "../data/aggregate/ES-aggregate.csv",
-                                     country_population = 46754778, max_ratio = .3,
+                                     country_population = 46754778, batch = 20, max_ratio = .3,
                                      correction_factor = 1) {
-  cat("file_path is ", file_path, "\n")
-  cat("country_population is", country_population, "\n")
+  #cat("file_path is ", file_path, "\n")
+  #cat("country_population is", country_population, "\n")
   dt <- read.csv(file_path, as.is = T)
   names(dt) <- c("timestamp","region","reach","cases")
   dt$date <- substr(dt$timestamp, 1, 10)
