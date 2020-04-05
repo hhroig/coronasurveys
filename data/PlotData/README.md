@@ -11,6 +11,7 @@ been removed)
 the current day). There are additional confidence interval estimates for
 this variable which are: cases_p_reach_low and cases_p_reach_high and cases_p_reach_error.
 - cases_p_reach_prop: mean(cases/reach). mean is taken over the current day.
+- cases_p_reach_prop_median : median(cases/reach). median is taken over the current day.
 - estimated_cases: country_population * cases_p_reach *
 correction_factor. There are additional confidence interval estimates
 for this variable which are:estimated_cases_low, estimated_cases_high,
