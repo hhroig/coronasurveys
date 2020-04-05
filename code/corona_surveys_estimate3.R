@@ -125,7 +125,7 @@ estimate_cases_aggregate <- function(file_path,
       summarise(date = last(date),
                 sample_size = n(), 
                 mean_cases = mean(cases),
-                mean_dreach = mean(reach),
+                mean_reach = mean(reach),
                 dunbar_reach = 150 * n(),
                 cases_p_reach = sum(cases)/sum(reach), 
                 cases_p_reach_low = calculate_ci(p_est = sum(cases)/sum(reach), level = 0.95,
@@ -208,8 +208,14 @@ estimate_cases_aggregate <- function(file_path,
  
 }
 
+get_countries_with_survey <- function(path = "../data/aggregate/"){
+  #get list of countries with surveys
+  plotdata_files <- list.files(path)
+  plotdata_files <- plotdata_files[plotdata_files != "Twitter-surveys.csv"]
+  substr(plotdata_files,start = 1, stop = 2)
+}
+
 plot_estimates <- function(country_geoid = "ES", 
-                           country_population = 46754778,
                            batch_size = 30,
                            batching_method = "antonio",
                            est_date = format(Sys.time(), "%Y-%m-%d"),
@@ -219,60 +225,90 @@ plot_estimates <- function(country_geoid = "ES",
                            z_sd_hdt = 12.7,
                            z_median_hdt = 9.1,
                            c_cfr_baseline = 1.38,
-                           c_cfr_estimate_range = c(1.23, 1.53)){
+                           c_cfr_estimate_range = c(1.23, 1.53), 
+                           survey_countries =  get_countries_with_survey()){
   mu_hdt = log(z_median_hdt)
   sigma_hdt = sqrt(2*(log(z_mean_hdt) - mu_hdt))
-  file_path = paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
   url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
                est_date, ".xlsx", sep = "")
   GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
   data <- read_excel(tf)
-  data <- data[data$geoId == country_geoid,]
-  dt <- data[rev(1:nrow(data)),]
-  dt$cum_cases <- cumsum(dt$cases)
-  dt$cum_deaths <- cumsum(dt$deaths)
-  dt$cum_deaths_400 <- dt$cum_deaths * 400
-  dt$date <- gsub("-", "/", dt$dateRep)
-  ndt <- nrow(dt)
-  est_ccfr <- rep(NA, ndt)
-  
-  for (i in ndt : 1) {
-    data2t <- dt[1:i, c("cases", "deaths")]
-    ccfr <- scale_cfr(data2t, delay_fun = hosp_to_death_trunc, mu_hdt = mu_hdt, sigma_hdt = sigma_hdt)
-    fraction_reported <- c_cfr_baseline / (ccfr$cCFR*100)
-    est_ccfr[i] <- dt$cum_cases[i]*1/fraction_reported
-  }
-  
-  survey_gforms_estimate <- estimate_cases_aggregate(file_path = file_path,
-                                                     country_population = country_population,
-                                                     max_ratio = max_ratio,
-                                                     correction_factor = correction_factor, 
-                                                     method = batching_method,
-                                                     batch = batch_size)$dt_estimates
-  dt$est_ccfr <- est_ccfr
-  # combine dt and survey forms estimates
-  dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
-  # combine with survey twitter
-  if (country_geoid == "ES"){
-    dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:survey_twitter)
+  if(country_geoid %in% survey_countries){
+    file_path = paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
+    data <- data[data$geoId == country_geoid,]
+    dt <- data[rev(1:nrow(data)),]
+    dt$cum_cases <- cumsum(dt$cases)
+    dt$cum_deaths <- cumsum(dt$deaths)
+    dt$cum_deaths_400 <- dt$cum_deaths * 400
+    dt$date <- gsub("-", "/", dt$dateRep)
+    ndt <- nrow(dt)
+    est_ccfr <- rep(NA, ndt)
     
-  } else if(country_geoid == "PT"){
-    dt_res <- full_join(dt_res, survey_twitter_pt, by = "date") %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:survey_twitter)
+    for (i in ndt : 1) {
+      data2t <- dt[1:i, c("cases", "deaths")]
+      ccfr <- scale_cfr(data2t, delay_fun = hosp_to_death_trunc, mu_hdt = mu_hdt, sigma_hdt = sigma_hdt)
+      fraction_reported <- c_cfr_baseline / (ccfr$cCFR*100)
+      est_ccfr[i] <- dt$cum_cases[i]*1/fraction_reported
+    }
+    
+    survey_gforms_estimate <- estimate_cases_aggregate(file_path = file_path,
+                                                       country_population = dt$popData2018[1],
+                                                       max_ratio = max_ratio,
+                                                       correction_factor = correction_factor, 
+                                                       method = batching_method,
+                                                       batch = batch_size)$dt_estimates
+    dt$est_ccfr <- est_ccfr
+    # combine dt and survey forms estimates
+    dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
+    # combine with survey twitter
+    if (country_geoid == "ES"){
+      dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:survey_twitter)
+      
+    } else if(country_geoid == "PT"){
+      dt_res <- full_join(dt_res, survey_twitter_pt, by = "date") %>% 
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:survey_twitter)
+    } else{
+      dt_res <- dt_res %>% 
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases)
+    }
+    
+    write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "-", "estimates.csv"))
   } else{
-    dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases)
+    data <- data[data$geoId == country_geoid,]
+    dt <- data[rev(1:nrow(data)),]
+    dt$cum_cases <- cumsum(dt$cases)
+    dt$cum_deaths <- cumsum(dt$deaths)
+    dt$cum_deaths_400 <- dt$cum_deaths * 400
+    dt$date <- gsub("-", "/", dt$dateRep)
+    ndt <- nrow(dt)
+    est_ccfr <- rep(NA, ndt)
+    
+    for (i in ndt : 1) {
+      data2t <- dt[1:i, c("cases", "deaths")]
+      ccfr <- scale_cfr(data2t, delay_fun = hosp_to_death_trunc, mu_hdt = mu_hdt, sigma_hdt = sigma_hdt)
+      fraction_reported <- c_cfr_baseline / (ccfr$cCFR*100)
+      est_ccfr[i] <- dt$cum_cases[i]*1/fraction_reported
+    }
+    survey_gforms_estimate <- data.frame(date,
+                                         sample_size,
+                                         mean_cases,
+                                         mean)
+    dt$est_ccfr <- est_ccfr
+    dt <- dt %>% 
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr)
+    
+    write.csv(dt, paste0("../data/PlotData/", country_geoid, "-", "estimates.csv"))
   }
   
-  write.csv(dt_res, paste0("../data/PlotData/", country_geoid, "-", "estimates.csv"))
 }
+
+
 
 # usage...generate and write data to plotdata folder
 # Spain
 plot_estimates(country_geoid = "ES", country_population = 46754778,
                est_date = "2020-04-05")
-
 # Portugal
 plot_estimates(country_geoid = "PT", country_population = 10261075, 
                est_date = "2020-04-05")
