@@ -284,5 +284,31 @@ plot_estimates(country_geoid = "CY", country_population = 890900,
 # France
 plot_estimates(country_geoid = "FR", country_population = 66987244,
                est_date = "2020-04-05")
+# Argentina
+plot_estimates(country_geoid = "AR", country_population = 45195774,
+               est_date = "2020-04-05")
+# Chile
+plot_estimates(country_geoid = "CL", country_population = 19116201,
+               est_date = "2020-04-05")
+#Germany
+plot_estimates(country_geoid = "DE", country_population = 83783942,
+               est_date = "2020-04-05")
+# Ecuador
+plot_estimates(country_geoid = "EC", country_population = 17643054,
+               est_date = "2020-04-05")
+#GB
+plot_estimates(country_geoid = "GB", country_population = 67886011,
+               est_date = "2020-04-05")
+
+plot_estimates(country_geoid = "IT", country_population = 60461826,
+               est_date = "2020-04-05")
+
+plot_estimates(country_geoid = "JP", country_population = 126476461,
+               est_date = "2020-04-05")
 
 
+plot_estimates(country_geoid = "NL", country_population = 17134872,
+               est_date = "2020-04-05")
+
+plot_estimates(country_geoid = "US", country_population = 331002651,
+               est_date = "2020-04-05")
