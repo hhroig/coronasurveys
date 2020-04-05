@@ -47,11 +47,12 @@ calculate_ci <- function(p_est, level, pop_size) {
   se <- sqrt(p_est*(1-p_est))/sqrt(pop_size)
   return(list(low=p_est-z*se, upp=p_est+z*se, error=z*se))
 }
-estimate_cases_aggregate <- function(file_path = "../data/aggregate/ES-aggregate.csv",
-                                     country_population = 46754778,
-                                     batch = 30, method = c("antonio", "carlos"),
-                                     max_ratio = .3,
-                                     correction_factor = 1) {
+estimate_cases_aggregate <- function(file_path,
+                                     country_population,
+                                     batch,
+                                     method = c("antonio", "carlos"),
+                                     max_ratio,
+                                     correction_factor) {
   #cat("file_path is ", file_path, "\n")
   #cat("country_population is", country_population, "\n")
   dt <- read.csv(file_path, as.is = T)
@@ -207,14 +208,20 @@ estimate_cases_aggregate <- function(file_path = "../data/aggregate/ES-aggregate
  
 }
 
-plot_estimates <- function(country_geoid = "ES",
-                           country_population = 46754778, max_ratio = .3, correction_factor = 1, 
-                           z_mean_hdt = 13, z_sd_hdt = 12.7, z_median_hdt = 9.1,
-                           mu_hdt = log(z_median_hdt), sigma_hdt = sqrt(2*(log(z_mean_hdt) - mu_hdt)),
-                           c_cfr_baseline = 1.38, c_cfr_estimate_range = c(1.23, 1.53), 
+plot_estimates <- function(country_geoid = "ES", 
+                           country_population = 46754778,
+                           batch_size = 30,
+                           batching_method = "antonio",
                            est_date = format(Sys.time(), "%Y-%m-%d"),
-                           batch_size = 30, 
-                           batching_method = "antonio"){
+                           max_ratio = .3,
+                           correction_factor = 1, 
+                           z_mean_hdt = 13,
+                           z_sd_hdt = 12.7,
+                           z_median_hdt = 9.1,
+                           c_cfr_baseline = 1.38,
+                           c_cfr_estimate_range = c(1.23, 1.53)){
+  mu_hdt = log(z_median_hdt)
+  sigma_hdt = sqrt(2*(log(z_mean_hdt) - mu_hdt))
   file_path = paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
   url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
                est_date, ".xlsx", sep = "")
@@ -263,18 +270,19 @@ plot_estimates <- function(country_geoid = "ES",
 
 # usage...generate and write data to plotdata folder
 # Spain
-plot_estimates(est_date = "2020-04-05")
+plot_estimates(country_geoid = "ES", country_population = 46754778,
+               est_date = "2020-04-05")
 
 # Portugal
-plot_estimates(est_date = "2020-04-05", country_geoid = "PT",
-                     country_population = 10261075)
+plot_estimates(country_geoid = "PT", country_population = 10261075, 
+               est_date = "2020-04-05")
 
 # Cyprus
-plot_estimates(est_date = "2020-04-05", country_geoid = "CY",
-                     country_population = 890900)
+plot_estimates(country_geoid = "CY", country_population = 890900,
+               est_date = "2020-04-05")
 
 # France
-plot_estimates(est_date = "2020-04-05", country_geoid = "FR",
-                     country_population = 66987244)
+plot_estimates(country_geoid = "FR", country_population = 66987244,
+               est_date = "2020-04-05")
 
 
