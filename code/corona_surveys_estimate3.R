@@ -212,7 +212,9 @@ plot_estimates <- function(country_geoid = "ES",
                            z_mean_hdt = 13, z_sd_hdt = 12.7, z_median_hdt = 9.1,
                            mu_hdt = log(z_median_hdt), sigma_hdt = sqrt(2*(log(z_mean_hdt) - mu_hdt)),
                            c_cfr_baseline = 1.38, c_cfr_estimate_range = c(1.23, 1.53), 
-                           est_date = format(Sys.time(), "%Y-%m-%d")){
+                           est_date = format(Sys.time(), "%Y-%m-%d"),
+                           batch_size = 30, 
+                           batching_method = "antonio"){
   file_path = paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
   url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
                est_date, ".xlsx", sep = "")
@@ -238,7 +240,8 @@ plot_estimates <- function(country_geoid = "ES",
                                                      country_population = country_population,
                                                      max_ratio = max_ratio,
                                                      correction_factor = correction_factor, 
-                                                     method = "antonio", batch = 30)$dt_estimates
+                                                     method = batching_method,
+                                                     batch = batch_size)$dt_estimates
   dt$est_ccfr <- est_ccfr
   # combine dt and survey forms estimates
   dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
