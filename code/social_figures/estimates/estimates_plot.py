@@ -5,10 +5,12 @@ import os
 import argparse
 
 import pandas as pd
+import numpy as np
 
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
+import matplotlib.patches as mpatches
 import seaborn as sns
 
 import gettext
@@ -19,12 +21,18 @@ parser = argparse.ArgumentParser(description="Builds a social network friendly r
 parser.add_argument("-l", "--locale", help="the locale to choose the text from", default="en")
 parser.add_argument("-c", "--country_code", help="the country code the data belongs to", default="WW")
 parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shift the arrow text on the x axis", default=0)
+parser.add_argument("-f", "--first_datapoint", help="first datapoint to plot", type=int)
+parser.add_argument("-o", "--official_arrow_datapoint", help="datapoint after the first plotted to point the arrow to for the official number", type=int, default=5)
 #parser.add_argument("csv_filename", help="the csv file to process", default="../../../data/aggregate/FR-aggregate.csv", nargs="?")
 args = parser.parse_args()
-    
+
+if args.first_datapoint:
+    args.official_arrow_datapoint += args.first_datapoint
+print(args.official_arrow_datapoint)
+
 ## Language
 
-locale = gettext.translation('overall_plot', localedir='locales')
+locale = gettext.translation('estimates_plot', localedir='locales')
 locale.install()
 _ = locale.gettext
 
@@ -32,7 +40,9 @@ _ = locale.gettext
 
 filename="../../../data/PlotData/"+args.country_code+"-estimates.csv"
 df = pd.read_csv(filename)
-print (df)
+print (df['cum_cases'])
+print (df['est_ccfr'])
+print (df['estimated_cases'])
 
 ccfrisgtzero=(df['est_ccfr'] > 0)
 
@@ -65,31 +75,98 @@ sns.set(rc={'axes.facecolor': figcolor,
 fig, ax = plt.subplots(figsize=(10,10))
 ax.set_yscale("log")
 #palette = sns.color_palette(palette=sns.crayon_palette(sns.colors.crayons))
-palette = sns.color_palette(sns.light_palette((210, 90, 60), input="husl"))
-sns.set_palette(palette)
+palette = sns.color_palette('colorblind') #sns.light_palette((210, 90, 60), input="husl"))
+#sns.set_palette(palette)
 new_palette = itertools.cycle(palette)
+next(new_palette)
 
-## Line Plot
+## Line Plots
 
-snsplot = sns.lineplot(data=df, x='date', y='cum_cases', ax=ax) #, color=next(new_palette))
-sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax) #, color=next(new_palette))
+## Official Estimate
 
-#sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax) #, color=next(new_palette))
+next_color=palette[7]#next(new_palette)
+snsplot = sns.lineplot(data=df, x='date', y='cum_cases', ax=ax, color=next_color)
+official_arrow_x = df.loc[df.index[args.official_arrow_datapoint], 'date']
+official_arrow_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases']
+official_arrow_text_x = df.loc[df.index[args.official_arrow_datapoint + 5], 'date']
+ax.annotate(_('Confirmed cases'),
+            xy=(official_arrow_x, official_arrow_y), xycoords='data',
+            xytext=(official_arrow_text_x, official_arrow_y), textcoords='data',
+            arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",
+                            facecolor=next_color, edgecolor=next_color,
+                            shrinkA=5, shrinkB=5,
+                            relpos=(0, 0.5)),
+            horizontalalignment='left', verticalalignment='center_baseline',
+            fontfamily='Futura LT', fontsize=28, color=next_color)
 
-sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax) #, err_style="bars")
+## Estimate from Death Rate
 
-sns.lineplot(data=df, x='date', y='prop_cases', ax=ax) #, err_style="bars")
+next_color=next(new_palette)
+sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax, color=next_color)
+death_estimate_arrow_x = df.loc[df.index[-20], 'date']
+death_estimate_arrow_y = df.loc[df.index[-20], 'est_ccfr']
+death_estimate_arrow_text_x = df.loc[df.index[-12], 'date']
+ax.annotate(_('If 4% of cases lead\nto death'),
+            xy=(death_estimate_arrow_x, death_estimate_arrow_y), xycoords='data',
+            xytext=(death_estimate_arrow_text_x, death_estimate_arrow_y / 1000), textcoords='data',
+            arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=0.4",
+                            facecolor=next_color,edgecolor=next_color,
+                            shrinkA=5,shrinkB=5,
+                            relpos=(0.5, 1)),
+            horizontalalignment='center', verticalalignment='top', multialignment='center',
+            fontfamily='Futura LT', fontsize=28, color=next_color)
 
-sns.lineplot(data=df, x='date', y='dunbar_cases', ax=ax) #, err_style="bars")
- 
+## CoronaSurveys Estimate
+
+#sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next(new_palette))
+
+#next(new_palette)
+next_color=next(new_palette)
+sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next_color) #, err_style="bars")
+ix=0
+while ix < len(df.index) and np.isnan(df.loc[df.index[ix], 'estimated_cases']):
+    ix += 1
+cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
+cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
+cosur_estimate_arrow_text_x = df.loc[df.index[ix - 10], 'date']
+ax.annotate(_('CoronaSurveys'),
+            xy=(cosur_estimate_arrow_x, cosur_estimate_arrow_y), xycoords='data',
+            xytext=(cosur_estimate_arrow_text_x, cosur_estimate_arrow_y), textcoords='data',
+            arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=-0.4",
+                            facecolor=next_color,edgecolor=next_color,
+                            shrinkA=5,shrinkB=5,
+                            relpos=(1, 1)),
+            horizontalalignment='right', verticalalignment='top', multialignment='center',
+            fontfamily='Futura LT', fontsize=28, fontweight='bold', color=next_color)
+
+#sns.lineplot(data=df, x='date', y='prop_cases', ax=ax, color=next(new_palette)) #, err_style="bars")
+
+#sns.lineplot(data=df, x='date', y='dunbar_cases', ax=ax) #, err_style="bars")
+
+## Date Limits
+if args.first_datapoint:
+    ax.set_xlim([df.loc[df.index[args.first_datapoint], 'date'], df.loc[df.index[-1], 'date']])
+
 ## Margins
-plt.subplots_adjust(left=0.1, right=.95, top=0.9, bottom=0.2)
+plt.subplots_adjust(left=0.1, right=.95, top=0.9, bottom=0.25)
+
 
 ## Axes tikcks and tick labels
+@mticker.FuncFormatter
+def my_ytick_formatter(x, pos):
+    tmp = np.log10(x)
+    if tmp < 3:
+        return str(int(x))
+    elif tmp < 6:
+        return str(int(x / 1000)) + 'k'
+    else:
+        return str(int(x / 1000000)) + 'M'
 
+plt.xticks(rotation=20)
 #plt.locator_params(axis='y', nbins=3)
-ax.xaxis.set_major_locator(mdates.DayLocator(bymonthday=range(5,32,5)))
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%B %dth'))
+ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=(mdates.MO))) #DayLocator(bymonthday=range(5,32,10)))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %dth'))
+ax.yaxis.set_major_formatter(my_ytick_formatter)
 
 ## Axes labels
 
@@ -130,17 +207,17 @@ elif args.country_code == 'PT':
 elif args.country_code == 'US':
     title_subset = _('in the USA')
 
-ax.set_title(_('CoronaSurveys Responses ') + title_subset,
+ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
              color='white', size=30, fontweight='bold', fontname='Futura LT', pad=20)
 
 ## Arrow for Welcomed Contributions
 
-ax.annotate(_('You can contribute here\nwith your responses!'),
-            xy=(df.iloc[-2, 1], df.iloc[-10, 0]), xycoords='data',
-            xytext=(0.7 + args.shift_contrib_x, 0.8), textcoords='axes fraction',
-            arrowprops=dict(facecolor='white', connectionstyle="arc3,rad=-0.2"),
-            horizontalalignment='right', verticalalignment='center_baseline',
-            fontfamily='Futura LT', fontsize=28, color='white')
+#ax.annotate(_('You can contribute here\nwith your responses!'),
+            #xy=(df.loc[df.index[-2], 'date'], df.loc[df.index[-10], 'estimated_cases'] / 2), xycoords='data',
+            #xytext=(0.4 + args.shift_contrib_x, 0.9), textcoords='axes fraction',
+            #arrowprops=dict(facecolor='white', connectionstyle="arc3,rad=-0.2"),
+            #horizontalalignment='right', verticalalignment='center_baseline',
+            #fontfamily='Futura LT', fontsize=28, color='white')
 
 ## Save the figure
 

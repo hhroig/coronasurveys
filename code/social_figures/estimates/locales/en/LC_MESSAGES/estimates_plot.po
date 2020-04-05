@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: coronasurveys-social-plot 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-03 11:07-0700\n"
-"PO-Revision-Date: 2020-04-03 10:54-0700\n"
+"POT-Creation-Date: 2020-04-04 19:29-0700\n"
+"PO-Revision-Date: 2020-04-04 19:29-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -17,7 +17,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: overall_plot.py:74
+#: estimates_plot.py:92
+msgid "Confirmed cases"
+msgstr "Confirmed cases"
+
+#: estimates_plot.py:109
+#, python-format
+msgid ""
+"If 4% of cases lead\n"
+"to death"
+msgstr ""
+"If 4% of cases lead\n"
+"to death"
+
+#: estimates_plot.py:132
+msgid "CoronaSurveys"
+msgstr "CoronaSurveys"
+
+#: estimates_plot.py:173
 msgid ""
 "Want to help? Complete the survey at \n"
 " coronasurveys.org!"
@@ -25,74 +42,66 @@ msgstr ""
 "Want to help? Complete the survey at \n"
 " coronasurveys.org!"
 
-#: overall_plot.py:81
+#: estimates_plot.py:180
 msgid "in the World"
 msgstr "in the World"
 
-#: overall_plot.py:83
+#: estimates_plot.py:182
 msgid "in Argentina"
 msgstr "in Argentina"
 
-#: overall_plot.py:85
+#: estimates_plot.py:184
 msgid "in Chile"
 msgstr "in Chile"
 
-#: overall_plot.py:87
+#: estimates_plot.py:186
 msgid "in Cyprus"
 msgstr "in Cyprus"
 
-#: overall_plot.py:89
+#: estimates_plot.py:188
 msgid "in Germany"
 msgstr "in Germany"
 
-#: overall_plot.py:91
+#: estimates_plot.py:190
 msgid "in Ecuador"
 msgstr "in Ecuador"
 
-#: overall_plot.py:93
+#: estimates_plot.py:192
 msgid "in Spain"
 msgstr "in Spain"
 
-#: overall_plot.py:95
+#: estimates_plot.py:194
 msgid "in France"
 msgstr "in France"
 
-#: overall_plot.py:97
+#: estimates_plot.py:196
 msgid "in the United Kingdom"
 msgstr "in the United Kingdom"
 
-#: overall_plot.py:99
+#: estimates_plot.py:198
 msgid "in Greece"
 msgstr "in Greece"
 
-#: overall_plot.py:101
+#: estimates_plot.py:200
 msgid "in Italy"
 msgstr "in Italy"
 
-#: overall_plot.py:103
+#: estimates_plot.py:202
 msgid "in Japan"
 msgstr "in Japan"
 
-#: overall_plot.py:105
+#: estimates_plot.py:204
 msgid "in the Netherlands"
 msgstr "in the Netherlands"
 
-#: overall_plot.py:107
+#: estimates_plot.py:206
 msgid "in Portugal"
 msgstr "in Portugal"
 
-#: overall_plot.py:109
+#: estimates_plot.py:208
 msgid "in the USA"
 msgstr "in the USA"
 
-#: overall_plot.py:111
-msgid "CoronaSurveys Responses "
-msgstr "CoronaSurveys Responses "
-
-#: overall_plot.py:116
-msgid ""
-"You can contribute here\n"
-"with your responses!"
-msgstr ""
-"You can contribute here\n"
-"with your responses!"
+#: estimates_plot.py:210
+msgid "Covid-19 Cases Estimates "
+msgstr "Covid-19 Cases Estimates "
