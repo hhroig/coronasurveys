@@ -54,10 +54,11 @@ ccfrisgtzero=(df['est_ccfr'] > 0)
 #exit
 ## Plot Settings
 
-figcolor=(40/255, 87/255, 128/255)
+#figcolor=(40/255, 87/255, 128/255)
 #figcolor=(27/255, 54/255, 93/255)
 #figcolor=(28/255, 66/255, 32/255)
-#figcolor=(63/255,42/255,86/255)
+#figcolor=(63/255, 42/255, 86/255)
+figcolor=(93/255, 62/255, 128/255)
 sns.set(rc={'axes.facecolor': figcolor,
             'figure.facecolor': figcolor,
             'grid.color': 'black',
@@ -106,7 +107,7 @@ sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax, color=next_co
 death_estimate_arrow_x = df.loc[df.index[-20], 'date']
 death_estimate_arrow_y = df.loc[df.index[-20], 'est_ccfr']
 death_estimate_arrow_text_x = df.loc[df.index[-12], 'date']
-ax.annotate(_('If 4% of cases lead\nto death'),
+ax.annotate(_('If 1.4% of cases lead\nto death [1]'),
             xy=(death_estimate_arrow_x, death_estimate_arrow_y), xycoords='data',
             xytext=(death_estimate_arrow_text_x, death_estimate_arrow_y / 1000), textcoords='data',
             arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=0.4",
