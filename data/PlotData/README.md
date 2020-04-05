@@ -3,6 +3,7 @@ The variables in the generated files are:
 - deaths: deaths of current day..from ecdc data
 - cum_cases: cumulative cases up to the current day
 - cum_deaths: cumulative deaths up to the current day
+- cum_deaths_400: cumulative deaths up to the current day *400
 - mean_cases: daily mean of cases  
 - mean_reach: dialy mean of reach
 - dunbar_reach: 150 * sample_size (for current day after ouliers have
