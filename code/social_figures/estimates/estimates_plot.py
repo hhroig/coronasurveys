@@ -111,7 +111,7 @@ sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax, color=next_co
 death_estimate_arrow_x = df.loc[df.index[-20], 'date']
 death_estimate_arrow_y = df.loc[df.index[-20], 'est_ccfr']
 death_estimate_arrow_text_x = df.loc[df.index[-12], 'date']
-ax.annotate(_('If 1.4% of cases lead\nto death [1]'),
+ax.annotate(_('If 1.4% of the cases lead\nto death')+'$^*$',
             xy=(death_estimate_arrow_x, death_estimate_arrow_y), xycoords='data',
             xytext=(death_estimate_arrow_text_x, death_estimate_arrow_y / 1000), textcoords='data',
             arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=0.4",
@@ -121,6 +121,7 @@ ax.annotate(_('If 1.4% of cases lead\nto death [1]'),
             horizontalalignment='center', verticalalignment='top', multialignment='center',
             fontfamily='Futura LT', fontsize=28, color=next_color)
 
+ccfrcolor=next_color
 ## CoronaSurveys Estimate
 #sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next(new_palette))
 
@@ -134,7 +135,7 @@ cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
 cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
 cosur_estimate_arrow_text_x = df.loc[df.index[ix - 10], 'date']
 cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']
-print ("CHECK", df.loc[df.index[ix], 'estimated_cases'])
+
 ancosur=ax.annotate(_('CoronaSurveys'),
             xy=(cosur_estimate_arrow_x, cosur_estimate_arrow_y), xycoords='data',
             xytext=(cosur_estimate_arrow_text_x, cosur_estimate_arrow_y), textcoords='data',
@@ -183,9 +184,21 @@ ax.yaxis.set_major_formatter(my_ytick_formatter)
 
 ## Axes labels
 
-ax.set_xlabel(_('Want to help? Complete the survey at \n coronasurveys.org!'),
+xlabel=ax.set_xlabel(_('Want to help? Complete the survey at \n coronasurveys.org!'),
               labelpad=30, fontsize=28, fontstyle='italic', fontname='Futura LT')
+
+offset_from_xlabel = OffsetFrom(xlabel, (0, 0))
 ax.set_ylabel('')
+
+#ax.annotate('$^*$'+_('estimation based on ')+'https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html',
+#            xy=(280, -10), xycoords='offset_from_xlabel,
+#            horizontalalignment='center', verticalalignment='top', multialignment='center',
+#            fontfamily='Futura LT', fontsize=14, fontweight='normal', color=ccfrcolor)
+
+ax.annotate('$^*$'+_('estimation based on ')+'https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html',
+            xy=(280, -160), xycoords='axes points',
+            horizontalalignment='center', verticalalignment='top', multialignment='center',
+            fontfamily='Futura LT', fontsize=14, fontweight='normal', color=ccfrcolor)
 
 ## Title
 
@@ -221,7 +234,7 @@ elif args.country_code == 'US':
     title_subset = _('in the USA')
 
 ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
-             color='white', size=30, fontweight='bold', fontname='Futura LT', pad=20)
+             color='white', size=29, fontweight='bold', fontname='Futura LT', pad=20)
 
 ## Arrow for Welcomed Contributions
 
