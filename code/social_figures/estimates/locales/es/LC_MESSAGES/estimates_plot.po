@@ -19,7 +19,7 @@ msgstr ""
 
 #: estimates_plot.py:97
 msgid "Confirmed cases"
-msgstr ""
+msgstr "Casos confirmados"
 
 #: estimates_plot.py:114
 #, python-format
@@ -27,81 +27,85 @@ msgid ""
 "If 1.4% of cases lead\n"
 "to death [1]"
 msgstr ""
+"Si 1.4% de los casos\n"
+"fallecen [1]"
 
 #: estimates_plot.py:138
 msgid "CoronaSurveys"
-msgstr ""
+msgstr "CoronaSurveys"
 
 #: estimates_plot.py:150
 msgid "help us get more data"
-msgstr ""
+msgstr "ayúdanos a tener más datos"
 
 #: estimates_plot.py:186
 msgid ""
 "Want to help? Complete the survey at \n"
 " coronasurveys.org!"
 msgstr ""
+"Quieres ayudar? Rellena la encuesta en\n"
+"coronasurveys.org !"
 
 #: estimates_plot.py:193
 msgid "in the World"
-msgstr ""
+msgstr "en el mundo"
 
 #: estimates_plot.py:195
 msgid "in Argentina"
-msgstr ""
+msgstr "en Argentina"
 
 #: estimates_plot.py:197
 msgid "in Chile"
-msgstr ""
+msgstr "en Chile"
 
 #: estimates_plot.py:199
 msgid "in Cyprus"
-msgstr ""
+msgstr "en Chipre"
 
 #: estimates_plot.py:201
 msgid "in Germany"
-msgstr ""
+msgstr "en Alemania"
 
 #: estimates_plot.py:203
 msgid "in Ecuador"
-msgstr ""
+msgstr "en Ecuador"
 
 #: estimates_plot.py:205
 msgid "in Spain"
-msgstr ""
+msgstr "en España"
 
 #: estimates_plot.py:207
 msgid "in France"
-msgstr ""
+msgstr "en Francia"
 
 #: estimates_plot.py:209
 msgid "in the United Kingdom"
-msgstr ""
+msgstr "en Reino Unido"
 
 #: estimates_plot.py:211
 msgid "in Greece"
-msgstr ""
+msgstr "en Grecia"
 
 #: estimates_plot.py:213
 msgid "in Italy"
-msgstr ""
+msgstr "en Italia"
 
 #: estimates_plot.py:215
 msgid "in Japan"
-msgstr ""
+msgstr "en Japon"
 
 #: estimates_plot.py:217
 msgid "in the Netherlands"
-msgstr ""
+msgstr "en Holanda"
 
 #: estimates_plot.py:219
 msgid "in Portugal"
-msgstr ""
+msgstr "en Portugal"
 
 #: estimates_plot.py:221
 msgid "in the USA"
-msgstr ""
+msgstr "en EEUU"
 
 #: estimates_plot.py:223
 msgid "Covid-19 Cases Estimates "
-msgstr ""
+msgstr "Estimación de casos de Covid-19 "
