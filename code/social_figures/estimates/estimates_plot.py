@@ -251,5 +251,5 @@ ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
 
 #print os.path.split(filename)
 
-fig.savefig(os.path.splitext(os.path.split(filename)[1])[0] + '.jpg', dpi=200)
+fig.savefig(os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+ '.jpg', dpi=200)
 
