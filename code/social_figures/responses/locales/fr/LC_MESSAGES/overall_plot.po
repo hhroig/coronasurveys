@@ -23,7 +23,7 @@ msgid ""
 " coronasurveys.org!"
 msgstr ""
 "Tu veux nous aider ? Rempli le questionnaire sur\n"
-"coronasurveys.org !"
+" coronasurveys.org !"
 
 #: overall_plot.py:81
 msgid "in the World"

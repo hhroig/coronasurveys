@@ -31,3 +31,11 @@ find . -maxdepth 2 -mindepth 2 -type d -exec msgmerge -U {}/estimates_plot.po es
 cd locales
 find . -maxdepth 2 -mindepth 2 -type d -exec msgfmt --check --verbose --output-file {}/estimates_plot.mo {}/estimates_plot.po \;
 ```
+
+## Update all
+
+The script below runs all update steps
+
+```bash
+./updateAllMsgs.sh
+```
