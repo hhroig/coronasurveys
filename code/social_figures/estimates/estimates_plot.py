@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 
 import sys
 import os
@@ -15,7 +15,10 @@ import seaborn as sns
 
 import gettext
 import itertools
+from matplotlib.text import OffsetFrom
+
 ## Arguments / Options
+
 
 parser = argparse.ArgumentParser(description="Builds a social network friendly response status curve.")
 parser.add_argument("-l", "--locale", help="the locale to choose the text from", default="en")
@@ -35,6 +38,7 @@ print(args.official_arrow_datapoint)
 locale = gettext.translation('estimates_plot', localedir='locales')
 locale.install()
 _ = locale.gettext
+
 
 ## Preprocessing
 
@@ -118,7 +122,6 @@ ax.annotate(_('If 1.4% of cases lead\nto death [1]'),
             fontfamily='Futura LT', fontsize=28, color=next_color)
 
 ## CoronaSurveys Estimate
-
 #sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next(new_palette))
 
 #next(new_palette)
@@ -130,7 +133,9 @@ while ix < len(df.index) and np.isnan(df.loc[df.index[ix], 'estimated_cases']):
 cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
 cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
 cosur_estimate_arrow_text_x = df.loc[df.index[ix - 10], 'date']
-ax.annotate(_('CoronaSurveys'),
+cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']
+print ("CHECK", df.loc[df.index[ix], 'estimated_cases'])
+ancosur=ax.annotate(_('CoronaSurveys'),
             xy=(cosur_estimate_arrow_x, cosur_estimate_arrow_y), xycoords='data',
             xytext=(cosur_estimate_arrow_text_x, cosur_estimate_arrow_y), textcoords='data',
             arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=-0.4",
@@ -139,6 +144,13 @@ ax.annotate(_('CoronaSurveys'),
                             relpos=(1, 1)),
             horizontalalignment='right', verticalalignment='top', multialignment='center',
             fontfamily='Futura LT', fontsize=28, fontweight='bold', color=next_color)
+
+
+offset_from = OffsetFrom(ancosur, (0, -.1))
+ax.annotate(_('help us get more data'),
+            xy=(0, 0), xycoords=offset_from,
+            horizontalalignment='left', verticalalignment='top', multialignment='center',
+            fontfamily='Futura LT', fontsize=20, fontweight='normal', color=next_color)
 
 #sns.lineplot(data=df, x='date', y='prop_cases', ax=ax, color=next(new_palette)) #, err_style="bars")
 
@@ -149,7 +161,7 @@ if args.first_datapoint:
     ax.set_xlim([df.loc[df.index[args.first_datapoint], 'date'], df.loc[df.index[-1], 'date']])
 
 ## Margins
-plt.subplots_adjust(left=0.1, right=.95, top=0.9, bottom=0.25)
+plt.subplots_adjust(left=0.1, right=.9, top=0.9, bottom=0.25)
 
 
 ## Axes tikcks and tick labels
