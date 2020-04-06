@@ -1,0 +1,111 @@
+# Italian translations for coronasurveys-social-plot package.
+# Copyright (C) 2020 THE coronasurveys-social-plot'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the coronasurveys-social-plot package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: coronasurveys-social-plot 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-06 12:22+0200\n"
+"PO-Revision-Date: 2020-04-06 12:22+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: estimates_plot.py:97
+msgid "Confirmed cases"
+msgstr ""
+
+#: estimates_plot.py:114
+#, python-format
+msgid ""
+"If 1.4% of the cases lead\n"
+"to death"
+msgstr ""
+
+#: estimates_plot.py:139
+msgid "CoronaSurveys"
+msgstr ""
+
+#: estimates_plot.py:151
+msgid "help us get more data"
+msgstr ""
+
+#: estimates_plot.py:187
+msgid ""
+"Want to help? Complete the survey at \n"
+" coronasurveys.org!"
+msgstr ""
+
+#: estimates_plot.py:198
+msgid "estimation based on "
+msgstr ""
+
+#: estimates_plot.py:206
+msgid "in the World"
+msgstr ""
+
+#: estimates_plot.py:208
+msgid "in Argentina"
+msgstr ""
+
+#: estimates_plot.py:210
+msgid "in Chile"
+msgstr ""
+
+#: estimates_plot.py:212
+msgid "in Cyprus"
+msgstr ""
+
+#: estimates_plot.py:214
+msgid "in Germany"
+msgstr ""
+
+#: estimates_plot.py:216
+msgid "in Ecuador"
+msgstr ""
+
+#: estimates_plot.py:218
+msgid "in Spain"
+msgstr ""
+
+#: estimates_plot.py:220
+msgid "in France"
+msgstr ""
+
+#: estimates_plot.py:222
+msgid "in the United Kingdom"
+msgstr ""
+
+#: estimates_plot.py:224
+msgid "in Greece"
+msgstr ""
+
+#: estimates_plot.py:226
+msgid "in Italy"
+msgstr ""
+
+#: estimates_plot.py:228
+msgid "in Japan"
+msgstr ""
+
+#: estimates_plot.py:230
+msgid "in the Netherlands"
+msgstr ""
+
+#: estimates_plot.py:232
+msgid "in Portugal"
+msgstr ""
+
+#: estimates_plot.py:234
+msgid "in the USA"
+msgstr ""
+
+#: estimates_plot.py:236
+msgid "Covid-19 Cases Estimates "
+msgstr ""
