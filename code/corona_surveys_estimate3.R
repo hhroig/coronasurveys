@@ -152,6 +152,7 @@
                   prop_cases = country_population * mean(ratio) * correction_factor,
                   dunbar_cases = country_population * (sum(cases)/dunbar_reach) * correction_factor)
       dt_summary <- dt_summary[, -1] # remove group factor variable
+      dt_summary$cases_p_reach_low[dt_summary$cases_p_reach_low < 0] <- 0.000001
     } else if (method == "carlos"){
       max_group <- nrow(dt2)/batch
       group_factor <- rep(1:floor(max_group), each = batch)
@@ -346,9 +347,9 @@
   }
   
   
-  # generate data for all countries
+  # generate data for all countries #format(Sys.time(), "%Y-%m-%d")
   url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
-               format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
+               "2020-04-05", ".xlsx", sep = "")
   GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
   data_ecdc <- read_excel(tf)
   data_country_code <- read_excel("wikipedia-iso-country-codes.xlsx")
@@ -357,7 +358,7 @@
   
   data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
   all_geo_ids <- unique(data_ecdc$Alpha.2.code)
-  sapply(all_geo_ids, plot_estimates)
+  sapply(all_geo_ids, plot_estimates, est_date = "2020-04-05")
   
   
   
