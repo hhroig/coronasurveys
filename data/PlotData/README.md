@@ -8,9 +8,8 @@ The variables in the generated files are:
 - mean_reach: dialy mean of reach
 - dunbar_reach: 150 * sample_size (for current day after ouliers have
 been removed)
-- cases_p_reach: sum of cases (in current day)/ sum of reach (for
-the current day). There are additional confidence interval estimates for
-this variable which are: cases_p_reach_low and cases_p_reach_high and cases_p_reach_error.
+- cases_p_reach: The % of population infected, where the confidence interval
+estimates for this variable are: cases_p_reach_low and cases_p_reach_high and cases_p_reach_error.
 - cases_p_reach_prop: mean(cases/reach). mean is taken over the current day.
 - cases_p_reach_prop_median : median(cases/reach). median is taken over the current day.
 - estimated_cases: country_population * cases_p_reach *
