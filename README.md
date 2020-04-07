@@ -4,17 +4,19 @@
 
 ## Motivation
 
-The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests to their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
-
-## How you can help
-
-Please complete one of our surveys! Choose your country of residence and tell us about the number of cases (suspected or confirmed) you know about. No personal information is stored in these surveys. Because each of us can provide information about the situation among our direct contacts, in aggregate we are able to get rough estimates of total cases.
-
-Please complete your country survey!!  Because we are tracking the evolution of this epidemic over time, once you have completed the survey, please remember to come back and update the survey every day. And finally, you can help us by asking your friends, colleagues and relatives to complete the survey as well! Thank you!
+The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. National governments can face challenges in evaluating the reach of the epidemic, since they have limited resources and tests at their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful.
 
 ## Objective
 
-The objective of this study is the collection and publication of data concerning the number of people that show symptoms compatible with COVID-19 in different countries. Hopefully, this data will be useful to estimate the number of infected persons with the COVID-19 virus at a given point in time in these countries, and the evolution of this number over time.
+The objective of this study is the collection and publication of data about the number of people showing symptoms compatible with COVID-19 in different countries. Our hope is that this data will be useful to estimate the number of infected persons with the COVID-19 virus at a given point in time in a given country, and then track the evolution of this number over time.
+
+## How you can help
+
+Please complete one of our surveys!! Choose your country of residence and tell us about the number of cases (suspected or confirmed) you know about. No personal information is stored in these surveys. Because each of us can provide information about the situation among our direct contacts, in aggregate we are able to get rough estimates of total cases.
+
+Because we are tracking the evolution of this epidemic over time, once you have completed the survey, please remember to come back and update the survey every day. And finally, you can help us by asking your friends, colleagues and relatives to complete the survey as well! Thank you!
+
+You can find our results and links to our surveys in [http://coronasurveys.org](http://coronasurveys.org)
 
 ## Latest Reports
 
@@ -33,7 +35,7 @@ Latest case estimates for Portugal and Spain. Solid line is official confirmed c
 
 The study will periodically issue open surveys in different countries to which any person can answer. In these surveys we will ask every participant to report how many people he/she knows that have shown symptoms compatible with a COVID-19 infection. We will additionally ask for other indirect data, like the number of people he/she knows. We will not ask for any private information of any participant in the poll. The data is collected anonymously and cannot be backtraced to the participant in the poll.
 
-The data colected will be cleaned and processed in order to provide estimates of the number of persons with symptoms compatible with COVID-19 in the different countries, and its evolution over time. While these estimates are not expected to be fully accurate, they will hopefully be in the same order of magnitude as the real value. The estimates will be contrasted with other estimates and any data available, to validate its accuracy
+The data collected will be cleaned and processed in order to provide estimates of the number of persons with symptoms compatible with COVID-19 in the different countries, and its evolution over time. While these estimates are not expected to be fully accurate, they will hopefully be in the same order of magnitude as the real value. The estimates will be contrasted with other estimates and any data available, to validate its accuracy
 
 ### Other Methods to Estimate the Number of Cases
 
@@ -155,9 +157,9 @@ Rodrigo Irarrazaval
 
 ## Data Availability and License
 
-We will make all the data available here. The data of the first collection of surveys will be available shorly.
+We will make all the data available here. The data of the first collection of surveys will be available shortly.
 
-In the midtime, you access some aggregated results at https://docs.google.com/spreadsheets/d/1dn8o8xSuBQTQYzMhKvqoxzWe4FXGbY1MpehyUM4gnwk/edit#gid=1914437865
+In the meantime, you access some aggregated results at https://docs.google.com/spreadsheets/d/1dn8o8xSuBQTQYzMhKvqoxzWe4FXGbY1MpehyUM4gnwk/edit#gid=1914437865
 
 All the data in this project is distributed under the Open Data Commons Attribution License.
 
