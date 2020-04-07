@@ -132,3 +132,14 @@ Timestamp,Region,Reach,Cases
 "2020/04/06 04:49:23 PM UTC",California,5,0
 "2020/04/06 09:12:04 PM UTC",California,50,0
 "2020/04/06 09:30:59 PM UTC",California,25,0
+"2020/04/07 12:38:01 AM UTC",California,20,0
+"2020/04/07 12:44:36 AM UTC",California,10,0
+"2020/04/07 12:56:52 AM UTC",California,50,2
+"2020/04/07 12:59:07 AM UTC",California,5,0
+"2020/04/07 01:21:27 AM UTC",Washington,100,3
+"2020/04/07 01:55:54 AM UTC",Idaho,20,0
+"2020/04/07 03:10:49 AM UTC",California,20,0
+"2020/04/07 03:15:31 AM UTC",California,35,3
+"2020/04/07 03:26:55 AM UTC",California,10,0
+"2020/04/07 03:43:39 AM UTC",Massachusetts,30,4
+"2020/04/07 04:27:40 AM UTC",Texas,100,0

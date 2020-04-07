@@ -514,3 +514,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/02 11:32:38 AM UTC",Emilia-Romagna,50,1
 "2020/04/02 12:31:22 PM UTC",Emilia-Romagna,350,2
 "2020/04/04 04:26:02 PM UTC","Friuli-Venezia Giulia",2000,2
+"2020/04/06 11:22:08 PM UTC",Lombardia,100,2
+"2020/04/07 04:52:17 AM UTC",Lombardia,80,3
+"2020/04/07 05:06:48 AM UTC",Lombardia,10,2

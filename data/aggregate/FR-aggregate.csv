@@ -139,3 +139,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/04 07:10:44 PM UTC","Toute la France",50,1
 "2020/04/06 07:24:27 AM UTC","13 Bouches-du-Rhône",50,0
 "2020/04/06 07:30:07 AM UTC","35 Ille-et-Vilaine",23,0
+"2020/04/06 10:05:31 PM UTC","69 Rhône",40,0
+"2020/04/07 12:47:35 AM UTC","Toute la France",100,4
