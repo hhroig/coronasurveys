@@ -1,5 +1,5 @@
 #country population
-pop <- 100
+pop <- 10000
 side <- floor(sqrt(pop))
 
 m <- matrix(0,nrow = side,ncol = side)
@@ -25,7 +25,7 @@ P <- sum(m)/(side*side)
 reach<-9
 rside <- floor(sqrt(reach))
 
-resp <- 1000
+resp <- 500
 
 answ <- rep(0,resp)
 p <- rep(0,resp)
