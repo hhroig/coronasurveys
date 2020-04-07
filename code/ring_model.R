@@ -1,10 +1,12 @@
+#model of a 1-lattice with k=reach, as in Duncan J. Watts, Small Worlds: The Dynamics of Networks between Order and Randomness
+
 #country population
 pop <- 10000000
 
 r <- rep(0,pop)
 
 #True ratio  of infection
-P <- 0.06
+P <- 0.0075
 
 inf <- floor(P*pop)
 
