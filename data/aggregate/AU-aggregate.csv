@@ -2,3 +2,8 @@ Timestamp,Region,Reach,Cases
 "2020/04/05 10:49:37 AM UTC","New South Wales",20,0
 "2020/04/07 12:33:11 AM UTC","New South Wales",10,0
 "2020/04/07 01:47:31 AM UTC","New South Wales",200,0
+"2020/04/07 05:40:34 AM UTC",Victoria,6,1
+"2020/04/07 05:49:11 AM UTC","New South Wales",100,2
+"2020/04/07 06:10:23 AM UTC",Victoria,50,0
+"2020/04/07 06:25:14 AM UTC",Tasmania,25,0
+"2020/04/07 06:28:12 AM UTC","New South Wales",40,0
