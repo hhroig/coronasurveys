@@ -1,0 +1,8 @@
+"","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases"
+"1","Northern_Mariana_Islands","MP","2020/03/31",2,0,2,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","Northern_Mariana_Islands","MP","2020/04/01",4,0,6,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Northern_Mariana_Islands","MP","2020/04/02",0,1,6,1,400,2320.06957699157,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4","Northern_Mariana_Islands","MP","2020/04/03",2,0,8,1,400,1138.34402816656,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"5","Northern_Mariana_Islands","MP","2020/04/04",0,0,8,1,400,608.307221453784,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"6","Northern_Mariana_Islands","MP","2020/04/05",0,0,8,1,400,389.431983685473,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"7","Northern_Mariana_Islands","MP","2020/04/06",0,0,8,1,400,282.130335501658,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
