@@ -368,41 +368,29 @@
 # # Spain
 # plot_estimates(country_geoid = "ES", est_date = "2020-04-05")
 # # Portugal
-# plot_estimates(country_geoid = "PT", country_population = 10261075, 
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "PT", est_date = "2020-04-07")
 # 
 # # Cyprus
-# plot_estimates(country_geoid = "CY", country_population = 890900,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "CY", est_date = "2020-04-05")
 # 
 # # France
-# plot_estimates(country_geoid = "FR", country_population = 66987244,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "FR",est_date = "2020-04-05")
 # # Argentina
-# plot_estimates(country_geoid = "AR", country_population = 45195774,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "AR", est_date = "2020-04-05")
 # # Chile
-# plot_estimates(country_geoid = "CL", country_population = 19116201,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "CL", est_date = "2020-04-05")
 # #Germany
-# plot_estimates(country_geoid = "DE", country_population = 83783942,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "DE", est_date = "2020-04-05")
 # # Ecuador
-# plot_estimates(country_geoid = "EC", country_population = 17643054,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "EC",  est_date = "2020-04-05")
 # #GB
-# plot_estimates(country_geoid = "GB", country_population = 67886011,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "GB",  est_date = "2020-04-05")
 # 
-# plot_estimates(country_geoid = "IT", country_population = 60461826,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "IT",  est_date = "2020-04-05")
 # 
-# plot_estimates(country_geoid = "JP", country_population = 126476461,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "JP", est_date = "2020-04-05")
 # 
 # 
-# plot_estimates(country_geoid = "NL", country_population = 17134872,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "NL",  est_date = "2020-04-05")
 # 
-# plot_estimates(country_geoid = "US", country_population = 331002651,
-#                est_date = "2020-04-05")
+# plot_estimates(country_geoid = "US",  est_date = "2020-04-05")
