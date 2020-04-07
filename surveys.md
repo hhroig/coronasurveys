@@ -27,6 +27,8 @@
 
 - UK: https://tinyurl.com/coronasurveysuk
 
+- Ukraine: https://tinyurl.com/coronasurveysukraine
+
 - USA: https://tinyurl.com/coronasurveysusa
 
 - Venezuela: https://tinyurl.com/coronasurveysvenezuela
