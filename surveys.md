@@ -21,9 +21,11 @@
 
 - Netherlands: https://tinyurl.com/coronasurveysnetherlands
 
+- Portugal: https://tinyurl.com/coronasurveysportugal
+
 - Spain: https://tinyurl.com/coronasurveysspain
 
-- Portugal: https://tinyurl.com/coronasurveysportugal
+- Sweden: https://tinyurl.com/coronasurveyssweden
 
 - UK: https://tinyurl.com/coronasurveysuk
 
