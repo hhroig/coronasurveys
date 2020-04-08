@@ -350,7 +350,7 @@
   
   # generate data for all countries #format(Sys.time(), "%Y-%m-%d")
   url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
-               "2020-04-07", ".xlsx", sep = "")
+               format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
   GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
   data_ecdc <- read_excel(tf)
   data_country_code <- read_excel("wikipedia-iso-country-codes.xlsx")
@@ -359,7 +359,7 @@
   
   data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
   all_geo_ids <- unique(data_ecdc$Alpha.2.code)
-  sapply(all_geo_ids, plot_estimates, est_date = "2020-04-07")
+  sapply(all_geo_ids, plot_estimates, est_date = format(Sys.time(), "%Y-%m-%d") )
   
   
   
