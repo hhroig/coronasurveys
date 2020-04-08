@@ -2,6 +2,12 @@
 library(tidyverse)
 library(readxl)
 library(httr)
+
+
+## set working drirectoy here
+#setwd("please put the absolute folder path of where this script is located on the server")
+
+## 
 # get data from jh csce
 get_jh_data <- function(){
   ## fix iso look up file
@@ -545,4 +551,4 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
   }else {stop("The only data sources allowed are jh and ecdc")}
 }
 
-generate_estimates(srce = "jh")
+generate_estimates(srce = "ecdc")
