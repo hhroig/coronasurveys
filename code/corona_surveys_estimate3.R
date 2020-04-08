@@ -2,6 +2,7 @@
 library(tidyverse)
 library(readxl)
 library(httr)
+
 # get data from jh csce
 get_jh_data <- function(){
   ## fix iso look up file
@@ -545,4 +546,4 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
   }else {stop("The only data sources allowed are jh and ecdc")}
 }
 
-generate_estimates(srce = "jh")
+generate_estimates(srce = "ecdc")
