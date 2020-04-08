@@ -3,6 +3,11 @@ library(tidyverse)
 library(readxl)
 library(httr)
 
+
+## set working drirectoy here
+#setwd("please put the absolute folder path of where this script is located on the server")
+
+## 
 # get data from jh csce
 get_jh_data <- function(){
   ## fix iso look up file
