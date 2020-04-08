@@ -2,7 +2,8 @@
 
 To create a plot run the following, where `<CC>` is the country code:
 ```bash
-LANG=<LANG> ./estimates_plot.py -c <CC> 
+LANG=<LANG> ./estimates_plot.py -c <CC>
+LC_ALL=<LANG> ./estimates_plot.py -c <CC> -f 50
 ```
 
 
@@ -15,5 +16,6 @@ LANG=<LANG> ./estimates_plot.py -c <CC>
 * Make this work To get the string translated in the language `<LANG>` and using worlwide data:
 ```bash
 LANG=<LANG> ./estimates_plot.py
+
 ```
 

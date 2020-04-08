@@ -15,6 +15,8 @@ import seaborn as sns
 
 import gettext
 import itertools
+
+from datetime import date
 from matplotlib.text import OffsetFrom
 
 ## Arguments / Options
@@ -26,6 +28,8 @@ parser.add_argument("-c", "--country_code", help="the country code the data belo
 parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shift the arrow text on the x axis", default=0)
 parser.add_argument("-f", "--first_datapoint", help="first datapoint to plot", type=int)
 parser.add_argument("-o", "--official_arrow_datapoint", help="datapoint after the first plotted to point the arrow to for the official number", type=int, default=5)
+parser.add_argument("-x", "--offsetXcosur", help="datapoint before the first plotted point for coronasurveys estimate arrow text", type=int, default=10)
+parser.add_argument("-d", "--deathEstimateDivisor", help="factor by which to divide death estimate to place corresponding text", type=int, default=100)
 #parser.add_argument("csv_filename", help="the csv file to process", default="../../../data/aggregate/FR-aggregate.csv", nargs="?")
 args = parser.parse_args()
 
@@ -51,7 +55,7 @@ print (df['estimated_cases'])
 ccfrisgtzero=(df['est_ccfr'] > 0)
 
 #df['date'] = pd.to_datetime(df['date'])
-#df['answers'] = df['answers'].cumsum()
+1#df['answers'] = df['answers'].cumsum()
 
 #print (df)
 
@@ -113,7 +117,7 @@ death_estimate_arrow_y = df.loc[df.index[-20], 'est_ccfr']
 death_estimate_arrow_text_x = df.loc[df.index[-12], 'date']
 ax.annotate(_('If 1.4% of the cases lead\nto death')+'$^*$',
             xy=(death_estimate_arrow_x, death_estimate_arrow_y), xycoords='data',
-            xytext=(death_estimate_arrow_text_x, death_estimate_arrow_y / 1000), textcoords='data',
+            xytext=(death_estimate_arrow_text_x, death_estimate_arrow_y / args.deathEstimateDivisor), textcoords='data',
             arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=0.4",
                             facecolor=next_color,edgecolor=next_color,
                             shrinkA=5,shrinkB=5,
@@ -133,7 +137,7 @@ while ix < len(df.index) and np.isnan(df.loc[df.index[ix], 'estimated_cases']):
     ix += 1
 cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
 cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
-cosur_estimate_arrow_text_x = df.loc[df.index[ix - 10], 'date']
+cosur_estimate_arrow_text_x = df.loc[df.index[ix - args.offsetXcosur], 'date']
 cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']
 
 ancosur=ax.annotate(_('CoronaSurveys'),
@@ -160,7 +164,8 @@ ax.annotate(_('help us get more data'),
 ## Date Limits
 if args.first_datapoint:
     ax.set_xlim([df.loc[df.index[args.first_datapoint], 'date'], df.loc[df.index[-1], 'date']])
-
+else:
+    ax.set_xlim([df.loc[df.index[1], 'date'], df.loc[df.index[-1], 'date']])
 ## Margins
 plt.subplots_adjust(left=0.1, right=.9, top=0.9, bottom=0.25)
 
@@ -187,7 +192,7 @@ ax.yaxis.set_major_formatter(my_ytick_formatter)
 xlabel=ax.set_xlabel(_('Want to help? Complete the survey at \n coronasurveys.org!'),
               labelpad=30, fontsize=28, fontstyle='italic', fontname='Futura LT')
 
-offset_from_xlabel = OffsetFrom(xlabel, (0, 0))
+#offset_from_xlabel = OffsetFrom(xlabel, (0, 0))
 ax.set_ylabel('')
 
 #ax.annotate('$^*$'+_('estimation based on ')+'https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html',
@@ -250,6 +255,7 @@ ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
 #fig.savefig(os.path.splitext(filename)[0] + '.jpg', dpi=200)
 
 #print os.path.split(filename)
-
-fig.savefig(os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+ '.jpg', dpi=200)
+outfilename='../../../Plots/socialPlots/estimates/'+os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+'-'+ str(date.today())+'.jpg'
+#print(outfilename)
+fig.savefig(outfilename, dpi=200)
 
