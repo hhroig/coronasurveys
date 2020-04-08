@@ -35,6 +35,8 @@
 
 - Venezuela: https://tinyurl.com/coronasurveysvenezuela
 
+- Rest of the World: https://tinyurl.com/coronasurveysworld
+
 Follow us on:
 
 Twitter: https://twitter.com/coronasurveys
