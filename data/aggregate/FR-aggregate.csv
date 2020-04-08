@@ -161,3 +161,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/07 03:23:43 PM UTC","35 Ille-et-Vilaine",100,0
 "2020/04/07 03:41:11 PM UTC","75 Paris",100,4
 "2020/04/07 03:57:06 PM UTC","35 Ille-et-Vilaine",40,2
+"2020/04/08 01:00:21 PM UTC","35 Ille-et-Vilaine",5,0
+"2020/04/08 05:37:46 PM UTC","35 Ille-et-Vilaine",30,5
+"2020/04/08 05:43:07 PM UTC","35 Ille-et-Vilaine",100,15
+"2020/04/08 10:03:36 PM UTC","Toute la France",100,2

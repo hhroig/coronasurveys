@@ -152,3 +152,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/07 08:56:53 PM UTC","City of London",50,2
 "2020/04/08 03:21:45 AM UTC","City of London",100,7
 "2020/04/08 11:50:45 AM UTC","Greater London",100,10
+"2020/04/08 08:36:37 PM UTC","Entire country",100,10
+"2020/04/08 08:57:34 PM UTC",Bedfordshire,479,479
