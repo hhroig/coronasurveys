@@ -18,13 +18,13 @@ Because we are tracking the evolution of this epidemic over time, once you have 
 
 You can find our results and links to our surveys in [http://coronasurveys.org](http://coronasurveys.org)
 
-## Latest Reports
+## Reports
 
 **First report with the estimates of COVID-19 cases in Spain and Portugal**
 
 [Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain](reports/2020-03-29-CaseEstimation.pdf)
 
-Latest case estimates for Portugal and Spain. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
+Case estimates for Portugal and Spain. Solid line is official confirmed cases. Dashed lines and solid dots are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds and triangles show the results from @CoronaSurveys, Twitter and Google Forms, respectively.
 
 ![Estimates for Portugal](doc/EstPTMar29.jpg)
 
