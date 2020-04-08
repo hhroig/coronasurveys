@@ -48,6 +48,8 @@ _ = locale.gettext
 
 filename="../../../data/PlotData/"+args.country_code+"-estimates.csv"
 df = pd.read_csv(filename)
+df['date'] = [pd.to_datetime(d, errors='ignore') for d in df['date']]
+print(df['date'])
 print (df['cum_cases'])
 print (df['est_ccfr'])
 print (df['estimated_cases'])
