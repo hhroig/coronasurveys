@@ -551,3 +551,11 @@ Timestamp,Region,Reach,Cases
 "2020/04/07 12:27:19 PM UTC",Veneto,100,3
 "2020/04/07 12:28:51 PM UTC",Veneto,200,0
 "2020/04/07 12:44:51 PM UTC",Veneto,200,1
+"2020/04/07 04:26:37 PM UTC",Veneto,50,1
+"2020/04/07 05:43:31 PM UTC",Sicilia,2,0
+"2020/04/07 06:15:08 PM UTC",Emilia-Romagna,400,1
+"2020/04/07 06:15:27 PM UTC","Trentino-Alto Adige",30,0
+"2020/04/07 06:27:21 PM UTC","Trentino-Alto Adige",20,0
+"2020/04/07 08:44:30 PM UTC",Veneto,200,1
+"2020/04/07 09:47:38 PM UTC",Piemonte,100,0
+"2020/04/08 01:02:47 AM UTC",Marche,18,7
