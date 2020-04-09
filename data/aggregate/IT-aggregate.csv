@@ -613,3 +613,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/09 03:52:20 PM UTC","Trentino-Alto Adige",50,10
 "2020/04/09 03:59:41 PM UTC",Lombardia,80,2
 "2020/04/09 05:19:39 PM UTC","Trentino-Alto Adige",100,5
+"2020/04/09 06:58:21 PM UTC",Lombardia,150,20
+"2020/04/09 08:26:40 PM UTC","Trentino-Alto Adige",50,10
+"2020/04/09 08:44:52 PM UTC",Campania,30,2
