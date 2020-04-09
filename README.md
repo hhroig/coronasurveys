@@ -169,6 +169,8 @@ All the data in this project is distributed under the Open Data Commons Attribut
 
 In the news:
 
+- ABC, Spain (April 9th, 2020): https://www.abc.es/ciencia/abci-pregunta-millon-cuantos-infectados-coronavirus-espana-y-dato-importante-202004090209_noticia.html?ref=https%3A%2F%2Ft.co%2FTcYXnIrWXN%3Famp%3D1
+
 - ABC, Spain (April 7th, 2020): https://www.abc.es/ciencia/abci-tres-metodos-matematicos-estan-salvando-vidas-frente-coronavirus-202004062243_noticia.html#vca=rrss-inducido&vmc=undefined&vso=tw&vli=undefined
 
 - El Pitazo, Venezuela (April 7th, 2020): https://elpitazo.net/tecnologia/investigadores-independientes-usan-encuesta-online-para-estimar-alcance-de-covid-19-en-venezuela/
