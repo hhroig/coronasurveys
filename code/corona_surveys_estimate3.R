@@ -297,11 +297,27 @@ estimate_cases_aggregate <- function(file_path,
                                                    pop_size = sum(reach))$upp *  country_population * correction_factor,
                 estimate_cases_error = calculate_ci(p_est = sum(cases)/sum(reach), level=0.95,
                                                     pop_size = sum(reach))$error *  country_population * correction_factor,
+                
                 prop_cases = country_population * mean(ratio) * correction_factor,
-                dunbar_cases = country_population * (sum(cases)/dunbar_reach) * correction_factor)
+                dunbar_cases = country_population * (sum(cases)/dunbar_reach) * correction_factor, 
+                pop_cases_low = calculate_ci(p_est = mean(ratio), level = 0.95,
+                                             pop_size = sum(reach))$low,
+                pop_cases_high = calculate_ci(p_est = mean(ratio), level = 0.95,
+                                              pop_size = sum(reach))$upp,
+                pop_cases_error = calculate_ci(p_est = mean(ratio), level = 0.95,
+                                               pop_size = sum(reach))$error,
+                dunbar_cases_low = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
+                                                pop_size = dunbar_reach)$low,
+                dunbar_cases_high = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
+                                                pop_size = dunbar_reach)$upp,
+                dunbar_cases_error = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
+                                                 pop_size = dunbar_reach)$error)
     dt_summary <- dt_summary[, -1] # remove group factor variable
     dt_summary$cases_p_reach_low[dt_summary$cases_p_reach_low < 0]   <- 0.000001
     dt_summary$estimate_cases_low[dt_summary$estimate_cases_low < 0] <- 0.000001
+    dt_summary$pop_cases_low[dt_summary$pop_cases_low < 0] <- 0.000001
+    dt_summary$dunbar_cases_low[dt_summary$dunbar_cases_low < 0] <- 0.000001
+    
   } else if (method == "carlos"){
     max_group <- nrow(dt2)/batch
     group_factor <- rep(1:floor(max_group), each = batch)
