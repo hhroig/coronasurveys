@@ -158,3 +158,10 @@ Timestamp,Region,Reach,Cases
 "2020/04/08 06:32:17 PM UTC",California,10,0
 "2020/04/08 10:42:40 PM UTC",Massachusetts,40,4
 "2020/04/08 10:58:49 PM UTC",California,30,0
+"2020/04/09 12:17:54 AM UTC",Massachusetts,50,1
+"2020/04/09 01:05:16 AM UTC",Maryland,10,1
+"2020/04/09 01:13:17 AM UTC",Massachusetts,85,1
+"2020/04/09 01:20:38 AM UTC","Rhode Island",50,1
+"2020/04/09 01:46:20 AM UTC",Massachusetts,200,0
+"2020/04/09 03:28:52 AM UTC",Massachusetts,15,0
+"2020/04/09 10:41:02 AM UTC",Massachusetts,100,4

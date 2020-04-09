@@ -594,3 +594,17 @@ Timestamp,Region,Reach,Cases
 "2020/04/08 09:14:22 PM UTC",Lombardia,1000,0
 "2020/04/08 09:46:05 PM UTC",Veneto,26,0
 "2020/04/08 11:57:42 PM UTC",Veneto,50,5
+"2020/04/09 06:58:24 AM UTC","Tutta la nazione",150,3
+"2020/04/09 07:59:00 AM UTC",Veneto,40,1
+"2020/04/09 08:00:58 AM UTC",Emilia-Romagna,25,4
+"2020/04/09 08:01:08 AM UTC","Trentino-Alto Adige",10,0
+"2020/04/09 08:03:35 AM UTC","Friuli-Venezia Giulia",40,0
+"2020/04/09 08:04:17 AM UTC","Trentino-Alto Adige",20,0
+"2020/04/09 08:15:54 AM UTC",Veneto,10,0
+"2020/04/09 08:40:00 AM UTC","Trentino-Alto Adige",50,10
+"2020/04/09 09:12:55 AM UTC",Veneto,11,0
+"2020/04/09 09:24:21 AM UTC",Veneto,40,1
+"2020/04/09 10:00:14 AM UTC",Veneto,50,2
+"2020/04/09 10:15:16 AM UTC",Emilia-Romagna,10,0
+"2020/04/09 10:15:54 AM UTC",Veneto,60,1
+"2020/04/09 11:32:21 AM UTC",Veneto,30,1
