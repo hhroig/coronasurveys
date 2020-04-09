@@ -3,6 +3,8 @@
 
 - Australia: https://tinyurl.com/coronasurveysaustralia
 
+- Canada: https://tinyurl.com/coronasurveyscanada
+
 - Chile: https://tinyurl.com/coronasurveyschile
 
 - Cyprus: https://tinyurl.com/coronasurveyscyprus
