@@ -19,6 +19,8 @@ parser = argparse.ArgumentParser(description="Builds a social network friendly r
 parser.add_argument("-l", "--locale", help="the locale to choose the text from", default="en")
 parser.add_argument("-c", "--country_code", help="the country code the data belongs to", default="WW")
 parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shift the arrow text on the x axis", default=0)
+parser.add_argument("-t", "--shift_contrib_y", type=float, help="how much to shift the arrow text on the y axis", default=0)
+parser.add_argument("-o", "--output", help="output image location")
 parser.add_argument("csv_filename", help="the csv file to process", default="overall.csv", nargs="?")
 args = parser.parse_args()
     
@@ -66,7 +68,8 @@ plt.subplots_adjust(left=0.1, right=.95, top=0.9, bottom=0.2)
 ## Axes tikcks and tick labels
 
 plt.locator_params(axis='y', nbins=3)
-ax.xaxis.set_major_locator(mdates.DayLocator(bymonthday=range(5,32,5)))
+ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=(mdates.MO)))
+#ax.xaxis.set_major_locator(mdates.DayLocator(bymonthday=range(5,32,5)))
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%B %dth'))
 
 ## Axes labels
@@ -115,11 +118,14 @@ ax.set_title(_('CoronaSurveys Responses ') + title_subset,
 
 ax.annotate(_('You can contribute here\nwith your responses!'),
             xy=(df.iloc[-2, 1], df.iloc[-1, 0]), xycoords='data',
-            xytext=(0.7 + args.shift_contrib_x, 0.8), textcoords='axes fraction',
+            xytext=(0.7 + args.shift_contrib_x, 0.8 + args.shift_contrib_y), textcoords='axes fraction',
             arrowprops=dict(facecolor='white', connectionstyle="arc3,rad=-0.2"),
             horizontalalignment='right', verticalalignment='center_baseline',
             fontfamily='Futura LT', fontsize=28, color='white')
 
 ## Save the figure
 
-fig.savefig(os.path.splitext(args.csv_filename)[0] + '.jpg', dpi=200)
+if args.output:
+    fig.savefig(args.output, dpi=200)
+else:
+    fig.savefig(os.path.splitext(args.csv_filename)[0] + '.jpg', dpi=200)
