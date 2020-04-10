@@ -181,3 +181,15 @@ Timestamp,Region,Reach,Cases
 "2020/04/09 08:34:23 PM UTC",California,100,0
 "2020/04/09 08:44:24 PM UTC",California,10,0
 "2020/04/09 08:59:18 PM UTC",California,75,9
+"2020/04/09 09:41:29 PM UTC",California,100,0
+"2020/04/09 11:00:29 PM UTC",Washington,30,0
+"2020/04/09 11:04:23 PM UTC",Washington,100,4
+"2020/04/09 11:06:28 PM UTC",Oregon,60,0
+"2020/04/09 11:17:24 PM UTC",Virginia,20,0
+"2020/04/09 11:37:20 PM UTC","North Carolina",10,2
+"2020/04/09 11:56:05 PM UTC",California,30,0
+"2020/04/09 11:56:39 PM UTC",California,20,0
+"2020/04/10 12:06:17 AM UTC",California,20,0
+"2020/04/10 12:12:48 AM UTC",California,9,0
+"2020/04/10 12:21:46 AM UTC","Entire country",200,8
+"2020/04/10 12:21:58 AM UTC",Georgia,100,5
