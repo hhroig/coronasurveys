@@ -184,3 +184,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/10 07:50:48 AM UTC","Toute la France",100,1
 "2020/04/10 08:39:24 AM UTC","74 Haute-Savoie",100,2
 "2020/04/10 11:26:34 AM UTC","29 Finistère",50,1
+"2020/04/10 05:49:59 PM UTC","Toute la France",100,11
+"2020/04/10 05:56:12 PM UTC","35 Ille-et-Vilaine",15,0
+"2020/04/10 06:18:10 PM UTC","Toute la France",70,2
