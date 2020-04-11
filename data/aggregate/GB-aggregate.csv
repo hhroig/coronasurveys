@@ -159,3 +159,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/09 08:51:22 PM UTC",Berkshire,25,5
 "2020/04/09 08:54:33 PM UTC","Greater London",30,0
 "2020/04/09 11:00:25 PM UTC","City of London",5,0
+"2020/04/11 08:23:02 AM UTC","City of London",20,0
+"2020/04/11 08:54:23 AM UTC","City of Bristol",20,0

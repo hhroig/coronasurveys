@@ -2719,3 +2719,13 @@ Timestamp,Region,Reach,Cases
 "2020/04/10 11:44:57 PM UTC","Castilla y León",100,0
 "2020/04/11 12:48:28 AM UTC","Comunidad de Madrid",50,0
 "2020/04/11 05:25:38 AM UTC","Comunidad de Madrid",20,5
+"2020/04/11 06:38:06 AM UTC","Región de Murcia",25,2
+"2020/04/11 07:31:09 AM UTC","Comunidad de Madrid",150,3
+"2020/04/11 07:40:30 AM UTC","Castilla-La Mancha",100,4
+"2020/04/11 07:40:56 AM UTC",Cataluña,50,3
+"2020/04/11 08:04:43 AM UTC","Región de Murcia",100,1
+"2020/04/11 08:05:45 AM UTC","Comunidad de Madrid",100,19
+"2020/04/11 08:31:00 AM UTC","Comunidad de Madrid",50,4
+"2020/04/11 08:37:53 AM UTC","Todo el país",110,16
+"2020/04/11 08:50:25 AM UTC","Región de Murcia",1000,1
+"2020/04/11 09:01:23 AM UTC",Cataluña,60,11
