@@ -74,3 +74,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/10 11:24:04 AM UTC",Berlin,20,0
 "2020/04/10 12:40:00 PM UTC",Nordrhein-Westfalen,100,0
 "2020/04/11 06:18:07 AM UTC",Hessen,50,0
+"2020/04/11 07:08:41 PM UTC",Nordrhein-Westfalen,2,2
+"2020/04/11 07:36:20 PM UTC",Sachsen,50,0
+"2020/04/11 07:38:45 PM UTC","Ganz Deutschland",1000,0
+"2020/04/11 07:46:37 PM UTC",Sachsen,20,2
