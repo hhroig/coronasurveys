@@ -631,3 +631,10 @@ Timestamp,Region,Reach,Cases
 "2020/04/10 05:46:22 PM UTC",Lombardia,150,6
 "2020/04/11 06:45:21 AM UTC",Veneto,10,3
 "2020/04/11 01:19:53 PM UTC",Lombardia,80,2
+"2020/04/11 05:13:15 PM UTC",Piemonte,200,0
+"2020/04/11 05:14:16 PM UTC",Piemonte,200,0
+"2020/04/11 05:21:35 PM UTC","Trentino-Alto Adige",2,2
+"2020/04/11 05:41:38 PM UTC",Liguria,3,5
+"2020/04/11 05:49:47 PM UTC",Sicilia,2,1
+"2020/04/11 05:53:54 PM UTC",Emilia-Romagna,25,0
+"2020/04/11 06:28:36 PM UTC",Lombardia,70,0
