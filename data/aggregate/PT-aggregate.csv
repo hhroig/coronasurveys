@@ -1347,3 +1347,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 05:40:42 PM UTC",Santarém,100,5
 "2020/04/12 07:20:09 PM UTC","Castelo Branco",20,0
 "2020/04/12 07:43:28 PM UTC",Lisboa,3,0
+"2020/04/12 09:53:52 PM UTC",Lisboa,100,1
+"2020/04/12 10:16:04 PM UTC","Todo o país",100,2
+"2020/04/12 11:20:44 PM UTC",Braga,20,0
