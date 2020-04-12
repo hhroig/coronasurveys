@@ -14,6 +14,8 @@ for language in en; do
 	LC_ALL=$language ./estimates_plot.py -c CY -f 10 -d 10 #-x 3
 	LC_ALL=$language ./estimates_plot.py -c GB -f 60 -d 10  -x 5
 	LC_ALL=$language ./estimates_plot.py -c US -f 60 -d 10 -x 5
+	LC_ALL=$language ./estimates_plot.py -c UA -f 1 -d 3 -x 6 -o 3
+
 	
 done
 
