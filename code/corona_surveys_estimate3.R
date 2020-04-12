@@ -471,7 +471,7 @@ plot_estimates <- function(country_geoid = "ES",
     } else{
       
       dt_res <- dt_res %>% 
-        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases)
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases_error)
     }
     
     if(data_srce == "jh"){
@@ -500,13 +500,19 @@ plot_estimates <- function(country_geoid = "ES",
                                          estimate_cases_error = NA,
                                          prop_cases = NA,
                                          dunbar_cases = NA,
+                                         pop_cases_low = NA,
+                                         pop_cases_high = NA,
+                                         pop_cases_error = NA,
+                                         dunbar_cases_low = NA,
+                                         dunbar_cases_high = NA,
+                                         dunbar_cases_error = NA,
                                          stringsAsFactors = F)
 
     # combine dt and survey forms estimates
     dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
     
     dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases_error)
    
     if(data_srce == "jh"){
       write.csv(dt_res, paste0("../data/PlotData/jh_estimates/", country_geoid, "-", "estimates.csv"))
