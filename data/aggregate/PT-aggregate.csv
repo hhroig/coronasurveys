@@ -1324,3 +1324,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/11 11:38:22 PM UTC",Porto,300,0
 "2020/04/11 11:47:35 PM UTC",Lisboa,70,0
 "2020/04/12 12:28:22 AM UTC",Lisboa,100,0
+"2020/04/12 01:41:20 AM UTC",Lisboa,20,1
+"2020/04/12 01:41:53 AM UTC",Lisboa,20,1
