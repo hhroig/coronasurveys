@@ -194,3 +194,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 09:45:57 AM UTC","Toute la France",30,3
 "2020/04/12 02:17:20 PM UTC","40 Landes",50,3
 "2020/04/12 02:40:31 PM UTC","35 Ille-et-Vilaine",10,0
+"2020/04/12 05:10:49 PM UTC","Toute la France",100,3
+"2020/04/12 04:55:45 PM UTC","Toute la France",20,2
