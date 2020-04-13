@@ -1351,3 +1351,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 10:16:04 PM UTC","Todo o país",100,2
 "2020/04/12 11:20:44 PM UTC",Braga,20,0
 "2020/04/13 02:02:05 AM UTC","Todo o país",200,4
+"2020/04/13 04:18:03 AM UTC",Setúbal,1000,0
+"2020/04/13 04:42:41 AM UTC",Leiria,10,0
