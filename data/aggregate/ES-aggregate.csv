@@ -3044,3 +3044,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 11:05:19 PM UTC","Castilla y León",20,1
 "2020/04/12 11:07:21 PM UTC","Comunidad Valenciana",100,1
 "2020/04/12 11:17:43 PM UTC","País Vasco",100,3
+"2020/04/12 11:38:18 PM UTC",Andalucía,130,0
+"2020/04/13 12:25:03 AM UTC","Comunidad de Madrid",6,1
+"2020/04/13 12:25:12 AM UTC",Canarias,60,0
+"2020/04/13 12:40:51 AM UTC","Comunidad de Madrid",80,8
