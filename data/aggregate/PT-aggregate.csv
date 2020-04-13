@@ -1356,3 +1356,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/13 09:10:29 AM UTC",Porto,50,0
 "2020/04/13 09:51:49 AM UTC","Todo o país",500,0
 "2020/04/13 11:20:29 AM UTC",Braga,100,0
+"2020/04/13 06:36:26 PM UTC",Braga,40,0
+"2020/04/13 07:01:22 PM UTC",Aveiro,100,0
+"2020/04/13 07:25:09 PM UTC","Todo o país",100,1
