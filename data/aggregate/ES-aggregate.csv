@@ -3074,3 +3074,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/13 12:08:33 PM UTC","Todo el país",80,0
 "2020/04/13 12:52:43 PM UTC",Cataluña,50,1
 "2020/04/13 01:26:59 PM UTC","Comunidad de Madrid",150,11
+"2020/04/13 01:52:30 PM UTC","Comunidad de Madrid",3,3
+"2020/04/13 02:19:08 PM UTC",Aragón,600,2
+"2020/04/13 02:23:59 PM UTC","Comunidad de Madrid",20,0
+"2020/04/13 02:43:12 PM UTC","Comunidad de Madrid",100,24
