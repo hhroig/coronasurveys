@@ -300,11 +300,11 @@ estimate_cases_aggregate <- function(file_path,
                 
                 prop_cases = country_population * mean(ratio) * correction_factor,
                 dunbar_cases = country_population * (sum(cases)/dunbar_reach) * correction_factor, 
-                pop_cases_low = calculate_ci(p_est = mean(ratio), level = 0.95,
+                prop_cases_low = calculate_ci(p_est = mean(ratio), level = 0.95,
                                              pop_size = sum(reach))$low,
-                pop_cases_high = calculate_ci(p_est = mean(ratio), level = 0.95,
+                prop_cases_high = calculate_ci(p_est = mean(ratio), level = 0.95,
                                               pop_size = sum(reach))$upp,
-                pop_cases_error = calculate_ci(p_est = mean(ratio), level = 0.95,
+                prop_cases_error = calculate_ci(p_est = mean(ratio), level = 0.95,
                                                pop_size = sum(reach))$error,
                 dunbar_cases_low = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
                                                 pop_size = dunbar_reach)$low,
@@ -315,10 +315,10 @@ estimate_cases_aggregate <- function(file_path,
     dt_summary <- dt_summary[, -1] # remove group factor variable
     dt_summary$cases_p_reach_low[dt_summary$cases_p_reach_low < 0]   <- 0.000001
     dt_summary$estimate_cases_low[dt_summary$estimate_cases_low < 0] <- 0.000001
-    dt_summary$pop_cases_low[dt_summary$pop_cases_low < 0] <- 0.000001
+    dt_summary$prop_cases_low[dt_summary$prop_cases_low < 0] <- 0.000001
     dt_summary$dunbar_cases_low[dt_summary$dunbar_cases_low < 0] <- 0.000001
     
-  } else if (method == "carlos"){
+  } else if (method == "carlos"){ #deprecated
     max_group <- nrow(dt2)/batch
     group_factor <- rep(1:floor(max_group), each = batch)
     group_factor <- c(group_factor, rep(NA, times = nrow(dt2) - length(group_factor)))
@@ -411,16 +411,26 @@ plot_estimates <- function(country_geoid = "ES",
     dt$date <- gsub("-", "/", dt$dateRep)
     ndt <- nrow(dt)
     est_ccfr <- rep(NA, ndt)
+    est_ccfr_low <- rep(NA, ndt)
+    est_ccfr_high <- rep(NA, ndt)
     cat("computing ccfr estimate for ", country_geoid, "...\n")
     for (i in ndt : 1) {
       data2t <- dt[1:i, c("cases", "deaths")]
       ccfr <- scale_cfr(data2t, delay_fun = hosp_to_death_trunc, mu_hdt = mu_hdt, sigma_hdt = sigma_hdt)
       fraction_reported <- c_cfr_baseline / (ccfr$cCFR*100)
-      est_ccfr[i] <- dt$cum_cases[i]*1/fraction_reported
+      sigma_fraction_reported <- (1/ccfr$total_deaths)-(1/ccfr$cum_known_t)+ (1/1023) - (1/74130)
+      fraction_reported_high <- fraction_reported * exp(1.96*sigma_fraction_reported)
+      fraction_reported_low <- fraction_reported * exp(-(1.96*sigma_fraction_reported))
+      est_ccfr_low[i] <- dt$cum_cases[i]*(1/fraction_reported_high)#swich low and high here coz of inverse.
+      est_ccfr_high[i] <- dt$cum_cases[i]*(1/fraction_reported_low)
+      est_ccfr[i] <- dt$cum_cases[i]*(1/fraction_reported)
+      
     }
     
     
     dt$est_ccfr <- est_ccfr
+    dt$est_ccfr_low <- est_ccfr_low
+    dt$est_ccfr_high <- est_ccfr_high
     population_value  = dt$popData2018[1]
   } else if(data_srce == "jh"){
     dt <- dts[dts$geoId == country_geoid,]
@@ -433,11 +443,18 @@ plot_estimates <- function(country_geoid = "ES",
       data2t <- dt[1:i, c("cases", "deaths")]
       ccfr <- scale_cfr(data2t, delay_fun = hosp_to_death_trunc, mu_hdt = mu_hdt, sigma_hdt = sigma_hdt)
       fraction_reported <- c_cfr_baseline / (ccfr$cCFR*100)
-      est_ccfr[i] <- dt$cum_cases[i]*1/fraction_reported
+      sigma_fraction_reported <- (1/ccfr$total_deaths)-(1/ccfr$cum_known_t)+ (1/1023) - (1/74130)
+      fraction_reported_high <- fraction_reported * exp(1.96*sigma_fraction_reported)
+      fraction_reported_low <- fraction_reported * exp(-(1.96*sigma_fraction_reported))
+      est_ccfr_low[i] <- dt$cum_cases[i]*(1/fraction_reported_high) #swich low and high here coz of inverse.
+      est_ccfr_high[i] <- dt$cum_cases[i]*(1/fraction_reported_low)
+      est_ccfr[i] <- dt$cum_cases[i]*(1/fraction_reported)
     }
     
     
     dt$est_ccfr <- est_ccfr
+    dt$est_ccfr_low <- est_ccfr_low
+    dt$est_ccfr_high <- est_ccfr_high
     population_value  = dt$population[1]
   }else{
     stop("only jh and ecdc allowed as data sources")
@@ -462,16 +479,19 @@ plot_estimates <- function(country_geoid = "ES",
     if (country_geoid == "ES"){
       cat(country_geoid, "has twitter data...adding twitter estimates..\n")
       dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
-        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:survey_twitter)
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
+               est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:survey_twitter)
       
     } else if(country_geoid == "PT"){
       cat(country_geoid, "has twitter data...adding twitter estimates..\n")
       dt_res <- full_join(dt_res, survey_twitter_pt, by = "date") %>% 
-        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:survey_twitter)
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
+               est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:survey_twitter)
     } else{
       
       dt_res <- dt_res %>% 
-        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases_error)
+        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
+               est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:dunbar_cases_error)
     }
     
     if(data_srce == "jh"){
@@ -500,9 +520,9 @@ plot_estimates <- function(country_geoid = "ES",
                                          estimate_cases_error = NA,
                                          prop_cases = NA,
                                          dunbar_cases = NA,
-                                         pop_cases_low = NA,
-                                         pop_cases_high = NA,
-                                         pop_cases_error = NA,
+                                         prop_cases_low = NA,
+                                         prop_cases_high = NA,
+                                         prop_cases_error = NA,
                                          dunbar_cases_low = NA,
                                          dunbar_cases_high = NA,
                                          dunbar_cases_error = NA,
@@ -512,7 +532,8 @@ plot_estimates <- function(country_geoid = "ES",
     dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
     
     dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400, est_ccfr, sample_size:dunbar_cases_error)
+      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
+             est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:dunbar_cases_error)
    
     if(data_srce == "jh"){
       write.csv(dt_res, paste0("../data/PlotData/jh_estimates/", country_geoid, "-", "estimates.csv"))
