@@ -226,3 +226,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 08:39:08 PM UTC",California,50,1
 "2020/04/12 09:18:32 PM UTC",California,70,1
 "2020/04/13 12:09:41 AM UTC",Massachusetts,38,7
+"2020/04/13 01:57:32 AM UTC",Massachusetts,38,7
+"2020/04/13 02:00:05 AM UTC",Massachusetts,38,7
+"2020/04/13 02:00:13 AM UTC",Massachusetts,38,7
