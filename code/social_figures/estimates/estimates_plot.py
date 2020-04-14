@@ -18,7 +18,8 @@ import itertools
 
 from datetime import date
 from matplotlib.text import OffsetFrom
-
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
 ## Arguments / Options
 
 
@@ -28,13 +29,20 @@ parser.add_argument("-c", "--country_code", help="the country code the data belo
 parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shift the arrow text on the x axis", default=0)
 parser.add_argument("-f", "--first_datapoint", help="first datapoint to plot", type=int)
 parser.add_argument("-o", "--official_arrow_datapoint", help="datapoint after the first plotted to point the arrow to for the official number", type=int, default=5)
-parser.add_argument("-x", "--offsetXcosur", help="datapoint before the first plotted point for coronasurveys estimate arrow text", type=int, default=10)
-parser.add_argument("-d", "--deathEstimateDivisor", help="factor by which to divide death estimate to place corresponding text", type=int, default=100)
+parser.add_argument("-cs", "--cosur_arrow_datapoint", help="datapoint after the first plotted point to point the arrow for coronasurveys", type=int, default=10)
+parser.add_argument("-cfr", "--ccfr_arrow_datapoint", help="datapoint after the first plotted point to point the arrow for ccfr", type=int, default=10)
+parser.add_argument("-otof", "--official_text_offset", help="text offset to for the official number", type=int, default=5)
+parser.add_argument("-cstof", "--cosur_text_offset", help="text offset for coronasurveys", type=int, default=-7)
+parser.add_argument("-cfrtof", "--ccfr_text_offset", help="text offset for ccfr", type=int, default=15)
+
+parser.add_argument("-d", "--ccfrEstimateDivisor", help="factor by which to divide death estimate to place corresponding text", type=int, default=100)
 #parser.add_argument("csv_filename", help="the csv file to process", default="../../../data/aggregate/FR-aggregate.csv", nargs="?")
 args = parser.parse_args()
 
 if args.first_datapoint:
     args.official_arrow_datapoint += args.first_datapoint
+    args.cosur_arrow_datapoint+=args.first_datapoint
+    args.ccfr_arrow_datapoint+=args.first_datapoint
 print(args.official_arrow_datapoint)
 
 ## Language
@@ -97,12 +105,18 @@ next(new_palette)
 
 next_color=palette[7]#next(new_palette)
 snsplot = sns.lineplot(data=df, x='date', y='cum_cases', ax=ax, color=next_color)
+print ("plotting official")
+print (args.official_arrow_datapoint)
+print (df.index[args.official_arrow_datapoint])
+print (df.loc[df.index[args.official_arrow_datapoint], 'date'])
+
 official_arrow_x = df.loc[df.index[args.official_arrow_datapoint], 'date']
 official_arrow_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases']
-official_arrow_text_x = df.loc[df.index[args.official_arrow_datapoint + 5], 'date']
+official_arrow_text_x = df.loc[df.index[args.official_arrow_datapoint + args.official_text_offset], 'date']
+official_arrow_text_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases']
 ax.annotate(_('Confirmed cases'),
             xy=(official_arrow_x, official_arrow_y), xycoords='data',
-            xytext=(official_arrow_text_x, official_arrow_y), textcoords='data',
+            xytext=(official_arrow_text_x, official_arrow_text_y), textcoords='data',
             arrowprops=dict(arrowstyle='fancy', connectionstyle="arc3,rad=-0.2",
                             facecolor=next_color, edgecolor=next_color,
                             shrinkA=5, shrinkB=5,
@@ -114,13 +128,19 @@ ax.annotate(_('Confirmed cases'),
 
 next_color=next(new_palette)
 sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax, color=next_color)
-death_estimate_arrow_x = df.loc[df.index[-20], 'date']
-death_estimate_arrow_y = df.loc[df.index[-20], 'est_ccfr']
-death_estimate_arrow_text_x = df.loc[df.index[-12], 'date']
+print ("plotting ccfr")
+print (args.ccfr_arrow_datapoint)
+print (df.index[args.ccfr_arrow_datapoint])
+print (df.loc[df.index[args.ccfr_arrow_datapoint], 'date'])
+
+ccfr_estimate_arrow_x = df.loc[df.index[args.ccfr_arrow_datapoint], 'date']
+ccfr_estimate_arrow_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr']
+ccfr_estimate_arrow_text_x = df.loc[df.index[args.ccfr_arrow_datapoint + args.ccfr_text_offset], 'date']
+ccfr_estimate_arrow_text_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr'] / args.ccfrEstimateDivisor
 ax.annotate(_('Estimated cases based\non 1.4% death-rate')+'$^*$',
-            xy=(death_estimate_arrow_x, death_estimate_arrow_y), xycoords='data',
-            xytext=(death_estimate_arrow_text_x, death_estimate_arrow_y / args.deathEstimateDivisor), textcoords='data',
-            arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=0.4",
+            xy=(ccfr_estimate_arrow_x, ccfr_estimate_arrow_y), xycoords='data',
+            xytext=(ccfr_estimate_arrow_text_x, ccfr_estimate_arrow_text_y ), textcoords='data',
+            arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=-0.4",
                             facecolor=next_color,edgecolor=next_color,
                             shrinkA=5,shrinkB=5,
                             relpos=(0.5, 1)),
@@ -134,18 +154,26 @@ ccfrcolor=next_color
 #next(new_palette)
 next_color=next(new_palette)
 sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next_color) #, err_style="bars")
-ix=0
+ix=args.cosur_arrow_datapoint
 while ix < len(df.index) and np.isnan(df.loc[df.index[ix], 'estimated_cases']):
-    ix += 1
+   ix += 1
+
+
+print ("plotting coronasurveys")
+print (ix)
+print (df.index[ix])
+print (df.loc[df.index[ix], 'date'])
+
 cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
 cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
-cosur_estimate_arrow_text_x = df.loc[df.index[ix - args.offsetXcosur], 'date']
-cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']
+cosur_estimate_arrow_text_x = df.loc[df.index[ix + args.cosur_text_offset], 'date']
+cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']/ 3
 
+print (cosur_estimate_arrow_x, cosur_estimate_arrow_y, cosur_estimate_arrow_text_x, cosur_estimate_arrow_text_y)
 ancosur=ax.annotate(_('Estimated cases based\non CoronaSurveys'),
             xy=(cosur_estimate_arrow_x, cosur_estimate_arrow_y), xycoords='data',
-            xytext=(cosur_estimate_arrow_text_x, cosur_estimate_arrow_y), textcoords='data',
-            arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=-0.4",
+            xytext=(cosur_estimate_arrow_text_x, cosur_estimate_arrow_text_y), textcoords='data',
+            arrowprops=dict(arrowstyle='fancy',connectionstyle="arc3,rad=0.4",
                             facecolor=next_color,edgecolor=next_color,
                             shrinkA=5,shrinkB=5,
                             relpos=(1, 1)),
@@ -261,5 +289,6 @@ ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
 #print os.path.split(filename)
 outfilename='../../../Plots/socialPlots/estimates/'+os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+'-'+ str(date.today())+'.jpg'
 #print(outfilename)
+#pd.plotting.register_matplotlib_converters()
 fig.savefig(outfilename, dpi=200)
 
