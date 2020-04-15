@@ -25,6 +25,8 @@
 
 - Netherlands: https://tinyurl.com/coronasurveysnetherlands
 
+- Nigeria: https://tinyurl.com/coronasurveysnigeria
+
 - Portugal: https://tinyurl.com/coronasurveysportugal
 
 - Spain: https://tinyurl.com/coronasurveysspain

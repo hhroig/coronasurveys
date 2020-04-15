@@ -90,3 +90,8 @@ Timestamp,Region,Reach,Cases
 "2020/04/13 09:07:02 PM UTC",Bayern,25,1
 "2020/04/14 05:38:01 AM UTC",Hessen,50,2
 "2020/04/14 05:50:24 AM UTC","Ganz Deutschland",50,0
+"2020/04/14 09:20:07 PM UTC","Ganz Deutschland",30,0
+"2020/04/15 07:13:27 AM UTC","Ganz Deutschland",50,0
+"2020/04/15 08:15:16 AM UTC",Rheinland-Pfalz,20,0
+"2020/04/15 11:32:56 AM UTC",Schleswig-Hostein,50,0
+"2020/04/15 11:33:25 AM UTC",Hamburg,50,0
