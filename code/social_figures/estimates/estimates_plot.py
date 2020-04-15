@@ -30,12 +30,14 @@ parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shi
 parser.add_argument("-f", "--first_datapoint", help="first datapoint to plot", type=int)
 parser.add_argument("-o", "--official_arrow_datapoint", help="datapoint after the first plotted to point the arrow to for the official number", type=int, default=5)
 parser.add_argument("-cs", "--cosur_arrow_datapoint", help="datapoint after the first plotted point to point the arrow for coronasurveys", type=int, default=10)
-parser.add_argument("-cfr", "--ccfr_arrow_datapoint", help="datapoint after the first plotted point to point the arrow for ccfr", type=int, default=10)
+parser.add_argument("-ccfr", "--ccfr_arrow_datapoint", help="datapoint after the first plotted point to point the arrow for ccfr", type=int, default=10)
 parser.add_argument("-otof", "--official_text_offset", help="text offset to for the official number", type=int, default=5)
 parser.add_argument("-cstof", "--cosur_text_offset", help="text offset for coronasurveys", type=int, default=-7)
-parser.add_argument("-cfrtof", "--ccfr_text_offset", help="text offset for ccfr", type=int, default=15)
+parser.add_argument("-ccfrtof", "--ccfr_text_offset", help="text offset for ccfr", type=int, default=15)
 
-parser.add_argument("-d", "--ccfrEstimateDivisor", help="factor by which to divide death estimate to place corresponding text", type=int, default=100)
+parser.add_argument("-ccfrd", "--ccfrEstimateDivisor", help="factor by which to divide death estimate to place corresponding text", type=int, default=100)
+parser.add_argument("-csd", "--cosurEstimateDivisor", help="factor by which to divide coronasurveys estimate to place corresponding text", type=int, default=3)
+parser.add_argument("-od", "--officialDivisor", help="factor by which to divide official number to place corresponding text", type=int, default=1)
 #parser.add_argument("csv_filename", help="the csv file to process", default="../../../data/aggregate/FR-aggregate.csv", nargs="?")
 args = parser.parse_args()
 
@@ -43,7 +45,7 @@ if args.first_datapoint:
     args.official_arrow_datapoint += args.first_datapoint
     args.cosur_arrow_datapoint+=args.first_datapoint
     args.ccfr_arrow_datapoint+=args.first_datapoint
-print(args.official_arrow_datapoint)
+#print(args.official_arrow_datapoint)
 
 ## Language
 
@@ -57,10 +59,10 @@ _ = locale.gettext
 filename="../../../data/PlotData/"+args.country_code+"-estimates.csv"
 df = pd.read_csv(filename)
 df['date'] = [pd.to_datetime(d, errors='ignore') for d in df['date']]
-print(df['date'])
-print (df['cum_cases'])
-print (df['est_ccfr'])
-print (df['estimated_cases'])
+#print(df['date'])
+#print (df['cum_cases'])
+#print (df['est_ccfr'])
+#print (df['estimated_cases'])
 
 ccfrisgtzero=(df['est_ccfr'] > 0)
 
@@ -93,6 +95,28 @@ sns.set(rc={'axes.facecolor': figcolor,
 
 fig, ax = plt.subplots(figsize=(10,10))
 ax.set_yscale("log")
+
+
+#### prepare error bands
+#interpolated=df.resample('1D')
+interpolated=df.copy()
+df['estimate_cases_low']=df['estimate_cases_low'].apply(lambda x: 1 if x<1 else x) #replace negative values by 1
+df['est_ccfr_low']=df['est_ccfr_low'].apply(lambda x: 1 if x<1 else x) #replace negative values by 1
+
+interpolated['estimate_cases_low']=df['estimate_cases_low'].interpolate()
+interpolated['estimate_cases_high']=df['estimate_cases_high'].interpolate()
+
+interpolated['est_ccfr_low']=df['est_ccfr_low'].interpolate()
+interpolated['est_ccfr_high']=df['est_ccfr_high'].interpolate()
+
+#print ("DF")
+#print (df['estimate_cases_low'])
+#print ("Interpolated")
+#print(interpolated['estimate_cases_low'])
+
+########
+
+
 #palette = sns.color_palette(palette=sns.crayon_palette(sns.colors.crayons))
 palette = sns.color_palette('colorblind') #sns.light_palette((210, 90, 60), input="husl"))
 #sns.set_palette(palette)
@@ -102,18 +126,19 @@ next(new_palette)
 ## Line Plots
 
 ## Official Estimate
+print ("plotting official")
 
 next_color=palette[7]#next(new_palette)
 snsplot = sns.lineplot(data=df, x='date', y='cum_cases', ax=ax, color=next_color)
-print ("plotting official")
-print (args.official_arrow_datapoint)
-print (df.index[args.official_arrow_datapoint])
-print (df.loc[df.index[args.official_arrow_datapoint], 'date'])
+
+#print (args.official_arrow_datapoint)
+#print (df.index[args.official_arrow_datapoint])
+#print (df.loc[df.index[args.official_arrow_datapoint], 'date'])
 
 official_arrow_x = df.loc[df.index[args.official_arrow_datapoint], 'date']
 official_arrow_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases']
 official_arrow_text_x = df.loc[df.index[args.official_arrow_datapoint + args.official_text_offset], 'date']
-official_arrow_text_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases']
+official_arrow_text_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases'] / args.officialDivisor
 ax.annotate(_('Confirmed cases'),
             xy=(official_arrow_x, official_arrow_y), xycoords='data',
             xytext=(official_arrow_text_x, official_arrow_text_y), textcoords='data',
@@ -125,13 +150,18 @@ ax.annotate(_('Confirmed cases'),
             fontfamily='Futura LT', fontsize=28, color=next_color)
 
 ## Estimate from Death Rate
+print ("plotting ccfr")
 
 next_color=next(new_palette)
 sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax, color=next_color)
-print ("plotting ccfr")
-print (args.ccfr_arrow_datapoint)
-print (df.index[args.ccfr_arrow_datapoint])
-print (df.loc[df.index[args.ccfr_arrow_datapoint], 'date'])
+#draw errobands
+ax.fill_between(df['date'], interpolated['est_ccfr_low'], interpolated['est_ccfr_high'],facecolor=next_color,   alpha=0.2) #,  interpolate=True) #where=df['estimate_cases_low'] < df['estimate_cases_high'],
+
+
+
+#print (args.ccfr_arrow_datapoint)
+#print (df.index[args.ccfr_arrow_datapoint])
+#print (df.loc[df.index[args.ccfr_arrow_datapoint], 'date'])
 
 ccfr_estimate_arrow_x = df.loc[df.index[args.ccfr_arrow_datapoint], 'date']
 ccfr_estimate_arrow_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr']
@@ -154,22 +184,27 @@ ccfrcolor=next_color
 #next(new_palette)
 next_color=next(new_palette)
 sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next_color) #, err_style="bars")
+
+#draw errobands
+ax.fill_between(df['date'], interpolated['estimate_cases_low'], interpolated['estimate_cases_high'],facecolor=next_color,   alpha=0.2) #,  interpolate=True) #where=df['estimate_cases_low'] < df['estimate_cases_high'],
+
+
 ix=args.cosur_arrow_datapoint
 while ix < len(df.index) and np.isnan(df.loc[df.index[ix], 'estimated_cases']):
    ix += 1
 
 
 print ("plotting coronasurveys")
-print (ix)
-print (df.index[ix])
-print (df.loc[df.index[ix], 'date'])
+#print (ix)
+#print (df.index[ix])
+#print (df.loc[df.index[ix], 'date'])
 
 cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
 cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
 cosur_estimate_arrow_text_x = df.loc[df.index[ix + args.cosur_text_offset], 'date']
-cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']/ 3
+cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']/ args.cosurEstimateDivisor
 
-print (cosur_estimate_arrow_x, cosur_estimate_arrow_y, cosur_estimate_arrow_text_x, cosur_estimate_arrow_text_y)
+#print (cosur_estimate_arrow_x, cosur_estimate_arrow_y, cosur_estimate_arrow_text_x, cosur_estimate_arrow_text_y)
 ancosur=ax.annotate(_('Estimated cases based\non CoronaSurveys'),
             xy=(cosur_estimate_arrow_x, cosur_estimate_arrow_y), xycoords='data',
             xytext=(cosur_estimate_arrow_text_x, cosur_estimate_arrow_text_y), textcoords='data',
