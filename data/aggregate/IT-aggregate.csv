@@ -649,3 +649,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 11:29:50 AM UTC",Emilia-Romagna,100,2
 "2020/04/12 02:33:54 PM UTC",Basilicata,29,0
 "2020/04/13 08:44:30 AM UTC",Veneto,44,6
+"2020/04/15 03:33:42 PM UTC",Veneto,40,1
+"2020/04/15 03:34:38 PM UTC","Trentino-Alto Adige",10,0
+"2020/04/15 03:35:30 PM UTC",Lombardia,10,0
