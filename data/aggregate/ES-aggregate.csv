@@ -3199,3 +3199,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/14 11:42:35 PM UTC","Principado de Asturias",50,0
 "2020/04/14 11:57:20 PM UTC",Andalucía,50,0
 "2020/04/15 01:27:11 AM UTC","Principado de Asturias",100,10
+"2020/04/15 05:41:57 AM UTC","Comunidad de Madrid",110,16
+"2020/04/15 07:00:53 AM UTC",Andalucía,20,1
