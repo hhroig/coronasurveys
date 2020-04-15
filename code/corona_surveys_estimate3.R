@@ -658,7 +658,7 @@ get_spain_regional_estimates <- function(batch_size = 30,
     survey_ccaa <- ccaa_pop$ccaa_survey[ccaa_pop$ccaa == x]
     survey_ccaa_pop <- ccaa_pop$population[ccaa_pop$ccaa == x]
     
-    if(x %in% (unique(dt_ds$CCAA)[-10])){
+    if(x %in% (unique(dt_ds$CCAA))){
       survey_gforms_estimate <- estimate_cases_aggregate_spain_regional(region = survey_ccaa,
                                                                         region_population = survey_ccaa_pop,
                                                                         max_ratio = max_ratio,
@@ -748,8 +748,12 @@ estimate_cases_aggregate_spain_regional <- function(region,
   }else{
     n_maxratio_outliers <- 0
   }
+  if (region == ""){
+    dt2_r <- dt2[dt2$region == region |dt2$region == "Todo el país", ]
+  }else{
+    dt2_r <- dt2[dt2$region == region, ]
+  }
   
-  dt2_r <- dt2[dt2$region == region, ]
   
   method <- match.arg(method)
   
