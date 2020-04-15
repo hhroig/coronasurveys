@@ -3213,3 +3213,9 @@ Timestamp,Region,Reach,Cases
 "2020/04/15 12:31:42 PM UTC","Comunidad de Madrid",100,5
 "2020/04/15 01:11:26 PM UTC","Todo el país",5,3
 "2020/04/15 01:13:15 PM UTC",Cataluña,30,3
+"2020/04/15 01:40:13 PM UTC",Andalucía,50,0
+"2020/04/15 01:56:49 PM UTC","Comunidad de Madrid",1,1
+"2020/04/15 02:13:11 PM UTC","Todo el país",50,3
+"2020/04/15 02:24:22 PM UTC","Todo el país",80,0
+"2020/04/15 02:27:37 PM UTC","Todo el país",100,10
+"2020/04/15 02:29:03 PM UTC","Comunidad de Madrid",2,0
