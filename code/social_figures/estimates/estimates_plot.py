@@ -22,8 +22,22 @@ from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 ## Arguments / Options
 
+# parsing boolean arguments from https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
+def str2bool(v):
+    if isinstance(v, bool):
+       return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+    
 
-parser = argparse.ArgumentParser(description="Builds a social network friendly response status curve.")
+parser = argparse.ArgumentParser(description="Builds a social-network-friendly estimate plot.")
+parser.add_argument("--ccfrerror", type=str2bool, nargs='?', const=True, default=False, help="Display ccfr error.")
+parser.add_argument("--cosurerror", type=str2bool, nargs='?', const=True, default=False, help="Display coronasurveys error.")
+parser.add_argument("--logyscale", type=str2bool, nargs='?', const=True, default=False, help="Use log scale for y axis.")
 parser.add_argument("-l", "--locale", help="the locale to choose the text from", default="en")
 parser.add_argument("-c", "--country_code", help="the country code the data belongs to", default="WW")
 parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shift the arrow text on the x axis", default=0)
@@ -94,7 +108,13 @@ sns.set(rc={'axes.facecolor': figcolor,
             'font.family': 'Gotham Rounded'})
 
 fig, ax = plt.subplots(figsize=(10,10))
-ax.set_yscale("log")
+if args.logyscale:
+    print ("using log scale")
+    ax.set_yscale("log")
+    scalesuffix="-log"
+else:
+    print ("using linear scale")
+    scalesuffix="-linear"
 
 
 #### prepare error bands
@@ -155,7 +175,8 @@ print ("plotting ccfr")
 next_color=next(new_palette)
 sns.lineplot(data=df[ccfrisgtzero], x='date', y='est_ccfr', ax=ax, color=next_color)
 #draw errobands
-ax.fill_between(df['date'], interpolated['est_ccfr_low'], interpolated['est_ccfr_high'],facecolor=next_color,   alpha=0.2) #,  interpolate=True) #where=df['estimate_cases_low'] < df['estimate_cases_high'],
+if args.ccfrerror:
+    ax.fill_between(df['date'], interpolated['est_ccfr_low'], interpolated['est_ccfr_high'],facecolor=next_color,   alpha=0.2) #,  interpolate=True) #where=df['estimate_cases_low'] < df['estimate_cases_high'],
 
 
 
@@ -186,7 +207,8 @@ next_color=next(new_palette)
 sns.lineplot(data=df, x='date', y='estimated_cases', ax=ax, color=next_color) #, err_style="bars")
 
 #draw errobands
-ax.fill_between(df['date'], interpolated['estimate_cases_low'], interpolated['estimate_cases_high'],facecolor=next_color,   alpha=0.2) #,  interpolate=True) #where=df['estimate_cases_low'] < df['estimate_cases_high'],
+if args.cosurerror:
+    ax.fill_between(df['date'], interpolated['estimate_cases_low'], interpolated['estimate_cases_high'],facecolor=next_color,   alpha=0.2) #,  interpolate=True) #where=df['estimate_cases_low'] < df['estimate_cases_high'],
 
 
 ix=args.cosur_arrow_datapoint
@@ -236,9 +258,13 @@ plt.subplots_adjust(left=0.1, right=.9, top=0.9, bottom=0.25)
 
 
 ## Axes tikcks and tick labels
+
 @mticker.FuncFormatter
 def my_ytick_formatter(x, pos):
-    tmp = np.log10(x)
+    if x>0:
+        tmp = np.log10(x)
+    else:
+        tmp=0
     if tmp < 3:
         return str(int(x))
     elif tmp < 6:
@@ -322,7 +348,7 @@ ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
 #fig.savefig(os.path.splitext(filename)[0] + '.jpg', dpi=200)
 
 #print os.path.split(filename)
-outfilename='../../../Plots/socialPlots/estimates/'+os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+'-'+ str(date.today())+'.jpg'
+outfilename='../../../Plots/socialPlots/estimates/'+os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+'-'+ str(date.today())+scalesuffix+'.jpg'
 #print(outfilename)
 #pd.plotting.register_matplotlib_converters()
 fig.savefig(outfilename, dpi=200)
