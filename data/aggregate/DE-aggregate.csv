@@ -95,3 +95,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/15 08:15:16 AM UTC",Rheinland-Pfalz,20,0
 "2020/04/15 11:32:56 AM UTC",Schleswig-Hostein,50,0
 "2020/04/15 11:33:25 AM UTC",Hamburg,50,0
+"2020/04/15 10:36:49 PM UTC",Baden-Württemberg,50,0
+"2020/04/15 10:40:41 PM UTC",Bayern,50,5
