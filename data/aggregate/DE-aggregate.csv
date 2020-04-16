@@ -98,3 +98,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/15 10:36:49 PM UTC",Baden-Württemberg,50,0
 "2020/04/15 10:40:41 PM UTC",Bayern,50,5
 "2020/04/16 04:57:44 AM UTC",Baden-Württemberg,100,0
+"2020/04/16 06:38:49 AM UTC","Ganz Deutschland",50,0
+"2020/04/16 07:02:20 AM UTC",Hessen,40,0
+"2020/04/16 07:29:43 AM UTC",Berlin,10,0
