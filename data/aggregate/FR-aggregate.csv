@@ -225,3 +225,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/15 09:19:50 PM UTC","35 Ille-et-Vilaine",100,4
 "2020/04/15 10:04:02 PM UTC","31 Haute-Garonne",3,0
 "2020/04/15 10:40:40 PM UTC","Toute la France",35,3
+"2020/04/16 04:16:02 AM UTC","35 Ille-et-Vilaine",25,0
+"2020/04/16 05:06:02 AM UTC","Toute la France",50,0
