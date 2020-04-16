@@ -640,21 +640,29 @@ get_spain_regional_estimates <- function(batch_size = 30,
   
   dt_ds$deaths[is.na(dt_ds$deaths)] <- 0 
   
-  
-  
   dt_ds_est <- lapply(unique(dt_ds$CCAA), function(x){
     cat("working on the region", x, "\n")
     dt_ccca <- dt_ds[dt_ds$CCAA == x, ]
     ndt <- nrow(dt_ccca)
     est_ccfr <- rep(NA, ndt)
+    est_ccfr_low <- rep(NA, ndt)
+    est_ccfr_high <- rep(NA, ndt)
     #cat("computing ccfr estimate for ", country_geoid, "...\n")
     for (i in ndt : 1) {
       data2t <- dt_ccca[1:i, c("cases", "deaths")]
       ccfr <- scale_cfr(data2t, delay_fun = hosp_to_death_trunc, mu_hdt = mu_hdt, sigma_hdt = sigma_hdt)
       fraction_reported <- c_cfr_baseline / (ccfr$cCFR*100)
-      est_ccfr[i] <- dt_ccca$cum_cases[i]*1/fraction_reported
+      
+      sigma_fraction_reported <- (1/ccfr$total_deaths)-(1/ccfr$cum_known_t)+ (1/1023) - (1/74130)
+      fraction_reported_high <- fraction_reported * exp(1.96*sigma_fraction_reported)
+      fraction_reported_low <- fraction_reported * exp(-(1.96*sigma_fraction_reported))
+      est_ccfr_low[i] <- dt_ccca$cum_cases[i]*(1/fraction_reported_high)#swich low and high here coz of inverse.
+      est_ccfr_high[i] <- dt_ccca$cum_cases[i]*(1/fraction_reported_low)
+      est_ccfr[i] <- dt_ccca$cum_cases[i]*(1/fraction_reported)
     }
     dt_ccca$est_ccfr <- est_ccfr
+    dt_ccca$est_ccfr_low <- est_ccfr_low
+    dt_ccca$est_ccfr_high <- est_ccfr_high
     survey_ccaa <- ccaa_pop$ccaa_survey[ccaa_pop$ccaa == x]
     survey_ccaa_pop <- ccaa_pop$population[ccaa_pop$ccaa == x]
     
@@ -693,7 +701,6 @@ get_spain_regional_estimates <- function(batch_size = 30,
     }
       
     
-      
     
     dt_ccca <- full_join(dt_ccca, survey_gforms_estimate, by = "date")
     return(dt_ccca)
@@ -816,17 +823,17 @@ estimate_cases_aggregate_spain_regional <- function(region,
                 prop_cases = region_population * mean(ratio) * correction_factor,
                 dunbar_cases = region_population * (sum(cases)/dunbar_reach) * correction_factor, 
                 pop_cases_low = calculate_ci(p_est = mean(ratio), level = 0.95,
-                                             pop_size = sum(reach))$low,
+                                             pop_size = sum(reach))$low * region_population * correction_factor,
                 pop_cases_high = calculate_ci(p_est = mean(ratio), level = 0.95,
-                                              pop_size = sum(reach))$upp,
+                                              pop_size = sum(reach))$upp * region_population * correction_factor,
                 pop_cases_error = calculate_ci(p_est = mean(ratio), level = 0.95,
-                                               pop_size = sum(reach))$error,
+                                               pop_size = sum(reach))$error * region_population * correction_factor,
                 dunbar_cases_low = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
-                                                pop_size = dunbar_reach)$low,
+                                                pop_size = dunbar_reach)$low * region_population * correction_factor,
                 dunbar_cases_high = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
-                                                 pop_size = dunbar_reach)$upp,
+                                                 pop_size = dunbar_reach)$upp * region_population * correction_factor,
                 dunbar_cases_error = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
-                                                  pop_size = dunbar_reach)$error)
+                                                  pop_size = dunbar_reach)$error * region_population * correction_factor )
     dt_summary <- dt_summary[, -1] # remove group factor variable
     dt_summary$cases_p_reach_low[dt_summary$cases_p_reach_low < 0]   <- 0.000001
     dt_summary$estimate_cases_low[dt_summary$estimate_cases_low < 0] <- 0.000001
@@ -847,3 +854,5 @@ estimate_cases_aggregate_spain_regional <- function(region,
 }
 
 get_spain_regional_estimates()
+
+
