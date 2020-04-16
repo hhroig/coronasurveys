@@ -235,3 +235,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/14 01:45:58 PM UTC",Washington,50,2
 "2020/04/14 09:12:14 PM UTC","New York",50,0
 "2020/04/15 10:17:32 PM UTC",Pennsylvania,70,5
+"2020/04/15 11:39:13 PM UTC",Wisconsin,48376,74
+"2020/04/16 12:32:38 AM UTC",California,50,0
