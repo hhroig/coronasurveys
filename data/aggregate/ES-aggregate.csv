@@ -3242,3 +3242,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/16 08:52:30 AM UTC",Andalucía,30,2
 "2020/04/16 08:56:04 AM UTC","Comunidad Valenciana",80,5
 "2020/04/16 09:25:35 AM UTC","Comunidad de Madrid",100,5
+"2020/04/16 09:48:23 AM UTC",Cataluña,40,2
+"2020/04/16 10:03:11 AM UTC","Comunidad de Madrid",50,5
+"2020/04/16 11:02:25 AM UTC","Castilla y León",15,0
+"2020/04/16 11:12:10 AM UTC","Comunidad Foral de Navarra",200,5

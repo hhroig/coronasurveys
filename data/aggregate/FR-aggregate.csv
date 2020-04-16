@@ -256,3 +256,9 @@ Timestamp,Region,Reach,Cases
 "2020/04/16 08:41:01 AM UTC","11 Aude",100,2
 "2020/04/16 08:44:11 AM UTC","38 Isère",100,5
 "2020/04/16 09:20:10 AM UTC","75 Paris",30,2
+"2020/04/16 09:38:09 AM UTC","35 Ille-et-Vilaine",10,2
+"2020/04/16 10:26:17 AM UTC","75 Paris",20,1
+"2020/04/16 10:39:54 AM UTC","75 Paris",100,0
+"2020/04/16 10:44:13 AM UTC","Toute la France",50,8000
+"2020/04/16 11:06:25 AM UTC","34 Hérault",600,4
+"2020/04/16 11:06:36 AM UTC","Toute la France",100,0
