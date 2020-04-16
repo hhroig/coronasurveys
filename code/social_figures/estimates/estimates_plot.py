@@ -39,7 +39,7 @@ parser.add_argument("--ccfrerror", type=str2bool, nargs='?', const=True, default
 parser.add_argument("--cosurerror", type=str2bool, nargs='?', const=True, default=False, help="Display coronasurveys error.")
 parser.add_argument("--logyscale", type=str2bool, nargs='?', const=True, default=False, help="Use log scale for y axis.")
 parser.add_argument("-l", "--locale", help="the locale to choose the text from", default="en")
-parser.add_argument("-c", "--country_code", help="the country code the data belongs to", default="WW")
+parser.add_argument("-ct", "--country_code", help="the country code the data belongs to", default="WW")
 parser.add_argument("-s", "--shift_contrib_x", type=float, help="how much to shift the arrow text on the x axis", default=0)
 parser.add_argument("-f", "--first_datapoint", help="first datapoint to plot", type=int)
 parser.add_argument("-o", "--official_arrow_datapoint", help="datapoint after the first plotted to point the arrow to for the official number", type=int, default=5)
@@ -48,10 +48,10 @@ parser.add_argument("-ccfr", "--ccfr_arrow_datapoint", help="datapoint after the
 parser.add_argument("-otof", "--official_text_offset", help="text offset to for the official number", type=int, default=5)
 parser.add_argument("-cstof", "--cosur_text_offset", help="text offset for coronasurveys", type=int, default=-7)
 parser.add_argument("-ccfrtof", "--ccfr_text_offset", help="text offset for ccfr", type=int, default=15)
-
-parser.add_argument("-ccfrd", "--ccfrEstimateDivisor", help="factor by which to divide death estimate to place corresponding text", type=int, default=100)
-parser.add_argument("-csd", "--cosurEstimateDivisor", help="factor by which to divide coronasurveys estimate to place corresponding text", type=int, default=3)
-parser.add_argument("-od", "--officialDivisor", help="factor by which to divide official number to place corresponding text", type=int, default=1)
+parser.add_argument("-helpusoff", help="text offset for ccfr", type=int, default=60)
+parser.add_argument("-ccfryoff", "--ccfrEstimateYOffset", help="multiplicative/additive factor for ccfr estimate to place corresponding text", type=float, default=0.001)
+parser.add_argument("-csyoff", "--cosurEstimateYOffset", help="multiplicative/additive factor for coronasurveys estimate to place corresponding text", type=float, default=.33)
+parser.add_argument("-oyoff", "--officialYOffset", help="multiplicative/additive factor for official number to place corresponding text", type=float, default=1)
 #parser.add_argument("csv_filename", help="the csv file to process", default="../../../data/aggregate/FR-aggregate.csv", nargs="?")
 args = parser.parse_args()
 
@@ -81,7 +81,7 @@ df['date'] = [pd.to_datetime(d, errors='ignore') for d in df['date']]
 ccfrisgtzero=(df['est_ccfr'] > 0)
 
 #df['date'] = pd.to_datetime(df['date'])
-1#df['answers'] = df['answers'].cumsum()
+#df['answers'] = df['answers'].cumsum()
 
 #print (df)
 
@@ -158,7 +158,11 @@ snsplot = sns.lineplot(data=df, x='date', y='cum_cases', ax=ax, color=next_color
 official_arrow_x = df.loc[df.index[args.official_arrow_datapoint], 'date']
 official_arrow_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases']
 official_arrow_text_x = df.loc[df.index[args.official_arrow_datapoint + args.official_text_offset], 'date']
-official_arrow_text_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases'] / args.officialDivisor
+if args.logyscale:
+    official_arrow_text_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases'] * args.officialYOffset
+else:
+    official_arrow_text_y = df.loc[df.index[args.official_arrow_datapoint], 'cum_cases'] + args.officialYOffset
+    
 ax.annotate(_('Confirmed cases'),
             xy=(official_arrow_x, official_arrow_y), xycoords='data',
             xytext=(official_arrow_text_x, official_arrow_text_y), textcoords='data',
@@ -187,7 +191,11 @@ if args.ccfrerror:
 ccfr_estimate_arrow_x = df.loc[df.index[args.ccfr_arrow_datapoint], 'date']
 ccfr_estimate_arrow_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr']
 ccfr_estimate_arrow_text_x = df.loc[df.index[args.ccfr_arrow_datapoint + args.ccfr_text_offset], 'date']
-ccfr_estimate_arrow_text_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr'] / args.ccfrEstimateDivisor
+if args.logyscale:
+    ccfr_estimate_arrow_text_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr'] * args.ccfrEstimateYOffset
+else:
+    ccfr_estimate_arrow_text_y = df.loc[df.index[args.ccfr_arrow_datapoint], 'est_ccfr'] + args.ccfrEstimateYOffset
+    
 ax.annotate(_('Estimated cases based\non 1.4% death-rate')+'$^*$',
             xy=(ccfr_estimate_arrow_x, ccfr_estimate_arrow_y), xycoords='data',
             xytext=(ccfr_estimate_arrow_text_x, ccfr_estimate_arrow_text_y ), textcoords='data',
@@ -224,8 +232,11 @@ print ("plotting coronasurveys")
 cosur_estimate_arrow_x = df.loc[df.index[ix], 'date']
 cosur_estimate_arrow_y = df.loc[df.index[ix], 'estimated_cases']
 cosur_estimate_arrow_text_x = df.loc[df.index[ix + args.cosur_text_offset], 'date']
-cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases']/ args.cosurEstimateDivisor
-
+if args.logyscale:
+    cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases'] * args.cosurEstimateYOffset
+else:
+    cosur_estimate_arrow_text_y = df.loc[df.index[ix], 'estimated_cases'] + args.cosurEstimateYOffset
+    
 #print (cosur_estimate_arrow_x, cosur_estimate_arrow_y, cosur_estimate_arrow_text_x, cosur_estimate_arrow_text_y)
 ancosur=ax.annotate(_('Estimated cases based\non CoronaSurveys'),
             xy=(cosur_estimate_arrow_x, cosur_estimate_arrow_y), xycoords='data',
@@ -237,12 +248,26 @@ ancosur=ax.annotate(_('Estimated cases based\non CoronaSurveys'),
             horizontalalignment='right', verticalalignment='top', multialignment='left',
             fontfamily='Futura LT', fontsize=28, fontweight='bold', color=next_color)
 
+if args.logyscale:
+    helpusY=cosur_estimate_arrow_text_y / 2
+else:
+    helpusY=cosur_estimate_arrow_text_y - (ax.get_ylim()[1]-ax.get_ylim()[0])/10
+#ax.annotate(_('help us get more data'),
+#            xy=(cosur_estimate_arrow_text_x, helpusY ), xycoords='data',
+#            horizontalalignment='left', verticalalignment='top', multialignment='left',
+#            fontfamily='Futura LT', fontsize=20, fontweight='normal', color=next_color)
 
-offset_from = OffsetFrom(ancosur, (0, -.1))
+
+offset_from = OffsetFrom(ancosur, (0, 0))
+yoff= args.helpusoff
+#print ("yoff=",yoff)
 ax.annotate(_('help us get more data'),
-            xy=(0, 0), xycoords=offset_from,
+            xy=(0, yoff), xycoords=offset_from,
             horizontalalignment='left', verticalalignment='top', multialignment='left',
             fontfamily='Futura LT', fontsize=20, fontweight='normal', color=next_color)
+
+
+
 
 #sns.lineplot(data=df, x='date', y='prop_cases', ax=ax, color=next(new_palette)) #, err_style="bars")
 
@@ -265,12 +290,17 @@ def my_ytick_formatter(x, pos):
         tmp = np.log10(x)
     else:
         tmp=0
+
     if tmp < 3:
         return str(int(x))
     elif tmp < 6:
         return str(int(x / 1000)) + 'k'
     else:
-        return str(int(x / 1000000)) + 'M'
+        if args.logyscale:
+            return str(int(x / 1000000)) + 'M'
+        else:
+            return str(float(int(x / 100000))/10) + 'M'
+
 
 plt.xticks(rotation=20)
 #plt.locator_params(axis='y', nbins=3)
@@ -349,7 +379,31 @@ ax.set_title(_('Covid-19 Cases Estimates ') + title_subset,
 
 #print os.path.split(filename)
 outfilename='../../../Plots/socialPlots/estimates/'+os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+'-'+ str(date.today())+scalesuffix+'.jpg'
+outfilename2='../../../Plots/socialPlots/estimates/'+os.path.splitext(os.path.split(filename)[1])[0] +'-'+locale.info()['language']+'-'+ str(date.today())+scalesuffix+'2.jpg'
 #print(outfilename)
 #pd.plotting.register_matplotlib_converters()
 fig.savefig(outfilename, dpi=200)
 
+#print ("Bbox")
+#bbox=ancosur.get_window_extent()
+#print (bbox)
+#rect=mpatches.Rectangle((50,100),279730,307375,linewidth=1,edgecolor='r',facecolor='none')
+#mpatches.Rectangle((bbox.xmin, bbox.ymin), bbox.width, bbox.height, linewidth=4, fill=True, facecolor='white',edgecolor='white')
+#Rectangle((100, 100), 100, 100, fill=True, facecolor='white',edgecolor='white', figure=fig)
+#ax.add_patch(rect)
+
+
+#plt.show()
+#fig.savefig(outfilename2, dpi=200)
+#print("xlim=",ax.get_xlim())
+#print("ylim=",ax.get_ylim())
+
+#print ("cosuryoff=",args.cosurEstimateYOffset)
+
+#yoff=args.cosurEstimateYOffset/(ax.get_ylim()[1])*180
+#amplitude=ax.get_ylim()[1]-ax.get_ylim()[0]
+#print ("amplitude=",amplitude)
+#fig.savefig(outfilename, dpi=200)
+
+#ax.add_patch(bbox.as_artist(facecolor='none', edgecolor='white',
+        #     lw=2.))
