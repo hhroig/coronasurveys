@@ -10,3 +10,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/12 03:56:29 AM UTC",Queensland,20,0
 "2020/04/16 12:49:10 AM UTC",Victoria,8,0
 "2020/04/16 03:49:50 AM UTC","New South Wales",1000,1
+"2020/04/16 01:07:57 PM UTC","New South Wales",100,1
+"2020/04/16 01:09:56 PM UTC","New South Wales",20,1
