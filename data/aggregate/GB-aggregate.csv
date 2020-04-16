@@ -213,3 +213,11 @@ Timestamp,Region,Reach,Cases
 "2020/04/15 09:39:08 AM UTC",Wales,150,3
 "2020/04/16 05:33:52 AM UTC",Surrey,5,2
 "2020/04/16 06:04:10 AM UTC",Oxfordshire,100,11
+"2020/04/16 07:30:30 AM UTC",Wales,150,3
+"2020/04/16 07:58:34 AM UTC",Hampshire,150,2
+"2020/04/16 07:58:59 AM UTC","Entire country",150,3
+"2020/04/16 08:16:33 AM UTC",Northumberland,20,4
+"2020/04/16 08:42:25 AM UTC",Berkshire,10,1
+"2020/04/16 09:08:59 AM UTC",Somerset,25,1
+"2020/04/16 09:24:13 AM UTC","Entire country",100,6
+"2020/04/16 09:28:51 AM UTC",Oxfordshire,4,0
