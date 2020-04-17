@@ -47,6 +47,8 @@
 
 - Rest of the World: https://tinyurl.com/coronasurveysworld
 
+- Arab World: https://tinyurl.com/coronasurveysarabworld
+
 Follow us on:
 
 Twitter: https://twitter.com/coronasurveys
