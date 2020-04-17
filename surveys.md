@@ -17,6 +17,8 @@
 
 - Greece: https://tinyurl.com/coronasurveysgreece
 
+- Indonesia: https://tinyurl.com/coronasurveysindonesia
+
 - Iran: https://tinyurl.com/coronasurveysiran
 
 - Italy: https://tinyurl.com/coronasurveysitaly
