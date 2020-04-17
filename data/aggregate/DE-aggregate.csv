@@ -107,3 +107,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/17 07:00:00 AM UTC","Ganz Deutschland",50,0
 "2020/04/17 12:39:45 PM UTC",Hamburg,50,0
 "2020/04/17 12:40:06 PM UTC",Schleswig-Hostein,50,0
+"2020/04/17 09:30:20 PM UTC",Sachsen,40,0
+"2020/04/17 09:30:34 PM UTC","Ganz Deutschland",100,5
