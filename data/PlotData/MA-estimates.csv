@@ -1,10 +1,10 @@
 "","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","est_ccfr_low","est_ccfr_high","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases","prop_cases_low","prop_cases_high","prop_cases_error","dunbar_cases_low","dunbar_cases_high","dunbar_cases_error"
 "1","Morocco","MA","2020/03/03",1,0,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "2","Morocco","MA","2020/03/06",1,0,2,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"3","Morocco","MA","2020/03/12",3,1,5,1,400,4632.16446821274,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"4","Morocco","MA","2020/03/13",1,0,6,1,400,1824.21282888488,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"5","Morocco","MA","2020/03/14",1,0,7,1,400,947.15995880525,945.371995932142,948.95130321626,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"6","Morocco","MA","2020/03/15",11,0,18,1,400,1380.90770477445,1378.30095215112,1383.51938749612,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Morocco","MA","2020/03/12",3,1,5,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4","Morocco","MA","2020/03/13",1,0,6,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"5","Morocco","MA","2020/03/14",1,0,7,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"6","Morocco","MA","2020/03/15",11,0,18,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "7","Morocco","MA","2020/03/16",10,0,28,1,400,1274.2132935608,477.323638864682,3401.5066200133,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "8","Morocco","MA","2020/03/17",9,0,37,1,400,970.961239009979,262.363353580673,3593.35903735468,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "9","Morocco","MA","2020/03/18",7,1,44,2,800,1391.50838595136,771.436309293023,2509.98762288939,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

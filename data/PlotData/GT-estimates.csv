@@ -1,10 +1,10 @@
 "","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","est_ccfr_low","est_ccfr_high","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases","prop_cases_low","prop_cases_high","prop_cases_error","dunbar_cases_low","dunbar_cases_high","dunbar_cases_error"
 "1","Guatemala","GT","2020/03/15",1,0,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"2","Guatemala","GT","2020/03/16",0,1,1,1,400,4680.42803307069,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"3","Guatemala","GT","2020/03/17",5,0,6,1,400,6930.38055476638,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"4","Guatemala","GT","2020/03/18",0,0,6,1,400,2104.78465048832,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"5","Guatemala","GT","2020/03/19",2,0,8,1,400,1122.6499985579,1120.53076146573,1124.77324372018,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"6","Guatemala","GT","2020/03/20",1,0,9,1,400,684.394199134328,683.10226168781,685.688579995923,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","Guatemala","GT","2020/03/16",0,1,1,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Guatemala","GT","2020/03/17",5,0,6,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4","Guatemala","GT","2020/03/18",0,0,6,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"5","Guatemala","GT","2020/03/19",2,0,8,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"6","Guatemala","GT","2020/03/20",1,0,9,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "7","Guatemala","GT","2020/03/21",4,0,13,1,400,627.883645172931,235.206858861157,1676.13254895924,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "8","Guatemala","GT","2020/03/22",4,0,17,1,400,566.640365797675,212.264965918169,1512.64389185686,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "9","Guatemala","GT","2020/03/23",2,0,19,1,400,452.099639346339,122.161804988695,1673.14230430702,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

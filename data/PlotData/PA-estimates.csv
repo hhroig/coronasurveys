@@ -1,8 +1,8 @@
 "","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","est_ccfr_low","est_ccfr_high","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases","prop_cases_low","prop_cases_high","prop_cases_error","dunbar_cases_low","dunbar_cases_high","dunbar_cases_error"
 "1","Panama","PA","2020/03/10",1,0,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"2","Panama","PA","2020/03/11",6,1,7,1,400,32762.9962314948,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"3","Panama","PA","2020/03/12",7,0,14,1,400,6518.63965892646,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"4","Panama","PA","2020/03/13",13,0,27,1,400,3186.78857941189,3180.77284826588,3192.81568798814,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","Panama","PA","2020/03/11",6,1,7,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Panama","PA","2020/03/12",7,0,14,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4","Panama","PA","2020/03/13",13,0,27,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "5","Panama","PA","2020/03/14",9,0,36,1,400,1612.23548391378,603.947637163596,4303.85532725681,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "6","Panama","PA","2020/03/15",7,0,43,1,400,929.753500020807,251.228613942972,3440.85634686966,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "7","Panama","PA","2020/03/16",0,0,43,1,400,539.666182029883,105.185761076065,2768.81190997042,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

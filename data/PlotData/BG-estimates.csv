@@ -1,8 +1,8 @@
 "","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","est_ccfr_low","est_ccfr_high","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases","prop_cases_low","prop_cases_high","prop_cases_error","dunbar_cases_low","dunbar_cases_high","dunbar_cases_error"
 "1","Bulgaria","BG","2020/03/08",2,0,2,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "2","Bulgaria","BG","2020/03/09",2,0,4,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"3","Bulgaria","BG","2020/03/12",3,1,7,1,400,3242.51512774892,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"4","Bulgaria","BG","2020/03/13",16,0,23,1,400,3873.87159708913,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Bulgaria","BG","2020/03/12",3,1,7,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4","Bulgaria","BG","2020/03/13",16,0,23,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "5","Bulgaria","BG","2020/03/14",8,0,31,1,400,2042.84038004376,2038.98409080639,2046.70396260271,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "6","Bulgaria","BG","2020/03/15",10,1,41,2,800,2402.91767190338,2398.38166133351,2407.462261338,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "7","Bulgaria","BG","2020/03/16",10,0,51,2,800,1615.43668077485,895.579590820434,2913.90703444034,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

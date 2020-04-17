@@ -1,9 +1,9 @@
 "","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","est_ccfr_low","est_ccfr_high","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases","prop_cases_low","prop_cases_high","prop_cases_error","dunbar_cases_low","dunbar_cases_high","dunbar_cases_error"
 "1","Botswana","BW","2020/04/01",3,0,3,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"2","Botswana","BW","2020/04/02",1,1,4,1,400,6240.57071076092,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"3","Botswana","BW","2020/04/03",0,0,4,1,400,1423.02384942607,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"4","Botswana","BW","2020/04/04",0,0,4,1,400,643.82566225073,Inf,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"5","Botswana","BW","2020/04/05",0,0,4,1,400,393.156740785986,392.41457506276,393.900310152185,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","Botswana","BW","2020/04/02",1,1,4,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Botswana","BW","2020/04/03",0,0,4,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4","Botswana","BW","2020/04/04",0,0,4,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"5","Botswana","BW","2020/04/05",0,0,4,1,400,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "6","Botswana","BW","2020/04/06",2,0,6,1,400,421.623658244432,420.827755250058,422.421066513991,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "7","Botswana","BW","2020/04/07",0,0,6,1,400,323.311544860997,322.701226579185,323.923017425391,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "8","Botswana","BW","2020/04/08",0,0,6,1,400,255.469746945065,95.6996366682778,681.975333202173,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

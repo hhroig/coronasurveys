@@ -186,8 +186,14 @@ scale_cfr <- function(data_1_in, delay_fun, mu_hdt, sigma_hdt){
   b_tt <- sum(death_incidence)/sum(case_incidence) 
   # corrected CFR estimator
   p_tt <- sum(death_incidence)/cumulative_known_t
-  data.frame(nCFR = b_tt, cCFR = p_tt, total_deaths = sum(death_incidence), 
-             cum_known_t = round(cumulative_known_t), total_cases = sum(case_incidence))
+  if (sum(death_incidence) > cumulative_known_t){
+    ccfrr <- data.frame(nCFR =0, cCFR = 0, total_deaths = 0, 
+                        cum_known_t = 0, total_cases = sum(case_incidence))
+  } else{
+    ccfrr <- data.frame(nCFR = b_tt, cCFR = p_tt, total_deaths = sum(death_incidence), 
+                        cum_known_t = round(cumulative_known_t), total_cases = sum(case_incidence))
+  }
+  return(ccfrr)
 }
 calculate_ci <- function(p_est, level, pop_size) {
   z <- qnorm(level+(1-level)/2)

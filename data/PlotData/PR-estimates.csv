@@ -1,7 +1,7 @@
 "","countriesAndTerritories","geoId","date","cases","deaths","cum_cases","cum_deaths","cum_deaths_400","est_ccfr","est_ccfr_low","est_ccfr_high","sample_size","mean_cases","mean_reach","dunbar_reach","cases_p_reach","cases_p_reach_low","cases_p_reach_high","cases_p_reach_error","cases_p_reach_prop","cases_p_reach_prop_median","estimated_cases","estimate_cases_low","estimate_cases_high","estimate_cases_error","prop_cases","dunbar_cases","prop_cases_low","prop_cases_high","prop_cases_error","dunbar_cases_low","dunbar_cases_high","dunbar_cases_error"
-"1","Puerto_Rico","PR","2020/03/28",64,2,64,2,800,Inf,Inf,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"2","Puerto_Rico","PR","2020/03/29",36,1,100,3,1200,21939.5064050188,80888.0524549314,5950.71740123862,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"3","Puerto_Rico","PR","2020/03/30",27,2,127,5,2000,10063.4206378075,10044.4238228455,10082.4533810602,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"1","Puerto_Rico","PR","2020/03/28",64,2,64,2,800,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2","Puerto_Rico","PR","2020/03/29",36,1,100,3,1200,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3","Puerto_Rico","PR","2020/03/30",27,2,127,5,2000,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "4","Puerto_Rico","PR","2020/03/31",47,1,174,6,2400,6913.56504701714,5948.33345377496,8035.42404452858,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "5","Puerto_Rico","PR","2020/04/01",65,2,239,8,3200,6912.37970507499,5956.15102143705,8022.12586872996,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "6","Puerto_Rico","PR","2020/04/02",47,3,286,11,4400,7033.05438694853,6245.11637761828,7920.40548468372,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
