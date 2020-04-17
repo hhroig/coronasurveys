@@ -25,6 +25,8 @@
 
 - Japan: https://tinyurl.com/coronasurveysjapan
 
+- Lebanon: https://tinyurl.com/coronasurveyslebanon
+
 - Netherlands: https://tinyurl.com/coronasurveysnetherlands
 
 - Nigeria: https://tinyurl.com/coronasurveysnigeria
