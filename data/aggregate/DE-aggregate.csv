@@ -105,3 +105,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/16 09:14:54 AM UTC",Berlin,100,3
 "2020/04/16 10:19:36 AM UTC",Berlin,30,0
 "2020/04/17 07:00:00 AM UTC","Ganz Deutschland",50,0
+"2020/04/17 12:39:45 PM UTC",Hamburg,50,0
+"2020/04/17 12:40:06 PM UTC",Schleswig-Hostein,50,0
