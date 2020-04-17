@@ -707,7 +707,8 @@ get_spain_regional_estimates <- function(batch_size = 30,
   })
   
   dt_ds_est <- do.call(rbind, dt_ds_est)
-  lapply(unique(dt_ds_est$CCAA), function(x){
+  lapply(unique(dt_ds_est$CCAA)[!is.na(unique(dt_ds_est$CCAA))],
+         function(x){
     dt_ccca <- dt_ds_est[dt_ds_est$CCAA == x, ]
     write.csv(dt_ccca, paste0("../data/PlotData/ES_regional_estimates/", x, "-", "estimates.csv"))
   })
