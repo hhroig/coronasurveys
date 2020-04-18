@@ -253,3 +253,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/18 12:02:10 AM UTC","New York",100,10
 "2020/04/18 01:38:39 AM UTC",Massachusetts,100,5
 "2020/04/18 02:32:43 AM UTC",Maryland,50,0
+"2020/04/18 04:58:55 AM UTC",California,9,0
+"2020/04/18 05:17:07 AM UTC",Georgia,100,0
