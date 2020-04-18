@@ -242,3 +242,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/17 10:58:17 PM UTC","Greater London",50,2
 "2020/04/18 07:46:43 AM UTC",Wales,150,4
 "2020/04/18 08:15:10 AM UTC","West Midlands",30,0
+"2020/04/18 09:33:15 AM UTC",England,5,0
+"2020/04/18 10:19:32 AM UTC","City of Glasgow",100,1
