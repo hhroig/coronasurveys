@@ -244,3 +244,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/18 08:15:10 AM UTC","West Midlands",30,0
 "2020/04/18 09:33:15 AM UTC",England,5,0
 "2020/04/18 10:19:32 AM UTC","City of Glasgow",100,1
+"2020/04/18 11:57:51 AM UTC",Gloucestershire,10,3
+"2020/04/18 11:58:36 AM UTC",Gloucestershire,30,0
