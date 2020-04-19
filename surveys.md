@@ -37,6 +37,8 @@
 
 - Sweden: https://tinyurl.com/coronasurveyssweden
 
+- Turkey: https://tinyurl.com/coronasurveysturkey
+
 - UK: https://tinyurl.com/coronasurveysuk
 
 - Ukraine: https://tinyurl.com/coronasurveysukraine
