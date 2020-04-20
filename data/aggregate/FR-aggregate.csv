@@ -301,3 +301,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/20 04:20:43 PM UTC","35 Ille-et-Vilaine",100,4
 "2020/04/20 06:40:14 PM UTC","Toute la France",110,5
 "2020/04/20 07:29:55 PM UTC","Toute la France",64000000,50000
+"2020/04/20 07:45:19 PM UTC","69 Rhône",500,6
+"2020/04/20 08:19:07 PM UTC","01 Ain",15,0
+"2020/04/20 08:52:28 PM UTC","69 Rhône",80,3
+"2020/04/20 09:02:58 PM UTC","14 Calvados",10,0
