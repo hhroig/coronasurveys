@@ -3,7 +3,6 @@ library(tidyverse)
 library(readxl)
 library(httr)
 
-
 ## set working drirectoy here
 #setwd("please put the absolute folder path of where this script is located on the server")
 
@@ -246,6 +245,7 @@ estimate_cases_aggregate <- function(file_path,
     n_maxratio_outliers <- 0
   }
   
+
   
   method <- match.arg(method)
   
@@ -466,18 +466,45 @@ plot_estimates <- function(country_geoid = "ES",
     stop("only jh and ecdc allowed as data sources")
   }
   
+  
+  
   if(country_geoid %in% survey_countries){
     cat(country_geoid, "has a survey data file..", "reading survey data...", "\n")
-    file_path = paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
-    
-    
-    
-    survey_gforms_estimate <- estimate_cases_aggregate(file_path = file_path,
-                                                       country_population = population_value,
-                                                       max_ratio = max_ratio,
-                                                       correction_factor = correction_factor, 
-                                                       method = batching_method,
-                                                       batch = batch_size)$dt_estimates
+    file_path <- paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
+    dt_test_agg <- read.csv(file_path, as.is = T)
+    if(nrow(dt_test_agg)<30){
+      survey_gforms_estimate <- data.frame(date = dt$date,
+                                           sample_size = NA,
+                                           mean_cases = NA,
+                                           mean_reach = NA,
+                                           dunbar_reach = NA,
+                                           cases_p_reach = NA,
+                                           cases_p_reach_low = NA,
+                                           cases_p_reach_high = NA,
+                                           cases_p_reach_error = NA,
+                                           cases_p_reach_prop = NA,
+                                           cases_p_reach_prop_median = NA,
+                                           estimated_cases = NA,
+                                           estimate_cases_low = NA,
+                                           estimate_cases_high = NA,
+                                           estimate_cases_error = NA,
+                                           prop_cases = NA,
+                                           dunbar_cases = NA,
+                                           prop_cases_low = NA,
+                                           prop_cases_high = NA,
+                                           prop_cases_error = NA,
+                                           dunbar_cases_low = NA,
+                                           dunbar_cases_high = NA,
+                                           dunbar_cases_error = NA,
+                                           stringsAsFactors = F)
+    } else{
+      survey_gforms_estimate <- estimate_cases_aggregate(file_path = file_path,
+                                                         country_population = population_value,
+                                                         max_ratio = max_ratio,
+                                                         correction_factor = correction_factor, 
+                                                         method = batching_method,
+                                                         batch = batch_size)$dt_estimates
+    }
    
     # combine dt and survey forms estimates
     dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
@@ -556,7 +583,7 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
   srce <- match.arg(srce)
   if(srce == "ecdc"){
     url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
-                 Sys.Date(), ".xlsx", sep = "")
+                 Sys.Date()-1, ".xlsx", sep = "")
     GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
     try( data_ecdc <- read_excel(tf), silent = T)
     
@@ -862,4 +889,6 @@ estimate_cases_aggregate_spain_regional <- function(region,
 
 get_spain_regional_estimates()
 
+# get spain region based estimate scribe
+source("spain_region_based_estimate.R")
 
