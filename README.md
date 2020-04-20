@@ -70,9 +70,9 @@ See https://coronasurveys.org/info/team/
 
 ## Data Availability and License
 
-We will make all the data available here. The data of the first collection of surveys will be available shortly.
+All the data collected via our surveys is available (here)[https://github.com/GCGImdea/coronasurveys/tree/master/data/aggregate]. 
 
-In the meantime, you access some aggregated results at https://docs.google.com/spreadsheets/d/1dn8o8xSuBQTQYzMhKvqoxzWe4FXGbY1MpehyUM4gnwk/edit#gid=1914437865
+The estimates we compute from the surveys and using other indirect methods are available (here)[https://github.com/GCGImdea/coronasurveys/tree/master/data/PlotData].
 
 All the data in this project is distributed under the Open Data Commons Attribution License.
 
