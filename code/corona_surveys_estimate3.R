@@ -584,7 +584,7 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
   srce <- match.arg(srce)
   if(srce == "ecdc"){
     url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
-                 Sys.Date()-1, ".xlsx", sep = "")
+                 Sys.Date(), ".xlsx", sep = "")
     GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
     try( data_ecdc <- read_excel(tf), silent = T)
     
