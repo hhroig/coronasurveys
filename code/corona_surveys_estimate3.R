@@ -472,6 +472,7 @@ plot_estimates <- function(country_geoid = "ES",
     cat(country_geoid, "has a survey data file..", "reading survey data...", "\n")
     file_path <- paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
     dt_test_agg <- read.csv(file_path, as.is = T)
+    # skip computing estimate if survey data is less than 30 responses
     if(nrow(dt_test_agg)<30){
       survey_gforms_estimate <- data.frame(date = dt$date,
                                            sample_size = NA,
@@ -591,7 +592,7 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
       cat("Seems the ECDC data for today is not available yet is not availabe yet...", "\n")
       cat("Trying to get data for the previous day...", "\n")
       url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
-                   Sys.Date() - 1, ".xlsx", sep = "")
+                   Sys.Date(), ".xlsx", sep = "")
       GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
       try( data_ecdc <- read_excel(tf), silent = T)
       if(!is.data.frame(data_ecdc)){
@@ -889,6 +890,6 @@ estimate_cases_aggregate_spain_regional <- function(region,
 
 get_spain_regional_estimates()
 
-# get spain region based estimate scribe
+# get spain region based estimate 
 source("spain_region_based_estimate.R")
 
