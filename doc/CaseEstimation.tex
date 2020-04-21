@@ -1,10 +1,29 @@
 \documentclass{article}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
 \begin{document}
 \title{Measuring Icebergs: Using Different Methods to Estimate the Number of COVID-19 Cases in Portugal and Spain}
-\author{$@$CoronaSurveys Team \\ \texttt{https://github.com/GCGImdea/coronasurveys}\\(draft in progress, not peer-reviewed)}
+\author{Carlos Baquero, U. Minho \& INESC TEC, Portugal \and
+Paolo Casari, University of Trento, Italy \and
+Antonio Fernández Anta, IMDEA Networks Institute, Spain \and
+Davide Frey, Inria Rennes, France \and
+Augusto Garcia-Agundez, TU Darmstadt, Germany \and
+Chryssis Georgiou, U. Cyprus, Cyprus \and
+Raquel Menezes, U. Minho, Portugal \and
+Nicolas Nicolaou, Algolysis Ltd, Cyprus \and
+Oluwasegun Ojo, IMDEA Networks \& UC3M, Spain \and
+Paul Patras, U. Edinburgh, UK
+%$@$CoronaSurveys Team \\ \texttt{https://github.com/GCGImdea/coronasurveys}\\(draft in progress, not peer-reviewed)
+}
+\date{}
 \maketitle
+
+\begin{abstract}
+The world is suffering from a pandemic called COVID-19, caused by the SARS-CoV-2 virus. The different national governments have problems evaluating the reach of the epidemic, having limited resources and tests at their disposal. Hence, any means to evaluate the number of persons with symptoms compatible with COVID-19 with reasonable level of accuracy is useful. In this paper we present the initial results of the $@$CoronaSurveys project. The objective of this project is the collection and publication of data concerning the number of people that show symptoms compatible with COVID-19 in different countries using open anonymous surveys. While this data may be biased, we conjecture that it is still useful to estimate the number of infected persons with the COVID-19 virus at a given point in time in these countries, and the evolution of this number over time. We show here the initial results of the $@$CoronaSurveys project in Spain and Portugal. 
+\end{abstract}
+
 \section{Introduction}
 
 During the current coronavirus pandemic, monitoring the evolution of COVID-19 cases is very important for the authorities to make
@@ -13,9 +32,9 @@ Official numbers of confirmed cases are periodically issued by each country's he
 Unfortunately, upon the pandemic outbreak is it usually the case that there is lack of available laboratory tests, and other material and human resources. Hence, it is not possible to test all potential cases, and some eligibility criteria is applied to decide who is tested.
 Under these circumstances, the evolution of official confirmed cases might not represent the total number of cases (see \cite{maxmen2020much}).  
 
-This motivates the need of other probing techniques, beyond laboratory testing, that may bring in information about the potential numbers of cases. In fact, it is very likely that the true numbers might only be known in the future, once serological surveys are done (as done in prior outbreaks \cite{yang2012serological}). However, any rough estimate that is within one order of magnitude of the real number will be better than being almost in the dark.
+This motivates the need of other probing techniques, beyond laboratory testing, that may bring in information about the potential numbers of cases. In fact, it is very likely that the true numbers might only be known in the future, once serological surveys are done (as happened in prior outbreaks \cite{yang2012serological}). However, any rough estimate that is of the same order of magnitude as the real number will be better than being almost in the dark.
 
-In the rest of this document we propose a new approach to estimate the number of cases with COVID-19 symptoms, which is based on using crowdsourcing with open anonymous surveys to obtain indirect information. We compare this new approach with approaches that infer current cases from the case fatality series for two particular countries, Portugal and Spain.
+In the rest of this document we present the $@$CoronaSurvey project \cite{CoronaSurveys}, which uses a new approach to estimate the number of cases with COVID-19 symptoms, based on using crowdsourcing via open anonymous surveys to obtain indirect information. We compare this new approach with approaches that infer current cases from the case fatality series for two particular countries, Portugal and Spain.
 
 \section{Delay-adjusted Case Fatality Ratio}
 
@@ -30,7 +49,7 @@ The $@$CoronaSurveys effort is based on crowdsourcing data collection, in a way 
 
 \begin{itemize}
 \item How many people do you know in this geographical area? (Please, consider only people whose current health status you likely know.)
-\item As far as you know, how many of the above have symptoms compatible with COVID-19 (or were diagnosed with the disease)?
+\item As far as you know, how many of the above have had symptoms compatible with COVID-19 (or were diagnosed with the disease)?
 \end{itemize}
 
 By not asking any personal information we aim at protecting the participant's privacy, and having just two questions aims to simplify the answering process. This will hopefully increase the participation. However, the lack of detailed information of the participants makes the estimation process challenging. We do not control the spread of the survey nor the adequate coverage of regions, age groups and other parameters. Somewhat surprisingly, even given these limitations, we can still obtain a rough estimate and see that it is not far from those obtained with other techniques. One reason for this may be that each participant is typically reporting on the health status of a large sample (hundreds), which increases significantly the coverage of the survey. Obvious advantages of this approach are that it is very simple to deploy and can give very timely results.
@@ -44,13 +63,13 @@ In the following sections we show the results we obtain for the two countries, P
 
 \section{Estimating the Number of COVID-19 Cases in Portugal}
 
-Portuguese data on fatality and confirmed cases was obtained from \cite{dssg-pt}, a public repository that helps disseminated the official DGS daily data.
+Portuguese data on fatality and confirmed cases was obtained from \cite{dssg-pt}, a public repository that helps disseminate the official DGS daily data.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.9\linewidth]{EstPTMar28.pdf}
+\includegraphics[width=0.9\linewidth]{EstPTMar29.pdf}
 \end{center}
-  \caption{Case estimates for Portugal, March 28th 2020. Solid line is official confirmed cases. Dashed lines and solid dots $\bullet$ are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds $\diamond$ and triangles  $\triangle$ show the results from $@$CoronaSurveys, Twitter and Google Forms, respectively.}
+  \caption{Case estimates for Portugal, March 29, 2020. Solid line is official confirmed cases. Dashed lines and solid dots $\bullet$ are the number of cases as estimated from fatalities (times 400) and from corrected case fatality ratios, respectively. Diamonds $\diamond$ and triangles  $\triangle$ show the results from $@$CoronaSurveys, Twitter and Google Forms, respectively.}
 \label{pt}
 \end{figure}
 
@@ -65,9 +84,9 @@ Spanish data was obtained from the European Center for Disease Control \cite{ECD
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.9\linewidth]{EstSPMar28.pdf}
+\includegraphics[width=0.9\linewidth]{EstSPMar29.pdf}
 \end{center}
-\caption{Case estimates for Spain, March 28th 2020. Solid line is official confirmed cases. Dashed lines and solid dots $\bullet$ are the number of cases as estimated from deaths (times 400) and from corrected case fatality ratios, respectively. Diamonds $\diamond$ and triangles  $\triangle$ show the results from $@$CoronaSurveys, Twitter and Google Forms, respectively.}
+\caption{Case estimates for Spain, March 29, 2020. Solid line is official confirmed cases. Dashed lines and solid dots $\bullet$ are the number of cases as estimated from fatalities (times 400) and from corrected case fatality ratios, respectively. Diamonds $\diamond$ and triangles  $\triangle$ show the results from $@$CoronaSurveys, Twitter and Google Forms, respectively.}
 \label{sp}
 \end{figure}
 
@@ -76,6 +95,39 @@ For the Spanish case (see Figure~\ref{sp}) there is an even wider gap between th
 \section{Discussion}
 
 In this first report we draw attention to the limitations of relying only on confirmed cases to measure the true size of a growing pandemic. From existing data it is possible to derive other measures, and, surprisingly, it is also possible to do simple surveying approaches that, while simple and maybe crude, are clearly non invasive of privacy, and still get meaningful data. In particular  $@$CoronaSurveys can be relevant in countries with a decent digital infrastructure but lacking in laboratory resources. When measuring icebergs,  there are many strategies. 
+
+\section{Further Progress and Acknowledgments}
+
+As mentioned, this document is the first report on the $@$CoronaSurveys project \cite{CoronaSurveys}, describing its status at the end of March 2020. Since then, the project has grown rapidly, with specific surveys open for 24 different countries in 13 different languages, plus two generic surveys open for the rest of countries in English and Arabic. All the data collected and several estimates computed are openly available at the project web site \cite{CoronaSurveys}, which also contains plots of the estimates for all countries.
+
+We would like to thank the large group of resaerchers and collaborators that is currently involved in the $@$CoronaSurveys project in any form: 
+Payman Arabshahi,
+Annette Bieniusa,
+Elisa Cabana,
+Ignacio Castro, 
+Angeliki Gazi, 
+Benjamin Girault, 
+Mathieu Goessens, 
+Harold Hernández,
+Rodrigo Irarrazaval,
+Anna Ishchenko,
+Oleksiy Kebkal,
+Rosa Lillo, 
+Alvaro Méndez,
+Esteban Moro,
+Antonio Ortega, 
+Yuichi Tanaka, 
+Christopher Thraves, 
+Erol Sahin,
+Andres Schafer,
+Ghadi Sebaali,
+Natalie Soto,
+Matias Spatz Fernández,
+Efstathios Stavrakis, 
+Pelayo Vallina, 
+and
+Lin Wang.
+
 
 \bibliographystyle{plain}
 \bibliography{refs}
