@@ -297,3 +297,17 @@ Timestamp,Region,Reach,Cases
 "2020/04/20 06:47:33 AM UTC","17 Charente-Maritime",30,2
 "2020/04/20 07:39:00 AM UTC","75 Paris",50,5
 "2020/04/20 08:18:53 AM UTC","67 Bas-Rhin",50,4
+"2020/04/20 03:56:04 PM UTC","Toute la France",100,11
+"2020/04/20 04:20:43 PM UTC","35 Ille-et-Vilaine",100,4
+"2020/04/20 06:40:14 PM UTC","Toute la France",110,5
+"2020/04/20 07:29:55 PM UTC","Toute la France",64000000,50000
+"2020/04/20 07:45:19 PM UTC","69 Rhône",500,6
+"2020/04/20 08:19:07 PM UTC","01 Ain",15,0
+"2020/04/20 08:52:28 PM UTC","69 Rhône",80,3
+"2020/04/20 09:02:58 PM UTC","14 Calvados",10,0
+"2020/04/20 10:04:58 PM UTC","69 Rhône",100,3
+"2020/04/20 10:16:49 PM UTC","35 Ille-et-Vilaine",150,2
+"2020/04/20 10:21:10 PM UTC","15 Cantal",9,4
+"2020/04/21 05:48:20 AM UTC","35 Ille-et-Vilaine",25,0
+"2020/04/21 06:59:04 AM UTC","Toute la France",110,5
+"2020/04/21 07:22:41 AM UTC","69 Rhône",50,2
