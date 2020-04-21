@@ -3424,3 +3424,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/21 09:00:04 AM UTC",Andalucía,20,2
 "2020/04/21 09:32:06 AM UTC","Todo el país",200,11
 "2020/04/21 11:25:09 AM UTC","Todo el país",50,0
+"2020/04/21 12:32:32 PM UTC","Comunidad de Madrid",100,30
+"2020/04/21 01:09:56 PM UTC","Comunidad de Madrid",100,12
