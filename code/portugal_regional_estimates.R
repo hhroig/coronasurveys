@@ -28,6 +28,8 @@ get_portugal_regional_estimates <- function(batch_size = 30,
     ungroup() %>% 
     mutate(region = substr(region, 13, 23))
   
+  cases_data_source$cases[cases_data_source$cases<0] <- 0
+  
   obitos_data_source <- data_source  %>% 
     select("data",  "obitos_arsnorte", "obitos_arscentro",
            "obitos_arslvt", "obitos_arsalentejo", "obitos_arsalgarve", "obitos_acores",
@@ -38,7 +40,7 @@ get_portugal_regional_estimates <- function(batch_size = 30,
     ungroup() %>% 
     mutate(region = substr(region, 8, 20))
   
-  
+  obitos_data_source$deaths[obitos_data_source$deaths<0] <- 0
   
   dt_ds <- full_join(cases_data_source, obitos_data_source) %>% 
     mutate(cum_deaths_400 = cum_deaths *400) %>%
