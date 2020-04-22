@@ -1005,5 +1005,5 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
 get_spain_region_based_estimate()
 
 # # get spain region based estimate 
-# source("spain_region_based_estimate.R")
-
+source("spain_region_based_estimate.R")
+source("portugal_regional_estimates.R")
