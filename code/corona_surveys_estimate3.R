@@ -588,17 +588,18 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
     GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
     try( data_ecdc <- read_excel(tf), silent = T)
     
-    if(!is.data.frame(data_ecdc)){
+    if(!exists("data_ecdc")){
       cat("Seems the ECDC data for today is not available yet is not availabe yet...", "\n")
       cat("Trying to get data for the previous day...", "\n")
       url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
-                   Sys.Date(), ".xlsx", sep = "")
+                   Sys.Date()-1, ".xlsx", sep = "")
       GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
       try( data_ecdc <- read_excel(tf), silent = T)
-      if(!is.data.frame(data_ecdc)){
+      if(!exists("data_ecdc")){
         stop("Unfortunately, the ECDC data for yesterday is not availabe neither...\n")
       }else{
         cat("Using ECDC data for previous day...\n")
+        data_ecdc$countryterritoryCode[data_ecdc$geoId == "CZ"] <- "CZE" # add "CZ" manually
         data_country_code <- read_excel("wikipedia-iso-country-codes.xlsx")
         names(data_country_code) <- c("English.short.name.lower.case", "Alpha.2.code",
                                       "Alpha.3.code", "Numeric.code", "ISO.3166.2")
