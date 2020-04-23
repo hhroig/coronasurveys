@@ -273,3 +273,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/23 09:01:24 PM UTC",California,50,0
 "2020/04/23 09:01:38 PM UTC",California,200,2
 "2020/04/23 09:09:53 PM UTC",Illinois,100,8
+"2020/04/23 09:34:03 PM UTC",California,200,0
+"2020/04/23 09:51:03 PM UTC",California,30,0
+"2020/04/23 09:54:17 PM UTC",California,40,0
