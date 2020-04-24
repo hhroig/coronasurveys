@@ -318,3 +318,12 @@ Timestamp,Region,Reach,Cases
 "2020/04/21 11:56:35 AM UTC","Toute la France",50,2
 "2020/04/21 07:30:52 PM UTC","Toute la France",50,4
 "2020/04/22 06:12:12 AM UTC","35 Ille-et-Vilaine",100,2
+"2020/04/23 08:50:35 PM UTC","35 Ille-et-Vilaine",100,4
+"2020/04/23 09:07:32 PM UTC","34 Hérault",4,0
+"2020/04/23 09:34:13 PM UTC","35 Ille-et-Vilaine",150,0
+"2020/04/24 06:50:46 AM UTC","35 Ille-et-Vilaine",25,0
+"2020/04/24 07:05:56 AM UTC","35 Ille-et-Vilaine",100,2
+"2020/04/24 08:11:56 AM UTC","35 Ille-et-Vilaine",100,11
+"2020/04/24 08:32:22 AM UTC","22 Côtes d'Armor",100,34
+"2020/04/24 08:33:05 AM UTC","Toute la France",100,4
+"2020/04/24 10:35:31 AM UTC","35 Ille-et-Vilaine",600,400
