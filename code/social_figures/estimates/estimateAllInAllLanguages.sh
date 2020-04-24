@@ -5,7 +5,7 @@
 
 #    for langdir in `ls -d locales/*/`; do
     #	language=`basename $langdir`
-for language in en; do
+for language in en fr it; do
 	echo "doing  $language"
 	
 	scale='t'
