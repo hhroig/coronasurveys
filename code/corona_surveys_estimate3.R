@@ -185,7 +185,7 @@ scale_cfr <- function(data_1_in, delay_fun, mu_hdt, sigma_hdt){
   b_tt <- sum(death_incidence)/sum(case_incidence) 
   # corrected CFR estimator
   p_tt <- sum(death_incidence)/cumulative_known_t
-  if (sum(death_incidence) > cumulative_known_t){
+  if (sum(death_incidence, na.rm = T) > cumulative_known_t){
     ccfrr <- data.frame(nCFR =0, cCFR = 0, total_deaths = 0, 
                         cum_known_t = 0, total_cases = sum(case_incidence))
   } else{
