@@ -3502,3 +3502,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/26 01:01:08 AM UTC","Comunidad de Madrid",100,20
 "2020/04/26 07:15:13 AM UTC",Cataluña,180,12
 "2020/04/26 07:20:39 AM UTC",Baleares,80,6
+"2020/04/26 07:49:05 AM UTC","Comunidad de Madrid",25,5
+"2020/04/26 08:01:45 AM UTC","Comunidad Foral de Navarra",300,6
+"2020/04/26 09:13:48 AM UTC",Aragón,50,2
