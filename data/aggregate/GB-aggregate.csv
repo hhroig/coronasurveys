@@ -256,3 +256,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/23 08:49:02 PM UTC",Berkshire,100,0
 "2020/04/23 09:39:58 PM UTC","City of Glasgow",10,0
 "2020/04/25 06:37:34 AM UTC",Leicestershire,55,0
+"2020/04/27 11:04:19 AM UTC","West Yorkshire",40,2
+"2020/04/27 11:17:48 AM UTC",England,200,3
