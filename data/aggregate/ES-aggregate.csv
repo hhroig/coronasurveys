@@ -3531,3 +3531,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/27 04:33:06 PM UTC","Castilla y León",75,3
 "2020/04/27 04:54:05 PM UTC","Principado de Asturias",50,1
 "2020/04/27 06:42:26 PM UTC","Castilla y León",500,1
+"2020/04/27 08:05:29 PM UTC","Todo el país",200,11
+"2020/04/27 08:19:53 PM UTC",Aragón,1000,0
+"2020/04/27 08:21:49 PM UTC","Comunidad de Madrid",100,4

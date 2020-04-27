@@ -690,3 +690,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/23 10:39:38 AM UTC",Calabria,100,10
 "2020/04/23 05:55:42 PM UTC",Veneto,44,6
 "2020/04/27 04:44:26 PM UTC",Liguria,40,1
+"2020/04/27 08:18:53 PM UTC",Lombardia,60,6
+"2020/04/27 08:20:39 PM UTC",Lombardia,100,6
+"2020/04/27 08:21:49 PM UTC","Tutta la nazione",150,6
+"2020/04/27 08:21:57 PM UTC",Lombardia,100,6

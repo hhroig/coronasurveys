@@ -258,3 +258,6 @@ Timestamp,Region,Reach,Cases
 "2020/04/25 06:37:34 AM UTC",Leicestershire,55,0
 "2020/04/27 11:04:19 AM UTC","West Yorkshire",40,2
 "2020/04/27 11:17:48 AM UTC",England,200,3
+"2020/04/27 08:42:58 PM UTC",England,100,2
+"2020/04/27 08:47:50 PM UTC","East Sussex",14,0
+"2020/04/27 09:23:50 PM UTC",England,8,0
