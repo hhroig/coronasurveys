@@ -29,3 +29,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/16 08:47:09 AM UTC","Entire country",100,3
 "2020/04/16 09:01:57 AM UTC","Entire country",50,1
 "2020/04/25 01:44:00 PM UTC","Entire country",50,0
+"2020/04/28 07:38:06 AM UTC","South Holland",100,10
+"2020/04/28 07:40:01 AM UTC","South Holland",100,0
