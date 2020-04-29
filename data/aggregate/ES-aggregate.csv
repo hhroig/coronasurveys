@@ -3551,3 +3551,5 @@ Timestamp,Region,Reach,Cases
 "2020/04/29 12:25:00 PM UTC",Cataluña,40,10
 "2020/04/29 03:49:30 PM UTC","Comunidad de Madrid",28,5
 "2020/04/29 04:34:43 PM UTC","Castilla-La Mancha",50,10
+"2020/04/29 07:37:28 PM UTC","Todo el país",200,11
+"2020/04/29 09:24:59 PM UTC","Castilla y León",600,20
