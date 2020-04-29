@@ -46,6 +46,14 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
   estimate_cases_world <- c()
   estimate_cases_reg <- c()
   
+  I_c_est <- c()
+  I_c_prop <- c()
+  r_c <- c()
+  
+  I_r_est2 <- c()
+  I_r_prop2 <- c()
+  r_r2 <- c()
+  
   for (j in dates){
     cat("working on date: ", j, "\n"  )
     dt_date <- dt2[as.Date(dt2$date) <= as.Date(j), ]
@@ -71,10 +79,10 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
     estimated_cases_w <- ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_w * (m/(m+n))
     prop_cases_w <- ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_prop_w * (m/(m+n))
     
-    I_c_est <- ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_w
-    I_c_prop <- ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_prop_w
+    I_c_est <- c(I_c_est, ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_w)
+    I_c_prop <- c(I_c_prop, ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_prop_w)
     
-    r_c <- sum(dt2_rt$reach)
+    r_c <- c(r_c, sum(dt2_rt$reach))
     
     # copute the ratio for the regions
     cases_p_reach_t <- c()
@@ -86,6 +94,7 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
     r_r <- c()
     I_r_est <- c()
     I_r_prop <- c()
+    
     for (i in unique(dt2$region)[unique(dt2$region) != "Todo el país"]){
       # get data for all country and the current region
       dt_current <- dt2_r[dt2_r$region == i, ]
@@ -118,9 +127,9 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
     
     prop_cases <- c(prop_cases, prop_cases_w + prop_cases_t)
     
-    I_r_est <- sum(I_r_est)
-    I_r_prop <- sum(I_r_prop)
-    r_r <- sum(r_r)
+    I_r_est2 <- c(I_r_est2, sum(I_r_est, na.rm = T))
+    I_r_prop2 <- c(I_r_prop2, sum(I_r_prop, na.rm = T))
+    r_r2 <- c(r_r2, sum(r_r, na.rm = T))
   }
   
   region_based_estimate <- data.frame(date = dates,
@@ -128,12 +137,12 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
                                       prop_cases_region_based = prop_cases, 
                                       estimate_cases_world = estimate_cases_world,
                                       estimate_cases_reg = estimate_cases_reg, 
-                                      I_r_est = I_r_est,
+                                      I_r_est = I_r_est2,
                                       I_c_est =  I_c_est, 
-                                      r_r = r_r, 
+                                      r_r = r_r2, 
                                       r_c = r_c,
-                                      I_c_prop = I_c_prop, 
-                                      I_r_prop = I_r_prop)
+                                      I_r_prop = I_r_prop2,
+                                      I_c_prop = I_c_prop)
   cat("writing the region based estimate for Spain..\n")
   write.csv(region_based_estimate, paste0("../data/PlotData/ES_regional_estimates/", "ES-region-based-estimate.csv"))
 }
