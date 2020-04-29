@@ -131,3 +131,7 @@ Timestamp,Region,Reach,Cases
 "2020/04/28 05:24:41 PM UTC",Hessen,100,1
 "2020/04/28 07:52:27 PM UTC",Hessen,180,0
 "2020/04/28 11:49:04 PM UTC",Nordrhein-Westfalen,30,0
+"2020/04/29 06:18:45 AM UTC","Ganz Deutschland",30,0
+"2020/04/29 06:27:08 AM UTC",Hessen,50,0
+"2020/04/29 06:27:13 AM UTC",Hessen,50,3
+"2020/04/29 06:44:04 AM UTC",Hessen,200,2
