@@ -1440,3 +1440,9 @@ Timestamp,Region,Reach,Cases
 "2020/04/30 07:02:26 PM UTC",Lisboa,20,0
 "2020/04/30 07:11:02 PM UTC",Porto,100,2
 "2020/04/30 07:18:41 PM UTC","Viana do Castelo",50,0
+"2020/04/30 07:30:16 PM UTC","Castelo Branco",40,0
+"2020/04/30 08:26:22 PM UTC",Faro,100,0
+"2020/04/30 08:48:16 PM UTC",Braga,100,0
+"2020/04/30 09:09:00 PM UTC",Porto,500,6
+"2020/04/30 09:09:08 PM UTC","Todo o país",100,6
+"2020/04/30 09:18:15 PM UTC",Porto,100,0
