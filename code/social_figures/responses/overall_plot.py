@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+
 
 import sys
 import os
@@ -10,6 +11,8 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
 import seaborn as sns
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
 
 import gettext
 
@@ -77,6 +80,9 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter('%B %dth'))
 ax.set_xlabel(_('Want to help? Complete the survey at \n coronasurveys.org!'),
               labelpad=30, fontsize=28, fontstyle='italic', fontname='Futura LT')
 ax.set_ylabel('')
+
+ax.set_xlim([df.loc[df.index[1], 'date'], df.loc[df.index[-1], 'date']])
+
 
 ## Title
 

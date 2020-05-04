@@ -9,14 +9,14 @@ for language in en fr it; do
 	echo "doing  $language"
 	
 	scale='t'
-	LC_ALL=$language ./estimates_plot.py -ct FR -f 50  -o 10 -cs 35 -ccfr 20 -ccfryoff .1 -cstof -5 -helpusoff 0 --cosurerror --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct ES -f 50  -o 10 -cs 40 -ccfr 20 -ccfryoff .1 -cstof -5 -helpusoff 0 --cosurerror --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct IT -f 50 -o 3 -cs 40 -ccfr 10 -ccfryoff .1 -cstof -5 -helpusoff 0 --cosurerror --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct PT -f 1 -o 3 -cs 30 -ccfr 15 -ccfryoff .1 -helpusoff 0 --cosurerror  --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct CY -f 10 -o 2 -cs 15 -ccfr 5 -ccfryoff 0.05 -ccfrtof 6 -cstof 0 -csyoff 0.07 -helpusoff 0 -oyoff 0.01 --cosurerror --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct GB -f 60 -o 10 -cs 32 -ccfr 20 -ccfryoff .1 -cstof -4 -helpusoff 0  --cosurerror --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct US -f 60 -o 5 -cs 32 -ccfr 15 -ccfryoff 0.1 -cstof -5 -oyoff 0.07 -helpusoff 0  --cosurerror --logyscale $scale
-	LC_ALL=$language ./estimates_plot.py -ct UA -f 1  -o 5 -cs 20 -ccfr 15 -ccfryoff 0.1 -ccfrtof 4 -cstof -5 -helpusoff 0  --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct FR -f 50  -o 10 -cs 55 -ccfr 20 -ccfryoff .1 -cstof -5 -helpusoff 0 --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct ES -f 50  -o 10 -cs 55 -ccfr 20 -ccfryoff .1 -cstof -5 -helpusoff 0 --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct IT -f 50 -o 3 -cs 55 -ccfr 10 -ccfryoff .1 -cstof -5 -helpusoff 0 --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct PT -f 1 -o 3 -cs 45 -ccfr 15 -ccfryoff .1 -helpusoff 0 --cosurerror  --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct CY -f 10 -o 2 -cs 30 -ccfr 5 -ccfryoff 0.05 -ccfrtof 6 -cstof 0 -csyoff 0.07 -helpusoff 0 -oyoff 0.01 --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct GB -f 60 -o 10 -cs 47 -ccfr 20 -ccfryoff .1 -cstof -4 -helpusoff 0  --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct US -f 60 -o 5 -cs 47 -ccfr 15 -ccfryoff 0.1 -cstof -5 -oyoff 0.07 -helpusoff 0  --cosurerror --logyscale $scale
+	LC_ALL=$language ./estimates_plot.py -ct UA -f 1  -o 5 -cs 35 -ccfr 15 -ccfryoff 0.1 -ccfrtof 4 -cstof -5 -helpusoff 0  --cosurerror --logyscale $scale
 
 	scale='f'
 
