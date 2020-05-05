@@ -3604,3 +3604,5 @@ Timestamp,Region,Reach,Cases
 "2020/05/05 06:34:30 AM UTC","Comunidad de Madrid",20,4
 "2020/05/05 08:50:20 AM UTC",Aragón,100,3
 "2020/05/05 10:03:23 AM UTC",Galicia,200,0
+"2020/05/05 12:06:01 PM UTC","Comunidad de Madrid",100,6
+"2020/05/05 01:02:00 PM UTC","Comunidad de Madrid",100,12
