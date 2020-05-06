@@ -216,6 +216,8 @@ estimate_cases_aggregate <- function(file_path,
   #cat("country_population is", country_population, "\n")
   dt <- read.csv(file_path, as.is = T)
   names(dt) <- c("timestamp","region","reach","cases")
+  #names(dt) <- tolower(names(dt))
+  #dt <- dt[, c("timestamp","region","reach","cases")] # select only the needed columns
   dt$date <- substr(dt$timestamp, 1, 10)
   n_inital_response <- nrow(dt)
   

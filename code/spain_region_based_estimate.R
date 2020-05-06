@@ -1,5 +1,4 @@
-#cat("file_path is ", file_path, "\n")
-#cat("country_population is", country_population, "\n")
+
 get_spain_region_based_estimate <- function(max_ratio = .3){
   cat("generating region based estimate for spain \n")
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
@@ -149,8 +148,8 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
 
 get_spain_region_based_estimate()
 
-  
-  get_spain_region_based_estimate2 <- function(max_ratio = .3){
+# I_r, I_c, r_r, r_c
+get_spain_region_based_estimate2 <- function(max_ratio = .3){
     cat("generating region based estimate for spain \n")
     dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
     ccaa_pop <- read.csv("ccaa_population.csv", as.is = T)
@@ -245,9 +244,9 @@ get_spain_region_based_estimate()
                                             "ES-region-based-estimate2.csv"))
   }
   
-  get_spain_region_based_estimate2()
+get_spain_region_based_estimate2()
   
   
-  # I_r, I_c, r_r, r_c
+
 
   
