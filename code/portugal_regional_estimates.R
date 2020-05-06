@@ -1,3 +1,4 @@
+# needs review when new data is available.
 get_portugal_regional_estimates <- function(batch_size = 30,
                                          batching_method = "antonio",
                                          max_ratio = .3,

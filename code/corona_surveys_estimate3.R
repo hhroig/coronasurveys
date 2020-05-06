@@ -206,6 +206,7 @@ get_countries_with_survey <- function(path = "../data/aggregate/"){
   substr(plotdata_files,start = 1, stop = 2)
 }
 
+# needs changing
 estimate_cases_aggregate <- function(file_path,
                                      country_population,
                                      batch,
@@ -636,6 +637,9 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
 generate_estimates(srce = "ecdc")
 
 
+
+
+
 get_spain_regional_estimates <- function(batch_size = 30,
                                          batching_method = "antonio",
                                          max_ratio = .3,
@@ -753,7 +757,7 @@ get_spain_regional_estimates <- function(batch_size = 30,
 
 
 
-
+# needs review after new data is available.
 estimate_cases_aggregate_spain_regional <- function(region,
                                      region_population,
                                      batch,
@@ -765,15 +769,14 @@ estimate_cases_aggregate_spain_regional <- function(region,
   
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
   names(dt) <- c("timestamp","region","reach","cases")
+  #names(dt) <- tolower(names(dt))
+  #dt <- dt[, c("timestamp","region","reach","cases")] # select only the needed columns
   dt$date <- substr(dt$timestamp, 1, 10)
   n_inital_response <- nrow(dt)
   
   # remove outliers from reach column
   reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
   if(sum(dt$reach > reach_cutoff) > 0 ){
-    # write.table(dt[dt$reach >= reach_cutoff, ],
-    #             file = paste0("outliers_removed/", file_name, "_", "outliers_reach.txt"),
-    #              append = T) # write out outliers from reach column to the ouliers removed folder
     n_reach_outliers <- sum(dt$reach > reach_cutoff) #number of outliers removed based on reach
     dt <- dt[dt$reach <= reach_cutoff, ]
   }else{
@@ -785,16 +788,13 @@ estimate_cases_aggregate_spain_regional <- function(region,
   dt2 <- dt[is.finite(dt$ratio), ]  # discard cases with zero reach
   n_zero_reach_outliers <- sum(!is.finite(dt$ratio)) 
   if(sum(dt2$ratio > max_ratio) > 0 ){
-    #write.table(dt[dt$ratio >= max_ratio, ],
-    #            file = paste0("outliers_removed/", file_name, "_", "outliers_max_ratio.txt"),
-    #            append = T) # write out outliers based on max_Ratio
     n_maxratio_outliers <- sum(dt2$ratio > max_ratio) 
     dt2 <- dt2[dt2$ratio <= max_ratio, ]
   }else{
     n_maxratio_outliers <- 0
   }
   if (region == ""){
-    dt2_r <- dt2[dt2$region == region |dt2$region == "Todo el país", ]
+    dt2_r <- dt2[dt2$region == region |dt2$region == "Todo el país", ] # might cause problems
   }else{
     dt2_r <- dt2[dt2$region == region, ]
   }
@@ -891,8 +891,10 @@ estimate_cases_aggregate_spain_regional <- function(region,
   
 }
 
-get_spain_regional_estimates()
+#get_spain_regional_estimates()
 
+
+#Antonio's first attempt
 get_spain_region_based_estimate <- function(max_ratio = .3){
   cat("generating region based estimate for spain \n")
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
@@ -1005,8 +1007,8 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
   write.csv(region_based_estimate, paste0("../data/PlotData/ES_regional_estimates/", "ES-region-based-estimate.csv"))
 }
 
-get_spain_region_based_estimate()
+#get_spain_region_based_estimate() replaced by the ones in separate files
 
 # # get spain region based estimate 
-source("spain_region_based_estimate.R")
-source("portugal_regional_estimates.R")
+#source("spain_region_based_estimate.R")
+#source("portugal_regional_estimates.R")
