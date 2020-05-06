@@ -1,6 +1,6 @@
 # @CoronaSurveys: Monitoring COVID-19 incidence via open polls
 
-## [**Click here for links to all our country surveys**](surveys.md)
+## [**Click here for the link to our survey**](https://coronasurveys.org/)
 
 ## Motivation
 
