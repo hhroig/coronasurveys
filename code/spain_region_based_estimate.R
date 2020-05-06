@@ -1,4 +1,4 @@
-
+#Antonio's first attempt but with  I_r, I_c, r_r, r_c written out
 get_spain_region_based_estimate <- function(max_ratio = .3){
   cat("generating region based estimate for spain \n")
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
@@ -148,7 +148,7 @@ get_spain_region_based_estimate <- function(max_ratio = .3){
 
 get_spain_region_based_estimate()
 
-# I_r, I_c, r_r, r_c
+# Rosa's attempt. has problem of double counting.
 get_spain_region_based_estimate2 <- function(max_ratio = .3){
     cat("generating region based estimate for spain \n")
     dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
