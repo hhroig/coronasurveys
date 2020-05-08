@@ -1,11 +1,12 @@
-Timestamp,Region,Reach,Cases
-"2020/04/13 08:45:55 PM UTC",,100,0
-"2020/04/16 02:09:00 AM UTC",,25,0
-"2020/04/16 04:15:11 AM UTC",,6,0
-"2020/04/16 07:51:26 AM UTC",,1000,0
-"2020/04/16 07:12:48 PM UTC",,50,0
-"2020/04/18 08:10:39 AM UTC",,100,0
-"2020/04/23 11:56:22 PM UTC",,100,0
-"2020/04/24 12:17:03 AM UTC",,500,50
-"2020/04/24 05:15:55 AM UTC",,100,0
-"2020/04/24 07:47:30 AM UTC",,100,0
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/13 08:45:55 PM UTC",,India,IN,,,,100,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 02:09:00 AM UTC",,India,IN,,,,25,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 04:15:11 AM UTC",,India,IN,,,,6,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 07:12:48 PM UTC",,India,IN,,,,50,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 07:51:26 AM UTC",,India,IN,,,,1000,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/18 08:10:39 AM UTC",,India,IN,,,,100,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/23 11:56:22 PM UTC",,India,IN,,,,100,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/24 05:15:55 AM UTC",,India,IN,,,,100,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/24 07:47:30 AM UTC",,India,IN,,,,100,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/24 12:17:03 AM UTC",,India,IN,,,,500,50,,,,,,,,,,,world-g-sheet,,
+"2020/04/27 05:21:14 PM UTC",,India,IN,,,,1300000,30000,,,,,,,,,,,world-g-sheet,,

@@ -1,2 +1,2 @@
-Timestamp,Region,Reach,Cases
-"2020/04/09 04:25:39 PM UTC",,100,7
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/09 04:25:39 PM UTC",,China,CN,,,,100,7,,,,,,,,,,,world-g-sheet,,

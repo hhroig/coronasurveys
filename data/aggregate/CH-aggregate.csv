@@ -1,8 +1,9 @@
-Timestamp,Region,Reach,Cases
-"2020/04/10 06:20:40 AM UTC",,150,1
-"2020/04/12 07:47:35 PM UTC",,2,0
-"2020/04/12 07:55:22 PM UTC",,1000,0
-"2020/04/16 08:46:05 AM UTC",,15,0
-"2020/04/16 08:48:07 AM UTC",,50,0
-"2020/04/20 07:36:07 AM UTC",,30,2
-"2020/04/27 06:50:40 PM UTC",,25,1
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/10 06:20:40 AM UTC",,Switzerland,CH,,,,150,1,,,,,,,,,,,world-g-sheet,,
+"2020/04/12 07:47:35 PM UTC",,Switzerland,CH,,,,2,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/12 07:55:22 PM UTC",,Switzerland,CH,,,,1000,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 08:46:05 AM UTC",,Switzerland,CH,,,,15,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 08:48:07 AM UTC",,Switzerland,CH,,,,50,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/20 07:36:07 AM UTC",,Switzerland,CH,,,,30,2,,,,,,,,,,,world-g-sheet,,
+"2020/04/27 06:50:40 PM UTC",,Switzerland,CH,,,,25,1,,,,,,,,,,,world-g-sheet,,
+"2020/04/27 09:23:50 PM UTC",,Switzerland,CH,,,,344000,1795,,,,,,,,,,,world-g-sheet,,

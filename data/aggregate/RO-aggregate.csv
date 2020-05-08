@@ -1,4 +1,5 @@
-Timestamp,Region,Reach,Cases
-"2020/04/12 08:52:44 PM UTC",,300,4
-"2020/04/13 07:17:03 PM UTC",,100,2
-"2020/04/16 08:42:46 AM UTC",,70,1
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/12 07:55:47 PM UTC",,Romania,RO,,,,2000,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/12 08:52:44 PM UTC",,Romania,RO,,,,300,4,,,,,,,,,,,world-g-sheet,,
+"2020/04/13 07:17:03 PM UTC",,Romania,RO,,,,100,2,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 08:42:46 AM UTC",,Romania,RO,,,,70,1,,,,,,,,,,,world-g-sheet,,

@@ -1,4 +1,4 @@
-Timestamp,Region,Reach,Cases
-"2020/04/11 05:13:49 PM UTC",,400,1
-"2020/04/15 10:02:54 PM UTC",,100,0
-"2020/04/17 10:49:30 PM UTC",,200,3
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/11 05:13:49 PM UTC",,Turkey,TR,,,,400,1,,,,,,,,,,,world-g-sheet,,
+"2020/04/15 10:02:54 PM UTC",,Turkey,TR,,,,100,0,,,,,,,,,,,world-g-sheet,,
+"2020/04/17 10:49:30 PM UTC",,Turkey,TR,,,,200,3,,,,,,,,,,,world-g-sheet,,
