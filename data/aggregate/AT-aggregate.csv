@@ -1,5 +1,0 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/11 05:35:30 PM UTC",,Austria,AT,,,,100,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/16 04:43:18 PM UTC",,Austria,AT,,,,20,1,,,,,,,,,,,world-g-sheet,,
-"2020/04/16 07:51:26 AM UTC",,Austria,AT,,,,150,2,,,,,,,,,,,world-g-sheet,,
-"2020/05/08 07:45:18 AM UTC","2020/05/08 07:34:46 AM UTC",Austria,AT,Wien,AT9,sk,7,2,2,,,,,,,Y,N,N,limesurvey,kczxugsajdk9xw9xnp,
