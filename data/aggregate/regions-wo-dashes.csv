@@ -1,5 +1,4 @@
-,,,,,
-countrycode,regioncode,regionname,regiontype,,
+countrycode,regioncode,regionname,regiontype,regionnotes1, regionnotes2
 AF,AFBAL,Balkh - بلخ,Province,Balkh,بلخ
 AF,AFBAM,Bāmyān - بامیان,Province,Bāmyān,بامیان
 AF,AFBDG,Bādghīs - بادغیس,Province,Bādghīs,بادغیس
