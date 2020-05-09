@@ -81,3 +81,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/08 08:18:37 PM UTC","2020/05/08 08:16:24 PM UTC",Chile,CL,,CLRM,en,100,1,0,,,,,,,Y,N,Y,limesurvey,9jk01ghjwfk9yn6owr,
 "2020/05/08 08:39:51 PM UTC","2020/05/08 08:36:38 PM UTC",Chile,CL,,CLRM,en,500,0,0,,,,,,,N,N,N,limesurvey,aq5qbd5bzqk9yny28b,
 "2020/05/08 08:50:23 PM UTC","2020/05/08 08:48:49 PM UTC",Chile,CL,,CLRM,en,50,0,,,,,,,,Y,Y,N,limesurvey,of2fb3xkz8k9yobjmv,
+"2020/05/08 09:47:15 PM UTC","2020/05/08 09:44:16 PM UTC",Chile,CL,,CLRM,es,70,0,0,,,,,,,Y,Y,Y,limesurvey,7cj6a9x5tqk9yq45bw,
+"2020/05/08 09:59:52 PM UTC","2020/05/08 09:56:14 PM UTC",Chile,CL,,CLCO,es,10,0,0,,,,,,,Y,Y,N,limesurvey,8x2iv3n5mek9yqswzi,
+"2020/05/08 10:31:00 PM UTC","2020/05/08 10:29:07 PM UTC",Chile,CL,,CLRM,es,150,2222,2,,,,,,,Y,N,N,limesurvey,6d52blou28k9yrwx54,
+"2020/05/08 10:43:04 PM UTC","2020/05/08 10:40:36 PM UTC",Chile,CL,,CLRM,es,1000,1,1,,,,,,,Y,Y,N,limesurvey,pfdhm95kf4k9yq5vxg,
