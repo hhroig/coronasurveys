@@ -216,12 +216,19 @@ estimate_cases_aggregate <- function(file_path,
   #cat("file_path is ", file_path, "\n")
   #cat("country_population is", country_population, "\n")
   dt <- read.csv(file_path, as.is = T)
-  names(dt) <- c("timestamp","region","reach","cases")
-  #names(dt) <- tolower(names(dt))
-  #dt <- dt[, c("timestamp","region","reach","cases")] # select only the needed columns
-  dt$date <- substr(dt$timestamp, 1, 10)
-  n_inital_response <- nrow(dt)
+  if(file_path == "../data/aggregate/ES-aggregate.csv"){
+    
   
+  }
+  #names(dt) <- c("timestamp","region","reach","cases")
+  names(dt) <- tolower(names(dt))
+  dt <- dt[, c("timestamp","region","reach","cases")] # select only the needed columns
+  dt$date <- substr(dt$timestamp, 1, 10)
+  if(file_path == "../data/aggregate/ES-aggregate.csv"){
+    dt$reach[1:102] <- 150 # impute Dunbar number
+  }
+  n_inital_response <- nrow(dt)
+  dt <- dt[!is.na(dt$reach),] # remove NAs
   # remove outliers from reach column
   reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
   if(sum(dt$reach > reach_cutoff) > 0 ){
@@ -411,7 +418,7 @@ plot_estimates <- function(country_geoid = "ES",
       select(dateRep:popData2018, "Alpha.2.code" )
     data$geoId <- data$Alpha.2.code 
     data <- data %>% select(dateRep:popData2018)
-    ##############
+
     data <- data[data$geoId == country_geoid,]
     dt <- data[rev(1:nrow(data)),]
     dt$cum_cases <- cumsum(dt$cases)
@@ -608,7 +615,9 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
                                       "Alpha.3.code", "Numeric.code", "ISO.3166.2")
         
         data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
+        
         all_geo_ids <- unique(data_ecdc$Alpha.2.code)
+        all_geo_ids <- all_geo_ids[!(all_geo_ids %in% c("AR", "EC"))] # skip AR for now
         sapply(all_geo_ids, plot_estimates,  data_srce = "ecdc", dts = data_ecdc)
       }
     } else{
@@ -619,6 +628,7 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
       
       data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
       all_geo_ids <- unique(data_ecdc$Alpha.2.code) 
+      all_geo_ids <- all_geo_ids[!(all_geo_ids %in% c("AR", "EC"))] # skip AR for now
       sapply(all_geo_ids, plot_estimates, data_srce = "ecdc", dts =  data_ecdc)
     }
   }else if(srce == "jh"){
