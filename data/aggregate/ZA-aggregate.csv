@@ -1,6 +1,6 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/10 07:34:17 PM UTC",,"South Africa",ZA,,,,100,2,,,,,,,,,,,world-g-sheet,,
-"2020/04/16 03:04:08 PM UTC",,"South Africa",ZA,,,,100,1,,,,,,,,,,,world-g-sheet,,
-"2020/04/16 06:15:34 AM UTC",,"South Africa",ZA,,,,120,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/20 02:25:43 PM UTC",,"South Africa",ZA,,,,250,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/22 02:22:38 PM UTC",,"South Africa",ZA,,,,200,1,,,,,,,,,,,world-g-sheet,,
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/10 07:34:17 PM UTC",,"South Africa",ZA,,,,100,2,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 03:04:08 PM UTC",,"South Africa",ZA,,,,100,1,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 06:15:34 AM UTC",,"South Africa",ZA,,,,120,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/20 02:25:43 PM UTC",,"South Africa",ZA,,,,250,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/22 02:22:38 PM UTC",,"South Africa",ZA,,,,200,1,,,,,,,,,,,,,world-g-sheet,,

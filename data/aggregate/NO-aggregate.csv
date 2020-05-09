@@ -1,4 +1,4 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/09 08:15:08 AM UTC",,Norway,NO,,,,50,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/11 06:04:26 PM UTC",,Norway,NO,,,,8,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/14 10:07:13 PM UTC",,Norway,NO,,,,50,0,,,,,,,,,,,world-g-sheet,,
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/09 08:15:08 AM UTC",,Norway,NO,,,,50,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/11 06:04:26 PM UTC",,Norway,NO,,,,8,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/14 10:07:13 PM UTC",,Norway,NO,,,,50,0,,,,,,,,,,,,,world-g-sheet,,

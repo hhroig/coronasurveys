@@ -1,6 +1,6 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/14 03:17:58 AM UTC",,Mexico,MX,,,,75,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/14 12:52:01 AM UTC",,Mexico,MX,,,,90,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/16 03:44:50 AM UTC",,Mexico,MX,,,,25,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/17 11:25:58 PM UTC",,Mexico,MX,,,,100,0,,,,,,,,,,,world-g-sheet,,
-"2020/04/29 03:13:35 AM UTC",,Mexico,MX,,,,100,1,,,,,,,,,,,world-g-sheet,,
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/14 03:17:58 AM UTC",,Mexico,MX,,,,75,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/14 12:52:01 AM UTC",,Mexico,MX,,,,90,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/16 03:44:50 AM UTC",,Mexico,MX,,,,25,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/17 11:25:58 PM UTC",,Mexico,MX,,,,100,0,,,,,,,,,,,,,world-g-sheet,,
+"2020/04/29 03:13:35 AM UTC",,Mexico,MX,,,,100,1,,,,,,,,,,,,,world-g-sheet,,

@@ -1,5 +1,5 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/12 02:10:23 PM UTC",,Iran,IR,"تمام کشور",,,100,0,,,,,,,,,,,IR-g-sheet,,
-"2020/04/14 03:56:54 AM UTC",,Iran,IR,تهران,,,29,0,,,,,,,,,,,IR-g-sheet,,
-"2020/04/14 03:57:02 AM UTC",,Iran,IR,تهران,,,29,0,,,,,,,,,,,IR-g-sheet,,
-"2020/04/15 11:22:11 AM UTC",,Iran,IR,تهران,,,50,3,,,,,,,,,,,IR-g-sheet,,
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/12 02:10:23 PM UTC",,Iran,IR,"تمام کشور",,,100,0,,,,,,,,,,,,,IR-g-sheet,,
+"2020/04/14 03:56:54 AM UTC",,Iran,IR,تهران,,,29,0,,,,,,,,,,,,,IR-g-sheet,,
+"2020/04/14 03:57:02 AM UTC",,Iran,IR,تهران,,,29,0,,,,,,,,,,,,,IR-g-sheet,,
+"2020/04/15 11:22:11 AM UTC",,Iran,IR,تهران,,,50,3,,,,,,,,,,,,,IR-g-sheet,,

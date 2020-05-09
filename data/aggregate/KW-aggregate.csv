@@ -1,2 +1,2 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/11 05:52:03 PM UTC",,Kuwait,KW,,,,20,0,,,,,,,,,,,world-g-sheet,,
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/04/11 05:52:03 PM UTC",,Kuwait,KW,,,,20,0,,,,,,,,,,,,,world-g-sheet,,
