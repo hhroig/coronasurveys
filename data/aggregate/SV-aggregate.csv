@@ -1,2 +1,2 @@
 Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/05/08 09:03:33 PM UTC","2020/05/08 08:52:06 PM UTC","El Salvador",SV,,SVSS,en,20,5,5,,,,,,,,,Y,Y,Y,limesurvey,89n9964l8hk9yp051h,
+"2020/05/08 09:03:33 PM UTC","2020/05/08 08:52:06 PM UTC","El Salvador",SV,"San Salvador",SVSS,en,20,5,5,,,,,,,,,Y,Y,Y,limesurvey,89n9964l8hk9yp051h,
