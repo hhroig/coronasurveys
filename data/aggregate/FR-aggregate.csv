@@ -366,3 +366,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/08 07:01:07 AM UTC","2020/05/08 06:59:10 AM UTC",France,FR,,FROCC,fr,100,3,3,,,,,,,,,Y,Y,Y,limesurvey,ohre9rsj11k9xup55t,
 "2020/05/08 07:35:07 AM UTC","2020/05/08 07:30:08 AM UTC",France,FR,,FR91,en,1,0,0,,,,,,,,,Y,Y,Y,limesurvey,rye6re847yk9xvvcxv,
 "2020/05/09 01:10:04 PM UTC","2020/05/09 01:09:03 PM UTC",France,FR,,FR35,en,50,0,,,,,,,,,,N,N,N,limesurvey,r718tzncdsk9xov243,
+"2020/05/10 07:43:46 AM UTC","2020/05/10 07:43:46 AM UTC",France,FR,,FR35,en,100,4,4,,,,,,,,,N,Y,N,limesurvey,lnpvordk90ka0r3mmj,
+"2020/05/10 07:58:30 AM UTC","2020/05/10 07:58:30 AM UTC",France,FR,,FR35,en,50,0,,,,,,,,,,N,Y,Y,limesurvey,r718tzncdsk9xov243,
+"2020/05/10 08:20:51 AM UTC","2020/05/10 08:20:51 AM UTC",France,FR,,FRBRE,en,100,1,1,,,,,,,,,N,Y,Y,limesurvey,s2qolor2mck9ycxaoh,
