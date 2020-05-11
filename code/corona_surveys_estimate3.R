@@ -216,10 +216,7 @@ estimate_cases_aggregate <- function(file_path,
   #cat("file_path is ", file_path, "\n")
   #cat("country_population is", country_population, "\n")
   dt <- read.csv(file_path, as.is = T)
-  if(file_path == "../data/aggregate/ES-aggregate.csv"){
-    
   
-  }
   #names(dt) <- c("timestamp","region","reach","cases")
   names(dt) <- tolower(names(dt))
   dt <- dt[, c("timestamp","region","reach","cases")] # select only the needed columns
@@ -683,7 +680,7 @@ get_spain_regional_estimates <- function(batch_size = 30,
   ccaa_pop <- read.csv("ccaa_population.csv", as.is = T)
   
   dt_ds <- full_join(cases_data_source, deaths_data_source) %>% 
-    full_join(ccaa_pop, by = "cod_ine") %>% 
+    left_join(ccaa_pop, by = "cod_ine") %>% 
     select(-ccaa, -ccaa_survey) %>% 
     mutate(cum_deaths_400 = cum_deaths *400) %>%
     rename(date = fecha)
@@ -716,15 +713,18 @@ get_spain_regional_estimates <- function(batch_size = 30,
     dt_ccca$est_ccfr_low <- est_ccfr_low
     dt_ccca$est_ccfr_high <- est_ccfr_high
     survey_ccaa <- ccaa_pop$ccaa_survey[ccaa_pop$ccaa == x]
+    survey_ccaa_code <- ccaa_pop$iso31662[ccaa_pop$ccaa == x]
     survey_ccaa_pop <- ccaa_pop$population[ccaa_pop$ccaa == x]
     
     if(x %in% (unique(dt_ds$CCAA))){
       survey_gforms_estimate <- estimate_cases_aggregate_spain_regional(region = survey_ccaa,
+                                                                        region_code = survey_ccaa_code,
                                                                         region_population = survey_ccaa_pop,
                                                                         max_ratio = max_ratio,
                                                                         correction_factor = correction_factor, 
                                                                         method = batching_method,
-                                                                        batch = batch_size)$dt_estimates
+                                                                        batch = batch_size,
+                                                                        dt_ccca = dt_ccca)$dt_estimates
     }else{
       survey_gforms_estimate <- data.frame(date = dt_ccca$date,
                                            sample_size = NA,
@@ -769,21 +769,25 @@ get_spain_regional_estimates <- function(batch_size = 30,
 
 # needs review after new data is available.
 estimate_cases_aggregate_spain_regional <- function(region,
+                                                    region_code,
                                      region_population,
                                      batch,
                                      method = "antonio",
                                      max_ratio,
-                                     correction_factor) {
+                                     correction_factor,
+                                     dt_ccca) {
   #cat("file_path is ", file_path, "\n")
   #cat("country_population is", country_population, "\n")
   
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
-  names(dt) <- c("timestamp","region","reach","cases")
+  names(dt) <- tolower(names(dt))
+  dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
   #names(dt) <- tolower(names(dt))
   #dt <- dt[, c("timestamp","region","reach","cases")] # select only the needed columns
   dt$date <- substr(dt$timestamp, 1, 10)
+  dt$reach[1:102] <- 150 # impute Dunbar number
   n_inital_response <- nrow(dt)
-  
+  dt <- dt[!is.na(dt$reach),]
   # remove outliers from reach column
   reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
   if(sum(dt$reach > reach_cutoff) > 0 ){
@@ -803,12 +807,44 @@ estimate_cases_aggregate_spain_regional <- function(region,
   }else{
     n_maxratio_outliers <- 0
   }
+  
   if (region == ""){
     dt2_r <- dt2[dt2$region == region |dt2$region == "Todo el país", ] # might cause problems
   }else{
-    dt2_r <- dt2[dt2$region == region, ]
+    dt2_r <- dt2[dt2$iso.3166.2 == region_code, ]
+    
   }
   
+  
+  if(nrow(dt2_r)<30){
+    
+    dt_summary <- data.frame(date = dt_ccca$date,
+                                         sample_size = NA,
+                                         mean_cases = NA,
+                                         mean_reach = NA,
+                                         dunbar_reach = NA,
+                                         cases_p_reach = NA,
+                                         cases_p_reach_low = NA,
+                                         cases_p_reach_high = NA,
+                                         cases_p_reach_error = NA,
+                                         cases_p_reach_prop = NA,
+                                         cases_p_reach_prop_median = NA,
+                                         estimated_cases = NA,
+                                         estimate_cases_low = NA,
+                                         estimate_cases_high = NA,
+                                         estimate_cases_error = NA,
+                                         prop_cases = NA,
+                                         dunbar_cases = NA,
+                                         pop_cases_low = NA,
+                                         pop_cases_high = NA,
+                                         pop_cases_error = NA,
+                                         dunbar_cases_low = NA,
+                                         dunbar_cases_high = NA,
+                                         dunbar_cases_error = NA,
+                                         stringsAsFactors = F)
+    return(list(dt_estimates = dt_summary))
+    
+  }
   
   method <- match.arg(method)
   
@@ -901,7 +937,7 @@ estimate_cases_aggregate_spain_regional <- function(region,
   
 }
 
-#get_spain_regional_estimates()
+get_spain_regional_estimates()
 
 
 #Antonio's first attempt

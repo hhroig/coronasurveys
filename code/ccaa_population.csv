@@ -1,21 +1,21 @@
-ccaa,population,cod_ine,ccaa_survey
-Total,46934628,0,Todo el país
-Andalucía,8426405,1,Andalucía
-Aragón,1320794,2,Aragón
-Asturias,1022293,3,Principado de Asturias
-Baleares,1187808,4,Baleares
-Canarias,2207225,5,Canarias
-Cantabria,581684,6,Cantabria
-Castilla y León,2408083,7,Castilla y León
-Castilla-La Mancha,2035505,8,Castilla-La Mancha
-Cataluña,7565099,9,Cataluña
-C. Valenciana,4974475,10,Comunidad Valenciana
-Extremadura,1065371,11,Extremadura
-Galicia,2700330,12,Galicia
-Madrid,6640705,13,Comunidad de Madrid
-Murcia,1487698,14,Región de Murcia
-Navarra,649966,15,Comunidad Foral de Navarra
-País Vasco,2178048,16,País Vasco
-La Rioja,313582,17,La Rioja
-Ceuta,84843,18,Ceuta
-Melilla,84714,19,Melilla
+ccaa,population,cod_ine,ccaa_survey,iso31662
+Total,46934628,0,Todo el país,ES
+Andalucía,8426405,1,Andalucía,ESAN
+Aragón,1320794,2,Aragón,ESAR
+Asturias,1022293,3,Principado de Asturias,ESAS
+Baleares,1187808,4,Baleares,ESPM
+Canarias,2207225,5,Canarias,ESCN
+Cantabria,581684,6,Cantabria,ESCB
+Castilla y León,2408083,7,Castilla y León,ESCL
+Castilla La Mancha,2035505,8,Castilla-La Mancha,ESCM
+Cataluña,7565099,9,Cataluña,ESCT
+C. Valenciana,4974475,10,Comunidad Valenciana,ESVC
+Extremadura,1065371,11,Extremadura,ESEX
+Galicia,2700330,12,Galicia,ESGA
+Madrid,6640705,13,Comunidad de Madrid,ESMD
+Murcia,1487698,14,Región de Murcia,ESMC
+Navarra,649966,15,Comunidad Foral de Navarra,ESNC
+País Vasco,2178048,16,País Vasco,ESPV
+La Rioja,313582,17,La Rioja,ESRI
+Ceuta,84843,18,Ceuta,ESCE
+Melilla,84714,19,Melilla,ESML
