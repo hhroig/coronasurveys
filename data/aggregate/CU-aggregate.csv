@@ -1,0 +1,2 @@
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/05/11 04:14:53 PM UTC","2020/05/11 04:14:53 PM UTC",Cuba,CU,"La Habana",CU02,en,15,3,3,,,,,,,,,Y,Y,Y,limesurvey,klnbeb6z7uka2oss9b,
