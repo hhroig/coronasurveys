@@ -3717,3 +3717,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/12 12:06:21 PM UTC","2020/05/12 12:06:21 PM UTC",Spain,ES,"Comunidad Autónoma:Castilla y León",ESCL,en,14,3,3,,0,0,,,,,,N,N,N,limesurvey,6s17oq5rs9ka2rkt1b,
 "2020/05/12 12:22:28 PM UTC","2020/05/12 12:22:28 PM UTC",Spain,ES,"Comunidad Autónoma:Valenciana, Comunidad / Valenciana, Comunitat",ESVC,en,60,3,3,,0,0,,,,,,Y,N,N,limesurvey,bq1xvnjgnnka3vxrxd,
 "2020/05/12 02:59:00 PM UTC","2020/05/12 02:59:00 PM UTC",Spain,ES,Provincia:Alicante,ESA,en,2,2,1,,0,1,,,,,,Y,Y,Y,limesurvey,toamw6jgxika41j1mq,
+"2020/05/12 03:31:55 PM UTC","2020/05/12 03:31:55 PM UTC",Spain,ES,Provincia:Barcelona,ESB,en,100,5,5,,2,0,,,,,,Y,N,N,limesurvey,rdqyd5o21dka42peb6,
+"2020/05/12 04:44:12 PM UTC","2020/05/12 04:44:12 PM UTC",Spain,ES,"Comunidad Autónoma:Valenciana, Comunidad / Valenciana, Comunitat",ESVC,en,100,5,5,,0,0,,,,,,Y,Y,Y,limesurvey,kg082h189ska45abcy,
+"2020/05/12 05:03:13 PM UTC","2020/05/12 05:03:13 PM UTC",Spain,ES,"Comunidad Autónoma:Madrid, Comunidad de",ESMD,en,50,10,7,,0,3,,,,,,Y,N,N,limesurvey,2gaa80bmi3ka45yry3,
