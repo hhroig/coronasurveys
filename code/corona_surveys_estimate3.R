@@ -2,7 +2,7 @@
 library(tidyverse)
 library(readxl)
 library(httr)
-
+source("spain_region_based_estimate.R")
 ## set working drirectoy here
 #setwd("please put the absolute folder path of where this script is located on the server")
 
@@ -199,6 +199,7 @@ calculate_ci <- function(p_est, level, pop_size) {
   se <- sqrt(p_est*(1-p_est))/sqrt(pop_size)
   return(list(low=p_est-z*se, upp=p_est+z*se, error=z*se))
 }
+
 get_countries_with_survey <- function(path = "../data/aggregate/"){
   #get list of countries with surveys
   plotdata_files <- list.files(path)
@@ -325,6 +326,10 @@ estimate_cases_aggregate <- function(file_path,
                                                 pop_size = dunbar_reach)$upp * country_population * correction_factor,
                 dunbar_cases_error = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
                                                  pop_size = dunbar_reach)$error * country_population * correction_factor)
+    
+    
+    
+    
     dt_summary <- dt_summary[, -1] # remove group factor variable
     dt_summary$cases_p_reach_low[dt_summary$cases_p_reach_low < 0]   <- 0.000001
     dt_summary$estimate_cases_low[dt_summary$estimate_cases_low < 0] <- 0.000001
@@ -512,12 +517,25 @@ plot_estimates <- function(country_geoid = "ES",
                                                          correction_factor = correction_factor, 
                                                          method = batching_method,
                                                          batch = batch_size)$dt_estimates
+      
+      if (country_geoid == "ES"){
+        rosa_estimate <- get_spain_region_based_rosa(write_file = F)
+        cols_to_remove <- names(survey_gforms_estimate)[names(survey_gforms_estimate) %in% names(rosa_estimate)]
+        cols_to_remove <- cols_to_remove[-1]
+        survey_gforms_estimate2 <- survey_gforms_estimate %>% 
+            select(-cols_to_remove)
+        rosa_estimate2 <- full_join(rosa_estimate, survey_gforms_estimate2) %>% 
+          select(names(survey_gforms_estimate))
+        survey_gforms_estimate <- rosa_estimate2
+      }
+    
     }
    
     # combine dt and survey forms estimates
-    dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
+    dt_res <- left_join(dt, survey_gforms_estimate, by = "date")
     # combine with survey twitter
     if (country_geoid == "ES"){
+      
       cat(country_geoid, "has twitter data...adding twitter estimates..\n")
       dt_res <- full_join(dt_res, survey_twitter_esp, by = "date") %>% 
         select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
@@ -1061,5 +1079,5 @@ get_spain_region_based_estimate_antonio1 <- function(max_ratio = .3){
 get_spain_region_based_estimate_antonio1() #replaced by the ones in separate files
 
 # # get spain region based estimate 
-source("spain_region_based_estimate.R")
+
 #source("portugal_regional_estimates.R")
