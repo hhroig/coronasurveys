@@ -22,7 +22,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/03/24 03:28:32 PM UTC",,Argentina,AR,"Provincia de Buenos Aires",ARB,,500,0,,,,,,,,,,,,,AR-raw-csv,,
 "2020/03/24 03:29:11 PM UTC",,Argentina,AR,"Ciudad Autónoma de Buenos Aires",ARC,,150,0,,,,,,,,,,,,,AR-raw-csv,,
 "2020/03/24 03:30:43 PM UTC",,Argentina,AR,"Provincia de Buenos Aires",ARB,,100,0,,,,,,,,,,,,,AR-raw-csv,,
-"2020/03/24 03:30:56 PM UTC",,Argentina,AR,"Ciudad Autónoma de Buenos Aires",ARC,,Wt,25,,,,,,,,,,,,,AR-raw-csv,,
+"2020/03/24 03:30:56 PM UTC",,Argentina,AR,"Ciudad Autónoma de Buenos Aires",ARC,,0,25,,,,,,,,,,,,,AR-raw-csv,,
 "2020/03/24 03:32:38 PM UTC",,Argentina,AR,"Provincia de Buenos Aires",ARB,,15,0,,,,,,,,,,,,,AR-raw-csv,,
 "2020/03/24 03:34:06 PM UTC",,Argentina,AR,"Provincia de Buenos Aires",ARB,,100,0,,,,,,,,,,,,,AR-raw-csv,,
 "2020/03/24 03:35:04 PM UTC",,Argentina,AR,"Provincia de Buenos Aires",ARB,,6,0,,,,,,,,,,,,,AR-raw-csv,,
