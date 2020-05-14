@@ -695,3 +695,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/04/29 11:59:55 AM UTC",,Italy,IT,Lazio,IT62,,30,0,,,,,,,,,,,,,IT-g-sheet,,
 "2020/05/02 10:02:14 AM UTC",,Italy,IT,"Trentino-Alto Adige",IT32,,25,2,,,,,,,,,,,,,IT-g-sheet,,
 "2020/05/10 05:47:48 AM UTC","2020/05/10 05:47:48 AM UTC",Italy,IT,Regioni:Lombardia,IT25,en,50,5,1,,,,,,,,,Y,Y,N,limesurvey,iwfkfnzq29ka0myib4,
+"2020/05/14 11:43:14 AM UTC","2020/05/14 11:43:14 AM UTC",Italy,IT,Regioni:Liguria,IT42,en,9,2,2,,,,,,,,,Y,Y,N,limesurvey,ih4lokpjy2ka6pevhg,

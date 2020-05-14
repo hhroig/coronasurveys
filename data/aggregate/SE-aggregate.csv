@@ -9,3 +9,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/04/16 09:13:01 AM UTC",,Sweden,SE,"Västergötland - Westrogothia",,,50,5,,,,,,,,,,,,,SE-g-sheet,,
 "2020/05/08 07:47:42 PM UTC","2020/05/08 07:45:26 PM UTC",Sweden,SE,"Stockholms län",SEAB,en,10,0,,,,,,,,,,Y,Y,N,limesurvey,9y6bjrx0vjk9ym2wct,
 "2020/05/14 10:55:14 AM UTC","2020/05/14 10:55:14 AM UTC",Sweden,SE,"Uppsala län",SEC,en,50,8,8,,,,,,,,,Y,N,N,limesurvey,lsns4vo4m3ka6npa2l,
+"2020/05/14 12:17:38 PM UTC","2020/05/14 12:17:38 PM UTC",Sweden,SE,"Jönköpings län",SEF,en,120,0,0,,,,,,,,,Y,Y,N,limesurvey,wb9v66x467ka6qn8wz,
