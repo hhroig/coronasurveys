@@ -290,3 +290,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/14 10:42:42 AM UTC","2020/05/14 10:42:42 AM UTC","United Kingdom",GB,England,GBENG,en,6,4,4,,,,,,,,,Y,N,N,limesurvey,6vtl1tbqvlka6n95qc,
 "2020/05/14 12:09:53 PM UTC","2020/05/14 12:09:53 PM UTC","United Kingdom",GB,England,GBENG,en,40,0,0,,,,,,,,,Y,N,Y,limesurvey,k9tmojgqslka6qd8fr,
 "2020/05/14 04:12:22 PM UTC","2020/05/14 04:12:22 PM UTC","United Kingdom",GB,England,GBENG,en,100,10,10,,,,,,,,,Y,Y,N,limesurvey,e12wy7ua2lka6z13m5,
+"2020/05/14 06:18:59 PM UTC","2020/05/14 06:18:59 PM UTC","United Kingdom",GB,Scotland,GBSCT,en,30,0,0,,,,,,,,,Y,N,N,limesurvey,w0jqmdk0shka75pfwx,
