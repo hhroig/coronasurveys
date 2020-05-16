@@ -1,5 +1,127 @@
 #Antonio's first attempt but with  I_r, I_c, r_r, r_c written out
 library(stringr)
+
+#Antonio's first attempt
+get_spain_region_based_estimate_antonio1 <- function(max_ratio = .3){
+  cat("generating region based estimate for spain \n")
+  dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
+  ccaa_pop <- read.csv("ccaa_population.csv", as.is = T)
+  
+  names(dt) <- tolower(names(dt))
+  dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
+  
+  
+  dt$date <- substr(dt$timestamp, 1, 10)
+  dt$reach[1:102] <- 150 # impute Dunbar number
+  n_inital_response <- nrow(dt)
+  dt <- dt[!is.na(dt$reach),]
+  # remove outliers from reach column
+  reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
+  if(sum(dt$reach > reach_cutoff) > 0 ){
+    # write.table(dt[dt$reach >= reach_cutoff, ],
+    #             file = paste0("outliers_removed/", file_name, "_", "outliers_reach.txt"),
+    #              append = T) # write out outliers from reach column to the ouliers removed folder
+    n_reach_outliers <- sum(dt$reach > reach_cutoff) #number of outliers removed based on reach
+    dt <- dt[dt$reach <= reach_cutoff, ]
+  }else{
+    n_reach_outliers <- 0
+  }
+  
+  # remove outliers based on max ratio of   0.3
+  dt$ratio <- dt$cases/dt$reach
+  dt2 <- dt[is.finite(dt$ratio), ]  # discard cases with zero reach
+  n_zero_reach_outliers <- sum(!is.finite(dt$ratio)) 
+  if(sum(dt2$ratio > max_ratio) > 0 ){
+    n_maxratio_outliers <- sum(dt2$ratio > max_ratio) 
+    dt2 <- dt2[dt2$ratio <= max_ratio, ]
+  }else{
+    n_maxratio_outliers <- 0
+  }
+  
+  # set "" to todo el pais
+  dt2$region[dt2$region == ""] <- "Todo el país"
+  dt2$iso.3166.2[dt2$iso.3166.2 == ""] <- "ES"
+  
+  # get all the dates
+  dates <- unique(dt2$date)
+  # create vector of results
+  estimated_cases <- c()
+  prop_cases <- c()
+  
+  estimate_cases_world <- c()
+  estimate_cases_reg <- c()
+  for (j in dates){
+    cat("working on date: ", j, "\n"  )
+    dt_date <- dt2[as.Date(dt2$date) <= as.Date(j), ]
+    
+    # check for the date which correspond to the last 50 whole country entry
+    date_w <- tail(dt_date$date[dt_date$region == "Todo el país"], 50 )[1]
+    #check for the date which correspond to the last 100 entry
+    date_t <- tail(dt_date$date, 300)[1]
+    #dt2_r <- dt_date[as.Date(dt_date$date) >=  as.Date(date_t), ]
+    if (as.Date(date_w) < as.Date(date_t)){
+      dt2_r <- dt_date[as.Date(dt_date$date) >=  as.Date(date_t), ]
+    } else{
+      dt2_r <- dt_date[as.Date(dt_date$date) >=  as.Date(date_w), ]
+    }
+    
+    m <- sum(dt2_r$region == "Todo el país")
+    n <- nrow(dt2_r) - m
+    
+    # compute the ratios for todo el pais
+    dt2_rt <- dt2_r[dt2_r$region == "Todo el país", ]
+    cases_p_reach_w <- sum(dt2_rt$cases) / sum(dt2_rt$reach)
+    cases_p_reach_prop_w <- mean(dt2_rt$cases/dt2_rt$reach)
+    
+    estimated_cases_w <- ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_w * (m/(m+n))
+    prop_cases_w <- ccaa_pop$population[ccaa_pop$ccaa_survey == "Todo el país"] * cases_p_reach_prop_w * (m/(m+n))
+    
+    # copute the ratio for the regions
+    cases_p_reach_t <- c()
+    cases_p_reach_prop_t <- c()
+    
+    estimated_cases_t <- c()
+    prop_cases_t <- c()
+    
+    for (i in unique(dt2$iso.3166.2)[unique(dt2$iso.3166.2) != "ES"]){
+      # get data for all country and the current region
+      dt_current <- dt2_r[dt2_r$iso.3166.2 == i, ]
+      
+      cases_p_reach_current <- sum(dt_current$cases)/sum(dt_current$reach)
+      cases_p_reach_prop_current <- mean(dt_current$cases/dt_current$reach)
+      
+      estimated_cases_current <- ccaa_pop$population[ccaa_pop$iso31662 == i] * cases_p_reach_current
+      prop_cases_current <- ccaa_pop$population[ccaa_pop$iso31662 == i] * cases_p_reach_prop_current
+      
+      cases_p_reach_t <- c(cases_p_reach_t, cases_p_reach_current)
+      cases_p_reach_prop_t <- c(cases_p_reach_prop_t, cases_p_reach_prop_current)
+      estimated_cases_t <- c(estimated_cases_t, estimated_cases_current)
+      prop_cases_t <- c(prop_cases_t, prop_cases_current)
+    }
+    
+    estimated_cases_t <- sum(estimated_cases_t, na.rm = T) * (n/(m+n))
+    prop_cases_t <- sum(prop_cases_t, na.rm = T) * (n/(m+n))
+    
+    estimated_cases <-c(estimated_cases, estimated_cases_w + estimated_cases_t)
+    estimate_cases_world <- c(estimate_cases_world, estimated_cases_w)
+    estimate_cases_reg <- c(estimate_cases_reg, estimated_cases_t)
+    
+    prop_cases <- c(prop_cases, prop_cases_w + prop_cases_t)
+  }
+  
+  region_based_estimate <- data.frame(date = dates,
+                                      estimated_cases_region_based = estimated_cases,
+                                      prop_cases_region_based = prop_cases, 
+                                      estimate_cases_world = estimate_cases_world,
+                                      estimate_cases_reg = estimate_cases_reg)
+  cat("writing the region based estimate for Spain..\n")
+  write.csv(region_based_estimate, paste0("../data/PlotData/ES_regional_estimates/region_based_estimates/",
+                                          "ES-region-based-estimate_antonio_first_attempt.csv"))
+}
+
+#get_spain_region_based_estimate_antonio1() #replaced by the ones in separate files
+
+
 get_spain_region_based_estimate_antonio2 <- function(max_ratio = .3){
   cat("generating region based estimate for spain \n")
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
@@ -151,7 +273,7 @@ get_spain_region_based_estimate_antonio2 <- function(max_ratio = .3){
                                           "ES-region-based-estimate_antonio_first_attempt_with_Is.csv"))
 }
 
-get_spain_region_based_estimate_antonio2()
+#get_spain_region_based_estimate_antonio2()
 
 # Rosa's attempt. has problem of double counting.
 get_spain_region_based_rosa <- function(max_ratio = .3, write_file = T){
