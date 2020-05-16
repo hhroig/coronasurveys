@@ -30,7 +30,7 @@ get_spain_regional_estimates <- function(batch_size = 30,
   # read population
   ccaa_pop <- read.csv("ccaa_population.csv", as.is = T)
   
-  dt_ds <- full_join(cases_data_source, deaths_data_source) %>% 
+  dt_ds <- left_join(cases_data_source, deaths_data_source) %>% 
     left_join(ccaa_pop, by = "cod_ine") %>% 
     select(-ccaa, -ccaa_survey) %>% 
     mutate(cum_deaths_400 = cum_deaths *400) %>%
