@@ -288,4 +288,4 @@ estimate_cases_aggregate_spain_regional <- function(region,
   
 }
 
-get_spain_regional_estimates()
+
