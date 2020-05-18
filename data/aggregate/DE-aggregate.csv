@@ -169,3 +169,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/15 11:42:31 AM UTC","2020/05/15 11:42:31 AM UTC",Germany,DE,Berlin,DEBE,en,100,10,10,,,,,,,,,Y,N,N,limesurvey,s1ukvgzmp3ka84tx2x,
 "2020/05/15 07:42:35 PM UTC","2020/05/15 07:42:35 PM UTC",Germany,DE,Berlin,DEBE,en,11,3,3,,,,,,,,,N,Y,Y,limesurvey,3ar1w5ctdzka86ex6k,
 "2020/05/15 08:16:04 PM UTC","2020/05/15 08:16:04 PM UTC",Germany,DE,Hessen,DEHE,en,15,0,0,,,,,,,,,Y,N,N,limesurvey,jknztuxd4rka8n6cnv,
+"2020/05/18 09:45:55 PM UTC","2020/05/18 09:45:55 PM UTC",Germany,DE,Bayern,DEBY,en,9,0,0,,,,,,,,,Y,Y,Y,limesurvey-9018,ptuy8o35wokacdz0mt,
+"2020/05/18 09:47:45 PM UTC","2020/05/18 09:47:45 PM UTC",Germany,DE,Berlin,DEBE,en,3,0,0,,,,,,,,,Y,Y,Y,limesurvey-9020,ptuy8o35wokacdz0mt,
+"2020/05/18 09:56:02 PM UTC","2020/05/18 09:56:02 PM UTC",Germany,DE,Baden-Württemberg,DEBW,en,11,0,0,,,,,,,,,Y,Y,Y,limesurvey-9022,ptuy8o35wokacdz0mt,
+"2020/05/18 09:59:28 PM UTC","2020/05/18 09:59:28 PM UTC",Germany,DE,Nordrhein-Westfalen,DENW,en,4,0,0,,,,,,,,,Y,Y,Y,limesurvey-9024,ptuy8o35wokacdz0mt,
+"2020/05/18 09:59:31 PM UTC","2020/05/18 09:59:31 PM UTC",Germany,DE,Nordrhein-Westfalen,DENW,en,4,0,0,,,,,,,,,Y,Y,Y,limesurvey-9025,ptuy8o35wokacdz0mt,
