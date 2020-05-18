@@ -4835,3 +4835,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/18 11:18:00 AM UTC","2020/05/18 11:18:00 AM UTC",Spain,ES,"Comunidad Autónoma:Galicia",ESGA,en,15,0,0,,0,0,,,,,,Y,Y,Y,limesurvey-8649,ptuy8o35wokacdz0mt,
 "2020/05/18 11:19:23 AM UTC","2020/05/18 11:19:23 AM UTC",Spain,ES,"Comunidad Autónoma:Extremadura",ESEX,en,4,2,2,,0,0,,,,,,Y,,,limesurvey-8650,ptuy8o35wokacdz0mt,
 "2020/05/18 11:34:59 AM UTC","2020/05/18 11:34:59 AM UTC",Spain,ES,"Comunidad Autónoma:Madrid, Comunidad de",ESMD,en,70,7,7,,0,1,,,,,,Y,N,N,limesurvey-8656,wbajki1ffwkacevrjm,
+"2020/05/18 08:29:39 PM UTC","2020/05/18 08:29:39 PM UTC",Spain,ES,"Comunidad Autónoma:Valenciana, Comunidad / Valenciana, Comunitat",ESVC,en,80,1,1,,0,0,,,,,,N,N,Y,limesurvey-8993,8q3o631n17kacxzcf0,
+"2020/05/18 08:42:35 PM UTC","2020/05/18 08:42:35 PM UTC",Spain,ES,"Comunidad Autónoma:Castilla-La Mancha",ESCM,en,100,3,2,,0,0,,,,,,N,Y,Y,limesurvey-8997,u6sw0qo00qk9x3gy8u,
+"2020/05/18 08:44:03 PM UTC","2020/05/18 08:44:03 PM UTC",Spain,ES,"Comunidad Autónoma:Madrid, Comunidad de",ESMD,en,100,10,9,,0,1,,,,,,N,Y,Y,limesurvey-8998,u6sw0qo00qk9x3gy8u,
