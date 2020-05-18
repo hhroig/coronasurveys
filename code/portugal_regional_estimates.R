@@ -47,7 +47,7 @@ get_portugal_regional_estimates <- function(batch_size = 30,
     mutate(cum_deaths_400 = cum_deaths *400) %>%
     rename(date = data)
   
-  dt_ds$date <- as.character(lubridate::dmy(dt_ds$date))
+  dt_ds$date <- as.character(as.Date(dt_ds$date, format = "%d-%m-%Y"))
   dt_ds$date <- gsub("-", "/", dt_ds$date)
   
   #dt_ds <- dt_ds %>% left_join(region_pop_portugal, by = "region")
@@ -139,12 +139,15 @@ estimate_cases_aggregate_portugal_regional <- function(region,
                                                     correction_factor) {
 
   dt <- read.csv("../data/aggregate/PT-aggregate.csv", as.is = T)
-  names(dt) <- c("timestamp","region","reach","cases")
+  names(dt) <- tolower(names(dt))
+  dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
+  region_pop_portugal <- read.csv("region_pop_portugal.csv", stringsAsFactors = F)[,-1]
   dt$date <- substr(dt$timestamp, 1, 10)
   n_inital_response <- nrow(dt)
-  region_pop_portugal <- read.csv("region_pop_portugal.csv", stringsAsFactors = F)[,-1]
+  
   # remove outliers from reach column
   reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
+  
   if(sum(dt$reach > reach_cutoff) > 0 ){
     # write.table(dt[dt$reach >= reach_cutoff, ],
     #             file = paste0("outliers_removed/", file_name, "_", "outliers_reach.txt"),
@@ -265,4 +268,4 @@ estimate_cases_aggregate_portugal_regional <- function(region,
   
 }
 
-get_portugal_regional_estimates()
+

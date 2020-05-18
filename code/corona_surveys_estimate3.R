@@ -5,7 +5,7 @@ library(httr)
 #source("get_jh_data.R") # function to get data from jh csce
 source("get_twitter_data.R") # function to get twitter data
 source("spain_regional_estimate.R")
-#source("portugal_regional_estimates.R")
+source("portugal_regional_estimates.R")
 source("spain_region_based_estimate.R")
 
 hosp_to_death_trunc <- function(x, mu_hdt, sigma_hdt){
@@ -512,3 +512,4 @@ generate_estimates(srce = "ecdc")
 
 
 get_spain_regional_estimates()
+get_portugal_regional_estimates()
