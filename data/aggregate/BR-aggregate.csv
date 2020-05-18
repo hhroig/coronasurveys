@@ -173,3 +173,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/18 01:27:34 PM UTC","2020/05/18 01:27:34 PM UTC",Brazil,BR,"São Paulo",BRSP,en,20,5,1,,2,4,,,,,,Y,Y,N,limesurvey-8683,wwrzuq5cntkaciwhuu,
 "2020/05/18 02:13:16 PM UTC","2020/05/18 02:13:16 PM UTC",Brazil,BR,"São Paulo",BRSP,en,10,0,0,,0,0,,,,,,Y,Y,N,limesurvey-8693,yl07ewr8cmkackjb81,
 "2020/05/18 02:14:32 PM UTC","2020/05/18 02:14:32 PM UTC",Brazil,BR,Paraná,BRPR,en,100,0,0,,0,0,,,,,,Y,N,Y,limesurvey-8694,oj8m1sn1ftkackkxjo,
+"2020/05/18 04:26:59 PM UTC","2020/05/18 04:26:59 PM UTC",Brazil,BR,Paraná,BRPR,en,7,1,1,,0,0,,,,,,N,N,N,limesurvey-8726,kr9s7rjlwtkacpb7qc,
+"2020/05/18 04:36:24 PM UTC","2020/05/18 04:36:24 PM UTC",Brazil,BR,"São Paulo",BRSP,en,35,3,3,,0,2,,,,,,Y,Y,Y,limesurvey-8729,31ssouwlx5kacpndsn,
