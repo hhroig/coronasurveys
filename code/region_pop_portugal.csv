@@ -1,22 +1,22 @@
-,district,region,pop_2014
-1,Açores,acores,246000
-2,,all_country,10375000
-3,Porto,arsnorte,3622000
-4,Braga,arsnorte,3622000
-5,Viana do Castelo,arsnorte,3622000
-6,Viseu,arsnorte,3622000
-7,Aveiro,arsnorte,3622000
-8,Faro,arsalgarve,441000
-9,Lisboa,arslvt,2809000
-10,Vila Real,arsnorte,3622000
-11,Setúbal,arslvt,2809000
-12,Beja,arsalentejo,733000
-13,Évora,arsalentejo,733000
-14,Madeira,madeira,259000
-15,Leiria,arscentro,2264000
-16,Santarém,arscentro,2264000
-17,Coimbra,arscentro,2264000
-18,Castelo Branco,arscentro,2264000
-19,Guarda,arscentro,2264000
-20,Portalegre,arsalentejo,733000
-21,Bragança,arsnorte,3622000
+,district,region,pop_2014,iso31662,pop_district
+1,Açores,acores,246000,PT20,245766
+2,,all_country,10375000,PT,10179079
+3,Porto,arsnorte,3622000,PT13,1817117
+4,Braga,arsnorte,3622000,PT03,848185
+5,Viana do Castelo,arsnorte,3622000,PT16,244836
+6,Viseu,arsnorte,3622000,PT18,377653
+7,Aveiro,arsnorte,3622000,PT01,714200
+8,Faro,arsalgarve,441000,PT08,451006
+9,Lisboa,arslvt,2809000,PT11,2250533
+10,Vila Real,arsnorte,3622000,PT17,206661
+11,Setúbal,arslvt,2809000,PT15,851258
+12,Beja,arsalentejo,733000,PT02,152758
+13,Évora,arsalentejo,733000,PT07,166706
+14,Madeira,madeira,259000,PT30,267785
+15,Leiria,arscentro,2264000,PT10,470930
+16,Santarém,arscentro,2264000,PT14,453638
+17,Coimbra,arscentro,2264000,PT06,430104
+18,Castelo Branco,arscentro,2264000,PT05,196264
+19,Guarda,arscentro,2264000,PT09,160939
+20,Portalegre,arsalentejo,733000,PT12,118506
+21,Bragança,arsnorte,3622000,PT04,136252

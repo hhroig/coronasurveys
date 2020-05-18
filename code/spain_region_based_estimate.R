@@ -1,4 +1,4 @@
-#Antonio's first attempt but with  I_r, I_c, r_r, r_c written out
+
 library(stringr)
 
 #Antonio's first attempt
@@ -121,7 +121,7 @@ get_spain_region_based_estimate_antonio1 <- function(max_ratio = .3){
 
 #get_spain_region_based_estimate_antonio1() #replaced by the ones in separate files
 
-
+#Antonio's first attempt but with  I_r, I_c, r_r, r_c written out
 get_spain_region_based_estimate_antonio2 <- function(max_ratio = .3){
   cat("generating region based estimate for spain \n")
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
@@ -416,7 +416,6 @@ get_spain_region_based_rosa <- function(max_ratio = .3, write_file = T){
   
   region_based_estimate2 <- data.frame(date = dates,
                                        cases_p_reach = cases_p_reach,
-                                       
                                        cases_p_reach_low = cases_p_reach - (1.96 * sqrt(Vp1)),
                                        cases_p_reach_high = cases_p_reach + (1.96 * sqrt(Vp1)),
                                        #variance_p_reach = Vp1,
@@ -429,7 +428,8 @@ get_spain_region_based_rosa <- function(max_ratio = .3, write_file = T){
                                        estimate_cases_high = (cases_p_reach + (1.96 * sqrt(Vp1))) * total_pop,
                                        prop_cases = cases_p_reach_prop * total_pop,
                                        prop_cases_low = (cases_p_reach_prop - 1.96 * sqrt(Vp2)) * total_pop,
-                                       prop_cases_high = (cases_p_reach_prop + 1.96 * sqrt(Vp2)) * total_pop)
+                                       prop_cases_high = (cases_p_reach_prop + 1.96 * sqrt(Vp2)) * total_pop,
+                                       stringsAsFactors = F)
   if(write_file == T){
     cat("writing the region based estimate for Spain..\n")
     write.csv(region_based_estimate2, paste0("../data/PlotData/ES_regional_estimates/region_based_estimates/",

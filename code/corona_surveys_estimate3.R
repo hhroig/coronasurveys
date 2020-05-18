@@ -7,6 +7,7 @@ source("get_twitter_data.R") # function to get twitter data
 source("spain_regional_estimate.R")
 source("portugal_regional_estimates.R")
 source("spain_region_based_estimate.R")
+source("portugal_region_based_estimate.R")
 
 hosp_to_death_trunc <- function(x, mu_hdt, sigma_hdt){
   dlnorm(x, mu_hdt, sigma_hdt)
@@ -373,6 +374,15 @@ plot_estimates <- function(country_geoid = "ES",
         cols_to_remove <- cols_to_remove[-1]
         survey_gforms_estimate2 <- survey_gforms_estimate %>%
             select(-cols_to_remove)
+        rosa_estimate2 <- full_join(rosa_estimate, survey_gforms_estimate2) %>%
+          select(names(survey_gforms_estimate))
+        survey_gforms_estimate <- rosa_estimate2
+      } else if (country_geoid == "PT"){
+        rosa_estimate <- get_portugal_region_based_rosa(write_file = F)
+        cols_to_remove <- names(survey_gforms_estimate)[names(survey_gforms_estimate) %in% names(rosa_estimate)]
+        cols_to_remove <- cols_to_remove[-1]
+        survey_gforms_estimate2 <- survey_gforms_estimate %>%
+          select(-cols_to_remove)
         rosa_estimate2 <- full_join(rosa_estimate, survey_gforms_estimate2) %>%
           select(names(survey_gforms_estimate))
         survey_gforms_estimate <- rosa_estimate2
