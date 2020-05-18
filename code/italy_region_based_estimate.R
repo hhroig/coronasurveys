@@ -1,8 +1,8 @@
 # Rosa's attempt. has problem of double counting.
-get_portugal_region_based_rosa <- function(max_ratio = .3, write_file = T){
-  cat("generating region based estimate for portugal \n")
-  region_pop_portugal <- read.csv("region_pop_portugal.csv", as.is = T)
-  dt <- read.csv("../data/aggregate/PT-aggregate.csv", as.is = T)
+get_italy_region_based_rosa <- function(max_ratio = .3, write_file = T){
+  cat("generating region based estimate for Italy \n")
+  region_pop_italy <- read.csv("region_pop_italy.csv", as.is = T)
+  dt <- read.csv("../data/aggregate/IT-aggregate.csv", as.is = T)
   names(dt) <- tolower(names(dt))
   dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
   dt$date <- substr(dt$timestamp, 1, 10)
@@ -30,8 +30,8 @@ get_portugal_region_based_rosa <- function(max_ratio = .3, write_file = T){
   }
   
   # set "" to todo el pais
-  dt2$region[dt2$region == ""] <- "Todo o país"
-  dt2$iso.3166.2[dt2$iso.3166.2 == ""] <- "PT"
+  dt2$region[dt2$region == ""] <- "all_country"
+  dt2$iso.3166.2[dt2$iso.3166.2 == ""] <- "IT"
   
   # get all the dates
   dates <- unique(dt2$date)
@@ -39,7 +39,7 @@ get_portugal_region_based_rosa <- function(max_ratio = .3, write_file = T){
   cases_p_reach <- c()
   cases_p_reach_prop <- c()
   # total population
-  total_pop <- 2*region_pop_portugal$pop_district[2]
+  total_pop <- 2*region_pop_italy$pop_district[1]
   A11 <- c()
   A12 <- c() 
   A21 <- c()
@@ -84,7 +84,7 @@ get_portugal_region_based_rosa <- function(max_ratio = .3, write_file = T){
       dt_current <- dt2_r[dt2_r$iso.3166.2 == reg, ]
       ni <- c(ni, nrow(dt_current))
       # get current population
-      pop_current <-  region_pop_portugal$pop_district[region_pop_portugal$iso31662 == reg]
+      pop_current <-  region_pop_italy$pop_district[region_pop_italy$iso31662 == reg]
       weight_current <- pop_current/total_pop
       
       
@@ -150,9 +150,9 @@ get_portugal_region_based_rosa <- function(max_ratio = .3, write_file = T){
                                        prop_cases_high = (cases_p_reach_prop + 1.96 * sqrt(Vp2)) * total_pop,
                                        stringsAsFactors = F)
   if(write_file == T){
-    cat("writing the region based estimate for Portugal..\n")
-    write.csv(region_based_estimate2, paste0("../data/PlotData/PT_regional_estimates/region_based_estimates/",
-                                             "PT-region-based-estimate_rosa.csv"))
+    cat("writing the region based estimate for Italy..\n")
+    write.csv(region_based_estimate2, paste0("../data/PlotData/IT_regional_estimates/region_based_estimates/",
+                                             "IT-region-based-estimate_rosa.csv"))
   }
   else{
     return(region_based_estimate2)
@@ -160,4 +160,4 @@ get_portugal_region_based_rosa <- function(max_ratio = .3, write_file = T){
   
 }
 
-get_portugal_region_based_rosa(write_file = T)
+get_italy_region_based_rosa(write_file = T)

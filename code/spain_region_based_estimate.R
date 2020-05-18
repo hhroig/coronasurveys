@@ -345,7 +345,7 @@ get_spain_region_based_rosa <- function(max_ratio = .3, write_file = T){
     dt2_r <- dt_date[as.Date(dt_date$date) >=  as.Date(date_t), ]
     
     regions <- unique(dt2$iso.3166.2)[unique(dt2$iso.3166.2) != "ES"]
-    lreg <- length(unique(dt2$iso.3166.2)[unique(dt2$iso.3166.2) != "ES"])
+    lreg <- length(regions)
     
     # copute the ratio for the regions
     cases_p_reach_t <- c()
