@@ -39,7 +39,7 @@ get_italy_region_based_rosa <- function(max_ratio = .3, write_file = T){
   cases_p_reach <- c()
   cases_p_reach_prop <- c()
   # total population
-  total_pop <- 2*region_pop_italy$pop_district[1]
+  total_pop <- region_pop_italy$pop_district[1]
   A11 <- c()
   A12 <- c() 
   A21 <- c()
@@ -59,7 +59,7 @@ get_italy_region_based_rosa <- function(max_ratio = .3, write_file = T){
     dt2_r <- dt_date[as.Date(dt_date$date) >=  as.Date(date_t), ]
     
     # exclude all country
-    regions <- unique(dt2$iso.3166.2)
+    regions <- unique(dt2$iso.3166.2)[unique(dt2$iso.3166.2) != "IT"]
     lreg <- length(regions)
     
     # copute the ratio for the regions
