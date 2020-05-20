@@ -192,3 +192,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/19 10:38:07 PM UTC","2020/05/19 10:38:07 PM UTC",Brazil,BR,"Rio Grande do Sul",BRRS,en,4,0,,,,,,,,,,N,N,N,limesurvey-9413,t73q4v9sr6kaehuvq0,
 "2020/05/19 11:26:10 PM UTC","2020/05/19 11:26:10 PM UTC",Brazil,BR,"Distrito Federal",BRDF,en,12,0,0,,0,0,,,,,,Y,N,N,limesurvey-9424,p62k4trjcukaejpfdf,
 "2020/05/20 09:14:46 AM UTC","2020/05/20 09:14:46 AM UTC",Brazil,BR,"Minas Gerais",BRMG,en,80,0,0,,0,0,,,,,,Y,N,N,limesurvey-9561,g4pr54ms7kkaf4r5z5,
+"2020/05/20 04:50:30 PM UTC","2020/05/20 04:50:30 PM UTC",Brazil,BR,"São Paulo",BRSP,en,100,0,,,,,,,,,,N,Y,Y,limesurvey-9681,he6diq9pc2ka8zdi5g,
