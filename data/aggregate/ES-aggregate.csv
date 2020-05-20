@@ -4863,3 +4863,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/19 09:00:09 PM UTC","2020/05/19 09:00:09 PM UTC",Spain,ES,"Comunidad Autónoma:Asturias, Principado de",ESAS,en,50,0,0,,0,0,,,,,,N,N,N,limesurvey-9378,2sbmtvty2cka8q87ra,
 "2020/05/19 09:37:48 PM UTC","2020/05/19 09:37:48 PM UTC",Spain,ES,"Comunidad Autónoma:Madrid, Comunidad de",ESMD,en,200,5,5,,5,0,,,,,,Y,Y,Y,limesurvey-9387,jlf3hzub9pkaefutth,
 "2020/05/19 10:34:04 PM UTC","2020/05/19 10:34:04 PM UTC",Spain,ES,Provincia:Madrid,ESM,en,100,30,30,,0,0,,,,,,Y,Y,N,limesurvey-9411,9tdgzb0pybkaehv6ky,
+"2020/05/20 02:39:49 AM UTC","2020/05/20 02:39:49 AM UTC",Spain,ES,"Comunidad Autónoma:Castilla y León",ESCL,en,400,40,35,,15,27,,,,,,Y,N,N,limesurvey-9467,ojwuncd197kaeqn7qn,
