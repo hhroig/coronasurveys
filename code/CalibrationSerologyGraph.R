@@ -13,6 +13,6 @@ Survey <- zoo(baseEw,days)
 
 all.ts <- cbind(IgG,cCFR,Survey)
 
-plot(all.ts,plot.type = "single",ylim=c(0,10),col = c("green","red","blue"),ylab="Percentage of infection",xlab="Dates",lty = c(1,2,3))
+plot(all.ts,plot.type = "single",ylim=c(0,10),col = c("green","red","blue"),ylab="Percentage of infection in total population",xlab="Dates",lty = c(1,2,3))
 title("Estimates of SARS-COV2 infections in Spain",cex=0.6)
 legend("bottomleft", c("IgG prevalence","cCFR based estimate","Survey based estimate"), lty = c(1,2,3), col =c("green","red","blue"), lwd=1, cex=0.7, bty="n")
