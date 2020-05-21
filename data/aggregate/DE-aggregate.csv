@@ -177,3 +177,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/21 09:21:01 AM UTC","2020/05/21 09:21:01 AM UTC",Germany,DE,,,en,150,0,0,,,,,,,,,Y,N,N,limesurvey-9958,n75obetp95kagkf1xq,
 "2020/05/21 10:20:19 AM UTC","2020/05/21 10:20:19 AM UTC",Germany,DE,Baden-Württemberg,DEBW,en,50,0,,,,,,,,,,Y,N,N,limesurvey-10005,dclsq6mlwjkagmjbq9,
 "2020/05/21 10:57:07 AM UTC","2020/05/21 10:57:07 AM UTC",Germany,DE,Rheinland-Pfalz,DERP,en,40,3,2,,,,,,,,,Y,Y,N,limesurvey-10022,9jlr13rfbakagnukh7,
+"2020/05/21 12:24:03 PM UTC","2020/05/21 12:24:03 PM UTC",Germany,DE,Berlin,DEBE,en,20,0,0,,,,,,,,,Y,N,Y,limesurvey-10070,373v8jhdk8kagqyeeo,
+"2020/05/21 12:25:36 PM UTC","2020/05/21 12:25:36 PM UTC",Germany,DE,Nordrhein-Westfalen,DENW,en,7,2,2,,,,,,,,,Y,N,N,limesurvey-10071,17jcpqaa0zkagr0ebi,
