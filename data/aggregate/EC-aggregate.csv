@@ -197,3 +197,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/02 02:04:32 AM UTC",,Ecuador,EC,Pichincha,ECP,,150,10,,,,,,,,,,,,,EC-g-sheet,,
 "2020/05/09 04:14:55 AM UTC","2020/05/09 04:12:13 AM UTC",Ecuador,EC,Pichincha,ECP,es,30,3,2,,,,,,,,,Y,Y,N,limesurvey,kggfl8irhzk9z477lv,
 "2020/05/15 09:54:41 AM UTC","2020/05/15 09:54:41 AM UTC",Ecuador,EC,Azuay,ECA,en,9,0,0,,,,,,,,,Y,N,N,limesurvey,2bazjvxd9cka80z56x,
+"2020/05/21 01:02:01 PM UTC","2020/05/21 01:02:01 PM UTC",Ecuador,EC,,,en,10,0,0,,,,,,,,,N,Y,Y,limesurvey-10087,qucj0knk2hkagsb972,
+"2020/05/21 01:15:04 PM UTC","2020/05/21 01:15:04 PM UTC",Ecuador,EC,Tungurahua,ECT,en,100,1,1,,,,,,,,,N,Y,Y,limesurvey-10092,37rvaccy61kagss0vc,
+"2020/05/21 11:40:52 AM UTC","2020/05/21 11:40:52 AM UTC",Ecuador,EC,Tungurahua,ECT,en,85,0,0,,,,,,,,,N,N,Y,limesurvey-10045,yyws2xd7erkagpns4u,
+"2020/05/21 12:26:41 PM UTC","2020/05/21 12:26:41 PM UTC",Ecuador,EC,Chimborazo,ECH,en,10,0,0,,,,,,,,,Y,N,N,limesurvey-10072,17jcpqaa0zkagr0ebi,
