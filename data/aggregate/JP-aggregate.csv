@@ -135,3 +135,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/07 12:34:55 AM UTC","2020/05/07 12:34:12 AM UTC",Japan,JP,"東京 - Tokyo",JP13,ja,100,0,,,,,,,,,,N,Y,Y,limesurvey,50umnc7h8ok9uo4h4l,
 "2020/05/10 04:02:50 AM UTC","2020/05/10 04:02:50 AM UTC",Japan,JP,"茨城 - Ibaraki",JP08,en,2,0,0,,,,,,,,,Y,Y,Y,limesurvey,43355sfgu8ka0j7i5v,
 "2020/05/15 04:19:43 AM UTC","2020/05/15 04:19:43 AM UTC",Japan,JP,"東京 - Tokyo",JP13,en,100,0,0,,,,,,,,,Y,Y,N,limesurvey,49eurg5ighka7p0hi5,
+"2020/05/22 06:07:34 AM UTC","2020/05/22 06:07:34 AM UTC",Japan,JP,"神奈川 - Kanagawa",JP14,en,100,0,0,,,,,,,,,Y,Y,N,limesurvey-10654,3z41ncfvxxkahsy48u,
+"2020/05/22 06:07:36 AM UTC","2020/05/22 06:07:36 AM UTC",Japan,JP,"神奈川 - Kanagawa",JP14,en,100,0,0,,,,,,,,,Y,Y,N,limesurvey-10655,3z41ncfvxxkahsy48u,
+"2020/05/22 06:07:41 AM UTC","2020/05/22 06:07:41 AM UTC",Japan,JP,"大阪 - Osaka",JP27,en,40,0,0,,,,,,,,,Y,Y,N,limesurvey-10656,6qfaux5g9dkahsy9cc,
+"2020/05/22 06:19:42 AM UTC","2020/05/22 06:19:42 AM UTC",Japan,JP,"東京 - Tokyo",JP13,en,4,0,0,,,,,,,,,Y,N,N,limesurvey-10661,v9b9b7pvtekahtdon3,
