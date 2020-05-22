@@ -278,3 +278,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/22 01:38:27 AM UTC","2020/05/22 01:38:26 AM UTC",Brazil,BR,"São Paulo",BRSP,en,12,3,3,,0,0,,,,,,Y,Y,N,limesurvey-10590,99006z73qwkahjc050,
 "2020/05/22 03:01:10 AM UTC","2020/05/22 03:01:10 AM UTC",Brazil,BR,"Rio Grande do Sul",BRRS,en,200,1,1,,0,0,,,,,,Y,N,Y,limesurvey-10610,cy2pmavohgkahmadmu,
 "2020/05/22 08:19:15 AM UTC","2020/05/22 08:19:15 AM UTC",Brazil,BR,Piauí,BRPI,en,3000,20,10,,5,2,,,,,,Y,Y,N,limesurvey-10690,q37z3xpjl8kahxnfmr,
+"2020/05/22 10:51:00 AM UTC","2020/05/22 10:51:00 AM UTC",Brazil,BR,"São Paulo",BRSP,en,80,0,0,,0,0,,,,,,N,Y,Y,limesurvey-10727,hbi8ga6pu6ka8ta0tl,
+"2020/05/22 10:55:30 AM UTC","2020/05/22 10:55:30 AM UTC",Brazil,BR,"São Paulo",BRSP,en,50,0,0,,0,0,,,,,,Y,N,N,limesurvey-10729,kk9hwyao9bkah6xvtb,
+"2020/05/22 10:56:24 AM UTC","2020/05/22 10:56:24 AM UTC",Brazil,BR,Pará,BRPA,en,3,1,1,,0,0,,,,,,N,Y,Y,limesurvey-10730,jbk54wuud7ka8xknh4,
+"2020/05/22 10:57:43 AM UTC","2020/05/22 10:57:43 AM UTC",Brazil,BR,"São Paulo",BRSP,en,25,0,,,0,0,,,,,,Y,N,N,limesurvey-10732,uriv50a6cskai3b90a,
+"2020/05/22 10:59:32 AM UTC","2020/05/22 10:59:32 AM UTC",Brazil,BR,"São Paulo",BRSP,en,80,0,0,,0,0,,,,,,N,Y,Y,limesurvey-10734,jbk54wuud7ka8xknh4,
