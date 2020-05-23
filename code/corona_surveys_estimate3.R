@@ -513,7 +513,7 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
         data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
         
         all_geo_ids <- unique(data_ecdc$Alpha.2.code)
-        #all_geo_ids <- all_geo_ids[!(all_geo_ids %in% c("EC"))] # skip AR for now
+        all_geo_ids <- all_geo_ids[!(all_geo_ids %in% c("EC"))] # skip AR for now
         sapply(all_geo_ids, plot_estimates,  data_srce = "ecdc", dts = data_ecdc)
       }
     } else{
@@ -524,7 +524,7 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
       
       data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
       all_geo_ids <- unique(data_ecdc$Alpha.2.code) 
-      #all_geo_ids <- all_geo_ids[!(all_geo_ids %in% c("EC"))] # skip AR for now
+      all_geo_ids <- all_geo_ids[!(all_geo_ids %in% c("EC"))] # skip AR for now
       sapply(all_geo_ids, plot_estimates, data_srce = "ecdc", dts =  data_ecdc)
     }
   }else if(srce == "jh"){
