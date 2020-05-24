@@ -13,3 +13,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/14 05:56:09 PM UTC","2020/05/14 05:56:09 PM UTC",Sweden,SE,"Östergötlands län",SEE,en,20,20,19,,,,,,,,,Y,N,N,limesurvey,z0q5kov148ka72qj9v,
 "2020/05/15 07:38:43 PM UTC","2020/05/15 07:38:43 PM UTC",Sweden,SE,"Västernorrlands län",SEY,en,1,1,1,,,,,,,,,N,Y,Y,limesurvey,3ar1w5ctdzka86ex6k,
 "2020/05/21 11:30:29 AM UTC","2020/05/21 11:30:29 AM UTC",Sweden,SE,"Stockholms län",SEAB,en,12,1,1,,,,,,,,,Y,N,N,limesurvey-10039,q8l11yd51xkagp1j00,
+"2020/05/24 08:54:41 AM UTC","2020/05/24 08:54:41 AM UTC",Sweden,SE,"Skåne län",SEM,en,10,1,1,,,,,,,,,Y,Y,Y,limesurvey-11611,xh05kfp9ytkaktsqm3,
