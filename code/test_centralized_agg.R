@@ -4,7 +4,8 @@ spain_provincial_regional_estimate <- function(province = T,
                                          alpha = 0.0001,
                                          max_ratio = .3,
                                          provinces_and_codes = readxl::read_excel("regions-tree-population.xlsx"),
-                                         write_file = T){
+                                         write_summary_file = T,
+                                         write_daily_file = T){
   cat("Generating region based estimates for Spain \n")
   dt <- read.csv("../data/aggregate/ES-aggregate.csv", as.is = T)
   dt_region <- provinces_and_codes[provinces_and_codes$countrycode == "ES", ]
@@ -119,7 +120,7 @@ spain_provincial_regional_estimate <- function(province = T,
     # aggregate provincia data into regional data
     if(province == T){
       # population variable refer to population at lowest level
-      dt_est_prov_reg <- merge(dtregs, dtprovs, all = T, by = c("countrycode", "regioncode")) 
+      dt_est_prov_reg <- merge(dtprovs, dtregs, all = T, by = c("countrycode", "regioncode")) 
       # go over regions and computed aggregated means
       estprop_regs_rhs <- c()
       meanprop_regs_rhs <- c()
@@ -159,11 +160,8 @@ spain_provincial_regional_estimate <- function(province = T,
     sumreach_country <- sum(dt_country$reach)
     estprop_country <- sum(dt_country$cases)/sumreach_country
     meanprop_country <- mean(dt_country$cases/dt_country$reach)
-    dtcount <- data.frame(countrycode = "ES",
-                          population = sum(dtregs$population_region),
-                          sumreach_country = sumreach_country,
-                          estprop_country = estprop_country,
-                          meanprop_country = meanprop_country)
+
+    
     dt_est_reg_count <- by(dt_est_prov_reg,
                  list(dt_est_prov_reg$countrycode, dt_est_prov_reg$regioncode), # groupby country and region and compute population
                  function(x){
@@ -189,6 +187,27 @@ spain_provincial_regional_estimate <- function(province = T,
     estprop_counts_agg <- ((sumreach_country/(sumreach_country + sumreach_country_rh)) * estprop_country) + 
       ((sumreach_country_rh/(sumreach_country + sumreach_country_rh)) * estprop_country_rh)
     
+    
+    if (write_daily_file == T){
+      dt_est_count <- data.frame(countrycode = "ES",
+                                 population = sum(dtregs$population_region),
+                                 estprop_country = estprop_country,
+                                 meanprop_country = meanprop_country, 
+                                 sumreach_country = sumreach_country,
+                                 estprop_country_rhs = estprop_country_rh,
+                                 meanprop_country_rhs = meanprop_country_rh, 
+                                 sumreach_country_rhs = sumreach_country_rh, 
+                                 meanprop_country_agg = meanprop_counts_agg,
+                                 estprop_country_agg = estprop_counts_agg)
+      
+     dt_est_prov_reg_country <- merge(dt_est_prov_reg, dt_est_count, all = T, by = "countrycode")
+     write.csv(x = dt_est_prov_reg_country, file = paste0("../data/PlotData/ES_regional_estimates/daily_province_region_country_based_estimates/",
+                       "ES-province-region-country-based-estimate-", gsub("/", "_", j), ".csv"))
+    }
+
+    
+    
+    
     r_c <-  c(r_c, sumreach_country)
     r_r <-  c(r_r, sumreach_country_rh)
     I_c_estprop <- c(I_c_estprop, estprop_country)
@@ -208,7 +227,7 @@ spain_provincial_regional_estimate <- function(province = T,
                                       I_r_meanprop = I_r_meanprop,
                                       estprop_country_agg = estprop_country_agg,
                                       meanprop_country_agg = meanprop_country_agg)
-  if(write_file == T){
+  if(write_summary_file == T){
     cat("Writing the region based estimate for Spain..\n")
     write.csv(region_based_estimate, paste0("../data/PlotData/ES_regional_estimates/region_based_estimates/",
                                             "ES-province-region-country-based-estimate.csv"))
@@ -219,4 +238,4 @@ spain_provincial_regional_estimate <- function(province = T,
 
 }
 
-spain_provincial_regional_estimate(write_file = T)
+spain_provincial_regional_estimate(write_summary_file = T, write_daily_file = T)
