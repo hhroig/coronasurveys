@@ -113,3 +113,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/25 05:26:22 PM UTC","2020/05/25 05:26:22 PM UTC",Chile,CL,Bío-Bío,CLBI,en,20,0,,,,,,,,,,N,Y,N,limesurvey-11792,poqrtlt349kamril2g,
 "2020/05/25 11:29:45 PM UTC","2020/05/25 11:29:45 PM UTC",Chile,CL,,,en,50,1,0,,,,,,,,,N,Y,Y,limesurvey-11972,cxy00lfbikk9yg9gci,
 "2020/05/26 12:38:19 AM UTC","2020/05/26 12:38:19 AM UTC",Chile,CL,"Los Ríos",CLLR,en,5,0,0,,,,,,,,,N,Y,Y,limesurvey-11977,cfyzvpsyczkan6y35j,
+"2020/05/26 01:45:05 AM UTC","2020/05/26 01:45:05 AM UTC",Chile,CL,"Región Metropolitana de Santiago",CLRM,en,50,2,1,,,,,,,,,Y,Y,Y,limesurvey-11978,c7y9ojj9i4kan9byfn,
+"2020/05/26 02:02:26 AM UTC","2020/05/26 02:02:26 AM UTC",Chile,CL,"Región Metropolitana de Santiago",CLRM,en,30,1,1,,,,,,,,,Y,Y,N,limesurvey-11980,ihgc6x8ac1kan9veix,
+"2020/05/26 02:02:28 AM UTC","2020/05/26 02:02:28 AM UTC",Chile,CL,"Región Metropolitana de Santiago",CLRM,en,30,1,1,,,,,,,,,Y,Y,N,limesurvey-11981,ihgc6x8ac1kan9veix,
