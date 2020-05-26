@@ -190,7 +190,7 @@ spain_provincial_regional_estimate <- function(province = T,
     
     if (write_daily_file == T){
       dt_est_count <- data.frame(countrycode = "ES",
-                                 population = sum(dtregs$population_region),
+                                 population_country = sum(dtregs$population_region),
                                  estprop_country = estprop_country,
                                  meanprop_country = meanprop_country, 
                                  sumreach_country = sumreach_country,
