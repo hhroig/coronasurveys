@@ -246,6 +246,7 @@ provincial_regional_estimate(countrycode = "ES",
 
 provincial_regional_estimate(countrycode = "BR",
                              province = F,
+                             alpha = 0.00001,
                              write_summary_file = T,
                              write_daily_file = T)
 
@@ -255,6 +256,11 @@ provincial_regional_estimate(countrycode = "EC",
                              write_daily_file = T)
 
 provincial_regional_estimate(countrycode = "US",
+                             province = F,
+                             write_summary_file = T,
+                             write_daily_file = T)
+
+provincial_regional_estimate(countrycode = "PT",
                              province = F,
                              write_summary_file = T,
                              write_daily_file = T)
