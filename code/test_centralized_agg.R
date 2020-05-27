@@ -249,3 +249,12 @@ provincial_regional_estimate(countrycode = "BR",
                              write_summary_file = T,
                              write_daily_file = T)
 
+provincial_regional_estimate(countrycode = "EC",
+                             province = F,
+                             write_summary_file = T,
+                             write_daily_file = T)
+
+provincial_regional_estimate(countrycode = "US",
+                             province = F,
+                             write_summary_file = T,
+                             write_daily_file = T)
