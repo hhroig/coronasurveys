@@ -331,8 +331,8 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
         if(cprov >= alpha){
           est <- sum(dt_prov$cases)/sumreach
           meanpest <- mean(dt_prov$cases/dt_prov$reach)
-          est2 <- sum(dt_prov$recentcases)/sumreach
-          meanpest2 <- mean(dt_prov$recentcases/dt_prov$reach)
+          est2 <- sum(dt_prov$recentcases, na.rm = T)/sumreach
+          meanpest2 <- mean(dt_prov$recentcases/dt_prov$reach, na.rm = T)
           estprop_provs <- c(estprop_provs, est)
           meanprop_provs  <- c(meanprop_provs, meanpest)
           estprop_provs2 <- c(estprop_provs2, est2)
@@ -380,8 +380,8 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
       if(creg >= alpha){
         est <- sum(dt_reg$cases)/sumreach
         meanpest <- mean(dt_reg$cases/dt_reg$reach)
-        est2 <- sum(dt_reg$recentcases)/sumreach
-        meanpest2 <- mean(dt_reg$recentcases/dt_reg$reach)
+        est2 <- sum(dt_reg$recentcases, na.rm = T)/sumreach
+        meanpest2 <- mean(dt_reg$recentcases/dt_reg$reach, na.rm = T)
         estprop_regs <- c(estprop_regs, est)
         meanprop_regs <- c(meanprop_regs, meanpest)
         estprop_regs2 <- c(estprop_regs2, est2)
@@ -467,8 +467,8 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     sumreach_country <- sum(dt_country$reach)
     estprop_country <- sum(dt_country$cases)/sumreach_country
     meanprop_country <- mean(dt_country$cases/dt_country$reach)
-    estprop_country2 <- sum(dt_country$recentcases)/sumreach_country
-    meanprop_country2 <- mean(dt_country$recentcases/dt_country$reach)
+    estprop_country2 <- sum(dt_country$recentcases, na.rm = T)/sumreach_country
+    meanprop_country2 <- mean(dt_country$recentcases/dt_country$reach, na.rm = T)
     
     
     dt_est_reg_count <- by(dt_est_prov_reg,
