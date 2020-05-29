@@ -570,8 +570,11 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                       meanprop_country_agg2 = meanprop_country_agg2)
   if(write_summary_file == T){
     cat(paste0("Writing the region based estimate summary for ", countrycode, "..\n"))
-    write.csv(region_based_estimate, paste0("../data/PlotData/", countrycode, "_regional_estimates/region_based_estimates/",
-                                            countrycode ,"-province-region-country-based-estimate.csv"))
+    write.csv(region_based_estimate, paste0("../data/PlotData/",
+                                            countrycode,
+                                            "_regional_estimates/region_based_estimates/",
+                                            countrycode,
+                                            "-province-region-country-based-estimate.csv"))
   }
   else{
     return(region_based_estimate)
