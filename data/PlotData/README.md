@@ -11,7 +11,7 @@ The variables in the generated files are:
 - cum_deaths: cumulative deaths up to the current day
 - cum_deaths_400: cumulative deaths up to the current day *400
 
-**- est_ccfr_prop: estimated ratio of the population infected (with symptoms) based on delay adjusted case fatality ratio**
+**- p_ccfr: estimated ratio of the population infected (with symptoms) based on delay adjusted case fatality ratio**
 
 - est_ccfr: estimated number of infected cases (with symptoms) based on delay adjusted case fatality ratio where 
 the confidence interval estimates for this variable are: est_ccfr_low and est_ccfr_high.
@@ -25,9 +25,13 @@ the confidence interval estimates for this variable are: est_ccfr_low and est_cc
 - mean_reach: dialy mean of reach
 - dunbar_reach: 150 * sample_size (for current day after ouliers have
 been removed)
-- cases_p_reach: The estimated ratio of the population infected (with symptoms), computed as sum_cases/sum_reach. The confidence interval
-estimates for this variable are: cases_p_reach_low and cases_p_reach_high and cases_p_reach_error.
-- cases_p_reach_prop: The estimated ratio of the population infected (with symptoms), computed as mean(cases/reach). The mean is taken over the sample (set of responses).
+
+**- p_w (aka cases_p_reach): The estimated ratio of the population infected (with symptoms), computed as sum_cases/sum_reach. The confidence interval estimates for this variable are: cases_p_reach_low and cases_p_reach_high and cases_p_reach_error.**
+
+**- p_m (aka cases_p_reach_prop): The estimated ratio of the population infected (with symptoms), computed as mean(cases/reach). The mean is taken over the sample (set of responses).**
+
+**- p_d: The estimated ratio of the population infected (with symptoms), computed as sum_cases/dunbar_reach.**
+
 - cases_p_reach_prop_median : median(cases/reach). median is taken over the sample (set of responses).
 - estimated_cases: country_population * cases_p_reach * correction_factor
 where the confidence interval estimates for this variable are:estimate_cases_low,
