@@ -1,19 +1,26 @@
 The variables in the generated files are:  
 - countriesAndTerritories: country/territory name
 - geoId: ISO2 code of country
+
 **- population: population of the country**
+
 - date: date
 - cases: cases recorded for current day..from ecdc data
 - deaths: deaths of current day..from ecdc data
 - cum_cases: cumulative cases up to the current day
 - cum_deaths: cumulative deaths up to the current day
 - cum_deaths_400: cumulative deaths up to the current day *400
+
 **- est_ccfr_prop: estimated ratio of the population infected (with symptoms) based on delay adjusted case fatality ratio**
+
 - est_ccfr: estimated number of infected cases (with symptoms) based on delay adjusted case fatality ratio where 
 the confidence interval estimates for this variable are: est_ccfr_low and est_ccfr_high.
 - sample_size: sample size (number of responses) used to compute estimates based on proportion below (after removing outliers)
+
 **- sum_cases: sum of all the cases reported in the sample (responses)**
+
 **- sum_reach: sum of all the reach values reported in the sample (responses)**
+
 - mean_cases: daily mean of cases  
 - mean_reach: dialy mean of reach
 - dunbar_reach: 150 * sample_size (for current day after ouliers have
