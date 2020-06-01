@@ -44,3 +44,6 @@
 **- p_w_country (was estprop_country_agg): estimate of p for the country obtained from the weighted sum of p_w_country_only and p_w_country_rhs (I)**
 
 **- p_m_country (was meanprop_country_agg): estimate of p for the country obtained from the weighted sum of p_m_country_only and p_m_country_rhs (I)
+
+**- recent_p_w_* and recent_p_m_* are the same as p_w and p_m, respectively, but computed with recent_cases instead of cases.**
+
