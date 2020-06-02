@@ -8,7 +8,7 @@ source("spain_regional_estimate.R")
 source("portugal_regional_estimates.R")
 source("spain_region_based_estimate.R")
 source("portugal_region_based_estimate.R")
-source("italy_region_based_estimate.R")
+#source("italy_region_based_estimate.R")
 source("ukraine_region_based_estimate.R")
 
 hosp_to_death_trunc <- function(x, mu_hdt, sigma_hdt){
