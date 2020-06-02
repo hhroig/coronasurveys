@@ -1,4 +1,4 @@
-Tables from the spanish ENECOVID19 serology study:
+Tables from the firts rfeport of the Spanish ENECOVID19 serology study:
 - Each table in a single *.csv
 - All tables are available in a single Excel file
 - Includes R code to read Excel and write single csv.
