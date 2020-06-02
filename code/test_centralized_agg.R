@@ -569,9 +569,3 @@ provincial_regional_estimate2(countrycode = "BR",
                              alpha = 0.00001,
                              write_summary_file = T,
                              write_daily_file = T)
-
-provincial_regional_estimate2(countrycode = "BR",
-                              province = F,
-                              alpha = 0.00001,
-                              write_summary_file = T,
-                              write_daily_file = T)
