@@ -1,3 +1,4 @@
+#without recent cases
 provincial_regional_estimate <- function(countrycode = "ES",
                                                province = T,
                                                district = F,
@@ -241,7 +242,6 @@ provincial_regional_estimate <- function(countrycode = "ES",
 }
 
 
-
 provincial_regional_estimate(countrycode = "EC",
                              province = F,
                              alpha = 0.00001,
@@ -259,11 +259,12 @@ provincial_regional_estimate(countrycode = "PT",
                              write_summary_file = T,
                              write_daily_file = T)
 
+#with recent cases
 provincial_regional_estimate2 <- function(countrycode = "ES",
                                          province = T,
                                          district = F,
                                          W = 90,
-                                         alpha = 0.0001,
+                                         alpha = 0.00001,
                                          max_ratio = .3,
                                          provinces_and_codes = readxl::read_excel("regions-tree-population.xlsx"),
                                          write_summary_file = T,
@@ -318,32 +319,20 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     if (province == T){
       dtprovs <- na.omit(dt_region2)
       provs <- unique(dtprovs$provincecode)
-      estprop_provs <- c()
-      meanprop_provs <- c()
-      estprop_provs2 <- c()
-      meanprop_provs2 <- c()
-      sumreach_provs <- c()
-      for (i in provs) {
-        provpop <- dtprovs$population[dtprovs$provincecode == i]
-        dt_prov <- dt_date[dt_date$iso.3166.2 == i, ]
-        sumreach <- sum(dt_prov$reach)
-        cprov <- sumreach/provpop
-        if(cprov >= alpha){
-          est <- sum(dt_prov$cases)/sumreach
-          meanpest <- mean(dt_prov$cases/dt_prov$reach)
-          est2 <- sum(dt_prov$recentcases, na.rm = T)/sumreach
-          meanpest2 <- mean(dt_prov$recentcases/dt_prov$reach, na.rm = T)
-          estprop_provs <- c(estprop_provs, est)
-          meanprop_provs  <- c(meanprop_provs, meanpest)
-          estprop_provs2 <- c(estprop_provs2, est2)
-          meanprop_provs2  <- c(meanprop_provs2, meanpest2)
-          sumreach_provs <- c(sumreach_provs, sumreach)
+      estprop_provs <- meanprop_provs <- estprop_provs2 <- meanprop_provs2 <- sumreach_provs <- rep(NA, length(provs))
+      for (i in seq_along(provs)) {
+        provpop <- dtprovs$population[dtprovs$provincecode == provs[i]]
+        dt_prov <- dt_date[dt_date$iso.3166.2 == provs[i], ]
+        if((sum(dt_prov$reach)/provpop) >= alpha){
+          estprop_provs[i] <- sum(dt_prov$cases)/sum(dt_prov$reach)
+          meanprop_provs[i]  <- mean(dt_prov$cases/dt_prov$reach)
+          estprop_provs2[i] <- ifelse(all(is.na(dt_prov$recentcases)), 
+                                      NA, sum(dt_prov$recentcases, na.rm = T)/sum(dt_prov$reach[!is.na(dt_prov$recentcases)]))  #should we use the whole sum or partial sum
+          meanprop_provs2[i] <- ifelse(all(is.na(dt_prov$recentcases)), 
+                                       NA, mean(dt_prov$recentcases/dt_prov$reach, na.rm = T))
+          sumreach_provs[i] <- sum(dt_prov$reach)
         }else{
-          estprop_provs <- c(estprop_provs, NA)
-          meanprop_provs <- c(meanprop_provs, NA)
-          estprop_provs2 <- c(estprop_provs2, NA)
-          meanprop_provs2 <- c(meanprop_provs2, NA)
-          sumreach_provs <- c(sumreach_provs, sumreach)
+          sumreach_provs[i] <- sum(dt_prov$reach)
         }
         
       }
@@ -353,6 +342,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                    estprop_provs2 = estprop_provs2,
                                    meanprop_provs2 = meanprop_provs2,
                                    sumreach_provs  = sumreach_provs)
+      
       dtprovs <- merge(dtprovs, dtestpropprovs, all = T, by = "provincecode")
     }
     
@@ -367,32 +357,20 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                  })
     dtregs <- do.call(rbind, dtregs)
     regions <- unique(dtregs$regioncode)
-    estprop_regs <- c()
-    meanprop_regs <- c()
-    estprop_regs2 <- c()
-    meanprop_regs2 <- c()
-    sumreach_regs <- c()
-    for (i in regions) {
-      regpop <- dtregs$population_region[dtregs$regioncode == i]
-      dt_reg <- dt_date[dt_date$iso.3166.2 == i, ]
-      sumreach <- sum(dt_reg$reach)
-      creg <- sumreach/regpop
-      if(creg >= alpha){
-        est <- sum(dt_reg$cases)/sumreach
-        meanpest <- mean(dt_reg$cases/dt_reg$reach)
-        est2 <- sum(dt_reg$recentcases, na.rm = T)/sumreach
-        meanpest2 <- mean(dt_reg$recentcases/dt_reg$reach, na.rm = T)
-        estprop_regs <- c(estprop_regs, est)
-        meanprop_regs <- c(meanprop_regs, meanpest)
-        estprop_regs2 <- c(estprop_regs2, est2)
-        meanprop_regs2 <- c(meanprop_regs2, meanpest2)
-        sumreach_regs <- c(sumreach_regs, sumreach)
+    estprop_regs <- meanprop_regs <- estprop_regs2 <- meanprop_regs2 <- sumreach_regs <- rep(NA, length(regions))
+    for (k in seq_along(regions)) {
+      regpop <- dtregs$population_region[dtregs$regioncode == regions[k]]
+      dt_reg <- dt_date[dt_date$iso.3166.2 == regions[k], ]
+      if((sum(dt_reg$reach)/regpop) >= alpha){
+        estprop_regs[k] <- sum(dt_reg$cases)/sum(dt_reg$reach)
+        meanprop_regs[k] <- mean(dt_reg$cases/dt_reg$reach)
+        estprop_regs2[k] <- ifelse(all(is.na(dt_reg$recentcases)),
+                             NA, sum(dt_reg$recentcases, na.rm = T)/sum(dt_reg$reach[!is.na(dt_reg$recentcases)]))  # should we use partial sum?
+        meanprop_regs2[k] <- ifelse(all(is.na(dt_reg$recentcases)),
+                               NA, mean(dt_reg$recentcases/dt_reg$reach, na.rm = T))
+        sumreach_regs[k] <- sum(dt_reg$reach)
       }else{
-        estprop_regs <- c(estprop_regs, NA)
-        meanprop_regs <- c(meanprop_regs, NA)
-        estprop_regs2 <- c(estprop_regs2, NA)
-        meanprop_regs2 <- c(meanprop_regs2, NA)
-        sumreach_regs <- c(sumreach_regs, sumreach)
+        sumreach_regs[k] <- sum(dt_reg$reach)
       }
       
     }
@@ -411,25 +389,19 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
       # population variable refer to population at lowest level
       dt_est_prov_reg <- merge(dtprovs, dtregs, all = T, by = c("countrycode", "regioncode")) 
       # go over regions and computed aggregated means
-      estprop_regs_rhs <- c()
-      meanprop_regs_rhs <- c()
-      estprop_regs_rhs2 <- c()
-      meanprop_regs_rhs2 <- c()
-      sumreach_regs_rhs <- c()
-      for (i in unique(dt_est_prov_reg$regioncode)) {
-        dt_est_reg <- na.omit(dt_est_prov_reg[dt_est_prov_reg$regioncode == i, ])
-        weight <- dt_est_reg$population/dt_est_reg$population_region
-        estprop_regs_rh <- sum(weight * dt_est_reg$estprop_provs)
-        meanprop_regs_rh <- sum(weight * dt_est_reg$meanprop_provs)
-        estprop_regs_rh2 <- sum(weight * dt_est_reg$estprop_provs2)
-        meanprop_regs_rh2 <- sum(weight * dt_est_reg$meanprop_provs2)
+      uregions <- unique(dt_est_prov_reg$regioncode)
+      estprop_regs_rhs <- meanprop_regs_rhs <- estprop_regs_rhs2 <- meanprop_regs_rhs2 <- sumreach_regs_rhs <- rep(NA, length(uregions))
+      for (l in seq_along(uregions)) {
+        dt_est_reg <- na.omit(dt_est_prov_reg[dt_est_prov_reg$regioncode == uregions[l], ])
+        weightreg <- dt_est_reg$population/dt_est_reg$population_region
+        estprop_regs_rhs[l] <- sum(weightreg * dt_est_reg$estprop_provs)
+        meanprop_regs_rhs[l] <- sum(weightreg * dt_est_reg$meanprop_provs)
+        estprop_regs_rhs2[l] <- sum(weightreg * dt_est_reg$estprop_provs2)
+        meanprop_regs_rhs2[l] <- sum(weightreg * dt_est_reg$meanprop_provs2)
         
-        sumreach_regs_rhs <- c(sumreach_regs_rhs, sum(dt_est_reg$sumreach_provs))
-        estprop_regs_rhs <- c(estprop_regs_rhs, estprop_regs_rh)
-        meanprop_regs_rhs <- c(meanprop_regs_rhs, meanprop_regs_rh)
-        estprop_regs_rhs2 <- c(estprop_regs_rhs2, estprop_regs_rh2)
-        meanprop_regs_rhs2 <- c(meanprop_regs_rhs2, meanprop_regs_rh2)
+        sumreach_regs_rhs[l] <- sum(dt_est_reg$sumreach_provs)
       }
+      
       dt_regs_rhs <- data.frame(regioncode = unique(dt_est_prov_reg$regioncode),
                                 estprop_regs_rhs = estprop_regs_rhs,
                                 meanprop_regs_rhs = meanprop_regs_rhs,
@@ -467,8 +439,10 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     sumreach_country <- sum(dt_country$reach)
     estprop_country <- sum(dt_country$cases)/sumreach_country
     meanprop_country <- mean(dt_country$cases/dt_country$reach)
-    estprop_country2 <- sum(dt_country$recentcases, na.rm = T)/sumreach_country
-    meanprop_country2 <- mean(dt_country$recentcases/dt_country$reach, na.rm = T)
+    estprop_country2 <- ifelse(all(is.na(dt_country$recentcases)),
+                               NA, sum(dt_country$recentcases, na.rm = T)/sum(dt_country$reach[!is.na(dt_country$recentcases)])) # may change
+    meanprop_country2 <- ifelse(all(is.na(dt_country$recentcases)),
+                                NA, mean(dt_country$recentcases/dt_country$reach, na.rm = T))
     
     
     dt_est_reg_count <- by(dt_est_prov_reg,
@@ -485,11 +459,11 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                         stringsAsFactors = F)
                            })
     dt_est_reg_count <- do.call(rbind, dt_est_reg_count)
-    weight <- dt_est_reg_count$population_region/sum(dt_est_reg_count$population_region)
-    estprop_country_rh <- sum(weight * dt_est_reg_count$estprop_regs_agg, na.rm = T)
-    meanprop_country_rh <- sum(weight * dt_est_reg_count$meanprop_regs_agg, na.rm = T)
-    estprop_country_rh2 <- sum(weight * dt_est_reg_count$estprop_regs_agg2, na.rm = T)
-    meanprop_country_rh2 <- sum(weight * dt_est_reg_count$meanprop_regs_agg2, na.rm = T)
+    weightcountry <- dt_est_reg_count$population_region/sum(dt_est_reg_count$population_region)
+    estprop_country_rh <- sum(weightcountry * dt_est_reg_count$estprop_regs_agg, na.rm = T)
+    meanprop_country_rh <- sum(weightcountry * dt_est_reg_count$meanprop_regs_agg, na.rm = T)
+    estprop_country_rh2 <- sum(weightcountry * dt_est_reg_count$estprop_regs_agg2, na.rm = T)
+    meanprop_country_rh2 <- sum(weightcountry * dt_est_reg_count$meanprop_regs_agg2, na.rm = T)
     sumreach_country_rh <-  sum(dt_est_reg_count$sumreach_regs)
     
     
@@ -527,8 +501,11 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
       
       cat(paste0("Writing the region based daily estimate for ", countrycode, "..\n")) 
       dt_est_prov_reg_country <- merge(dt_est_prov_reg, dt_est_count, all = T, by = "countrycode")
-      write.csv(x = dt_est_prov_reg_country, file = paste0("../data/PlotData/", countrycode, "_regional_estimates/daily_province_region_country_based_estimates/",
-                                                           countrycode, "-province-region-country-based-estimate-", gsub("/", "_", j), ".csv"))
+      write.csv(x = dt_est_prov_reg_country, file = paste0("../data/PlotData/",
+                                                           countrycode,
+                                                           "_regional_estimates/daily_province_region_country_based_estimates/",
+                                                           countrycode,
+                                                           "-province-region-country-based-estimate-", gsub("/", "_", j), ".csv"))
     }
     
     
@@ -583,12 +560,18 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
 }
 
 provincial_regional_estimate2(countrycode = "ES",
-                             write_summary_file = T,
-                             alpha = 0.00001,
-                             write_daily_file = T)
+                               write_summary_file = T,
+                               alpha = 0.00001,
+                               write_daily_file = T)
 
 provincial_regional_estimate2(countrycode = "BR",
                              province = F,
                              alpha = 0.00001,
                              write_summary_file = T,
                              write_daily_file = T)
+
+provincial_regional_estimate2(countrycode = "BR",
+                              province = F,
+                              alpha = 0.00001,
+                              write_summary_file = T,
+                              write_daily_file = T)
