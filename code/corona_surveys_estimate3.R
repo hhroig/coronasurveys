@@ -465,8 +465,8 @@ plot_estimates <- function(country_geoid = "ES",
     } else{
       
       dt_res <- dt_res %>% 
-        select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
-               est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:p_d_low)
+        select(countriesAndTerritories, geoId, population, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
+               p_ccfr, est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:p_d_low)
     }
     
     if(data_srce == "jh"){
