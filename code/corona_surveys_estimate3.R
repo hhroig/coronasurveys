@@ -518,8 +518,8 @@ plot_estimates <- function(country_geoid = "ES",
     dt_res <- full_join(dt, survey_gforms_estimate, by = "date")
     
     dt_res <- dt_res %>% 
-      select(countriesAndTerritories, geoId, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
-             est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:dunbar_cases_error)
+      select(countriesAndTerritories, geoId, population, date, cases, deaths, cum_cases, cum_deaths, cum_deaths_400,
+             p_ccfr, est_ccfr, est_ccfr_low, est_ccfr_high, sample_size:p_d_low)
    
     if(data_srce == "jh"){
       write.csv(dt_res, paste0("../data/PlotData/jh_estimates/", country_geoid, "-", "estimates.csv"))
