@@ -1454,3 +1454,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/01 11:45:00 PM UTC",,Portugal,PT,Lisboa,PT11,,20,0,,,,,,,,,,,,,PT-g-sheet,,
 "2020/06/02 12:24:13 AM UTC",,Portugal,PT,Braga,PT03,,100,2,,,,,,,,,,,,,PT-g-sheet,,
 "2020/06/02 12:25:45 AM UTC",,Portugal,PT,Braga,PT03,,100,2,,,,,,,,,,,,,PT-g-sheet,,
+"2020/06/04 10:44:44 AM UTC","2020/06/04 10:44:44 AM UTC",Portugal,PT,Porto,PT13,en,50,1,1,,,,,,,,,Y,N,N,limesurvey-13363,ovnn5hamiokb0nkmqw,
