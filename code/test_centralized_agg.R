@@ -274,6 +274,7 @@ provincial_regional_estimate(countrycode = "IT",
                              province = T,
                              write_summary_file = T,
                              write_daily_file = T)
+
 provincial_regional_estimate(countrycode = "UA",
                              province = F,
                              write_summary_file = T,
