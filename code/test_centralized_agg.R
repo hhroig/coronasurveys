@@ -1,5 +1,5 @@
 # without recent cases
-provincial_regional_estimate <- function(countrycode = "ES",
+provincial_regional_estimate <- function(countrycode = "PT",
                                           province = T,
                                           district = F,
                                           W = 90,
