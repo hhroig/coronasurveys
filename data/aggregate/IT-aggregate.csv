@@ -704,3 +704,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/02 08:04:24 AM UTC","2020/06/02 08:04:24 AM UTC",Italy,IT,Regioni:Campania,IT72,en,80,2,2,,,,,,,,,Y,N,N,limesurvey-12842,gkjg6lkbehkaxmypn5,
 "2020/06/03 09:38:15 AM UTC","2020/06/03 09:38:15 AM UTC",Italy,IT,Regioni:Lombardia,IT25,en,300,0,0,,,,,,,,,Y,N,N,limesurvey-13008,qya987qlnhkaz5ra6y,
 "2020/06/05 08:41:00 PM UTC","2020/06/05 08:41:00 PM UTC",Italy,IT,Regioni:Liguria,IT42,en,50,4,4,,,,,,,,,Y,N,N,limesurvey-13683,y7zcm84xj3kb2oba7j,
+"2020/06/05 09:50:42 PM UTC","2020/06/05 09:50:42 PM UTC",Italy,IT,Regioni:Toscana,IT52,en,10,3,3,,,,,,,,,Y,N,N,limesurvey-13786,ey03b3pntykb2qsm2l,
+"2020/06/05 10:01:51 PM UTC","2020/06/05 10:01:51 PM UTC",Italy,IT,Regioni:Calabria,IT78,en,11,0,,,,,,,,,,Y,N,N,limesurvey-13791,6ogyjr6g2ikb2r7876,
+"2020/06/05 10:05:13 PM UTC","2020/06/05 10:05:13 PM UTC",Italy,IT,Regioni:Calabria,IT78,en,10,0,,,,,,,,,,Y,N,Y,limesurvey-13793,6ogyjr6g2ikb2r7876,
+"2020/06/05 10:17:31 PM UTC","2020/06/05 10:17:31 PM UTC",Italy,IT,"Regioni:Friuli-Venezia Giulia",IT36,en,4,0,0,,,,,,,,,Y,N,Y,limesurvey-13801,jm7eo5p1h1kb2rrf3l,
