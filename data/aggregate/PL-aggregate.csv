@@ -18,3 +18,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/04/19 12:55:08 PM UTC",,Poland,PL,,,,100,1,,,,,,,,,,,,,world-g-sheet,,
 "2020/05/08 06:31:22 PM UTC","2020/05/08 06:29:38 PM UTC",Poland,PL,Pomorskie,PLPM,en,25,2,2,,,,,,,,,Y,Y,N,limesurvey,jzyshmpks5k9yjcrhu,
 "2020/05/15 08:47:06 AM UTC","2020/05/15 08:47:06 AM UTC",Poland,PL,Podkarpackie,PLPK,en,50,0,0,,,,,,,,,Y,N,N,limesurvey,mxl9qzijk5ka7ykbwt,
+"2020/06/05 08:55:54 PM UTC","2020/06/05 08:55:54 PM UTC",Poland,PL,Mazowieckie,PLMZ,en,6,3796,1862,,,,,,,,,Y,N,N,limesurvey-13708,6wkmiq63mzkb2oufzt,
+"2020/06/05 09:07:55 PM UTC","2020/06/05 09:07:55 PM UTC",Poland,PL,Wielkopolskie,PLWP,en,12,0,0,,,,,,,,,Y,N,N,limesurvey-13737,da58bkea6zkb2p9we8,
