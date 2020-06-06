@@ -26,3 +26,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/15 08:10:59 AM UTC","2020/05/15 08:10:59 AM UTC",Australia,AU,"New South Wales",AUNSW,en,500,0,0,,,,,,,,,Y,Y,Y,limesurvey,naj7vsnhmfka7x9uyn,
 "2020/06/05 09:00:04 PM UTC","2020/06/05 09:00:04 PM UTC",Australia,AU,Victoria,AUVIC,en,20,0,0,,,,,,,,,Y,N,N,limesurvey-13721,nfqkx3lc7hkb2p00a0,
 "2020/06/06 12:17:27 AM UTC","2020/06/06 12:17:27 AM UTC",Australia,AU,Victoria,AUVIC,en,4,0,0,,,,,,,,,Y,N,N,limesurvey-13835,ry32pqrf56kb2w1mgz,
+"2020/06/06 04:17:15 AM UTC","2020/06/06 04:17:15 AM UTC",Australia,AU,"Australian Capital Territory",AUACT,en,50,0,50,,,,,,,,,Y,N,N,limesurvey-13872,9ec5hfy6d0kb34lz1q,

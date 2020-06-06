@@ -1,3 +1,4 @@
 Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
 "2020/04/16 08:46:21 AM UTC",,Finland,FI,,,,25,0,,,,,,,,,,,,,world-g-sheet,,
 "2020/05/08 06:31:59 PM UTC","2020/05/08 06:30:17 PM UTC",Finland,FI,Pohjois-Savo,FI15,en,20,0,,,,,,,,,,Y,N,N,limesurvey,7hd9qb7x9ak9yjbmr7,
+"2020/06/06 04:47:32 AM UTC","2020/06/06 04:47:32 AM UTC",Finland,FI,Uusimaa,FI18,en,100,0,,,,,,,,,,Y,N,N,limesurvey-13878,o886i9qljpkb35oz68,
