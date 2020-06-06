@@ -406,3 +406,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 05:40:43 AM UTC","2020/06/06 05:40:43 AM UTC",France,FR,département:Ille-et-Vilaine,FR35,en,49,3,3,,,,,,,,,Y,N,N,limesurvey-13882,w2ds9xcy1lkb37ldgd,
 "2020/06/06 06:41:06 AM UTC","2020/06/06 06:41:06 AM UTC",France,FR,région:Île-de-France,FRIDF,en,100,20,18,,,,,,,,,,,,limesurvey-13892,n7ufdlr2w2kb39r0r3,
 "2020/06/06 06:41:07 AM UTC","2020/06/06 06:41:07 AM UTC",France,FR,région:Île-de-France,FRIDF,en,100,20,18,,,,,,,,,,,,limesurvey-13893,n7ufdlr2w2kb39r0r3,
+"2020/06/06 07:48:17 AM UTC","2020/06/06 07:48:17 AM UTC",France,FR,département:Bouches-du-Rhône,FR13,en,10,0,0,,,,,,,,,Y,N,N,limesurvey-13919,tjz0auwvfckb3c5f6b,
+"2020/06/06 09:16:45 AM UTC","2020/06/06 09:16:45 AM UTC",France,FR,région:Grand-Est,FRGES,en,8,0,,,,,,,,,,N,N,N,limesurvey-13939,jd9vonl8e2kb3f34pg,
