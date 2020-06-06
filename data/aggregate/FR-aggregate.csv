@@ -416,3 +416,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 12:20:06 PM UTC","2020/06/06 12:20:06 PM UTC",France,FR,département:Charente,FR16,en,5,1,1,,,,,,,,,Y,N,N,limesurvey-13983,piq68zeqpqkb3luynj,
 "2020/06/06 04:38:04 PM UTC","2020/06/06 04:38:04 PM UTC",France,FR,département:Moselle,FR57,en,20,0,0,,,,,,,,,Y,N,N,limesurvey-14014,0yqk96d4wikb3v2pkh,
 "2020/06/06 05:47:23 PM UTC","2020/06/06 05:47:23 PM UTC",France,FR,,,en,130,5,4,,,,,,,,,Y,N,N,limesurvey-14024,7bxph40aixkb3xjuyw,
+"2020/06/06 07:51:57 PM UTC","2020/06/06 07:51:57 PM UTC",France,FR,département:Hérault,FR34,en,3,1,1,,,,,,,,,Y,N,N,limesurvey-14046,uziggaw9i2kb420232,
+"2020/06/06 08:39:56 PM UTC","2020/06/06 08:39:56 PM UTC",France,FR,département:Hérault,FR34,en,5,0,0,,,,,,,,,Y,N,N,limesurvey-14058,smiasvwgkbkb43preg,
+"2020/06/06 08:46:12 PM UTC","2020/06/06 08:46:12 PM UTC",France,FR,région:Occitanie,FROCC,en,15,2,2,,,,,,,,,Y,N,Y,limesurvey-14059,e7himfytiykb43xtcy,

@@ -413,3 +413,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 05:35:00 PM UTC","2020/06/06 05:35:00 PM UTC","United States",US,"Rhode Island",USRI,en,50,1,1,,,,,,,,,Y,N,Y,limesurvey-14023,ac6epb7ym2kb3x3yo8,
 "2020/06/06 06:24:29 PM UTC","2020/06/06 06:24:29 PM UTC","United States",US,California,USCA,en,100,0,0,,,,,,,,,Y,Y,N,limesurvey-14033,p9vclou3dakb3yvk0o,
 "2020/06/06 07:06:55 PM UTC","2020/06/06 07:06:55 PM UTC","United States",US,Pennsylvania,USPA,en,40,0,,,,,,,,,,Y,N,N,limesurvey-14040,gux6c2es1vkb40e4xd,
+"2020/06/06 08:59:22 PM UTC","2020/06/06 08:59:22 PM UTC","United States",US,Oregon,USOR,en,500,6,3,,,,,,,,,Y,Y,Y,limesurvey-14062,wfkn5g4cl0kb2zrbg8,
+"2020/06/06 09:10:52 PM UTC","2020/06/06 09:10:52 PM UTC","United States",US,California,USCA,en,70,0,0,,,,,,,,,Y,N,N,limesurvey-14064,z3fci8tw5akb44tj8g,
