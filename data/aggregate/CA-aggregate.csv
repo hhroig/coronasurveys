@@ -43,3 +43,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 01:37:27 AM UTC","2020/06/06 01:37:27 AM UTC",Canada,CA,"British Columbia",CABC,en,20,3,3,,,,,,,,,Y,N,N,limesurvey-13851,wcl7i1s5amkb2ywnz2,
 "2020/06/06 01:39:19 AM UTC","2020/06/06 01:39:19 AM UTC",Canada,CA,Ontario,CAON,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-13852,3z8aw36w19kb2yyw34,
 "2020/06/06 02:53:43 AM UTC","2020/06/06 02:53:43 AM UTC",Canada,CA,"British Columbia",CABC,en,200,4,4,,,,,,,,,Y,N,N,limesurvey-13856,j54y4dgkjpkb31mj7p,
+"2020/06/06 12:39:52 PM UTC","2020/06/06 12:39:52 PM UTC",Canada,CA,Ontario,CAON,en,3,0,0,,,,,,,,,Y,N,N,limesurvey-13987,kvfxu4q9bjkb3mkdqo,
+"2020/06/06 12:58:12 PM UTC","2020/06/06 12:58:12 PM UTC",Canada,CA,Quebec,CAQC,en,50,5,5,,,,,,,,,Y,Y,N,limesurvey-13989,vqsytk1rckkb3n7ytq,
