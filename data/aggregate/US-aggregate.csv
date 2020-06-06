@@ -404,3 +404,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 12:14:17 PM UTC","2020/06/06 12:14:17 PM UTC","United States",US,"New Jersey",USNJ,en,150,0,,,,,,,,,,Y,N,N,limesurvey-13982,kj324zauyukb3lnhwq,
 "2020/06/06 12:47:53 PM UTC","2020/06/06 12:47:53 PM UTC","United States",US,"New York",USNY,en,6,0,0,,,,,,,,,Y,N,N,limesurvey-13988,p4xljjfiq8kb3mup3v,
 "2020/06/06 01:04:27 PM UTC","2020/06/06 01:04:27 PM UTC","United States",US,Massachusetts,USMA,en,50,1,1,,,,,,,,,Y,N,N,limesurvey-13992,ds1ihmgmr9kb3nfzrp,
+"2020/06/06 03:19:19 PM UTC","2020/06/06 03:19:19 PM UTC","United States",US,Illinois,USIL,en,15,0,0,,,,,,,,,Y,N,N,limesurvey-14003,b6mghp0apxkb3s9g3w,
+"2020/06/06 03:36:30 PM UTC","2020/06/06 03:36:30 PM UTC","United States",US,Texas,USTX,en,50,3,1,,,,,,,,,N,N,N,limesurvey-14005,pa3zi7kv6tkb2wplii,
+"2020/06/06 04:28:13 PM UTC","2020/06/06 04:28:13 PM UTC","United States",US,Massachusetts,USMA,en,30,3,3,,,,,,,,,Y,N,N,limesurvey-14013,4607ttrd7pkb3uq20c,
+"2020/06/06 04:49:04 PM UTC","2020/06/06 04:49:04 PM UTC","United States",US,"Rhode Island",USRI,en,300,0,0,,,,,,,,,Y,N,N,limesurvey-14015,d13n57s4s6kb3vgtwb,
+"2020/06/06 04:56:08 PM UTC","2020/06/06 04:56:08 PM UTC","United States",US,Pennsylvania,USPA,en,800,3,3,,,,,,,,,Y,N,N,limesurvey-14016,mbhaaym4xwkb3vpyn7,
