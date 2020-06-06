@@ -408,3 +408,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 06:41:07 AM UTC","2020/06/06 06:41:07 AM UTC",France,FR,région:Île-de-France,FRIDF,en,100,20,18,,,,,,,,,,,,limesurvey-13893,n7ufdlr2w2kb39r0r3,
 "2020/06/06 07:48:17 AM UTC","2020/06/06 07:48:17 AM UTC",France,FR,département:Bouches-du-Rhône,FR13,en,10,0,0,,,,,,,,,Y,N,N,limesurvey-13919,tjz0auwvfckb3c5f6b,
 "2020/06/06 09:16:45 AM UTC","2020/06/06 09:16:45 AM UTC",France,FR,région:Grand-Est,FRGES,en,8,0,,,,,,,,,,N,N,N,limesurvey-13939,jd9vonl8e2kb3f34pg,
+"2020/06/06 09:27:46 AM UTC","2020/06/06 09:27:46 AM UTC",France,FR,,,en,30,1,1,,,,,,,,,Y,N,Y,limesurvey-13944,vu8w62mjb7kb3fkcl4,
+"2020/06/06 09:32:02 AM UTC","2020/06/06 09:32:02 AM UTC",France,FR,région:Grand-Est,FRGES,en,20,5,4,,,,,,,,,Y,N,N,limesurvey-13947,ln6kvvyponkb3fuvd5,
+"2020/06/06 09:55:08 AM UTC","2020/06/06 09:55:08 AM UTC",France,FR,département:Rhône,FR69,en,50,7,7,,,,,,,,,Y,N,N,limesurvey-13957,dejofa1ozrkb3goj2p,
+"2020/06/06 10:13:55 AM UTC","2020/06/06 10:13:55 AM UTC",France,FR,département:Rhône,FR69,en,10,1,1,,,,,,,,,Y,N,N,limesurvey-13962,tacq3rdxifkb3hcpf0,
+"2020/06/06 10:31:08 AM UTC","2020/06/06 10:31:08 AM UTC",France,FR,région:Île-de-France,FRIDF,en,20,1,1,,,,,,,,,Y,Y,N,limesurvey-13967,xlzp4n6amkkb3hyuqa,
