@@ -5093,3 +5093,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 09:17:50 PM UTC","2020/06/06 09:17:50 PM UTC",Spain,ES,"Comunidad Autónoma:La Rioja",ESRI,en,50,10,10,,0,0,,,,,,Y,N,N,limesurvey-14065,3jhnyah1e9kb45b741,
 "2020/06/07 07:42:16 AM UTC","2020/06/07 07:42:16 AM UTC",Spain,ES,Provincia:Madrid,ESM,en,150,1,1,,0,0,,,,,,Y,N,N,limesurvey-14113,sd7fkyrfurkb4rdmil,
 "2020/06/07 07:52:56 AM UTC","2020/06/07 07:52:56 AM UTC",Spain,ES,Provincia:Madrid,ESM,en,25,0,0,,0,0,,,,,,Y,N,N,limesurvey-14114,90ew1tvkzmkb4rr93g,
+"2020/06/07 09:46:57 AM UTC","2020/06/07 09:46:57 AM UTC",Spain,ES,"Comunidad Autónoma:Galicia",ESGA,en,100,3,3,,0,0,,,,,,N,N,N,limesurvey-14120,dm9mvro7fgkb4vtvbr,
+"2020/06/07 10:48:42 AM UTC","2020/06/07 10:48:42 AM UTC",Spain,ES,"Comunidad Autónoma:Andalucía",ESAN,en,200,2,2,,2,0,,,,,,Y,N,N,limesurvey-14131,bv7plosvdtkb4y1a4l,
+"2020/06/07 10:49:43 AM UTC","2020/06/07 10:49:43 AM UTC",Spain,ES,"Comunidad Autónoma:País Vasco / Euskal Herria",ESPV,en,100,4,4,,4,0,,,,,,N,N,N,limesurvey-14132,bv7plosvdtkb4y1a4l,

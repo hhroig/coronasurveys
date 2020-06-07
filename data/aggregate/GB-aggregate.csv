@@ -367,3 +367,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/06 04:24:07 PM UTC","2020/06/06 04:24:07 PM UTC","United Kingdom",GB,England,GBENG,en,4,2,2,,0,0,,,,,,Y,N,N,limesurvey-14010,7xemymh9mokb3ukrp2,
 "2020/06/06 06:10:10 PM UTC","2020/06/06 06:10:10 PM UTC","United Kingdom",GB,England,GBENG,en,25,4,4,,0,0,,,,,,Y,N,N,limesurvey-14031,lehymzn8orkb3yd6y7,
 "2020/06/06 08:58:49 PM UTC","2020/06/06 08:58:49 PM UTC","United Kingdom",GB,England,GBENG,en,20,1,1,,0,0,,,,,,Y,N,N,limesurvey-14061,jakokubz5tkb44e1yd,
+"2020/06/07 09:55:53 AM UTC","2020/06/07 09:55:53 AM UTC","United Kingdom",GB,"Northern Ireland",GBNIR,en,50,1,0,,0,0,,,,,,Y,N,N,limesurvey-14122,ajnkfwlfimkb4w5e2l,
+"2020/06/07 10:00:13 AM UTC","2020/06/07 10:00:13 AM UTC","United Kingdom",GB,"Northern Ireland",GBNIR,en,10,0,0,,0,0,,,,,,Y,Y,Y,limesurvey-14123,l435bqcmilkb4waxt3,
+"2020/06/07 10:08:13 AM UTC","2020/06/07 10:08:13 AM UTC","United Kingdom",GB,England,GBENG,en,10,0,0,,0,0,,,,,,Y,N,N,limesurvey-14125,9f3e0q5lojkb4wl8bh,
+"2020/06/07 11:07:06 AM UTC","2020/06/07 11:07:06 AM UTC","United Kingdom",GB,"Wales; Cymru",GBWLS,en,20,0,0,,0,0,,,,,,N,N,N,limesurvey-14135,c7z5kga93hkb4yko2n,
+"2020/06/07 11:08:07 AM UTC","2020/06/07 11:08:07 AM UTC","United Kingdom",GB,England,GBENG,en,21,1,1,,0,0,,,,,,N,N,N,limesurvey-14136,c7z5kga93hkb4yko2n,
