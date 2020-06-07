@@ -5107,3 +5107,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/07 01:42:17 PM UTC","2020/06/07 01:42:17 PM UTC",Spain,ES,"Comunidad Autónoma:País Vasco / Euskal Herria",ESPV,en,150,3,3,,1,0,,,,,,,Y,Y,limesurvey-14161,zi36c254j2kb547tx0,
 "2020/06/07 01:42:21 PM UTC","2020/06/07 01:42:21 PM UTC",Spain,ES,"Comunidad Autónoma:País Vasco / Euskal Herria",ESPV,en,150,3,3,,1,0,,,,,,,Y,Y,limesurvey-14162,zi36c254j2kb547tx0,
 "2020/06/07 02:55:13 PM UTC","2020/06/07 02:55:13 PM UTC",Spain,ES,"Comunidad Autónoma:Madrid, Comunidad de",ESMD,en,23,2,2,,0,0,,,,,,Y,N,N,limesurvey-14165,z1wfwwzic6kb56nfqc,
+"2020/06/07 03:56:15 PM UTC","2020/06/07 03:56:15 PM UTC",Spain,ES,Provincia:Madrid,ESM,en,100,16,15,,0,0,,,,,,N,Y,Y,limesurvey-14169,7ggtjeju9mkb590sao,
+"2020/06/07 03:57:11 PM UTC","2020/06/07 03:57:11 PM UTC",Spain,ES,Provincia:Toledo,ESTO,en,50,5,4,,0,0,,,,,,N,Y,Y,limesurvey-14170,7ggtjeju9mkb590sao,
