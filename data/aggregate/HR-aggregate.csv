@@ -1,3 +1,4 @@
 Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
 "2020/05/15 08:31:21 AM UTC","2020/05/15 08:31:21 AM UTC",Croatia,HR,"Osječko-baranjska županija",HR14,en,7,0,0,,,,,,,,,N,N,N,limesurvey,reh3dtv93aka7xxwxy,
 "2020/05/21 09:20:51 AM UTC","2020/05/21 09:20:51 AM UTC",Croatia,HR,"Zagrebačka županija",HR01,en,10,0,,,,,,,,,,Y,N,N,limesurvey-9957,qoh8ngku4skagketu7,
+"2020/06/06 10:56:00 AM UTC","2020/06/06 10:56:00 AM UTC",Croatia,HR,"Krapinsko-zagorska županija",HR02,en,50,0,0,,,,,,,,,Y,N,N,limesurvey-13971,7mqkfk58d9kb3iut36,

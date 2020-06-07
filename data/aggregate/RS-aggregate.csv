@@ -1,0 +1,2 @@
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/06/05 08:23:50 PM UTC","2020/06/05 08:23:50 PM UTC",Serbia,RS,"Podunavski okrug",RS10,en,20,0,0,,,,,,,,,Y,N,N,limesurvey-13674,k2axc6yf8nkb2np7en,
