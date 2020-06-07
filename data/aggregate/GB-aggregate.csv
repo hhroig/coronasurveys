@@ -380,3 +380,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/07 05:16:18 PM UTC","2020/06/07 05:16:18 PM UTC","United Kingdom",GB,England,GBENG,en,550,6,6,,0,0,,,,,,Y,N,N,limesurvey-14174,tppq7wjco1kb5bvqd4,
 "2020/06/07 05:37:39 PM UTC","2020/06/07 05:37:39 PM UTC","United Kingdom",GB,England,GBENG,en,20,1,1,,0,0,,,,,,Y,N,N,limesurvey-14177,hw6c44dqb4kb5cn656,
 "2020/06/07 06:13:58 PM UTC","2020/06/07 06:13:58 PM UTC","United Kingdom",GB,England,GBENG,en,30,6,6,,0,0,,,,,,Y,N,N,limesurvey-14191,tshbd1tni3kb5dxwdi,
+"2020/06/07 08:18:34 PM UTC","2020/06/07 08:18:34 PM UTC","United Kingdom",GB,"Northern Ireland",GBNIR,en,15,0,0,,0,0,,,,,,Y,Y,N,limesurvey-14196,08s42ah2btkb5ie5vm,
