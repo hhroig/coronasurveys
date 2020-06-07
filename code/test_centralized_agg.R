@@ -1,5 +1,5 @@
 # without recent cases
-provincial_regional_estimate <- function(countrycode = "PT",
+provincial_regional_estimate <- function(countrycode = "ES",
                                           province = T,
                                           district = F,
                                           W = 90,
@@ -42,8 +42,6 @@ provincial_regional_estimate <- function(countrycode = "PT",
     # get data from the past up to W days earlier
     subcondition <- (as.Date(dt$date) >= (as.Date(j)-W)  & as.Date(dt$date) <= as.Date(j) )
     dt_date <- dt[subcondition, ]
-    
-    
     # compute provincia provinces
     if (province == T){
       dtprovs <- na.omit(dt_region2)
@@ -52,7 +50,10 @@ provincial_regional_estimate <- function(countrycode = "PT",
       for (i in seq_along(provs)) {
         provpop <- dtprovs$population[dtprovs$provincecode == provs[i]]
         dt_prov <- dt_date[dt_date$iso.3166.2 == provs[i], ]
-        if((sum(dt_prov$reach)/provpop) >= alpha){
+        required_reach <- round(alpha * provpop)
+        reverse_cumsum_reach_test <- cumsum(rev(dt_prov$reach)) >= required_reach
+        if(any(reverse_cumsum_reach_test)){
+          dt_prov <- tail(dt_prov, min(which(reverse_cumsum_reach_test)))
           p_w_provs[i] <- sum(dt_prov$cases)/sum(dt_prov$reach)
           p_m_provs[i]  <- mean(dt_prov$cases/dt_prov$reach)
           
@@ -86,7 +87,10 @@ provincial_regional_estimate <- function(countrycode = "PT",
     for (k in seq_along(regions)) {
       regpop <- dtregs$population_region[dtregs$regioncode == regions[k]]
       dt_reg <- dt_date[dt_date$iso.3166.2 == regions[k], ]
-      if((sum(dt_reg$reach)/regpop) >= alpha){
+      required_reach_reg <- round(alpha * regpop)
+      reverse_cumsum_reach_test_reg <- cumsum(rev(dt_reg$reach)) >= required_reach_reg
+      if(any(reverse_cumsum_reach_test_reg)){
+        dt_reg <- tail(dt_reg, min(which(reverse_cumsum_reach_test_reg)))
         p_w_regs_only[k] <- sum(dt_reg$cases)/sum(dt_reg$reach)
         p_m_regs_only[k] <- mean(dt_reg$cases/dt_reg$reach)
         
@@ -335,7 +339,11 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
       for (i in seq_along(provs)) {
         provpop <- dtprovs$population[dtprovs$provincecode == provs[i]]
         dt_prov <- dt_date[dt_date$iso.3166.2 == provs[i], ]
-        if((sum(dt_prov$reach)/provpop) >= alpha){
+        required_reach <- round(alpha * provpop)
+        reverse_cumsum_reach_test <- cumsum(rev(dt_prov$reach)) >= required_reach
+        
+        if(any(reverse_cumsum_reach_test)){
+          dt_prov <- tail(dt_prov, min(which(reverse_cumsum_reach_test)))
           p_w_provs[i] <- sum(dt_prov$cases)/sum(dt_prov$reach)
           p_m_provs[i]  <- mean(dt_prov$cases/dt_prov$reach)
           recent_p_w_provs[i] <- ifelse(all(is.na(dt_prov$recentcases)), 
@@ -373,7 +381,10 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     for (k in seq_along(regions)) {
       regpop <- dtregs$population_region[dtregs$regioncode == regions[k]]
       dt_reg <- dt_date[dt_date$iso.3166.2 == regions[k], ]
-      if((sum(dt_reg$reach)/regpop) >= alpha){
+      required_reach_reg <- round(alpha * regpop)
+      reverse_cumsum_reach_test_reg <- cumsum(rev(dt_reg$reach)) >= required_reach_reg
+      if(any(reverse_cumsum_reach_test_reg)){
+        dt_reg <- tail(dt_reg, min(which(reverse_cumsum_reach_test_reg)))
         p_w_regs_only[k] <- sum(dt_reg$cases)/sum(dt_reg$reach)
         p_m_regs_only[k] <- mean(dt_reg$cases/dt_reg$reach)
         recent_p_w_regs_only[k] <- ifelse(all(is.na(dt_reg$recentcases)),
