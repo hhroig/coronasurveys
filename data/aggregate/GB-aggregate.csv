@@ -398,3 +398,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/08 10:16:38 AM UTC","2020/06/08 10:16:38 AM UTC","United Kingdom",GB,,,en,150,2,2,,0,0,,,,,,Y,N,N,limesurvey-14278,jjv6tu5y95kb6cbwkf,
 "2020/06/08 10:34:11 AM UTC","2020/06/08 10:34:11 AM UTC","United Kingdom",GB,England,GBENG,en,20,6,6,,0,0,,,,,,Y,N,N,limesurvey-14281,yk4hcf3mdakb6cyh0l,
 "2020/06/08 11:15:43 AM UTC","2020/06/08 11:15:43 AM UTC","United Kingdom",GB,England,GBENG,en,50,4,4,,0,0,,,,,,Y,N,N,limesurvey-14285,9rjn1yikxtkb6efw32,
+"2020/06/08 01:10:48 PM UTC","2020/06/08 01:10:48 PM UTC","United Kingdom",GB,England,GBENG,en,200,0,0,,0,0,,,,,,Y,Y,Y,limesurvey-14300,hmc1cumnygkb6ijvh0,
+"2020/06/08 11:21:03 AM UTC","2020/06/08 11:21:03 AM UTC","United Kingdom",GB,England,GBENG,en,15,3,3,,0,0,,,,,,Y,Y,N,limesurvey-14286,j1kne0pndmkb6empsh,
+"2020/06/08 11:40:13 AM UTC","2020/06/08 11:40:13 AM UTC","United Kingdom",GB,Scotland,GBSCT,en,32,1,1,,0,0,,,,,,Y,N,N,limesurvey-14291,y0qzrqad8xkb6fbdaq,
+"2020/06/08 11:57:02 AM UTC","2020/06/08 11:57:01 AM UTC","United Kingdom",GB,England,GBENG,en,10,5,5,,0,0,,,,,,Y,N,N,limesurvey-14294,tiqrfp1kp8kb6fx062,
+"2020/06/08 12:20:00 PM UTC","2020/06/08 12:19:59 PM UTC","United Kingdom",GB,Scotland,GBSCT,en,34,7,7,,0,0,,,,,,Y,N,Y,limesurvey-14296,4o682zo4sskb6gqpbh,
