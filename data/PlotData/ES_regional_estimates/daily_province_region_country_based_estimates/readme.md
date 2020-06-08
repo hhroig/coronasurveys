@@ -10,7 +10,7 @@
 
 **- sr_prov: sum of the reach in responses for the province data only**
 
-**- pop_reg: region population (sum or pop_prov grouped by regioncode) (M_k)**
+**- pop_reg: region population (sum of pop_prov grouped by regioncode) (M_k)**
 
 **- p_w_reg_only: estimate of p as sum_cases/sum_reach from region data only**
 

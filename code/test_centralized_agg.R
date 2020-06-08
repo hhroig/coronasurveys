@@ -2,8 +2,8 @@
 provincial_regional_estimate <- function(countrycode = "ES",
                                           province = T,
                                           district = F,
-                                          W = 90,
-                                          alpha = 0.00001,
+                                          W = 30,
+                                          alpha = 0.0001,
                                           max_ratio = .3,
                                           provinces_and_codes = readxl::read_excel("regions-tree-population.xlsx"),
                                           write_summary_file = T,
@@ -265,13 +265,11 @@ provincial_regional_estimate <- function(countrycode = "ES",
 
 provincial_regional_estimate(countrycode = "EC",
                              province = F,
-                             alpha = 0.00001,
                              write_summary_file = T,
                              write_daily_file = T)
 
 provincial_regional_estimate(countrycode = "US",
                              province = F,
-                             alpha = 0.00001,
                              write_summary_file = T,
                              write_daily_file = T)
 
@@ -295,8 +293,8 @@ provincial_regional_estimate(countrycode = "UA",
 provincial_regional_estimate2 <- function(countrycode = "ES",
                                          province = T,
                                          district = F,
-                                         W = 90,
-                                         alpha = 0.00001,
+                                         W = 30,
+                                         alpha = 0.0001,
                                          max_ratio = .3,
                                          provinces_and_codes = readxl::read_excel("regions-tree-population.xlsx"),
                                          write_summary_file = T,
@@ -615,18 +613,15 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
 
 provincial_regional_estimate2(countrycode = "ES",
                                write_summary_file = T,
-                               alpha = 0.0001,
                                write_daily_file = T)
 
 provincial_regional_estimate2(countrycode = "BR",
                              province = F,
-                             alpha = 0.00001,
                              write_summary_file = T,
                              write_daily_file = T)
 
 provincial_regional_estimate2(countrycode = "GB",
                               province = F,
-                              alpha = 0.00001,
                               write_summary_file = T,
                               write_daily_file = T)
 
