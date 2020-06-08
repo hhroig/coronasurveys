@@ -66,7 +66,6 @@ provincial_regional_estimate <- function(countrycode = "ES",
       dtestpropprovs <- data.frame(provincecode = provs,
                                    p_w_provs = p_w_provs,
                                    p_m_provs = p_m_provs,
-                                   
                                    sumreach_provs  = sumreach_provs)
       
       dtprovs <- merge(dtprovs, dtestpropprovs, all = T, by = "provincecode")
@@ -93,7 +92,6 @@ provincial_regional_estimate <- function(countrycode = "ES",
         dt_reg <- tail(dt_reg, min(which(reverse_cumsum_reach_test_reg)))
         p_w_regs_only[k] <- sum(dt_reg$cases)/sum(dt_reg$reach)
         p_m_regs_only[k] <- mean(dt_reg$cases/dt_reg$reach)
-        
         sumreach_regs[k] <- sum(dt_reg$reach)
       }else{
         sumreach_regs[k] <- sum(dt_reg$reach)
@@ -104,7 +102,6 @@ provincial_regional_estimate <- function(countrycode = "ES",
     dtestpropregs <- data.frame(regioncode = regions,
                                 p_w_regs_only = p_w_regs_only,
                                 p_m_regs_only = p_m_regs_only,
-                                
                                 sumreach_regs = sumreach_regs)
     
     dtregs <- merge(dtregs, dtestpropregs, all = T, by = "regioncode")
@@ -117,18 +114,16 @@ provincial_regional_estimate <- function(countrycode = "ES",
       uregions <- unique(dt_est_prov_reg$regioncode)
       p_w_regs_rhs <-  p_m_regs_rhs <-  sumreach_regs_rhs <- rep(NA, length(uregions))
       for (l in seq_along(uregions)) {
-        dt_est_reg <- na.omit(dt_est_prov_reg[dt_est_prov_reg$regioncode == uregions[l], ])
-        weightreg <- dt_est_reg$population/dt_est_reg$population_region
+        dt_est_reg <- na.omit(dt_est_prov_reg[dt_est_prov_reg$regioncode == uregions[l], ]) # note here
+        weightreg <- dt_est_reg$population/sum(dt_est_reg$population) #note here
         p_w_regs_rhs[l] <- sum(weightreg * dt_est_reg$p_w_provs)
         p_m_regs_rhs[l] <- sum(weightreg * dt_est_reg$p_m_provs)
-        
         sumreach_regs_rhs[l] <- sum(dt_est_reg$sumreach_provs)
       }
       
       dt_regs_rhs <- data.frame(regioncode = unique(dt_est_prov_reg$regioncode),
                                 p_w_regs_rhs = p_w_regs_rhs,
                                 p_m_regs_rhs = p_m_regs_rhs,
-                                
                                 sumreach_regs_rhs = sumreach_regs_rhs)
       
       dt_est_prov_reg <- merge(dt_est_prov_reg, dt_regs_rhs, by = c("regioncode"))
@@ -155,9 +150,19 @@ provincial_regional_estimate <- function(countrycode = "ES",
     
     ## aggregate regional estimates into provinvial estimates
     dt_country <- dt_date[dt_date$iso.3166.2 == countrycode, ]
-    sumreach_country <- sum(dt_country$reach)
-    p_w_country_only <- sum(dt_country$cases)/sumreach_country
-    p_m_country_only <- mean(dt_country$cases/dt_country$reach)
+    required_reach_country <- round(alpha * sum(dtregs$population_region))
+    reverse_cumsum_reach_test_country <- cumsum(rev(dt_country$reach)) >= required_reach_country
+    p_w_country_only <- p_m_country_only <-sumreach_country <-NA
+    if(any(reverse_cumsum_reach_test_country)){
+      dt_country <- tail(dt_country, min(which(reverse_cumsum_reach_test_country)))
+      p_w_country_only <- sum(dt_country$cases)/sum(dt_country$reach)
+      p_m_country_only <- mean(dt_country$cases/dt_country$reach)
+      sumreach_country <- sum(dt_country$reach)
+    }else{
+      sumreach_country <- sum(dt_country$reach)
+    }
+    
+    
     
     
     
@@ -173,9 +178,10 @@ provincial_regional_estimate <- function(countrycode = "ES",
                                         stringsAsFactors = F)
                            })
     dt_est_reg_count <- do.call(rbind, dt_est_reg_count)
-    weightcountry <- dt_est_reg_count$population_region/sum(dt_est_reg_count$population_region)
-    p_w_country_rhs <- sum(weightcountry * dt_est_reg_count$p_w_regs, na.rm = T)
-    p_m_country_rhs <- sum(weightcountry * dt_est_reg_count$p_m_regs, na.rm = T)
+    dt_est_reg_count <- na.omit(dt_est_reg_count) ## note here
+    weightcountry <- dt_est_reg_count$population_region/sum(dt_est_reg_count$population_region) # note here
+    p_w_country_rhs <- sum(weightcountry * dt_est_reg_count$p_w_regs)
+    p_m_country_rhs <- sum(weightcountry * dt_est_reg_count$p_m_regs)
     sumreach_country_rhs <-  sum(dt_est_reg_count$sumreach_regs)
     
     
@@ -320,7 +326,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
   
   dt_region2 <- dt_region[, c("countrycode",  "regioncode",   "provincecode", "population")] ## bring autonomous cities code to lowest level
 
-  r_c <- r_r <-  I_c_p_w_country <- I_c_p_m_country <- I_c_recent_p_w_country <- I_c_recent_p_m_country <- c()
+  r_c <- r_r <- r_r_recent <-  I_c_p_w_country <- I_c_p_m_country <- I_c_recent_p_w_country <- I_c_recent_p_m_country <- c()
   I_r_p_w_country <- I_r_p_m_country <- I_r_recent_p_w_country <- I_r_recent_p_m_country <- c()
   p_w_country <- p_m_country <- recent_p_w_country <- recent_p_m_country <- c()
   
@@ -413,16 +419,19 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
       dt_est_prov_reg <- merge(dtprovs, dtregs, all = T, by = c("countrycode", "regioncode")) 
       # go over regions and computed aggregated means
       uregions <- unique(dt_est_prov_reg$regioncode)
-      p_w_regs_rhs <-  p_m_regs_rhs <- recent_p_w_regs_rhs <- recent_p_m_regs_rhs <- sumreach_regs_rhs <- rep(NA, length(uregions))
+      p_w_regs_rhs <-  p_m_regs_rhs <- recent_p_w_regs_rhs <- recent_p_m_regs_rhs <- sumreach_regs_rhs1 <- sumreach_regs_rhs2 <- rep(NA, length(uregions))
       for (l in seq_along(uregions)) {
-        dt_est_reg <- na.omit(dt_est_prov_reg[dt_est_prov_reg$regioncode == uregions[l], ])
-        weightreg <- dt_est_reg$population/dt_est_reg$population_region
-        p_w_regs_rhs[l] <- sum(weightreg * dt_est_reg$p_w_provs)
-        p_m_regs_rhs[l] <- sum(weightreg * dt_est_reg$p_m_provs)
-        recent_p_w_regs_rhs[l] <- sum(weightreg * dt_est_reg$recent_p_w_provs)
-        recent_p_m_regs_rhs[l] <- sum(weightreg * dt_est_reg$recent_p_m_provs)
-        
-        sumreach_regs_rhs[l] <- sum(dt_est_reg$sumreach_provs)
+        dt_est_reg <- dt_est_prov_reg[dt_est_prov_reg$regioncode == uregions[l], ]
+        dt_est_reg1 <- na.omit(dt_est_reg[, c(1:6, 9:15)])
+        weightreg1 <- dt_est_reg1$population/sum(dt_est_reg1$population)
+        p_w_regs_rhs[l] <- sum(weightreg1 * dt_est_reg1$p_w_provs)
+        p_m_regs_rhs[l] <- sum(weightreg1 * dt_est_reg1$p_m_provs)
+        sumreach_regs_rhs1[l] <- sum(dt_est_reg1$sumreach_provs)
+        dt_est_reg2 <- na.omit(dt_est_reg[, c(1:4, 7:15)])
+        weightreg2 <- dt_est_reg2$population/sum(dt_est_reg2$population)
+        recent_p_w_regs_rhs[l] <- sum(weightreg2 * dt_est_reg2$recent_p_w_provs)
+        recent_p_m_regs_rhs[l] <- sum(weightreg2 * dt_est_reg2$recent_p_m_provs)
+        sumreach_regs_rhs2[l] <- sum(dt_est_reg2$sumreach_provs)
       }
       
       dt_regs_rhs <- data.frame(regioncode = unique(dt_est_prov_reg$regioncode),
@@ -430,24 +439,25 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                 p_m_regs_rhs = p_m_regs_rhs,
                                 recent_p_w_regs_rhs = recent_p_w_regs_rhs,
                                 recent_p_m_regs_rhs = recent_p_m_regs_rhs,
-                                sumreach_regs_rhs = sumreach_regs_rhs)
+                                sumreach_regs_rhs1 = sumreach_regs_rhs1,
+                                sumreach_regs_rhs2 = sumreach_regs_rhs2)
       
       dt_est_prov_reg <- merge(dt_est_prov_reg, dt_regs_rhs, by = c("regioncode"))
       
-      dt_est_prov_reg$p_w_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs)) *
-                                             dt_est_prov_reg$p_w_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs)) *
+      dt_est_prov_reg$p_w_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
+                                             dt_est_prov_reg$p_w_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs1/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
                                                                                 dt_est_prov_reg$p_w_regs_rhs)
       
-      dt_est_prov_reg$p_m_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs)) *
-                                              dt_est_prov_reg$p_m_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs)) *
+      dt_est_prov_reg$p_m_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs1)) *
+                                              dt_est_prov_reg$p_m_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs1/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
                                                                                   dt_est_prov_reg$p_m_regs_rhs)
       
-      dt_est_prov_reg$recent_p_w_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs)) *
-                                              dt_est_prov_reg$recent_p_w_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs)) *
+      dt_est_prov_reg$recent_p_w_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
+                                              dt_est_prov_reg$recent_p_w_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs2/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
                                                                                   dt_est_prov_reg$recent_p_w_regs_rhs)
       
-      dt_est_prov_reg$recent_p_m_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs)) *
-                                              dt_est_prov_reg$recent_p_m_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs)) *
+      dt_est_prov_reg$recent_p_m_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs2)) *
+                                              dt_est_prov_reg$recent_p_m_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs2/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
                                                                                   dt_est_prov_reg$recent_p_m_regs_rhs)
       
       
@@ -463,13 +473,21 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     
     ## aggregate regional estimates into provinvial estimates
     dt_country <- dt_date[dt_date$iso.3166.2 == countrycode, ]
-    sumreach_country <- sum(dt_country$reach)
-    p_w_country_only <- sum(dt_country$cases)/sumreach_country
-    p_m_country_only <- mean(dt_country$cases/dt_country$reach)
-    recent_p_w_country_only <- ifelse(all(is.na(dt_country$recentcases)),
-                               NA, sum(dt_country$recentcases, na.rm = T)/sum(dt_country$reach[!is.na(dt_country$recentcases)])) # may change
-    recent_p_m_country_only <- ifelse(all(is.na(dt_country$recentcases)),
-                                NA, mean(dt_country$recentcases/dt_country$reach, na.rm = T))
+    required_reach_country <- round(alpha * sum(dtregs$population_region))
+    reverse_cumsum_reach_test_country <- cumsum(rev(dt_country$reach)) >= required_reach_country
+    p_w_country_only <- p_m_country_only <- recent_p_w_country_only <- recent_p_m_country_only <- sumreach_country <-NA
+    if(any(reverse_cumsum_reach_test_country)){
+      dt_country <- tail(dt_country, min(which(reverse_cumsum_reach_test_country)))
+      p_w_country_only <- sum(dt_country$cases)/sum(dt_country$reach)
+      p_m_country_only <- mean(dt_country$cases/dt_country$reach)
+      recent_p_w_country_only <- ifelse(all(is.na(dt_country$recentcases)),
+                                        NA, sum(dt_country$recentcases, na.rm = T)/sum(dt_country$reach[!is.na(dt_country$recentcases)]))
+      recent_p_m_country_only <- ifelse(all(is.na(dt_country$recentcases)),
+                                        NA, mean(dt_country$recentcases/dt_country$reach, na.rm = T))
+      sumreach_country <- sum(dt_country$reach)
+    }else{
+      sumreach_country <- sum(dt_country$reach)
+    }
     
     
     dt_est_reg_count <- by(dt_est_prov_reg,
@@ -486,26 +504,30 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                         stringsAsFactors = F)
                            })
     dt_est_reg_count <- do.call(rbind, dt_est_reg_count)
-    weightcountry <- dt_est_reg_count$population_region/sum(dt_est_reg_count$population_region)
-    p_w_country_rhs <- sum(weightcountry * dt_est_reg_count$p_w_regs, na.rm = T)
-    p_m_country_rhs <- sum(weightcountry * dt_est_reg_count$p_m_regs, na.rm = T)
-    recent_p_w_country_rhs <- sum(weightcountry * dt_est_reg_count$recent_p_w_regs, na.rm = T)
-    recent_p_m_country_rhs <- sum(weightcountry * dt_est_reg_count$recent_p_m_regs, na.rm = T)
-    sumreach_country_rhs <-  sum(dt_est_reg_count$sumreach_regs)
+    dt_est_reg_count1 <- na.omit(dt_est_reg_count[,c(1,2,3,4,5,8)])
+    weightcountry1 <- dt_est_reg_count1$population_region/sum(dt_est_reg_count1$population_region)
+    p_w_country_rhs <- sum(weightcountry1 * dt_est_reg_count1$p_w_regs)
+    p_m_country_rhs <- sum(weightcountry1 * dt_est_reg_count1$p_m_regs)
+    dt_est_reg_count2 <- na.omit(dt_est_reg_count[,c(1,2,3,6,7,8)])
+    weightcountry2 <- dt_est_reg_count2$population_region/sum(dt_est_reg_count2$population_region)
+    recent_p_w_country_rhs <- sum(weightcountry2 * dt_est_reg_count2$recent_p_w_regs)
+    recent_p_m_country_rhs <- sum(weightcountry2 * dt_est_reg_count2$recent_p_m_regs)
+    sumreach_country_rhs1<-  sum(dt_est_reg_count1$sumreach_regs)
+    sumreach_country_rhs2 <-  sum(dt_est_reg_count2$sumreach_regs)
     
     
     
+    p_w_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs1)) * p_w_country_only) + 
+      ((sumreach_country_rhs1/(sumreach_country + sumreach_country_rhs1)) * p_w_country_rhs)
     
-    p_w_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs)) * p_w_country_only) + 
-      ((sumreach_country_rhs/(sumreach_country + sumreach_country_rhs)) * p_w_country_rhs)
-    p_m_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs)) * p_m_country_only) + 
-      ((sumreach_country_rhs/(sumreach_country + sumreach_country_rhs)) * p_m_country_rhs)
+    p_m_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs1)) * p_m_country_only) + 
+      ((sumreach_country_rhs1/(sumreach_country + sumreach_country_rhs1)) * p_m_country_rhs)
     
-    recent_p_w_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs)) * recent_p_w_country_only) + 
-      ((sumreach_country_rhs/(sumreach_country + sumreach_country_rhs)) * recent_p_w_country_rhs)
+    recent_p_w_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs2)) * recent_p_w_country_only) + 
+      ((sumreach_country_rhs2/(sumreach_country + sumreach_country_rhs2)) * recent_p_w_country_rhs)
     
-    recent_p_m_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs)) * recent_p_m_country_only) + 
-      ((sumreach_country_rhs/(sumreach_country + sumreach_country_rhs)) * recent_p_m_country_rhs)
+    recent_p_m_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs2)) * recent_p_m_country_only) + 
+      ((sumreach_country_rhs2/(sumreach_country + sumreach_country_rhs2)) * recent_p_m_country_rhs)
     
 
     
@@ -520,9 +542,10 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                  sumreach_country = sumreach_country,
                                  p_w_country_rhs = p_w_country_rhs,
                                  p_m_country_rhs = p_m_country_rhs, 
+                                 sumreach_country_rhs = sumreach_country_rhs1,
                                  recent_p_w_country_rhs = recent_p_w_country_rhs,
                                  recent_p_m_country_rhs = recent_p_m_country_rhs, 
-                                 sumreach_country_rhs = sumreach_country_rhs, 
+                                 recent_sumreach_country_rhs = sumreach_country_rhs2, 
                                  p_w_country =  p_w_counts,
                                  p_m_country =  p_m_counts,
                                  recent_p_w_country =  recent_p_w_counts,
@@ -541,7 +564,8 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     
     
     r_c <-  c(r_c, sumreach_country)
-    r_r <-  c(r_r, sumreach_country_rhs)
+    r_r <-  c(r_r, sumreach_country_rhs1)
+    r_r_recent <-  c(r_r_recent, sumreach_country_rhs2)
     I_c_p_w_country <- c(I_c_p_w_country, p_w_country_only)
     I_c_p_m_country <- c(I_c_p_m_country, p_m_country_only)
     I_c_recent_p_w_country <- c(I_c_recent_p_w_country, recent_p_w_country_only)
@@ -562,6 +586,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
   region_based_estimate <- data.frame(date = dates,
                                       r_c = r_c,
                                       r_r = r_r,
+                                      r_r_recent = r_r_recent,
                                       I_c_p_w_country = I_c_p_w_country,
                                       I_c_p_m_country = I_c_p_m_country,
                                       I_c_recent_p_w_country = I_c_recent_p_w_country,
@@ -590,7 +615,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
 
 provincial_regional_estimate2(countrycode = "ES",
                                write_summary_file = T,
-                               alpha = 0.00001,
+                               alpha = 0.0001,
                                write_daily_file = T)
 
 provincial_regional_estimate2(countrycode = "BR",
