@@ -724,3 +724,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/08 07:31:46 AM UTC","2020/06/08 07:31:46 AM UTC",Italy,IT,Regioni:Sardegna,IT88,en,10,0,,,,,,,,,,Y,N,N,limesurvey-14241,ae0y6i1bxykb66fv2k,
 "2020/06/08 08:41:49 AM UTC","2020/06/08 08:41:49 AM UTC",Italy,IT,Province:Roma,ITRM,en,18,1,1,,,,,,,,,Y,N,N,limesurvey-14254,8hc1dxpvu1kb68vf59,
 "2020/06/08 09:21:34 AM UTC","2020/06/08 09:21:34 AM UTC",Italy,IT,Regioni:Lombardia,IT25,en,50,1,1,,,,,,,,,Y,N,N,limesurvey-14264,77p4e8rjdokb6ad33j,
+"2020/06/08 10:13:16 PM UTC","2020/06/08 10:13:16 PM UTC",Italy,IT,Regioni:Lombardia,IT25,en,15,0,0,,,,,,,,,Y,N,Y,limesurvey-14554,7ajg7qm9slkb71xgos,
+"2020/06/08 10:19:00 PM UTC","2020/06/08 10:19:00 PM UTC",Italy,IT,Regioni:Lombardia,IT25,en,100,10,8,,,,,,,,,Y,Y,N,limesurvey-14555,ty5ocy5bd5kb724u37,
