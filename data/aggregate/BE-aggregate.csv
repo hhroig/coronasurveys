@@ -17,3 +17,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/05/28 10:38:45 AM UTC","2020/05/28 10:38:45 AM UTC",Belgium,BE,"Vlaams Gewest",BEVLG,en,30,0,0,,,,,,,,,N,Y,Y,limesurvey-12085,wgfpmtb7hdka2wdc9o,
 "2020/06/05 08:49:42 PM UTC","2020/06/05 08:49:42 PM UTC",Belgium,BE,"Bruxelles-Capitale, Région de;Brussels Hoofdstedelijk Gewest",BEBRU,en,100,2,0,,,,,,,,,Y,N,N,limesurvey-13698,g9vdnntgj0kb2omh2o,
 "2020/06/09 03:41:09 PM UTC","2020/06/09 03:41:09 PM UTC",Belgium,BE,"Bruxelles-Capitale, Région de;Brussels Hoofdstedelijk Gewest",BEBRU,en,60,2,2,,,,,,,,,N,N,N,limesurvey-14645,g9vdnntgj0kb2omh2o,
+"2020/06/09 06:34:53 PM UTC","2020/06/09 06:34:53 PM UTC",Belgium,BE,Vlaams-Brabant,BEVBR,en,30,1,1,,,,,,,,,Y,N,Y,limesurvey-14860,kgquipiuqakb89khya,
