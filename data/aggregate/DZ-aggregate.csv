@@ -1,0 +1,2 @@
+Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+"2020/06/09 03:58:04 PM UTC","2020/06/09 03:58:04 PM UTC",Algeria,DZ,Alger,DZ16,en,100,3,1,,,,,,,,,Y,N,N,limesurvey-14688,gibxlg7fu1kb83yss1,
