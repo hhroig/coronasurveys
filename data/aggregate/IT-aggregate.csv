@@ -750,3 +750,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/10 07:11:41 AM UTC","2020/06/10 07:11:41 AM UTC",Italy,IT,Regioni:Lazio,IT62,en,20,3,3,,,,,,,,,Y,N,N,limesurvey-15040,oz6knvur8okb90lf8o,
 "2020/06/10 07:12:21 AM UTC","2020/06/10 07:12:21 AM UTC",Italy,IT,Regioni:Lazio,IT62,en,20,3,3,,,,,,,,,Y,N,N,limesurvey-15045,lzssb1aqcfkb90mlsm,
 "2020/06/10 09:14:19 AM UTC","2020/06/10 09:14:19 AM UTC",Italy,IT,Regioni:Veneto,IT34,en,50,0,0,,,,,,,,,Y,N,N,limesurvey-15084,c1q3cyfy2bkb94zgfg,
+"2020/06/10 09:29:17 AM UTC","2020/06/10 09:29:17 AM UTC",Italy,IT,,,en,21,1,1,,,,,,,,,N,N,N,limesurvey-15089,8hc1dxpvu1kb68vf59,
+"2020/06/10 10:17:21 AM UTC","2020/06/10 10:17:21 AM UTC",Italy,IT,Regioni:Lazio,IT62,en,50,0,0,,,,,,,,,N,N,N,limesurvey-15101,pdauc4b39hkb3ars11,
