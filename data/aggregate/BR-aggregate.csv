@@ -431,3 +431,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/10 07:40:09 PM UTC","2020/06/10 07:40:09 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,100,3,3,0,1,0,,,,,,Y,N,N,limesurvey-15219,90wlj78v4vkb9rcb1j,
 "2020/06/10 07:50:07 PM UTC","2020/06/10 07:50:07 PM UTC",Brazil,BR,Bahia,BRBA,en,25,0,,,,,,,,,,Y,N,N,limesurvey-15221,zk386bu3qgkb9rp0eh,
 "2020/06/10 08:19:49 PM UTC","2020/06/10 08:19:48 PM UTC",Brazil,BR,"Distrito Federal",BRDF,en,20,1,1,0,0,0,,,,,,Y,N,N,limesurvey-15225,pf0i6v7hwhkb9srauo,
+"2020/06/10 10:32:45 PM UTC","2020/06/10 10:32:45 PM UTC",Brazil,BR,"Rio Grande do Sul",BRRS,en,50,0,0,0,0,0,,,,,,Y,N,N,limesurvey-15231,c15eqdx59hkb9xhfje,
+"2020/06/10 10:56:37 PM UTC","2020/06/10 10:56:37 PM UTC",Brazil,BR,Ceará,BRCE,en,3,3,3,0,1,1,,,,,,Y,,,limesurvey-15234,cydx023qf3kb9ycxol,
+"2020/06/10 10:56:40 PM UTC","2020/06/10 10:56:40 PM UTC",Brazil,BR,Ceará,BRCE,en,3,3,3,0,1,1,,,,,,Y,,,limesurvey-15235,cydx023qf3kb9ycxol,
+"2020/06/10 11:00:46 PM UTC","2020/06/10 11:00:46 PM UTC",Brazil,BR,"São Paulo",BRSP,en,100,1,1,0,0,0,,,,,,N,Y,Y,limesurvey-15236,he6diq9pc2ka8zdi5g,
