@@ -16,3 +16,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/09 04:19:42 PM UTC","2020/06/09 04:19:42 PM UTC",Mexico,MX,Querétaro,MXQUE,en,7,1,1,,,,,,,,,Y,N,N,limesurvey-14718,0b07e6j3q8kb84qmwo,
 "2020/06/09 04:39:21 PM UTC","2020/06/09 04:39:20 PM UTC",Mexico,MX,Sonora,MXSON,en,200,3,2,,,,,,,,,Y,N,N,limesurvey-14741,bx59yqa6ockb85fwjf,
 "2020/06/09 05:17:00 PM UTC","2020/06/09 05:17:00 PM UTC",Mexico,MX,"Ciudad de México",MXCMX,en,20,3,0,,,,,,,,,Y,N,N,limesurvey-14803,7l1h9tj5avkb86scgq,
+"2020/06/10 12:40:54 AM UTC","2020/06/10 12:40:54 AM UTC",Mexico,MX,Guanajuato,MXGUA,en,80,1,1,,,,,,,,,N,N,N,limesurvey-14966,x0ult2xv2rkb8mn6dm,
