@@ -515,3 +515,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/10 03:57:38 PM UTC","2020/06/10 03:57:38 PM UTC","United States",US,Florida,USFL,en,35,2,2,,,,,,,,,N,N,N,limesurvey-15178,umz4ip2twikb86kzw0,
 "2020/06/10 03:59:44 PM UTC","2020/06/10 03:59:44 PM UTC","United States",US,Washington,USWA,en,16,1,1,,,,,,,,,Y,N,N,limesurvey-15179,g2bhuwwyma5r9lh2gu,
 "2020/06/10 07:04:30 PM UTC","2020/06/10 07:04:30 PM UTC","United States",US,California,USCA,en,20,2,2,,,,,,,,,Y,N,N,limesurvey-15215,nlwzph96kn4lymhe9c,
+"2020/06/10 11:54:53 PM UTC","2020/06/10 11:54:53 PM UTC","United States",US,California,USCA,en,40,0,0,,,,,,,,,N,N,Y,limesurvey-15239,ewqqoll5bbkagycsqk,
+"2020/06/11 12:44:54 AM UTC","2020/06/11 12:44:54 AM UTC","United States",US,"New Hampshire",USNH,en,3,0,,,,,,,,,,Y,N,N,limesurvey-15247,zxvq9tfyosp0bo56ge,
