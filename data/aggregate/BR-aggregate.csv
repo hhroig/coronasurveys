@@ -455,3 +455,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/11 03:01:44 PM UTC","2020/06/11 03:01:44 PM UTC",Brazil,BR,"São Paulo",BRSP,en,20,0,,,,,,,,,,N,N,N,limesurvey-15322,,
 "2020/06/11 03:32:12 PM UTC","2020/06/11 03:32:12 PM UTC",Brazil,BR,"São Paulo",BRSP,en,500,3,3,0,0,0,,,,,,Y,Y,Y,limesurvey-15328,2a7xo1h7qckbaya54t,
 "2020/06/11 04:41:43 PM UTC","2020/06/11 04:41:42 PM UTC",Brazil,BR,Ceará,BRCE,en,30035,55,35,5,10,6,,,,,,Y,N,N,limesurvey-15332,lsc5bizckmkbb0emys,
+"2020/06/11 05:54:08 PM UTC","2020/06/11 05:54:07 PM UTC",Brazil,BR,Amazonas,BRAM,en,3,1,1,1,,0,,,,,,Y,Y,N,limesurvey-15476,kiy9oq5iabkbb2zixi,
+"2020/06/11 05:54:09 PM UTC","2020/06/11 05:54:09 PM UTC",Brazil,BR,Amazonas,BRAM,en,3,1,1,1,,0,,,,,,Y,Y,N,limesurvey-15477,kiy9oq5iabkbb2zixi,
+"2020/06/11 05:54:12 PM UTC","2020/06/11 05:54:12 PM UTC",Brazil,BR,Amazonas,BRAM,en,3,1,1,1,,0,,,,,,Y,Y,N,limesurvey-15479,kiy9oq5iabkbb2zixi,
+"2020/06/11 06:59:35 PM UTC","2020/06/11 06:59:35 PM UTC",Brazil,BR,"São Paulo",BRSP,en,50,0,50,0,0,0,,,,,,Y,Y,Y,limesurvey-15562,xag7cg95p4kbb5byfm,
