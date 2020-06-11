@@ -612,6 +612,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
 }
 
 provincial_regional_estimate2(countrycode = "ES",
+                              alpha = 0.00001,
                                write_summary_file = T,
                                write_daily_file = T)
 
