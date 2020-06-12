@@ -29,3 +29,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/11 08:38:52 AM UTC","2020/06/11 08:38:52 AM UTC",Switzerland,CH,,,en,20,0,0,,,,,,,,,N,N,N,limesurvey-15280,f6ihatpmjgkb5itmwf,
 "2020/06/11 05:59:43 PM UTC","2020/06/11 05:59:43 PM UTC",Switzerland,CH,Genève,CHGE,en,13,1,1,,,,,,,,,N,Y,N,limesurvey-15509,rbkcd1nxgmkb3h8dii,
 "2020/06/12 03:59:08 AM UTC","2020/06/12 03:59:08 AM UTC",Switzerland,CH,Zürich,CHZH,en,17,1,1,,,,,,,,,N,N,N,limesurvey-15599,7c5d42rnx5kb8vtlug,
+"2020/06/12 07:57:44 AM UTC","2020/06/12 07:57:44 AM UTC",Switzerland,CH,Fribourg,CHFR,en,30,0,0,,,,,,,,,Y,N,N,limesurvey-15614,mb7dsjkqyukbbx4nvx,
