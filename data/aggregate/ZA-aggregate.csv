@@ -18,3 +18,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/10 07:38:01 AM UTC","2020/06/10 07:38:00 AM UTC","South Africa",ZA,Gauteng,ZAGT,en,15,0,0,,,,,,,,,Y,N,N,limesurvey-15056,98je85swn2kb91jk39,
 "2020/06/10 08:13:36 AM UTC","2020/06/10 08:13:36 AM UTC","South Africa",ZA,"Western Cape",ZAWC,en,100,1,1,,,,,,,,,Y,N,N,limesurvey-15062,owm9tt35lqkb92td06,
 "2020/06/10 10:01:17 AM UTC","2020/06/10 10:01:17 AM UTC","South Africa",ZA,"Western Cape",ZAWC,en,60,1,1,,,,,,,,,Y,N,Y,limesurvey-15096,q79xk7ztatkb96nu9h,
+"2020/06/12 07:09:05 AM UTC","2020/06/12 07:09:05 AM UTC","South Africa",ZA,"Eastern Cape",ZAEC,en,100,2,0,,,,,,,,,Y,N,N,limesurvey-15611,l03snlm8qqkbbve39o,
