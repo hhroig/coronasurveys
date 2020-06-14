@@ -465,3 +465,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/12 04:41:54 PM UTC","2020/06/12 04:41:54 PM UTC",France,FR,département:Paris,FR75,en,3,1,1,,,,,,,,,N,N,N,limesurvey-15651,lnwt33qdu2kbcfuquz,
 "2020/06/13 01:18:37 PM UTC","2020/06/13 01:18:37 PM UTC",France,FR,département:Alpes-Maritimes,FR06,en,80,0,,,,,,,,,,N,N,N,limesurvey-15785,1uq3vbw6u6kb87ee6l,
 "2020/06/14 04:32:22 AM UTC","2020/06/14 04:32:22 AM UTC",France,FR,,,en,15,0,,,,,,,,,,N,N,N,limesurvey-16081,xz4mkda0vdkb2wq648,
+"2020/06/14 07:38:20 PM UTC","2020/06/14 07:38:20 PM UTC",France,FR,département:Hérault,FR34,en,40,2,2,,0,0,,,,,,Y,N,N,limesurvey-16128,i7slcmfkhjkbfh1ciz,
