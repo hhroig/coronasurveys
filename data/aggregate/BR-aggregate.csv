@@ -537,3 +537,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/15 12:06:32 PM UTC","2020/06/15 12:06:32 PM UTC",Brazil,BR,,,en,500,5,4,1,0,0,,,,,,Y,Y,Y,limesurvey-16229,5prg0w6lbfkbggc455,
 "2020/06/15 12:06:35 PM UTC","2020/06/15 12:06:35 PM UTC",Brazil,BR,,,en,500,5,4,1,0,0,,,,,,Y,Y,Y,limesurvey-16230,5prg0w6lbfkbggc455,
 "2020/06/15 12:44:16 PM UTC","2020/06/15 12:44:16 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,50,5,1,2,2,2,,,,,,Y,Y,Y,limesurvey-16241,08u9djyqyfkbghooa3,
+"2020/06/15 03:30:59 PM UTC","2020/06/15 03:30:59 PM UTC",Brazil,BR,"São Paulo",BRSP,en,200,0,0,0,0,0,,,,,,Y,N,N,limesurvey-16258,je69bfsm7zkbgnn3h7,
+"2020/06/15 04:53:21 PM UTC","2020/06/15 04:53:21 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,200,4,3,1,0,0,,,,,,Y,Y,N,limesurvey-16268,pbnpvxnr6hkbgqhjvh,
+"2020/06/15 05:15:46 PM UTC","2020/06/15 05:15:46 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,150,15,6,7,2,2,,,,,,Y,Y,N,limesurvey-16272,eknjnooqy3kbgrduke,
