@@ -557,3 +557,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/16 12:34:05 PM UTC","2020/06/16 12:34:05 PM UTC",Brazil,BR,Bahia,BRBA,en,200,10,10,0,1,6,,,,,,Y,N,N,limesurvey-16550,1co87zh5nzkbhwrhl8,
 "2020/06/16 01:38:23 PM UTC","2020/06/16 01:38:22 PM UTC",Brazil,BR,"Mato Grosso do Sul",BRMS,en,20,0,0,,0,,,,,,,Y,Y,N,limesurvey-16552,c4u6vondhekbhz251a,
 "2020/06/16 03:05:41 PM UTC","2020/06/16 03:05:41 PM UTC",Brazil,BR,"São Paulo",BRSP,en,50,0,0,0,0,0,,,,,,N,N,N,limesurvey-16558,f9me4ijpd3kb2su7iy,
+"2020/06/16 03:19:42 PM UTC","2020/06/16 03:19:42 PM UTC",Brazil,BR,"Mato Grosso do Sul",BRMS,en,20,0,,0,0,0,,,,,,Y,Y,N,limesurvey-16560,ygfj4wqwnmkbi2ofhk,
+"2020/06/16 03:19:43 PM UTC","2020/06/16 03:19:43 PM UTC",Brazil,BR,"Mato Grosso do Sul",BRMS,en,20,0,,0,0,0,,,,,,Y,Y,N,limesurvey-16561,ygfj4wqwnmkbi2ofhk,
+"2020/06/16 03:32:47 PM UTC","2020/06/16 03:32:47 PM UTC",Brazil,BR,Amazonas,BRAM,en,20,20,20,2,0,1,,,,,,Y,N,N,limesurvey-16562,yuimxpa5t3kbi359b6,
+"2020/06/16 03:32:50 PM UTC","2020/06/16 03:32:50 PM UTC",Brazil,BR,Amazonas,BRAM,en,20,20,20,2,0,1,,,,,,Y,N,N,limesurvey-16563,yuimxpa5t3kbi359b6,
+"2020/06/16 04:23:50 PM UTC","2020/06/16 04:23:50 PM UTC",Brazil,BR,Paraíba,BRPB,en,3,3,3,,1,1,,,,,,Y,N,,limesurvey-16567,dg4m9hf9zjkbi4ywma,
