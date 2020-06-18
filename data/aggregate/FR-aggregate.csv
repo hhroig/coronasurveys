@@ -471,3 +471,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/15 12:19:38 PM UTC","2020/06/15 12:19:38 PM UTC",France,FR,département:Ille-et-Vilaine,FR35,en,3,0,,,0,0,,,,,,Y,Y,N,limesurvey-16237,tr4ntfwq1wkbggt1i6,
 "2020/06/16 07:44:10 PM UTC","2020/06/16 07:44:10 PM UTC",France,FR,région:Nouvelle-Aquitaine,FRNAQ,en,50,3,3,,0,0,,,,,,N,N,N,limesurvey-16574,hb84i7xaeikbic29jf,
 "2020/06/17 05:21:01 PM UTC","2020/06/17 05:21:01 PM UTC",France,FR,département:Moselle,FR57,en,15,0,0,,0,0,,,,,,N,N,N,limesurvey-16624,21joxgihsmkb8751j8,
+"2020/06/18 08:09:33 AM UTC","2020/06/18 08:09:33 AM UTC",France,FR,région:Normandie,FRNOR,en,20,1,1,,0,0,,,,,,Y,Y,Y,limesurvey-16771,xsc4wme2gnkbki6yst,
+"2020/06/18 08:14:49 AM UTC","2020/06/18 08:14:49 AM UTC",France,FR,région:Auvergne-Rhône-Alpes,FRARA,en,40,1,1,,0,0,,,,,,Y,Y,N,limesurvey-16772,0wzojs58i7kbkidoul,
+"2020/06/18 08:26:07 AM UTC","2020/06/18 08:26:07 AM UTC",France,FR,région:Normandie,FRNOR,en,25,0,0,,0,0,,,,,,Y,N,N,limesurvey-16773,1xqs4jtpz2kbkisaf9,
+"2020/06/18 09:01:10 AM UTC","2020/06/18 09:01:10 AM UTC",France,FR,région:Auvergne-Rhône-Alpes,FRARA,en,8,0,0,,0,0,,,,,,Y,Y,N,limesurvey-16774,l2cnn5ulz6kbkk1cci,
