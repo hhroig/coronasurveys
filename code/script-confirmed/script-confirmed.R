@@ -1,0 +1,77 @@
+# load library
+library(tidyverse)
+library(readxl)
+library(httr)
+
+plot_estimates <- function(country_geoid = "ES", dts){
+  data <- dts %>% 
+    select(dateRep:popData2019, "Alpha.2.code" )
+  data$geoId <- data$Alpha.2.code 
+  data <- data %>% select(dateRep:popData2019)
+  data <- data[data$geoId == country_geoid,]
+  
+  dt <- as.data.frame(data[rev(1:nrow(data)),])
+  ####### fix NAs in cases and deaths #######
+  dt$cases[is.na(dt$cases)] <- 0
+  dt$deaths[is.na(dt$deaths)] <- 0
+  ##########################################
+  dt$cum_cases <- cumsum(dt$cases)
+  dt$cum_deaths <- cumsum(dt$deaths)
+  
+
+  dt$dateRep <- as.Date(dt$dateRep, format = "%d/%m/%Y")
+  dt$date <- gsub("-", "/", dt$dateRep)
+  
+  
+  dt <- dt %>% 
+    select(date, cases, deaths, cum_cases, cum_deaths, popData2019) %>% 
+    rename(population = popData2019) %>% 
+    mutate(p_cases = cum_cases/population) %>% 
+    select(date, cases, deaths, cum_cases, cum_deaths, p_cases, population)
+  
+  dir.create("../../data/estimates-confirmed/PlotData/", showWarnings = F)
+  cat("::- script-confirmed: Writing data for", country_geoid, "::\n")
+  write.csv(dt, paste0("../../data/estimates-confirmed/PlotData/", country_geoid, "-estimate.csv"))
+}
+
+generate_estimates <- function(){
+    url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
+                 Sys.Date(), ".xlsx", sep = "")
+    GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
+    cat("::- script-confirmed: Checking the ECDC data for the day ::\n")
+    try( data_ecdc <- read_excel(tf), silent = T)
+    
+    if(!exists("data_ecdc")){
+      cat("::- script-confirmed: Seems the ECDC data for the day is not available yet ::\n")
+      cat("::- script-confirmed: Trying to get data for the previous day ::\n")
+      url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
+                   Sys.Date()-1, ".xlsx", sep = "")
+      GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
+      try( data_ecdc <- read_excel(tf), silent = T)
+      if(!exists("data_ecdc")){
+        stop("::- script-confirmed: Unfortunately, the ECDC data for yesterday is not availabe neither ::\n")
+      }else{
+        cat("::- script-confirmed: Using ECDC data for previous day ::\n")
+        data_ecdc$countryterritoryCode[data_ecdc$geoId == "CZ"] <- "CZE" # add "CZ" manually
+        data_country_code <- read_excel("wikipedia-iso-country-codes.xlsx")
+        names(data_country_code) <- c("English.short.name.lower.case", "Alpha.2.code",
+                                      "Alpha.3.code", "Numeric.code", "ISO.3166.2")
+        
+        data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
+        
+        all_geo_ids <- unique(data_ecdc$Alpha.2.code)
+        sapply(all_geo_ids, plot_estimates, dts = data_ecdc)
+      }
+    } else{
+      cat("::- script-confirmed: ECDC data for the day available! ::\n")
+      data_ecdc$countryterritoryCode[data_ecdc$geoId == "CZ"] <- "CZE" # add "CZ" manually
+      data_country_code <- read_excel("wikipedia-iso-country-codes.xlsx")
+      names(data_country_code) <- c("English.short.name.lower.case", "Alpha.2.code",
+                                    "Alpha.3.code", "Numeric.code", "ISO.3166.2")
+      data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
+      all_geo_ids <- unique(data_ecdc$Alpha.2.code) 
+      go <- sapply(all_geo_ids, plot_estimates, dts =  data_ecdc)
+    }
+  
+}
+generate_estimates()
