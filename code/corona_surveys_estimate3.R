@@ -287,9 +287,9 @@ plot_estimates <- function(country_geoid = "ES",
   ## process data based on data source
   if(data_srce == "ecdc"){
     data <- dts %>% 
-      select(dateRep:popData2018, "Alpha.2.code" )
+      select(dateRep:popData2019, "Alpha.2.code" )
     data$geoId <- data$Alpha.2.code 
-    data <- data %>% select(dateRep:popData2018)
+    data <- data %>% select(dateRep:popData2019)
 
     data <- data[data$geoId == country_geoid,]
     dt <- as.data.frame(data[rev(1:nrow(data)),])
@@ -315,7 +315,7 @@ plot_estimates <- function(country_geoid = "ES",
       est_ccfr_low[i] <- dt$cum_cases[i]*(1/fraction_reported_high)#swich low and high here coz of inverse.
       est_ccfr_high[i] <- dt$cum_cases[i]*(1/fraction_reported_low)
       est_ccfr[i] <- dt$cum_cases[i]*(1/fraction_reported)
-      p_ccfr[i] <- est_ccfr[i]/dt$popData2018[1]
+      p_ccfr[i] <- est_ccfr[i]/dt$popData2019[1]
     }
     
     
@@ -323,7 +323,7 @@ plot_estimates <- function(country_geoid = "ES",
     dt$est_ccfr_low <- est_ccfr_low
     dt$est_ccfr_high <- est_ccfr_high
     dt$p_ccfr <- p_ccfr
-    dt$population <- dt$popData2018
+    dt$population <- dt$popData2019
     
   } else if(data_srce == "jh"){
     dt <- dts[dts$geoId == country_geoid,]
