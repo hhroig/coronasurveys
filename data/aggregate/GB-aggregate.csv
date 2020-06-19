@@ -564,3 +564,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/18 07:31:29 AM UTC","2020/06/18 07:31:29 AM UTC","United Kingdom",GB,England,GBENG,en,11,1,1,,0,0,,,,,,N,N,N,limesurvey-16769,sntu285qqgkb83uo7g,
 "2020/06/18 09:58:14 AM UTC","2020/06/18 09:58:14 AM UTC","United Kingdom",GB,England,GBENG,en,10,0,0,,0,0,,,,,,N,N,Y,limesurvey-16778,9f3e0q5lojkb4wl8bh,
 "2020/06/18 01:59:04 PM UTC","2020/06/18 01:59:04 PM UTC","United Kingdom",GB,England,GBENG,en,200,6,5,,0,1,,,,,,N,N,N,limesurvey-16838,mbbfy1h4y3kb7nfzt8,
+"2020/06/19 10:51:28 AM UTC","2020/06/19 10:51:28 AM UTC","United Kingdom",GB,England,GBENG,en,10,0,,,,,,,,,,N,N,N,limesurvey-17222,eil4vh9kgqkb3fqdkf,
+"2020/06/19 10:52:13 AM UTC","2020/06/19 10:52:13 AM UTC","United Kingdom",GB,"Wales; Cymru",GBWLS,en,7,0,,,,,,,,,,N,N,N,limesurvey-17223,eil4vh9kgqkb3fqdkf,
