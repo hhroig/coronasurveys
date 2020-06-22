@@ -26,8 +26,9 @@ plot_estimates <- function(country_geoid = "ES", dts){
   dt <- dt %>% 
     select(date, cases, deaths, cum_cases, cum_deaths, popData2019) %>% 
     rename(population = popData2019) %>% 
-    mutate(p_cases = cum_cases/population) %>% 
-    select(date, cases, deaths, cum_cases, cum_deaths, p_cases, population)
+    mutate(p_cases = cum_cases/population,
+           p_cases_daily = cases/population) %>% 
+    select(date, cases, deaths, cum_cases, cum_deaths, p_cases, p_cases_daily, population)
   
   dir.create("../../data/estimates-confirmed/PlotData/", showWarnings = F)
   cat("::- script-confirmed: Writing data for", country_geoid, "::\n")
