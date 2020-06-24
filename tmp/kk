@@ -1,0 +1,343 @@
+	
+data	
+0	
+cli_se	0.00274
+cli_se_unw	0.002275
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.00735
+percent_cli_unw	0.010225
+sample_size	1956
+survey_date	"20200423"
+1	
+cli_se	0.004662
+cli_se_unw	0.002717
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.014263
+percent_cli_unw	0.010578
+sample_size	1418
+survey_date	"20200424"
+2	
+cli_se	0.002983
+cli_se_unw	0.002094
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.011759
+percent_cli_unw	0.01094
+sample_size	2468
+survey_date	"20200425"
+3	
+cli_se	0.002664
+cli_se_unw	0.002005
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.010388
+percent_cli_unw	0.011228
+sample_size	2761
+survey_date	"20200426"
+4	
+cli_se	0.002471
+cli_se_unw	0.00189
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.008818
+percent_cli_unw	0.009868
+sample_size	2736
+survey_date	"20200427"
+5	
+cli_se	0.002287
+cli_se_unw	0.001843
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.00832
+percent_cli_unw	0.009259
+sample_size	2700
+survey_date	"20200428"
+6	
+cli_se	0.002836
+cli_se_unw	0.00183
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.011688
+percent_cli_unw	0.008621
+sample_size	2552
+survey_date	"20200429"
+7	
+cli_se	0.002339
+cli_se_unw	0.001859
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007677
+percent_cli_unw	0.008557
+sample_size	2454
+survey_date	"20200430"
+8	
+cli_se	0.003516
+cli_se_unw	0.002447
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.011689
+percent_cli_unw	0.011807
+sample_size	1948
+survey_date	"20200501"
+9	
+cli_se	0.002739
+cli_se_unw	0.002181
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.006979
+percent_cli_unw	0.008762
+sample_size	1826
+survey_date	"20200502"
+10	
+cli_se	0.002132
+cli_se_unw	0.001442
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.008752
+percent_cli_unw	0.008687
+sample_size	4144
+survey_date	"20200503"
+11	
+cli_se	0.001911
+cli_se_unw	0.001317
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.0078
+percent_cli_unw	0.007821
+sample_size	4475
+survey_date	"20200504"
+12	
+cli_se	0.001762
+cli_se_unw	0.001102
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007211
+percent_cli_unw	0.005637
+sample_size	4612
+survey_date	"20200505"
+13	
+cli_se	0.001993
+cli_se_unw	0.001283
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007184
+percent_cli_unw	0.007509
+sample_size	4528
+survey_date	"20200506"
+14	
+cli_se	0.001996
+cli_se_unw	0.001409
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.009365
+percent_cli_unw	0.009172
+sample_size	4579
+survey_date	"20200507"
+15	
+cli_se	0.001441
+cli_se_unw	0.001174
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.004813
+percent_cli_unw	0.006231
+sample_size	4494
+survey_date	"20200508"
+16	
+cli_se	0.00154
+cli_se_unw	0.001155
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.005775
+percent_cli_unw	0.006241
+sample_size	4647
+survey_date	"20200509"
+17	
+cli_se	0.00167
+cli_se_unw	0.001228
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.00717
+percent_cli_unw	0.00729
+sample_size	4801
+survey_date	"20200510"
+18	
+cli_se	0.001802
+cli_se_unw	0.00138
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007844
+percent_cli_unw	0.008432
+sample_size	4388
+survey_date	"20200511"
+19	
+cli_se	0.00155
+cli_se_unw	0.001222
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.005117
+percent_cli_unw	0.006371
+sample_size	4238
+survey_date	"20200512"
+20	
+cli_se	0.001935
+cli_se_unw	0.001301
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.008398
+percent_cli_unw	0.00727
+sample_size	4264
+survey_date	"20200513"
+21	
+cli_se	0.001803
+cli_se_unw	0.00124
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.008047
+percent_cli_unw	0.007672
+sample_size	4953
+survey_date	"20200514"
+22	
+cli_se	0.001649
+cli_se_unw	0.001139
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.006864
+percent_cli_unw	0.006465
+sample_size	4950
+survey_date	"20200515"
+23	
+cli_se	0.001742
+cli_se_unw	0.001109
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007819
+percent_cli_unw	0.00609
+sample_size	4926
+survey_date	"20200516"
+24	
+cli_se	0.001696
+cli_se_unw	0.001161
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007365
+percent_cli_unw	0.006691
+sample_size	4932
+survey_date	"20200517"
+25	
+cli_se	0.001743
+cli_se_unw	0.001231
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.006933
+percent_cli_unw	0.006767
+sample_size	4433
+survey_date	"20200518"
+26	
+cli_se	0.001694
+cli_se_unw	0.00121
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.00663
+percent_cli_unw	0.007285
+sample_size	4942
+survey_date	"20200519"
+27	
+cli_se	0.001724
+cli_se_unw	0.001265
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007313
+percent_cli_unw	0.007829
+sample_size	4854
+survey_date	"20200520"
+28	
+cli_se	0.001793
+cli_se_unw	0.001266
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.005472
+percent_cli_unw	0.005533
+sample_size	3434
+survey_date	"20200521"
+29	
+cli_se	0.001665
+cli_se_unw	0.001275
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.005573
+percent_cli_unw	0.006768
+sample_size	4137
+survey_date	"20200522"
+30	
+cli_se	0.00141
+cli_se_unw	0.001098
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.004643
+percent_cli_unw	0.005827
+sample_size	4805
+survey_date	"20200523"
+31	
+cli_se	0.001779
+cli_se_unw	0.001058
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007696
+percent_cli_unw	0.005612
+sample_size	4989
+survey_date	"20200524"
+32	
+cli_se	0.002276
+cli_se_unw	0.001094
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.007763
+percent_cli_unw	0.0057
+sample_size	4737
+survey_date	"20200525"
+33	
+cli_se	0.001433
+cli_se_unw	0.000973
+country	"Spain"
+gid_0	"ESP"
+iso_code	"ESP"
+percent_cli	0.004236
+percent_cli_unw	0.004138
+sample_size	4350
+survey_date	"20200526"
+status	"success"
