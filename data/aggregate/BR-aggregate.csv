@@ -623,3 +623,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/25 02:24:55 AM UTC","2020/06/25 02:24:55 AM UTC",Brazil,BR,Pará,BRPA,en,25,22,21,1,0,0,,,,,,Y,N,N,limesurvey-19532,8pd82qxe61kbu5xa6f,FB
 "2020/06/25 03:23:26 AM UTC","2020/06/25 03:23:26 AM UTC",Brazil,BR,Paraíba,BRPB,en,129,86,86,,0,46,,,,,,Y,N,,limesurvey-19539,asc1nvkcu8kbu81yx3,FB
 "2020/06/25 04:40:30 AM UTC","2020/06/25 04:40:30 AM UTC",Brazil,BR,Amazonas,BRAM,en,10,10,8,2,5,5,,,,,,Y,N,N,limesurvey-19553,6cml4yi706kbuasave,FB
+"2020/06/25 03:26:53 PM UTC","2020/06/25 03:26:53 PM UTC",Brazil,BR,"São Paulo",BRSP,en,20,0,,,,,,,,,,N,N,N,limesurvey-19728,t73q4v9sr6kaehuvq0,
+"2020/06/25 03:27:54 PM UTC","2020/06/25 03:27:54 PM UTC",Brazil,BR,"Rio Grande do Sul",BRRS,en,17,0,,,,,,,,,,N,N,N,limesurvey-19729,t73q4v9sr6kaehuvq0,
+"2020/06/25 04:53:42 PM UTC","2020/06/25 04:53:42 PM UTC",Brazil,BR,Bahia,BRBA,en,50,0,,,,,,,,,,Y,N,N,limesurvey-19777,h6ulwr9fx7kbv100cu,FB
