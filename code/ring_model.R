@@ -6,7 +6,7 @@ pop <- 10000000
 r <- rep(0,pop)
 
 #True ratio  of infection
-P <- 0.0075
+P <- 0.01
 
 inf <- floor(P*pop)
 
@@ -21,23 +21,40 @@ for (i in selection)
 P <- sum(r)/pop
 
 #reach of each response in survey
-reach<-150
+reach<-100
 
-resp <- 200
+#how many runs to average
+runs <- 100
 
-answ <- rep(0,resp)
-p <- rep(0,resp)
-for (j in 1:resp)
+resp <- 100
+error <- rep(0,resp) 
+
+for (run in 1:runs)
 {
-    x<-sample(pop,1)
-    hits<-0
-    for (k in 0:(reach-1))
+    answ <- rep(0,resp)
+    p <- rep(0,resp)
+    probes <- sample(pop,resp,replace=FALSE)
+    for (j in 1:resp)
     {
-        hits<-hits+r[((x-1+k) %% pop)+1]
+        x <- probes[j]
+        hits<-0
+        for (k in 0:(reach-1))
+        {
+            hits<-hits+r[((x-1+k) %% pop)+1]
+        }
+        answ[j]<-hits
+        p[j]<-sum(head(answ,j))/(j*reach)
+        #perturbate
+        p[j]=p[j]+p[j]*rnorm(1,mean=0,sd=1)
+        error[j] <- error[j] + (p[j]-P)^2
     }
-    answ[j]<-hits
-    p[j]<-sum(head(answ,j))/(j*reach)
-}
+    
 
-plot(p,ylim=c(0,P*2))
-abline(h=P,lty="dotted")
+}
+#plot(p,ylim=c(0,P*2)
+# Normalized root mean square error
+plot(type="l",sqrt(error/runs)/P,log="y",ylim=c(0.0001,10))
+#abline(h=0,lty="dotted")
+
+
+
