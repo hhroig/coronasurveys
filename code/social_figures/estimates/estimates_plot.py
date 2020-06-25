@@ -304,7 +304,7 @@ def my_ytick_formatter(x, pos):
 
 
 #plt.locator_params(axis='y', nbins=3)
-ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=(mdates.MO))) #DayLocator(bymonthday=range(5,32,10)))
+ax.xaxis.set_major_locator(mdates.AutoDateLocator()) # WeekdayLocator(byweekday=(mdates.MO))) #DayLocator(bymonthday=range(5,32,10)))
 plt.xticks(rotation=20)
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %dth'))
 ax.yaxis.set_major_formatter(my_ytick_formatter)

@@ -37,24 +37,24 @@
 \end{center}
 }
 
+% \begin{frame}
+
+  % \frametitle{Spain, March 13th 2020}
+%   \begin{itemize}
+%     \item El País ``Spain is the second EU country in number of cases''
+
+%     \item Reuters ``The Spanish health ministry said the number of coronavirus cases in the country jumped to 4,209 on Friday from Thursday's 3,004 as the disease spread mostly in Madrid, the Basque Country and La Rioja regions.''
+% %The death toll from the coronavirus epidemic in the country has increased to 120 from 84 the previous day.
+%   \end{itemize}
+% \vspace{1ex}
+%   Rapid growth: hard to keep up with testing and reporting delays. \\
+%   \vspace{3ex}
+%   Not only in Spain, but also in France, Italy, and most countries.
+
+% \end{frame}
+
 \begin{frame}
   \frametitle{Spain, March 13th 2020}
-
-  \begin{itemize}
-    \item El País ``Spain is the second EU country in number of cases''
-
-    \item Reuters ``The Spanish health ministry said the number of coronavirus cases in the country jumped to 4,209 on Friday from Thursday's 3,004 as the disease spread mostly in Madrid, the Basque Country and La Rioja regions.''
-%The death toll from the coronavirus epidemic in the country has increased to 120 from 84 the previous day.
-  \end{itemize}
-\vspace{1ex}
-  Rapid growth: hard to keep up with testing and reporting delays. \\
-  \vspace{3ex}
-  Not only in Spain, but also in France, Italy, and most countries.
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Open Surveys via Twitter}
   \framesubtitle{Antonio Fernandez Anta, IMDEA Networks, Spain}
   \begin{center}
   \includegraphics[width=0.5\textwidth]{Twitter.png}
@@ -66,7 +66,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{A Steady Growth}
+\frametitle{From Twitter to Google Forms}
 \begin{itemize}
 \item Spread the survey beyond Spain 
 \item Initial countries:\\
@@ -83,6 +83,19 @@ Spain, Italy, Portugal, UK, USA, Germany, Cyprus
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Two ``simple'' questions}
+  For any given country/region and after informed consent we ask:
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{Questions.png}
+  \end{center}
+  A few optional questions to be added in new version
+  \begin{itemize}
+  \item estimate network bias, and other parameters 
+  \item without collecting personal information
+  \end{itemize}
+
+\end{frame}
 
 
 
@@ -103,24 +116,13 @@ Spain, Italy, Portugal, UK, USA, Germany, Cyprus
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Two ``simple'' questions}
-  For any given country/region and after informed consent we ask:
-  \begin{center}
-  \includegraphics[width=0.75\textwidth]{Questions.png}
-  \end{center}
-  A few optional questions to be added in new version
-  \begin{itemize}
-  \item estimate network bias, and other parameters 
-  \item without collecting personal information
-  \end{itemize}
-
-\end{frame}
  % (overlap)
  %  \item estimate other parameters (ICU rate, death rate, $R_0$, ...)
  %    in some countries
 \begin{frame}
   \frametitle{@CoronaSurveys at https://coronasurveys.org}
+  https://www.instagram.com/coronasurveys/\\
+  https://tinyurl.com/coronasurveysfrance\\
   \begin{center}
   \includegraphics[width=0.8\textwidth]{CoronaSurveys.png}
   \end{center}
@@ -161,7 +163,11 @@ Spain, Italy, Portugal, UK, USA, Germany, Cyprus
   \begin{itemize}
     \item $\textit{reach}_i$ \--- remove entries above $1.5 *$  the  interquartile  range
     \item $\frac{\textit{cases}_i}{\textit{reach}_i} < 0.3$ \--- remove entries with very high incidence
-  \end{itemize}
+  % \end{itemize}
+  % \begin{itemize}
+    \item Several datapoints, from batches of 30 or more answers  
+%    \item Consistent evolution across time
+  \end{itemize} 
 
 
 
@@ -177,24 +183,18 @@ Spain, Italy, Portugal, UK, USA, Germany, Cyprus
     \item[Mean] $E_m  =  P \cdot \frac{\sum_i (\textit{cases}_i / \textit{reach}_i)}{n}$
     \item[Dunbar] $E_d  =  P \cdot \frac{\sum_{i} \textit{cases}_i}{n \cdot 150}$
   \end{description}
-Only showing  Weighted in the following. 
-\end{frame}
+  Only showing  Weighted in the following. 
 
-
-\begin{frame}
-  \frametitle{Discussion}
-
-  \begin{itemize}
-    \item Several datapoints, from batches of 30 or more answers  
-    \item Consistent evolution across time
-  \end{itemize} \pause
 
   \begin{itemize}
     \item Still, how can we know the data is meaningful?   
     \item We need other independent estimates 
   \end{itemize}
 
+
 \end{frame}
+
+
 
 \begin{frame}
   \frametitle{Fatality based estimates}
@@ -261,9 +261,9 @@ Only showing  Weighted in the following.
 \end{frame}
 
 \begin{frame}
-\frametitle{To Summarize}
+\frametitle{Summary of Estimators}
 \begin{itemize}
-\item official number of cases
+\item Official number of cases
 \item CCFR estimate
 \item Coronasurveys estimate
 \end{itemize}
@@ -373,9 +373,25 @@ Only showing  Weighted in the following.
   \frametitle{Questions?}
   \framesubtitle{@CoronaSurveys at http://coronasurveys.org}
   \begin{center}
-  \includegraphics[width=0.7\textwidth]{CoronaSurveys.png}
+  \includegraphics[width=0.3\textwidth]{CoronaSurveys.png}
   \end{center}
+  \begin{itemize}
+    \item
+  https://www.instagram.com/coronasurveys/
+  \item
+  https://tinyurl.com/coronasurveysfrance
+\item
+  Twitter: @coronasurveys
+\item
+  https://www.instagram.com/coronasurveys/ 
+\item
+  FB: https://www.facebook.com/groups/209076966867175
+
+  \vspace{1ex}
+\item
   Both our raw and processed data is openly available
+  https://github.com/GCGImdea/coronasurveys
+\end{itemize}
 \end{frame}
 
 
