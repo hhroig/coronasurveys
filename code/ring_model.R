@@ -34,10 +34,10 @@ reach<-100
 #how many runs to average
 runs <- 100
 
-resp <- 100
+resp <- 1000
 error <- rep(0,resp) 
 
-uniform=TRUE
+uniform=FALSE
 noise=0 # 0 for no noise, then 0.1 for some scale free noise around each response estimated p
 
 for (run in 1:runs)
@@ -67,6 +67,7 @@ for (run in 1:runs)
 #plot(p,ylim=c(0,P*2)
 # Normalized root mean square error
 plot(type="l",sqrt(error/runs)/P,ylim=c(0,5))
+#plot(type="l",sqrt(error/runs)/P,log="y",ylim=c(0.0001,10))
 abline(h=0,lty="dotted")
 
 

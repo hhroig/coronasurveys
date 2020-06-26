@@ -4,7 +4,7 @@ forwardToFriends <- function(surveyRecipients, popSize, myId, knownPeople, fwdPr
   #sample fwdFanout candidates from reach
   rcpSample <- sample(knownPeople, min(fwdFanout,knownPeople))
   for (v in rcpSample){
-    candidate=((myId + v - 1)  %% popSize ) + 1;# TODO check this
+    candidate=((myId + v - 1)  %% popSize ) + 1;# myId starts from 1, v starts from 1 and goes up to reach-1 (see calls), v=1 means first friend. 
     if (! is.element(candidate, surveyRecipients)) {# we do not process two invitations
       surveyRecipients <- c(surveyRecipients, candidate)
     }
@@ -71,6 +71,6 @@ selectProbes <- function (popSize, nResp, replace){
 
 #default parameter values
 ansProb=0.3 # probability of answering a survey you receive from a friend
-fwdProb=0.05 # probability of forwarding the survey to some friends once you have answered it. 
+fwdProb=0.1 # probability of forwarding the survey to some friends once you have answered it. 
 fwdFanout=20 # number of people each respondent forwards the survey to
 numSeeds=20 # number of people that share the survey to begin with. These always respond to and forward the survey with probability 1
