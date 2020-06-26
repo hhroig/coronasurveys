@@ -2,7 +2,7 @@
 forwardToFriends <- function(surveyRecipients, popSize, myId, reach, fwdProb, fwdFanout){
   
   #sample fwdFanout candidates from reach
-  rcpSample <- sample(reach, fwdFanout)
+  rcpSample <- sample(reach, min(fwdFanout,reach))
   for (v in rcpSample){
     candidate=((myId + v)  %% popSize ) + 1;# TODO check this
     if (! is.element(candidate, surveyRecipients)) {# we do not process two invitations
@@ -17,7 +17,7 @@ correlatedSampling <- function(popSize, requiredSize, reach, numSeeds, ansProb, 
   surveyRecipients <- vector()
   surveyRespondents <- vector()
   # select seeds randomly
-  firstProbes <- sample (popSize, numSeeds) 
+  firstProbes <- sample (popSize, min(popSize,numSeeds)) 
   surveyRespondents <- c(surveyRespondents, firstProbes)
   
   for (p in firstProbes){
