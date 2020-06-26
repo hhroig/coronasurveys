@@ -5275,3 +5275,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/24 02:56:52 PM UTC","2020/06/24 02:56:52 PM UTC",Spain,ES,Provincia:Madrid,ESM,en,40,5,5,,0,0,,,,,,N,N,N,limesurvey-19315,gp7fx8bakjkbthdwxz,
 "2020/06/25 03:12:04 PM UTC","2020/06/25 03:12:04 PM UTC",Spain,ES,"Provincia:Valencia / València",ESV,en,115,1,1,,0,0,,,,,,N,N,N,limesurvey-19720,zzmnq23z6vkbuxdbez,
 "2020/06/26 12:08:41 PM UTC","2020/06/26 12:08:41 PM UTC",Spain,ES,"Provincia:Valencia / València",ESV,en,115,1,1,,0,0,,,,,,N,N,N,limesurvey-20110,ziqgvdd3nukbw69bs2,
+"2020/06/26 08:55:07 PM UTC","2020/06/26 08:55:07 PM UTC",Spain,ES,Provincia:Toledo,ESTO,en,100,3,2,,0,0,,,,,,N,Y,Y,limesurvey-20279,s5qd18x924kbs1ngw2,
+"2020/06/26 08:55:50 PM UTC","2020/06/26 08:55:50 PM UTC",Spain,ES,Provincia:Madrid,ESM,en,100,11,11,,0,0,,,,,,N,Y,Y,limesurvey-20280,s5qd18x924kbs1ngw2,
