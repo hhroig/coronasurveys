@@ -1,10 +1,10 @@
 
-forwardToFriends <- function(surveyRecipients, popSize, myId, reach, fwdProb, fwdFanout){
+forwardToFriends <- function(surveyRecipients, popSize, myId, knownPeople, fwdProb, fwdFanout){
   
   #sample fwdFanout candidates from reach
-  rcpSample <- sample(reach, min(fwdFanout,reach))
+  rcpSample <- sample(knownPeople, min(fwdFanout,knownPeople))
   for (v in rcpSample){
-    candidate=((myId + v)  %% popSize ) + 1;# TODO check this
+    candidate=((myId + v - 1)  %% popSize ) + 1;# TODO check this
     if (! is.element(candidate, surveyRecipients)) {# we do not process two invitations
       surveyRecipients <- c(surveyRecipients, candidate)
     }
@@ -19,10 +19,11 @@ correlatedSampling <- function(popSize, requiredSize, reach, numSeeds, ansProb, 
   # select seeds randomly
   firstProbes <- sample (popSize, min(popSize,numSeeds)) 
   surveyRespondents <- c(surveyRespondents, firstProbes)
-  
-  for (p in firstProbes){
-    #seeds always forward the survey
-    surveyRecipients <- forwardToFriends(surveyRecipients, popSize, p, reach, fwdProb, fwdFanout)
+  if (reach > 1){
+    for (p in firstProbes){
+      #seeds always forward the survey
+      surveyRecipients <- forwardToFriends(surveyRecipients, popSize, p, reach - 1, fwdProb, fwdFanout)
+    }
   }
   
   # print("1-length surveyRecipients ")
@@ -37,8 +38,8 @@ correlatedSampling <- function(popSize, requiredSize, reach, numSeeds, ansProb, 
     myId=surveyRecipients[i];
     if (runif(1) <= ansProb){
       surveyRespondents <-c(surveyRespondents, myId)
-      if (runif(1) <= fwdProb){
-        surveyRecipients <- forwardToFriends(surveyRecipients, popSize, myId, reach, fwdProb, fwdFanout)
+      if (reach > 1 && runif(1) <= fwdProb){# this reach>1 condition is not necessary because we will never get here if reach=1 because of line 22
+        surveyRecipients <- forwardToFriends(surveyRecipients, popSize, myId, reach - 1 , fwdProb, fwdFanout)
       }
     }
     i=i+1 #go to the next recipient
