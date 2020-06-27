@@ -586,8 +586,11 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
   }else {stop("The only data sources allowed are jh and ecdc")}
 }
 
-generate_estimates(srce = "ecdc")
+#generate_estimates(srce = "ecdc")
 
-# compute regional estimates
-get_spain_regional_estimates()
-get_portugal_regional_estimates()
+# compute nee decentralized estimates
+source("script-confirmed.R")
+source("script-ccfr-based.R")
+source("script-30responses.R")
+source("script-300responses.R")
+source("script-W-alpha.R")
