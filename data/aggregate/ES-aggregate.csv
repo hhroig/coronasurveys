@@ -5288,3 +5288,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/27 12:08:23 PM UTC","2020/06/27 12:08:23 PM UTC",Spain,ES,Provincia:Madrid,ESM,en,50,7,,,0,0,,,,,,N,Y,Y,limesurvey-20526,2d4pmliq1zka5rsf38,
 "2020/06/27 06:15:43 PM UTC","2020/06/27 06:15:43 PM UTC",Spain,ES,Provincia:Madrid,ESM,en,100,15,14,,0,0,,,,,,N,Y,Y,limesurvey-20665,1lftbjv8bmkagzs3c7,
 "2020/06/27 06:16:32 PM UTC","2020/06/27 06:16:32 PM UTC",Spain,ES,Provincia:Toledo,ESTO,en,50,5,4,,0,0,,,,,,N,Y,Y,limesurvey-20667,1lftbjv8bmkagzs3c7,
+"2020/06/28 06:27:55 AM UTC","2020/06/28 06:27:55 AM UTC",Spain,ES,"Provincia:A Coruña",ESC,en,200,0,0,,0,0,,,,,,Y,N,N,limesurvey-20883,lq5wtxcqzpkbyoyx8g,
+"2020/06/28 07:09:51 AM UTC","2020/06/28 07:09:51 AM UTC",Spain,ES,Provincia:Madrid,ESM,en,50,6,6,,0,0,,,,,,Y,Y,Y,limesurvey-20887,5aycd3wgkvkbyqgrs4,
