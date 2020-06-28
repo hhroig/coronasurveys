@@ -1497,3 +1497,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/26 08:15:16 PM UTC","2020/06/26 08:15:16 PM UTC",Portugal,PT,Lisboa,PT11,en,10,0,,,,,,,,,,Y,N,N,limesurvey-20269,r4x8vbwsxkkbwnn2vw,
 "2020/06/26 09:20:57 PM UTC","2020/06/26 09:20:57 PM UTC",Portugal,PT,Braga,PT03,en,20,0,0,,0,0,,,,,,Y,Y,N,limesurvey-20285,fmqe3gbf7okbwpw296,
 "2020/06/26 11:03:52 PM UTC","2020/06/26 11:03:52 PM UTC",Portugal,PT,Braga,PT03,en,50,0,,,0,,,,,,,N,N,N,limesurvey-20322,2snxyznrl4kb3lxppx,
+"2020/06/28 07:53:58 AM UTC","2020/06/28 07:53:58 AM UTC",Portugal,PT,Braga,PT03,en,100,0,,,,,,,,,,N,Y,Y,limesurvey-20894,r3tukte5vykbys1g36,
+"2020/06/28 08:16:55 AM UTC","2020/06/28 08:16:55 AM UTC",Portugal,PT,Lisboa,PT11,en,100,1,0,,1,1,,,,,,Y,N,N,limesurvey-20897,tuvfdavh9ikbysv149,
+"2020/06/28 08:44:09 AM UTC","2020/06/28 08:44:09 AM UTC",Portugal,PT,Porto,PT13,en,80,4,4,,0,0,,,,,,Y,N,N,limesurvey-20900,3pzqix2y8ckbytu03u,
