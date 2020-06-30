@@ -13,7 +13,7 @@ calculate_ci <- function(p_est, level, pop_size) {
   return(list(low=p_est-z*se, upp=p_est+z*se, error=z*se))
 }
 
-estimate_cases_aggregate <- function(country_geoid = "ES",
+estimate_cases_aggregate <- function(country_geoid = "AR",
                                      dts,
                                      batch = 30,
                                      max_ratio = .3,
@@ -32,7 +32,8 @@ estimate_cases_aggregate <- function(country_geoid = "ES",
       }
     
     names(dt) <- tolower(names(dt))
-    dt <- dt[, c("timestamp","region","reach","cases")]
+    dt <- dt[, c("timestamp","region","reach","cases",
+                 "recentcases", "recovered", "fatalities", "stillsick"  )]
     dt$date <- substr(dt$timestamp, 1, 10)
     if(file_path == "../data/aggregate/ES-aggregate.csv"){
       dt$reach[1:102] <- 150 # impute Dunbar number
@@ -80,14 +81,25 @@ estimate_cases_aggregate <- function(country_geoid = "ES",
       filter(include == T)
     
     dt <- full_join(dt, dt_batch[,-c(2, 4,5)], by = "date")
+    #compute active cases
+    active_cases <- sapply(unique(dt$date), function(x){
+      cat("::- script-30responses:>- Computing active cases for date", x, " in country", country_geoid ," ::\n")
+     end_date <- as.Date(x)
+     start_date <- end_date - 12
+     return(sum(dt$cases[dt$date<= end_date & dt$date>= start_date]))
+    }, USE.NAMES = F)
+    dactive <- data.frame(date = unique(dt$date),
+                          active_cases = active_cases, 
+                          stringsAsFactors = F)
+    dt <- full_join(dt, dactive, by = "date")
     ####################### compute estimates
     dt_summary <- dt %>%
       filter(!is.na(group_factor)) %>% 
       group_by(group_factor) %>% 
       summarise(date = last(date),
                 sample_size = n(), 
-                mean_cases = mean(cases), #
-                mean_reach = mean(reach), #
+                #mean_cases = mean(cases), #
+                #mean_reach = mean(reach), #
                 p_w = sum(cases)/sum(reach), 
                 p_w_low = calculate_ci(p_est = sum(cases)/sum(reach), level = 0.95,
                                                  pop_size = sum(reach))$low,
@@ -97,7 +109,85 @@ estimate_cases_aggregate <- function(country_geoid = "ES",
                 p_m_low = calculate_ci(p_est = mean(ratio), level = 0.95,
                                        pop_size = sum(reach))$low, 
                 p_m_high = calculate_ci(p_est = mean(ratio), level = 0.95,
-                             pop_size = sum(reach))$upp,
+                                        pop_size = sum(reach))$upp,
+                
+                p_w_recent = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
+                p_w_recent_low = calculate_ci(p_est = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
+                                              level = 0.95,
+                                              pop_size = sum(reach[!is.na(recentcases)]))$low,
+                p_w_recent_high = calculate_ci(p_est = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
+                                              level = 0.95,
+                                              pop_size = sum(reach[!is.na(recentcases)]))$upp,
+                
+                p_m_recent = mean(recentcases/reach, na.rm = T),
+                p_m_recent_low = calculate_ci(p_est = mean(recentcases/reach, na.rm = T), level = 0.95,
+                                              pop_size = sum(reach[!is.na(recentcases)]))$low, 
+                p_m_recent_high = calculate_ci(p_est = mean(recentcases/reach, na.rm = T), level = 0.95,
+                                              pop_size = sum(reach[!is.na(recentcases)]))$upp, 
+                
+                p_w_recovered = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
+                p_w_recovered_low = calculate_ci(p_est = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
+                                                 level = 0.95,
+                                                 pop_size = sum(reach[!is.na(recovered)]))$low,
+                p_w_recovered_high = calculate_ci(p_est = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
+                                                 level = 0.95,
+                                                 pop_size = sum(reach[!is.na(recovered)]))$upp,
+                
+                p_m_recovered = mean(recovered/reach, na.rm = T),
+                p_m_recovered_low = calculate_ci(p_est = mean(recovered/reach, na.rm = T),
+                                                 level = 0.95,
+                                                 pop_size = sum(reach[!is.na(recovered)]))$low,
+                p_m_recovered_high = calculate_ci(p_est = mean(recovered/reach, na.rm = T),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(recovered)]))$upp,
+                
+                p_w_fatalities = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
+                p_w_fatalities_low = calculate_ci(p_est = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
+                                                 level = 0.95,
+                                                 pop_size = sum(reach[!is.na(fatalities)]))$low,
+                p_w_fatalities_high = calculate_ci(p_est = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(fatalities)]))$upp,
+                
+                p_m_fatalities = mean(fatalities/reach, na.rm = T),
+                p_m_fatalities_high = calculate_ci(p_est = mean(fatalities/reach, na.rm = T),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(fatalities)]))$low,
+                p_m_fatalities_high = calculate_ci(p_est = mean(fatalities/reach, na.rm = T),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(fatalities)]))$upp,
+                
+                p_w_stillsick = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
+                p_w_stillsick_low = calculate_ci(p_est = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(stillsick)]))$low,
+                p_w_stillsick_high = calculate_ci(p_est = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
+                                                   level = 0.95,
+                                                   pop_size = sum(reach[!is.na(stillsick)]))$upp,
+                
+                p_m_stillsick = mean(stillsick/reach, na.rm = T),
+                p_m_stillsick_high = calculate_ci(p_est = mean(stillsick/reach, na.rm = T),
+                                                   level = 0.95,
+                                                   pop_size = sum(reach[!is.na(stillsick)]))$low,
+                p_m_stillsick_high = calculate_ci(p_est = mean(stillsick/reach, na.rm = T),
+                                                   level = 0.95,
+                                                   pop_size = sum(reach[!is.na(stillsick)]))$upp,
+                
+                p_w_active_cases = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
+                p_w_active_cases_low = calculate_ci(p_est = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
+                                                 level = 0.95,
+                                                 pop_size = sum(reach[!is.na(active_cases)]))$low,
+                p_w_active_cases_high = calculate_ci(p_est = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(active_cases)]))$upp,
+                
+                p_m_active_cases = mean(active_cases/reach, na.rm = T),
+                p_m_active_cases_high = calculate_ci(p_est = mean(active_cases/reach, na.rm = T),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(active_cases)]))$low,
+                p_m_active_cases_high = calculate_ci(p_est = mean(active_cases/reach, na.rm = T),
+                                                  level = 0.95,
+                                                  pop_size = sum(reach[!is.na(active_cases)]))$upp,
                 population = country_population
                 # p_d = sum(cases)/dunbar_reach,
                 # p_d_high = calculate_ci(p_est = (sum(cases)/dunbar_reach), level = 0.95,
@@ -109,6 +199,12 @@ estimate_cases_aggregate <- function(country_geoid = "ES",
     dt_summary <- dt_summary[, -1] # remove group factor variable
     dt_summary$p_w_low[dt_summary$p_w_low < 0]   <- 0.000001
     dt_summary$p_m_low[dt_summary$p_m_low < 0]   <- 0.000001
+    # dt_summary$p_w_recent_low[dt_summary$p_w_recent_low < 0]   <- 0.000001
+    # dt_summary$p_m_recent_low[dt_summary$p_m_recent_low < 0]   <- 0.000001
+    # dt_summary$p_w_recovered_low[dt_summary$p_w_recovered_low < 0]   <- 0.000001
+    # dt_summary$p_m_recovered_low[dt_summary$p_m_recovered_low < 0]   <- 0.000001
+    # dt_summary$p_w_fatalities_low[dt_summary$p_w_fatalities_low < 0]   <- 0.000001
+    # dt_summary$p_m_fatalities_low[dt_summary$p_m_fatalities_low < 0]   <- 0.000001
     #dt_summary$p_d_low[dt_summary$p_d_low < 0]   <- 0.000001
     
     
@@ -129,8 +225,5 @@ dtpop_ecdc <- read.csv(file = "../data/common-data/country_population_ecdc.csv",
                        na.strings = "")[,-1]
 all_geo_ids <- dtpop_ecdc$geo_id
 go <- sapply(all_geo_ids, estimate_cases_aggregate, dts = dtpop_ecdc)
-
-
-  
   
   
