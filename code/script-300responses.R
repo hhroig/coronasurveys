@@ -33,9 +33,7 @@ get_spain_region_based_rosa <- function(country_geoid = "IT",
       summarise(population = sum(population))
     
     names(dt) <- tolower(names(dt))
-    dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2",
-                 "recentcases", "recovered", "fatalities", "stillsick"  )]
-    #dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
+    dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
     dt$date <- substr(dt$timestamp, 1, 10)
     if(country_geoid == "ES"){
       dt$reach[1:102] <- 150 # impute Dunbar number
