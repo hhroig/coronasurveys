@@ -481,3 +481,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/22 07:50:49 PM UTC","2020/06/22 07:50:49 PM UTC",France,FR,département:Bouches-du-Rhône,FR13,en,10,0,0,,0,0,,,,,,N,N,N,limesurvey-18431,tjz0auwvfckb3c5f6b,
 "2020/06/24 07:24:33 PM UTC","2020/06/24 07:24:33 PM UTC",France,FR,région:Auvergne-Rhône-Alpes,FRARA,en,30,2,2,,0,0,,,,,,Y,N,N,limesurvey-19419,dstybimz2okbtqy593,
 "2020/07/01 08:33:40 AM UTC","2020/07/01 08:33:40 AM UTC",France,FR,département:Ille-et-Vilaine,FR35,en,200,7,7,,0,0,,,,,,N,Y,Y,limesurvey-22500,7shjf9i2gygf8m6dso,
+"2020/07/01 09:38:27 AM UTC","2020/07/01 09:38:27 AM UTC",France,FR,région:Bretagne,FRBRE,en,30,1,1,,0,0,,,,,,N,Y,N,limesurvey-22503,sr3nevrqbnkc363fu1,
+"2020/07/01 10:07:26 AM UTC","2020/07/01 10:07:26 AM UTC",France,FR,région:Bretagne,FRBRE,en,1,0,0,,0,0,,,,,,Y,N,N,limesurvey-22506,fb3jjdaljakc374ng8,
