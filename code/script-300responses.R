@@ -165,7 +165,7 @@ get_spain_region_based_rosa <- function(country_geoid = "IT",
 }
 
 
-
-country_interest <- c("ES", "IT", "PT", "UA")
+#"ES", 
+country_interest <- c("IT", "PT", "UA")
 
 dd <- sapply(country_interest, get_spain_region_based_rosa, write_file = T)
