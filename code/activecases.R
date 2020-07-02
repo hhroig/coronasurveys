@@ -1,5 +1,5 @@
 
-ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/PT-estimate.csv")
+ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/ES-estimate.csv")
 #confdata <- read.csv("../data/estimates-confirmed/PlotData/PT-estimate.csv")
 
 
@@ -64,7 +64,8 @@ lines(naif_current_est[1:num],lty=3)
 #--- ends here
 #--------- only run bellow this line for specific countries ----
 recentdata <- read.csv("../data/estimates-W/ES_regional_estimates/region_based_estimates/ES-province-region-country-based-estimate.csv")
-pwdata <- c(rep(NA,80),recentdata$recent_p_w_country)
+#pwdata <- c(rep(NA,80-15),recentdata$recent_p_w_country) # W=30
+pwdata <- c(rep(NA,80-7),recentdata$recent_p_w_country) # W=15
 lines(pwdata*ccfrdata$population[1],lty=1,col="red")
 
 #recentdata <- read.csv("../data/estimates-W/BR_regional_estimates/region_based_estimates/BR-province-region-country-based-estimate.csv")
