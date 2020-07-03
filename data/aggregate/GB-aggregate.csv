@@ -608,3 +608,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/02 08:31:23 AM UTC","2020/07/02 08:31:23 AM UTC","United Kingdom",GB,Scotland,GBSCT,en,10,0,,,,,,,,,,N,N,N,limesurvey-22550,v7zy54zv1zik4v3hiw,
 "2020/07/02 08:36:39 AM UTC","2020/07/02 08:36:39 AM UTC","United Kingdom",GB,England,GBENG,en,16,2,2,,0,0,,,,,,N,N,N,limesurvey-22552,sntu285qqgkb83uo7g,
 "2020/07/02 08:31:18 PM UTC","2020/07/02 08:31:18 PM UTC","United Kingdom",GB,,GBENG,en,2,2,0,,0,0,,,,,,N,N,N,limesurvey-22571,rpvi3zoztikb75auor,
+"2020/07/03 07:50:28 AM UTC","2020/07/03 07:50:28 AM UTC","United Kingdom",GB,,GBSCT,en,2,0,0,,0,0,,,,,,N,N,N,limesurvey-22606,ton6axo7iif2vlxf5q,
+"2020/07/03 07:50:59 AM UTC","2020/07/03 07:50:59 AM UTC","United Kingdom",GB,,GBENG,en,30,0,0,,0,0,,,,,,N,N,N,limesurvey-22607,ton6axo7iif2vlxf5q,
+"2020/07/03 08:32:28 AM UTC","2020/07/03 08:32:27 AM UTC","United Kingdom",GB,,GBENG,en,16,2,2,,1,1,,,,,,N,N,N,limesurvey-22608,sntu285qqgkb83uo7g,
+"2020/07/03 08:48:33 AM UTC","2020/07/03 08:48:33 AM UTC","United Kingdom",GB,,GBENG,en,25,0,,,,,,,,,,N,N,N,limesurvey-22609,05wgp9g7p3kb87rs3u,
