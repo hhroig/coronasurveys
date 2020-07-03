@@ -7,7 +7,7 @@ get_countries_with_survey <- function(path = "../data/aggregate/"){
   substr(plotdata_files,start = 1, stop = 2)
 }
 
-get_spain_region_based_rosa <- function(country_geoid = "IT",
+get_spain_region_based_rosa <- function(country_geoid = "ES",
                                         max_ratio = .3,
                                         write_file = T, 
                                         survey_countries = get_countries_with_survey()){
