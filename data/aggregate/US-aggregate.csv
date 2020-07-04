@@ -604,3 +604,8 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/04 05:54:02 PM UTC","2020/07/04 05:54:02 PM UTC","United States",US,Maryland,USMD,en,3,0,,,,,,,,,,Y,N,N,limesurvey-22687,i5kllbmv3tvcwx87yi,
 "2020/07/04 06:22:04 PM UTC","2020/07/04 06:22:04 PM UTC","United States",US,Virginia,USVA,en,3,0,,,,,,,,,,Y,N,N,limesurvey-22699,nt4zl6zobuh69xku5f,
 "2020/07/04 06:35:12 PM UTC","2020/07/04 06:35:12 PM UTC","United States",US,Minnesota,USMN,en,20,2,2,,0,0,,,,,,N,N,N,limesurvey-22704,bqx02hiz9kkb83uuke,
+"2020/07/04 08:01:07 PM UTC","2020/07/04 08:01:07 PM UTC","United States",US,Washington,USWA,en,20,0,0,,0,0,,,,,,N,N,N,limesurvey-22721,00y232ydc4ti1b0o8m,
+"2020/07/04 08:01:10 PM UTC","2020/07/04 08:01:10 PM UTC","United States",US,Washington,USWA,en,20,0,0,,0,0,,,,,,N,N,N,limesurvey-22722,00y232ydc4ti1b0o8m,
+"2020/07/04 08:21:11 PM UTC","2020/07/04 08:21:11 PM UTC","United States",US,Arizona,USAZ,en,10,1,0,,1,1,,,,,,N,N,N,limesurvey-22725,zwxxmpm8yjhfbw978y,
+"2020/07/04 08:29:51 PM UTC","2020/07/04 08:29:51 PM UTC","United States",US,Illinois,USIL,en,14,0,0,,0,0,,,,,,N,N,N,limesurvey-22726,od4o2nvwsusg559fbf,
+"2020/07/04 09:05:16 PM UTC","2020/07/04 09:05:16 PM UTC","United States",US,"Rhode Island",USRI,en,30,0,0,,0,0,,,,,,N,N,Y,limesurvey-22731,ac6epb7ym2kb3x3yo8,
