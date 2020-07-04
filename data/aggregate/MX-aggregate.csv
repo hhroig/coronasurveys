@@ -20,3 +20,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/15 10:20:55 AM UTC","2020/06/15 10:20:55 AM UTC",Mexico,MX,Nayarit,MXNAY,en,50,0,,,,,,,,,,N,N,N,limesurvey-16220,f9yny5qvx2kb4tdnwa,
 "2020/06/15 04:01:33 PM UTC","2020/06/15 04:01:33 PM UTC",Mexico,MX,Nayarit,MXNAY,en,8,0,0,,0,0,,,,,,Y,Y,N,limesurvey-16264,45uuvl5z9qkbgoqev2,
 "2020/06/22 04:18:43 AM UTC","2020/06/22 04:18:43 AM UTC",Mexico,MX,Sinaloa,MXSIN,en,1000,6,5,,1,1,,,,,,Y,N,N,limesurvey-18373,eqnpgwmjydkbpzpipb,
+"2020/07/04 05:06:45 PM UTC","2020/07/04 05:06:45 PM UTC",Mexico,MX,Sonora,MXSON,en,300,20,5,,10,15,,,,,,N,N,N,limesurvey-22659,vcjxzv3qs5kc7wfg5h,

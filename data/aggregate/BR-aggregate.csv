@@ -650,3 +650,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/03 03:03:29 AM UTC","2020/07/03 03:03:29 AM UTC",Brazil,BR,,BRGO,en,15,0,0,0,0,0,,,,,,N,Y,N,limesurvey-22603,tig0riu7jrkc5mv5kv,
 "2020/07/03 04:52:42 PM UTC","2020/07/03 04:52:42 PM UTC",Brazil,BR,"São Paulo",BRSP,en,100,2,1,1,0,0,,,,,,N,Y,Y,limesurvey-22624,he6diq9pc2ka8zdi5g,
 "2020/07/03 04:53:43 PM UTC","2020/07/03 04:53:43 PM UTC",Brazil,BR,"São Paulo",BRSP,en,100,3,1,1,1,1,,,,,,N,Y,Y,limesurvey-22625,he6diq9pc2ka8zdi5g,
+"2020/07/04 03:54:19 PM UTC","2020/07/04 03:54:19 PM UTC",Brazil,BR,"São Paulo",BRSP,en,15,0,,,,,,,,,,N,N,Y,limesurvey-22643,tuwnh7f94tka9g6u1p,
+"2020/07/04 05:02:49 PM UTC","2020/07/04 05:02:49 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,300,0,0,0,0,0,,,,,,Y,N,N,limesurvey-22648,lbfuw7ikpjqzeyyfvj,
+"2020/07/04 05:02:52 PM UTC","2020/07/04 05:02:52 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,300,0,0,0,0,0,,,,,,Y,N,N,limesurvey-22649,lbfuw7ikpjqzeyyfvj,
+"2020/07/04 05:02:56 PM UTC","2020/07/04 05:02:56 PM UTC",Brazil,BR,"Rio de Janeiro",BRRJ,en,300,0,0,0,0,0,,,,,,Y,N,N,limesurvey-22650,lbfuw7ikpjqzeyyfvj,
