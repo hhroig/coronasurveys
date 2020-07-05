@@ -488,3 +488,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/04 06:15:23 PM UTC","2020/07/04 06:15:23 PM UTC",France,FR,département:Essonne,FR91,en,6,0,,,0,0,,,,,,N,N,N,limesurvey-22694,v48dtx4yf8kb83h81c,
 "2020/07/04 07:35:21 PM UTC","2020/07/04 07:35:21 PM UTC",France,FR,département:Rhône,FR69,en,60,10,9,,0,1,,,,,,N,N,N,limesurvey-22713,dejofa1ozrkb3goj2p,
 "2020/07/04 08:41:23 PM UTC","2020/07/04 08:41:23 PM UTC",France,FR,région:Occitanie,FROCC,en,20,0,0,,0,0,,,,,,Y,N,N,limesurvey-22728,b5s81pylupkb82hyg4,
+"2020/07/05 06:58:02 AM UTC","2020/07/05 06:58:02 AM UTC",France,FR,région:Occitanie,FROCC,en,40,3,3,,0,0,,,,,,N,N,N,limesurvey-22771,0v0k6zm3f0kc8q4hs6,
