@@ -221,17 +221,17 @@
     
     
     
-    p_w_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs1)) * p_w_country_only) + 
-      ((sumreach_country_rhs1/(sumreach_country + sumreach_country_rhs1)) * p_w_country_rhs)
+    p_w_counts <- sum(((sumreach_country/(sumreach_country + sumreach_country_rhs1)) * p_w_country_only),  
+      ((sumreach_country_rhs1/(sumreach_country + sumreach_country_rhs1)) * p_w_country_rhs), na.rm = T)
     
-    p_m_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs1)) * p_m_country_only) + 
-      ((sumreach_country_rhs1/(sumreach_country + sumreach_country_rhs1)) * p_m_country_rhs)
+    p_m_counts <- sum(((sumreach_country/(sumreach_country + sumreach_country_rhs1)) * p_m_country_only),  
+      ((sumreach_country_rhs1/(sumreach_country + sumreach_country_rhs1)) * p_m_country_rhs), na.rm = T)
     
-    recent_p_w_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs2)) * recent_p_w_country_only) + 
-      ((sumreach_country_rhs2/(sumreach_country + sumreach_country_rhs2)) * recent_p_w_country_rhs)
+    recent_p_w_counts <- sum(((sumreach_country/(sumreach_country + sumreach_country_rhs2)) * recent_p_w_country_only), 
+      ((sumreach_country_rhs2/(sumreach_country + sumreach_country_rhs2)) * recent_p_w_country_rhs), na.rm = T)
     
-    recent_p_m_counts <- ((sumreach_country/(sumreach_country + sumreach_country_rhs2)) * recent_p_m_country_only) + 
-      ((sumreach_country_rhs2/(sumreach_country + sumreach_country_rhs2)) * recent_p_m_country_rhs)
+    recent_p_m_counts <- sum(((sumreach_country/(sumreach_country + sumreach_country_rhs2)) * recent_p_m_country_only),  
+      ((sumreach_country_rhs2/(sumreach_country + sumreach_country_rhs2)) * recent_p_m_country_rhs), na.rm = T)
     
     
     

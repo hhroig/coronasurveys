@@ -443,21 +443,25 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
       
       dt_est_prov_reg <- merge(dt_est_prov_reg, dt_regs_rhs, by = c("regioncode"))
       
-      dt_est_prov_reg$p_w_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
-                                     dt_est_prov_reg$p_w_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs1/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
-                                                                         dt_est_prov_reg$p_w_regs_rhs)
+      dt_est_prov_reg$p_w_regs <- sum(((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
+                                     dt_est_prov_reg$p_w_regs_only) ,
+                                     ((dt_est_prov_reg$sumreach_regs_rhs1/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
+                                                                         dt_est_prov_reg$p_w_regs_rhs), na.rm = T)
       
-      dt_est_prov_reg$p_m_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs1)) *
-                                     dt_est_prov_reg$p_m_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs1/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
-                                                                         dt_est_prov_reg$p_m_regs_rhs)
+      dt_est_prov_reg$p_m_regs <- sum(((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs1)) *
+                                     dt_est_prov_reg$p_m_regs_only) ,
+                                     ((dt_est_prov_reg$sumreach_regs_rhs1/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs1)) *
+                                                                         dt_est_prov_reg$p_m_regs_rhs), na.rm = T)
       
-      dt_est_prov_reg$recent_p_w_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
-                                            dt_est_prov_reg$recent_p_w_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs2/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
-                                                                                       dt_est_prov_reg$recent_p_w_regs_rhs)
+      dt_est_prov_reg$recent_p_w_regs <- sum(((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
+                                            dt_est_prov_reg$recent_p_w_regs_only) ,
+                                            ((dt_est_prov_reg$sumreach_regs_rhs2/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
+                                                                                       dt_est_prov_reg$recent_p_w_regs_rhs), na.rm = T)
       
-      dt_est_prov_reg$recent_p_m_regs <- ((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs2)) *
-                                            dt_est_prov_reg$recent_p_m_regs_only) + ((dt_est_prov_reg$sumreach_regs_rhs2/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
-                                                                                       dt_est_prov_reg$recent_p_m_regs_rhs)
+      dt_est_prov_reg$recent_p_m_regs <- sum(((dt_est_prov_reg$sumreach_regs/(dt_est_prov_reg$sumreach_regs + dt_est_prov_reg$sumreach_regs_rhs2)) *
+                                            dt_est_prov_reg$recent_p_m_regs_only),
+                                            ((dt_est_prov_reg$sumreach_regs_rhs2/(dt_est_prov_reg$sumreach_regs+dt_est_prov_reg$sumreach_regs_rhs2)) *
+                                                                                       dt_est_prov_reg$recent_p_m_regs_rhs), na.rm = T)
       
       
     }else{
