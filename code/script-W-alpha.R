@@ -293,7 +293,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                           province = T,
                                           district = F,
                                           W = 30,
-                                          alpha = 0.0001,
+                                          alpha = 0.00001,
                                           max_ratio = .3,
                                           provinces_and_codes = read.csv("../data/common-data/regions-tree-population.csv"),
                                           write_summary_file = T,
@@ -370,6 +370,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
     }
     
     # compute regional estimates
+    
     dtregs <- by(dt_region2,
                  list(dt_region2$countrycode, dt_region2$regioncode), # groupby country and region and compute population
                  function(x){
@@ -378,6 +379,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                               population_region = sum(x$population),
                               stringsAsFactors = F)
                  })
+    
     dtregs <- do.call(rbind, dtregs)
     regions <- unique(dtregs$regioncode)
     p_w_regs_only <- p_m_regs_only <- recent_p_w_regs_only <- recent_p_m_regs_only <- sumreach_regs <- rep(NA, length(regions))
@@ -610,13 +612,13 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
   }
   
 }
-
 provincial_regional_estimate2(countrycode = "ES",
-                              alpha = 0.0001,
-                              write_summary_file = T,
-                              write_daily_file = T)
+                                    alpha = 0.000001,
+                                    write_summary_file = T,
+                                    write_daily_file = T)
 
 provincial_regional_estimate2(countrycode = "BR",
+                              alpha = 0.0000001, 
                               province = F,
                               write_summary_file = T,
                               write_daily_file = T)

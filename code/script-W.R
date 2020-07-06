@@ -1,11 +1,11 @@
 #######
 #with recent cases
-provincial_regional_estimate_w_only <- function(countrycode = "ES",
+  provincial_regional_estimate_w_only <- function(countrycode = "ES",
                                                 province = T,
                                                 district = F,
                                                 W = 15,
                                                 max_ratio = .3,
-                                                provinces_and_codes = readxl::read_excel("regions-tree-population.xlsx"),
+                                                provinces_and_codes = read.csv("../data/common-data/regions-tree-population.csv"),
                                                 write_summary_file = T,
                                                 write_daily_file = T){
   cat(paste0("::- script-W: Generating region based estimates for ", countrycode, "\n"))
@@ -255,10 +255,10 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
                                  p_m_country =  p_m_counts,
                                  recent_p_w_country =  recent_p_w_counts,
                                  recent_p_m_country =  recent_p_m_counts)
-      
+      dir.create(paste0("../data/estimates-W/", countrycode), showWarnings = F)
       cat(paste0("::- script-W: Writing the region based daily estimate for ", countrycode, "..\n")) 
       dt_est_prov_reg_country <- merge(dt_est_prov_reg, dt_est_count, all = T, by = "countrycode")
-      write.csv(x = dt_est_prov_reg_country, file = paste0("../data/estimates-W/", countrycode,
+      write.csv(x = dt_est_prov_reg_country, file = paste0("../data/estimates-W/", countrycode, "/", countrycode,
                                                            "-province-region-country-based-estimate-", gsub("/", "_", j), ".csv"))
     }
     
@@ -297,9 +297,10 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
                                       #I_r_p_m_country = I_r_p_m_country,
                                       #I_r_recent_p_w_country = I_r_recent_p_w_country, 
                                       #I_r_recent_p_m_country = I_r_recent_p_m_country,
-                                      p_w_country = p_w_country,
+                                      p_cases = p_w_country,
+                                      p_cases_recent = recent_p_w_country,
                                       p_m_country = p_m_country,
-                                      recent_p_w_country = recent_p_w_country,
+                                      
                                       recent_p_m_country = recent_p_m_country)
   if(write_summary_file == T){
     dir.create("../data/estimates-W/PlotData/", showWarnings = F)
@@ -313,16 +314,10 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
   
 }
 
-provincial_regional_estimate_w_only(countrycode = "ES",
-                                    write_summary_file = T,
-                                    write_daily_file = T)
 
-provincial_regional_estimate_w_only(countrycode = "BR",
-                                    province = F,
-                                    write_summary_file = T,
-                                    write_daily_file = T)
+interest <- c("BR", "PT", "UA", "IT", "US", "EC")
+dd <- sapply(interest, provincial_regional_estimate_w_only, province = F)
 
-# provincial_regional_estimate_w_only(countrycode = "GB",
-#                                     province = F,
-#                                     write_summary_file = T,
-#                                     write_daily_file = T)
+interest2 <- c("ES")
+dd2 <- sapply(interest2, provincial_regional_estimate_w_only, province = T)
+
