@@ -5,7 +5,7 @@ provincial_regional_estimate <- function(countrycode = "EC",
                                          W = 30,
                                          alpha = 0.0001,
                                          max_ratio = .3,
-                                         provinces_and_codes = readxl::read_excel("../data/common-data/regions-tree-population.xlsx"),
+                                         provinces_and_codes = read.csv("../data/common-data/regions-tree-population.csv"),
                                          write_summary_file = T,
                                          write_daily_file = T){
   cat(paste0("::- script-W-alpha: Generating region based estimates for ", countrycode, "::\n"))
@@ -295,7 +295,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                           W = 30,
                                           alpha = 0.0001,
                                           max_ratio = .3,
-                                          provinces_and_codes = readxl::read_excel("../data/common-data/regions-tree-population.xlsx"),
+                                          provinces_and_codes = read.csv("../data/common-data/regions-tree-population.csv"),
                                           write_summary_file = T,
                                           write_daily_file = T){
   cat(paste0("::- script-W-alpha: Generating region based estimates for ", countrycode, "::\n"))
@@ -596,9 +596,9 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
                                       # I_r_p_m_country = I_r_p_m_country,
                                       # I_r_recent_p_w_country = I_r_recent_p_w_country, 
                                       # I_r_recent_p_m_country = I_r_recent_p_m_country,
-                                      p_w_country = p_w_country,
+                                      p_cases = p_w_country,
+                                      p_cases_recent = recent_p_w_country,
                                       p_m_country = p_m_country,
-                                      recent_p_w_country = recent_p_w_country,
                                       recent_p_m_country = recent_p_m_country)
   if(write_summary_file == T){
     dir.create("../data/estimates-W-alpha/PlotData/", showWarnings = F)
@@ -612,7 +612,7 @@ provincial_regional_estimate2 <- function(countrycode = "ES",
 }
 
 provincial_regional_estimate2(countrycode = "ES",
-                              alpha = 0.00001,
+                              alpha = 0.0001,
                               write_summary_file = T,
                               write_daily_file = T)
 

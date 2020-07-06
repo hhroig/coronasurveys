@@ -100,10 +100,10 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                 sample_size = n(), 
                 #mean_cases = mean(cases), #
                 #mean_reach = mean(reach), #
-                p_w = sum(cases)/sum(reach), 
-                p_w_low = calculate_ci(p_est = sum(cases)/sum(reach), level = 0.95,
+                p_cases = sum(cases)/sum(reach), 
+                p_cases_low = calculate_ci(p_est = sum(cases)/sum(reach), level = 0.95,
                                                  pop_size = sum(reach))$low,
-                p_w_high = calculate_ci(p_est = sum(cases)/sum(reach), level=0.95,
+                p_cases_high = calculate_ci(p_est = sum(cases)/sum(reach), level=0.95,
                                                   pop_size = sum(reach))$upp,
                 p_m = mean(ratio),
                 p_m_low = calculate_ci(p_est = mean(ratio), level = 0.95,
@@ -111,11 +111,11 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                 p_m_high = calculate_ci(p_est = mean(ratio), level = 0.95,
                                         pop_size = sum(reach))$upp,
                 
-                p_w_recent = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
-                p_w_recent_low = calculate_ci(p_est = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
+                p_cases_recent = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
+                p_cases_recent_low = calculate_ci(p_est = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
                                               level = 0.95,
                                               pop_size = sum(reach[!is.na(recentcases)]))$low,
-                p_w_recent_high = calculate_ci(p_est = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
+                p_cases_recent_high = calculate_ci(p_est = sum(recentcases[!is.na(recentcases)])/sum(reach[!is.na(recentcases)]),
                                               level = 0.95,
                                               pop_size = sum(reach[!is.na(recentcases)]))$upp,
                 
@@ -125,11 +125,11 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                 p_m_recent_high = calculate_ci(p_est = mean(recentcases/reach, na.rm = T), level = 0.95,
                                               pop_size = sum(reach[!is.na(recentcases)]))$upp, 
                 
-                p_w_recovered = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
-                p_w_recovered_low = calculate_ci(p_est = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
+                p_cases_recovered = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
+                p_cases_recovered_low = calculate_ci(p_est = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
                                                  level = 0.95,
                                                  pop_size = sum(reach[!is.na(recovered)]))$low,
-                p_w_recovered_high = calculate_ci(p_est = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
+                p_cases_recovered_high = calculate_ci(p_est = sum(recovered[!is.na(recovered)])/sum(reach[!is.na(recovered)]),
                                                  level = 0.95,
                                                  pop_size = sum(reach[!is.na(recovered)]))$upp,
                 
@@ -141,11 +141,11 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                                                   level = 0.95,
                                                   pop_size = sum(reach[!is.na(recovered)]))$upp,
                 
-                p_w_fatalities = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
-                p_w_fatalities_low = calculate_ci(p_est = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
+                p_cases_fatalities = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
+                p_cases_fatalities_low = calculate_ci(p_est = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
                                                  level = 0.95,
                                                  pop_size = sum(reach[!is.na(fatalities)]))$low,
-                p_w_fatalities_high = calculate_ci(p_est = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
+                p_cases_fatalities_high = calculate_ci(p_est = sum(fatalities[!is.na(fatalities)])/sum(reach[!is.na(fatalities)]),
                                                   level = 0.95,
                                                   pop_size = sum(reach[!is.na(fatalities)]))$upp,
                 
@@ -157,11 +157,11 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                                                   level = 0.95,
                                                   pop_size = sum(reach[!is.na(fatalities)]))$upp,
                 
-                p_w_stillsick = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
-                p_w_stillsick_low = calculate_ci(p_est = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
+                p_cases_stillsick = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
+                p_cases_stillsick_low = calculate_ci(p_est = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
                                                   level = 0.95,
                                                   pop_size = sum(reach[!is.na(stillsick)]))$low,
-                p_w_stillsick_high = calculate_ci(p_est = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
+                p_cases_stillsick_high = calculate_ci(p_est = sum(stillsick[!is.na(stillsick)])/sum(reach[!is.na(stillsick)]),
                                                    level = 0.95,
                                                    pop_size = sum(reach[!is.na(stillsick)]))$upp,
                 
@@ -173,11 +173,11 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                                                    level = 0.95,
                                                    pop_size = sum(reach[!is.na(stillsick)]))$upp,
                 
-                p_w_active_cases = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
-                p_w_active_cases_low = calculate_ci(p_est = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
+                p_cases_active_cases = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
+                p_cases_active_cases_low = calculate_ci(p_est = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
                                                  level = 0.95,
                                                  pop_size = sum(reach[!is.na(active_cases)]))$low,
-                p_w_active_cases_high = calculate_ci(p_est = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
+                p_cases_active_cases_high = calculate_ci(p_est = sum(active_cases[!is.na(active_cases)])/sum(reach[!is.na(active_cases)]),
                                                   level = 0.95,
                                                   pop_size = sum(reach[!is.na(active_cases)]))$upp,
                 
@@ -197,7 +197,7 @@ estimate_cases_aggregate <- function(country_geoid = "AR",
                 )
     
     dt_summary <- dt_summary[, -1] # remove group factor variable
-    dt_summary$p_w_low[dt_summary$p_w_low < 0]   <- 0.000001
+    dt_summary$p_cases_low[dt_summary$p_cases_low < 0]   <- 0.000001
     dt_summary$p_m_low[dt_summary$p_m_low < 0]   <- 0.000001
     # dt_summary$p_w_recent_low[dt_summary$p_w_recent_low < 0]   <- 0.000001
     # dt_summary$p_m_recent_low[dt_summary$p_m_recent_low < 0]   <- 0.000001
@@ -225,5 +225,5 @@ dtpop_ecdc <- read.csv(file = "../data/common-data/country_population_ecdc.csv",
                        na.strings = "")[,-1]
 all_geo_ids <- dtpop_ecdc$geo_id
 go <- sapply(all_geo_ids, estimate_cases_aggregate, dts = dtpop_ecdc)
-  
+
   

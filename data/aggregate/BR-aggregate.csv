@@ -644,3 +644,7 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/30 06:09:00 PM UTC","2020/06/30 06:09:00 PM UTC",Brazil,BR,"São Paulo",BRSP,en,100,2,1,1,0,0,,,,,,N,Y,Y,limesurvey-22328,he6diq9pc2ka8zdi5g,
 "2020/06/30 11:18:57 PM UTC","2020/06/30 11:18:56 PM UTC",Brazil,BR,Bahia,BRBA,en,4,0,0,0,0,0,,,,,,N,N,N,limesurvey-22482,chsbxyqgphkc2jyolu,
 "2020/07/02 12:27:12 PM UTC","2020/07/02 12:27:12 PM UTC",Brazil,BR,"São Paulo",BRSP,en,101,2,1,1,0,0,,,,,,N,N,Y,limesurvey-22557,a0argb1tyskbmintck,
+"2020/07/02 08:36:45 PM UTC","2020/07/02 08:36:45 PM UTC",Brazil,BR,,BRSP,en,100,2,1,1,0,0,,,,,,N,Y,Y,limesurvey-22573,he6diq9pc2ka8zdi5g,
+"2020/07/02 08:37:47 PM UTC","2020/07/02 08:37:47 PM UTC",Brazil,BR,,BRSP,en,100,2,1,1,0,0,,,,,,N,Y,Y,limesurvey-22574,he6diq9pc2ka8zdi5g,
+"2020/07/03 01:57:33 AM UTC","2020/07/03 01:57:33 AM UTC",Brazil,BR,,BRRS,en,3,0,0,0,0,0,,,,,,N,N,N,limesurvey-22601,lv8ucn7tznkbeeik9p,
+"2020/07/03 03:03:29 AM UTC","2020/07/03 03:03:29 AM UTC",Brazil,BR,,BRGO,en,15,0,0,0,0,0,,,,,,N,Y,N,limesurvey-22603,tig0riu7jrkc5mv5kv,

@@ -7,7 +7,7 @@ get_countries_with_survey <- function(path = "../data/aggregate/"){
   substr(plotdata_files,start = 1, stop = 2)
 }
 
-get_spain_region_based_rosa <- function(country_geoid = "ES",
+get_spain_region_based_rosa <- function(country_geoid = "PT",
                                         max_ratio = .3,
                                         write_file = T, 
                                         survey_countries = get_countries_with_survey()){
@@ -27,7 +27,7 @@ get_spain_region_based_rosa <- function(country_geoid = "ES",
     if (country_geoid == "IT"){
       dt <- dt[!stringr::str_detect((dt$Region), pattern = "Province:"),]
     }
-    regions_tree <- read.csv(file = "../data/common-data/regions-tree-population2.csv", as.is = T) %>% 
+    regions_tree <- read.csv(file = "../data/common-data/regions-tree-population.csv", as.is = T) %>% 
       filter(countrycode == country_geoid) %>% 
       group_by(regioncode) %>% 
       summarise(population = sum(population))
@@ -141,9 +141,9 @@ get_spain_region_based_rosa <- function(country_geoid = "ES",
     }
     
     region_based_estimate2 <- data.frame(date = dates,
-                                         p_w = cases_p_reach,
-                                         p_w_low = cases_p_reach - (1.96 * sqrt(Vp1)),
-                                         p_w_high = cases_p_reach + (1.96 * sqrt(Vp1)),
+                                         p_cases = cases_p_reach,
+                                         p_cases_low = cases_p_reach - (1.96 * sqrt(Vp1)),
+                                         p_cases_high = cases_p_reach + (1.96 * sqrt(Vp1)),
                                          p_m = cases_p_reach_prop, 
                                          p_m_low = cases_p_reach_prop - 1.96 * sqrt(Vp2),
                                          p_m_high = cases_p_reach_prop + 1.96 * sqrt(Vp2),
@@ -165,7 +165,8 @@ get_spain_region_based_rosa <- function(country_geoid = "ES",
 }
 
 
-#"ES", 
-country_interest <- c("IT", "PT", "UA")
+#"ES", IT, "DE", "FR" , "GB"
+# CY does not have regional data check
+country_interest <- c( "PT", "UA", "BR", "EC", "US")
 
 dd <- sapply(country_interest, get_spain_region_based_rosa, write_file = T)
