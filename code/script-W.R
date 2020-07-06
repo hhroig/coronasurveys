@@ -285,7 +285,7 @@
     recent_p_m_country <- c(recent_p_m_country, recent_p_m_counts)
   }
   
-  region_based_estimate <- data.frame(#date = dates,
+  region_based_estimate <- data.frame(date = dates,
                                       #r_c = r_c,
                                       #r_r = r_r,
                                       #r_r_recent = r_r_recent,
