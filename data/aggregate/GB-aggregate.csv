@@ -609,7 +609,11 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/02 08:36:39 AM UTC","2020/07/02 08:36:39 AM UTC","United Kingdom",GB,England,GBENG,en,16,2,2,,0,0,,,,,,N,N,N,limesurvey-22552,sntu285qqgkb83uo7g,
 "2020/07/02 08:31:18 PM UTC","2020/07/02 08:31:18 PM UTC","United Kingdom",GB,England,GBENG,en,2,2,0,,0,0,,,,,,N,N,N,limesurvey-22571,rpvi3zoztikb75auor,
 <<<<<<< HEAD
+<<<<<<< HEAD
 "2020/07/03 07:50:28 AM UTC","2020/07/03 07:50:28 AM UTC","United Kingdom",GB,Scotland,GBSCT,en,2,0,0,,0,0,,,,,,N,N,N,limesurvey-22606,ton6axo7iif2vlxf5q,
+=======
+"2020/07/03 07:50:28 AM UTC","2020/07/03 07:50:28 AM UTC","United Kingdom",GB,England,GBSCT,en,2,0,0,,0,0,,,,,,N,N,N,limesurvey-22606,ton6axo7iif2vlxf5q,
+>>>>>>> 0711cec233438d7fff6dacc1d8f76349dda2a22a
 =======
 "2020/07/03 07:50:28 AM UTC","2020/07/03 07:50:28 AM UTC","United Kingdom",GB,England,GBSCT,en,2,0,0,,0,0,,,,,,N,N,N,limesurvey-22606,ton6axo7iif2vlxf5q,
 >>>>>>> 0711cec233438d7fff6dacc1d8f76349dda2a22a
