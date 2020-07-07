@@ -89,13 +89,10 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/23 04:47:42 PM UTC","2020/06/23 04:47:42 PM UTC",Canada,CA,"British Columbia",CABC,en,12,0,0,,0,0,,,,,,N,N,N,limesurvey-18728,jep82rxre504rsgzmw,
 "2020/06/23 06:08:08 PM UTC","2020/06/23 06:08:08 PM UTC",Canada,CA,Quebec,CAQC,en,1,0,0,,0,0,,,,,,N,N,N,limesurvey-18819,i0lvmpcgplzjo22u94,
 "2020/06/24 02:59:43 AM UTC","2020/06/24 02:59:43 AM UTC",Canada,CA,Ontario,CAON,en,16,0,,,,,,,,,,Y,N,N,limesurvey-19186,14vketo22g86ti19ux,
-"2020/07/02 05:31:53 PM UTC","2020/07/02 05:31:53 PM UTC",Canada,CA,,CABC,en,12,0,0,,0,0,,,,,,N,N,N,limesurvey-22570,s3w0ktkztvfdbr80qi,
-<<<<<<< HEAD
-=======
+"2020/07/02 05:31:53 PM UTC","2020/07/02 05:31:53 PM UTC",Canada,CA,"British Columbia",CABC,en,12,0,0,,0,0,,,,,,N,N,N,limesurvey-22570,s3w0ktkztvfdbr80qi,
 "2020/07/04 05:07:59 PM UTC","2020/07/04 05:07:59 PM UTC",Canada,CA,Ontario,CAON,en,2144,4,4,,0,0,,,,,,N,N,N,limesurvey-22660,4mx1yetb6c74b1fahh,
 "2020/07/04 05:20:59 PM UTC","2020/07/04 05:20:59 PM UTC",Canada,CA,Ontario,CAON,en,250,0,0,,0,0,,,,,,Y,Y,N,limesurvey-22676,gr49hwsez1tkzz9yj7,
 "2020/07/04 05:21:02 PM UTC","2020/07/04 05:21:02 PM UTC",Canada,CA,Ontario,CAON,en,250,0,0,,0,0,,,,,,Y,Y,N,limesurvey-22677,gr49hwsez1tkzz9yj7,
 "2020/07/04 06:28:35 PM UTC","2020/07/04 06:28:35 PM UTC",Canada,CA,Ontario,CAON,en,16,0,,,,,,,,,,N,N,N,limesurvey-22702,ky4ts3uh1pc418rkqb,
 "2020/07/04 09:13:22 PM UTC","2020/07/04 09:13:22 PM UTC",Canada,CA,"British Columbia",CABC,en,23,0,0,,0,0,,,,,,N,N,N,limesurvey-22733,ptjco2qsbtkb85tgoq,
 "2020/07/05 01:53:23 AM UTC","2020/07/05 01:53:23 AM UTC",Canada,CA,Quebec,CAQC,en,20,0,0,,0,0,,,,,,Y,N,N,limesurvey-22757,vpsyte7ophm7h8hmo6,
->>>>>>> 5cecc6387a0742f5ab57c36c65e198d5241c95d3
