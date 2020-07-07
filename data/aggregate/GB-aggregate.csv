@@ -612,8 +612,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/03 07:50:59 AM UTC","2020/07/03 07:50:59 AM UTC","United Kingdom",GB,,GBENG,en,30,0,0,,0,0,,,,,,N,N,N,limesurvey-22607,ton6axo7iif2vlxf5q,
 "2020/07/03 08:32:28 AM UTC","2020/07/03 08:32:27 AM UTC","United Kingdom",GB,,GBENG,en,16,2,2,,1,1,,,,,,N,N,N,limesurvey-22608,sntu285qqgkb83uo7g,
 "2020/07/03 08:48:33 AM UTC","2020/07/03 08:48:33 AM UTC","United Kingdom",GB,,GBENG,en,25,0,,,,,,,,,,N,N,N,limesurvey-22609,05wgp9g7p3kb87rs3u,
-<<<<<<< HEAD
-=======
 "2020/07/03 03:58:34 PM UTC","2020/07/03 03:58:34 PM UTC","United Kingdom",GB,England,GBENG,en,25,0,,,,,,,,,,N,N,N,limesurvey-22622,y2fb65uortkb6bhuct,
 "2020/07/04 04:38:25 AM UTC","2020/07/04 04:38:25 AM UTC","United Kingdom",GB,England,GBENG,en,16,2,2,,0,0,,,,,,N,N,N,limesurvey-22631,sntu285qqgkb83uo7g,
 "2020/07/04 12:48:37 PM UTC","2020/07/04 12:48:37 PM UTC","United Kingdom",GB,England,GBENG,en,36,1,1,,0,0,,,,,,N,N,N,limesurvey-22641,as4fra340rpnupga9a,
@@ -649,4 +647,3 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/06 08:01:43 AM UTC","2020/07/06 08:01:43 AM UTC","United Kingdom",GB,England,GBENG,en,11,1,1,,0,0,,,,,,N,N,N,limesurvey-22865,nx3s3hjf8owdt7v9d7,
 "2020/07/06 08:22:36 AM UTC","2020/07/06 08:22:36 AM UTC","United Kingdom",GB,England,GBENG,en,16,2,2,,0,0,,,,,,N,N,N,limesurvey-22866,wwcx42jj3nd62oo3tq,
 "2020/07/06 09:24:53 AM UTC","2020/07/06 09:24:53 AM UTC","United Kingdom",GB,England,GBENG,en,300,2,2,,0,0,,,,,,N,N,N,limesurvey-22872,oqulese1vd5l2rued7,
->>>>>>> 5cecc6387a0742f5ab57c36c65e198d5241c95d3

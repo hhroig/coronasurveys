@@ -770,8 +770,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/03 09:32:13 AM UTC","2020/07/03 09:32:13 AM UTC",Italy,IT,,IT78,en,25,0,,,,,,,,,,N,N,Y,limesurvey-22610,6ogyjr6g2ikb2r7876,
 "2020/07/03 11:23:13 AM UTC","2020/07/03 11:23:13 AM UTC",Italy,IT,,ITPD,en,30,3,3,,,,,,,,,N,N,N,limesurvey-22613,4qonyph99hkb83n0xo,
 "2020/07/03 11:23:16 AM UTC","2020/07/03 11:23:16 AM UTC",Italy,IT,,ITPD,en,30,3,3,,,,,,,,,N,N,N,limesurvey-22614,4qonyph99hkb83n0xo,
-<<<<<<< HEAD
-=======
 "2020/07/04 05:05:08 PM UTC","2020/07/04 05:05:08 PM UTC",Italy,IT,Regioni:Liguria,IT42,en,50,4,4,,,,,,,,,N,N,N,limesurvey-22655,x67ybff1x5kc7wddji,
 "2020/07/04 05:05:11 PM UTC","2020/07/04 05:05:11 PM UTC",Italy,IT,Regioni:Liguria,IT42,en,50,4,4,,,,,,,,,N,N,N,limesurvey-22656,x67ybff1x5kc7wddji,
 "2020/07/04 06:00:36 PM UTC","2020/07/04 06:00:36 PM UTC",Italy,IT,Regioni:Campania,IT72,en,50,0,,,,,,,,,,Y,N,N,limesurvey-22690,kg8xctg66pkc7yexq9,
@@ -781,4 +779,3 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/05 04:35:10 PM UTC","2020/07/05 04:35:09 PM UTC",Italy,IT,Regioni:Campania,IT72,en,50,10,10,,,,,,,,,N,N,N,limesurvey-22818,gkjg6lkbehkaxmypn5,
 "2020/07/06 07:12:40 AM UTC","2020/07/06 07:12:40 AM UTC",Italy,IT,Regioni:Lazio,IT62,en,30,3,3,,,,,,,,,N,N,N,limesurvey-22856,oz6knvur8okb90lf8o,
 "2020/07/06 08:30:19 AM UTC","2020/07/06 08:30:19 AM UTC",Italy,IT,Regioni:Sardegna,IT88,en,10,0,0,,,,,,,,,N,N,N,limesurvey-22867,ae0y6i1bxykb66fv2k,
->>>>>>> 5cecc6387a0742f5ab57c36c65e198d5241c95d3
