@@ -632,3 +632,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/07 06:38:48 PM UTC","2020/07/07 06:38:48 PM UTC","United States",US,California,USCA,en,10,0,,,,,,,,,,N,N,N,limesurvey-23191,qr0us32v15ffiitkkf,
 "2020/07/07 11:47:14 PM UTC","2020/07/07 11:47:14 PM UTC","United States",US,Vermont,USVT,en,10,0,,,,,,,,,,N,N,N,limesurvey-23206,h5v0hwn6wp6hnm8mv9,
 "2020/07/08 05:06:10 PM UTC","2020/07/08 05:06:10 PM UTC","United States",US,California,USCA,en,60,0,0,,0,0,,,,,,N,N,N,limesurvey-23249,z3fci8tw5akb44tj8g,
+"2020/07/08 06:32:16 PM UTC","2020/07/08 06:32:16 PM UTC","United States",US,"New Jersey",USNJ,en,20,10,6,,0,0,,,,,,Y,Y,Y,limesurvey-23269,w1fvoj86qkk6v4gemu,
+"2020/07/08 06:32:19 PM UTC","2020/07/08 06:32:19 PM UTC","United States",US,"New Jersey",USNJ,en,20,10,6,,0,0,,,,,,Y,Y,Y,limesurvey-23270,w1fvoj86qkk6v4gemu,
+"2020/07/08 06:32:20 PM UTC","2020/07/08 06:32:20 PM UTC","United States",US,"New Jersey",USNJ,en,20,10,6,,0,0,,,,,,Y,Y,Y,limesurvey-23271,w1fvoj86qkk6v4gemu,
