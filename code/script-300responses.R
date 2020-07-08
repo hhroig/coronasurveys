@@ -7,7 +7,7 @@ get_countries_with_survey <- function(path = "../data/aggregate/"){
   substr(plotdata_files,start = 1, stop = 2)
 }
 
-get_spain_region_based_rosa <- function(country_geoid = "PT",
+get_spain_region_based_rosa <- function(country_geoid = "ES",
                                         max_ratio = .3,
                                         write_file = T, 
                                         survey_countries = get_countries_with_survey()){
@@ -16,25 +16,27 @@ get_spain_region_based_rosa <- function(country_geoid = "PT",
   if(country_geoid %in% survey_countries){
     file_path <- paste0("../data/aggregate/", country_geoid, "-aggregate.csv")
     dt <- read.csv(file_path, as.is = T)
+    names(dt) <- tolower(names(dt))
+    dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
+    dt$date <- substr(dt$timestamp, 1, 10)
+    dates <- as.character(seq.Date(as.Date(dt$date[1]), as.Date(tail(dt$date,1)), by = "days"))
+    dates <- gsub("-","/", dates)
     if(country_geoid == "ES"){
       # remove provincia
-      dt <- dt[!stringr::str_detect((dt$Region), pattern = "Provincia"),]
+      dt <- dt[!stringr::str_detect((dt$region), pattern = "Provincia"),]
       # change region Baleares from ESPM to ESIB
-      dt$ISO.3166.2[dt$Region == "Baleares"] <- "ESIB" 
+      dt$iso.3166.2[dt$region == "Baleares"] <- "ESIB" 
       # 
     }
     
     if (country_geoid == "IT"){
-      dt <- dt[!stringr::str_detect((dt$Region), pattern = "Province:"),]
+      dt <- dt[!stringr::str_detect((dt$region), pattern = "Province:"),]
     }
     regions_tree <- read.csv(file = "../data/common-data/regions-tree-population.csv", as.is = T) %>% 
       filter(countrycode == country_geoid) %>% 
       group_by(regioncode) %>% 
       summarise(population = sum(population))
     
-    names(dt) <- tolower(names(dt))
-    dt <- dt[, c("timestamp","region","reach","cases", "iso.3166.1.a2", "iso.3166.2")]
-    dt$date <- substr(dt$timestamp, 1, 10)
     if(country_geoid == "ES"){
       dt$reach[1:102] <- 150 # impute Dunbar number
     }
@@ -48,12 +50,12 @@ get_spain_region_based_rosa <- function(country_geoid = "PT",
     dt <- dt[is.finite(dt$ratio), ]  # discard cases with zero reach
     dt <- dt[dt$ratio <= max_ratio, ]
     
-    # set "" to todo el pais
+    # set "" to todo el pais"
     dt$region[dt$region == ""] <- "all country"
     dt$iso.3166.2[dt$iso.3166.2 == ""] <- country_geoid
     
     # get all the dates
-    dates <- unique(dt$date)
+    #dates <- unique(dt$date)  # creatr a list of consecutive dates
     # create vector of results
     cases_p_reach <- c()
     cases_p_reach_prop <- c()
