@@ -1,5 +1,5 @@
 
-ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/ES-estimate.csv")
+ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/US-estimate.csv")
 #confdata <- read.csv("../data/estimates-confirmed/PlotData/PT-estimate.csv")
 
 
@@ -15,6 +15,7 @@ for (i in 1:length(ccfrdata$cases))
 
 num <- length(ccfrdata$cases)
 cum <- cumsum(ccfrdata$cases)
+
 mult_fact_raw <- (ccfrdata$p_cases*ccfrdata$population)/cum
 mult_fact <- rep(0,num)
 
@@ -45,7 +46,7 @@ current_est <- cumsum(positive_daily_est-negative_daily_est)
 
 plot(current_est[1:num],type="l",lty=1,xlab="Days (cases considered active for 12 days)",ylab="Cases",main="Estimate of active COVID-19")
 
-legend(x="topleft", legend=c("total active cases estimate", "undetected active cases estimate","PCR detected active cases"), lty=1:3, cex=0.5)
+legend(x="topleft", legend=c("total active cases estimate", "undetected active cases estimate","active reported cases"), lty=1:3, cex=0.5)
 abline(h=0,lty=1)
 
 detected_daily <- c(ccfrdata$cases,infect_window)
@@ -56,6 +57,7 @@ undetected_current_est <- cumsum(positive_daily_est-negative_daily_undetected_es
 lines(undetected_current_est[1:num],lty=2)
 
 
+
 negative_detected_daily <- c(infect_window,ccfrdata$cases)
 # the naif approach is just to assume detected cases as all cases
 naif_current_est <- cumsum(detected_daily-negative_detected_daily)
@@ -63,33 +65,37 @@ lines(naif_current_est[1:num],lty=3)
 
 #--- ends here
 #--------- only run bellow this line for specific countries ----
-recentdata <- read.csv("../data/estimates-W/ES_regional_estimates/region_based_estimates/ES-province-region-country-based-estimate.csv")
-#pwdata <- c(rep(NA,80-15),recentdata$recent_p_w_country) # W=30
-pwdata <- c(rep(NA,80-7),recentdata$recent_p_w_country) # W=15
-lines(pwdata*ccfrdata$population[1],lty=1,col="red")
 
-#recentdata <- read.csv("../data/estimates-W/BR_regional_estimates/region_based_estimates/BR-province-region-country-based-estimate.csv")
-#pwdata <- c(rep(NA,129),recentdata$recent_p_w_country)
+#recentdata <- read.csv("../data/estimates-W/PlotData/ES-estimate.csv")
+#pwdata <- c(rep(NA,80-7),recentdata$p_cases_recent) # W=15?
+#pwdata <- c(rep(NA,80-7),recentdata$recent_p_m_country) # W=15
 #lines(pwdata*ccfrdata$population[1],lty=1,col="red")
 
-library(tidyverse)
-library(httr)
-library(jsonlite)
+
+#recentdata <- read.csv("../data/estimates-W/PlotData/PT-estimate.csv")
+#pwdata <- c(rep(NA,20),recentdata$p_cases_recent)
+#lines(pwdata*ccfrdata$population[1],lty=1,col="red")
+
+#library(tidyverse)
+#library(httr)
+#library(jsonlite)
 
 # adding url
 #path <- "https://covidmap.umd.edu/api/resources?indicator=covid&type=daily&country=Spain&daterange=20200423-20200626"
-path <- "https://covidmap.umd.edu/api/resources?indicator=covid&type=smoothed&country=Spain&daterange=20200423-20200626"
+#path <- "https://covidmap.umd.edu/api/resources?indicator=covid&type=smoothed&country=Spain&daterange=20200423-20200626"
 
 # request data from api
-request <- GET(url = path)
+#request <- GET(url = path)
 
 # make sure the content is encoded with 'UTF-8'
-response <- content(request, as = "text", encoding = "UTF-8")
+#response <- content(request, as = "text", encoding = "UTF-8")
 
 # now we can have a dataframe for use!
-coviddata <- fromJSON(response, flatten = TRUE) %>% data.frame()
+#coviddata <- fromJSON(response, flatten = TRUE) %>% data.frame()
 
 #facebook <- c(rep(NA,114),coviddata$data.percent_cli)
-facebook <- c(rep(NA,114),coviddata$data.smoothed_cli)
-lines(facebook*ccfrdata$population[1],lty=1,col="blue")
+#facebook <- c(rep(NA,114),coviddata$data.smoothed_cli)
+#lines(facebook*ccfrdata$population[1],lty=1,col="blue")
 
+undetected_current_est[num]
+undetected_current_est[num] / ccfrdata$population[1] * 100
