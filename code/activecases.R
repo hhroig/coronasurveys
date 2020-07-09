@@ -1,10 +1,10 @@
 
-ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/US-estimate.csv")
+ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/ES-estimate.csv")
 #confdata <- read.csv("../data/estimates-confirmed/PlotData/PT-estimate.csv")
 
 
-baselineA <- 1.38
-baselineB <- 1.38
+#baselineA <- 1.38
+#baselineB <- 1.38
 
 #clean negative daily cases to 0
 for (i in 1:length(ccfrdata$cases))
@@ -26,9 +26,10 @@ for (i in 1:num)
      mult_fact[i] <- 1
   else
   {
-    x <- mult_fact_raw[i] * baselineA
-    y <- x / baselineB
-    mult_fact[i] <- y
+#    x <- mult_fact_raw[i] * baselineA
+#    y <- x / baselineB
+#    mult_fact[i] <- y
+    mult_fact[i] <- mult_fact_raw[i]
   }
 
 }
