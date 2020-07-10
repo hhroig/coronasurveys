@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: CaseEstimation.aux
+The style file: plain.bst
+Database file #1: refs.bib
+Warning--there's a month but no year in Verity2020
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            595 strings with 8452 characters,
+and the built_in function-call counts, 6189 in all, are:
+= -- 545
+> -- 518
+< -- 1
++ -- 209
+- -- 190
+* -- 489
+:= -- 1141
+add.period$ -- 56
+call.type$ -- 16
+change.case$ -- 140
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 154
+empty$ -- 324
+format.name$ -- 190
+if$ -- 1182
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 11
+newline$ -- 91
+num.names$ -- 32
+pop$ -- 149
+preamble$ -- 1
+purify$ -- 123
+quote$ -- 0
+skip$ -- 115
+stack$ -- 0
+substring$ -- 155
+swap$ -- 20
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 1
+while$ -- 39
+width$ -- 18
+write$ -- 181
+(There was 1 warning)
