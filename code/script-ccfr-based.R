@@ -47,6 +47,7 @@ plot_estimates <- function(country_geoid = "ES",
                            c_cfr_estimate_range = c(1.23, 1.53),
                            dts, 
                            ac_window){
+  cat("::- script-ccfr-based: Computing ccfr-based estimates for", country_geoid, "::\n")
   mu_hdt = log(z_median_hdt)
   sigma_hdt = sqrt(2*(log(z_mean_hdt) - mu_hdt))
   
@@ -78,12 +79,12 @@ plot_estimates <- function(country_geoid = "ES",
     est_ccfr <- rep(NA, ndt)
     est_ccfr_low <- rep(NA, ndt)
     est_ccfr_high <- rep(NA, ndt)
-    ccfr_factor <- rep(NA, dt)
+    ccfr_factor <- rep(NA, ndt)
     p_ccfr <- rep(NA, ndt)
     p_ccfr_low <- rep(NA, ndt)
     p_ccfr_high <- rep(NA, ndt)
     
-    cat("::- script-ccfr-based: Computing ccfr-based estimates for", country_geoid, "::\n")
+    #cat("::- script-ccfr-based: Computing ccfr-based estimates for", country_geoid, "::\n")
     
     for (i in ndt : 1) {
       data2t <- dt[1:i, c("cases", "deaths")]
@@ -101,6 +102,7 @@ plot_estimates <- function(country_geoid = "ES",
       p_ccfr_low[i] <- est_ccfr_low[i]/dt$population[1]
       p_ccfr_high[i] <- est_ccfr_high[i]/dt$population[1]
     }
+    
     dt$est_cases <- est_ccfr
     dt$est_cases_low <- est_ccfr_low
     dt$est_cases_high <- est_ccfr_high
@@ -116,12 +118,12 @@ plot_estimates <- function(country_geoid = "ES",
     dt$active_total_cases <- cumsum(c(daily_ccfr_estimate[1:ac_window],
                                    diff(daily_ccfr_estimate, lag = ac_window)))
     #undetected active cases
-    undetected_daily_estimate - daily_ccfr_estimate - dt$cases
+    undetected_daily_estimate <-  daily_ccfr_estimate - dt$cases
     dt$undected_active_cases <- cumsum(c(undetected_daily_estimate[1:ac_window],
                                          diff(undetected_daily_estimate, lag = ac_window)))
     
     dt$p_cases_active <- dt$active_total_cases/dt$population
-    dt$p_cases_active_undetected <- dt$undected_active_cases
+    dt$p_cases_active_undetected <- dt$undected_active_cases/dt$population
 
     
     dt_w <- dt %>% 
@@ -177,3 +179,5 @@ generate_estimates <- function(active_window_cases = 12){
   
 }
 generate_estimates()
+
+#plot_estimates(country_geoid = "ES", dts =  data_ecdc, ac_window = active_window_cases)

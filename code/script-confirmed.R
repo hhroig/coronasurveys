@@ -3,7 +3,7 @@ library(tidyverse)
 library(readxl)
 library(httr)
 
-plot_estimates <- function(country_geoid = "PT", dts, ac_window){
+plot_estimates <- function(country_geoid = "AF", dts, ac_window){
   cat("::- script-confirmed: Working on", country_geoid, "::\n")
   data <- dts %>% 
     select(dateRep:popData2019, "Alpha.2.code" )
@@ -19,13 +19,11 @@ plot_estimates <- function(country_geoid = "PT", dts, ac_window){
   dt$cum_cases <- cumsum(dt$cases)
   dt$cum_deaths <- cumsum(dt$deaths)
   
-
-  dt$dateRep <- as.Date(dt$dateRep, format = "%d/%m/%Y")
-  dt$date <- gsub("-", "/", dt$dateRep)
+  dt$date <- gsub("-", "/", as.Date(dt$dateRep, format = "%d/%m/%Y"))
   dt$active_cases <- cumsum(c(dt$cases[1:ac_window], diff(dt$cases, lag = ac_window))) # Carlo active cases
   
   dt <- dt %>% 
-    select(date, cases, deaths, cum_cases, cum_deaths, popData2019) %>% 
+    select(date, cases, deaths, cum_cases, cum_deaths, active_cases, popData2019, ) %>% 
     rename(population = popData2019) %>% 
     mutate(p_cases = cum_cases/population,
            p_cases_daily = cases/population,
