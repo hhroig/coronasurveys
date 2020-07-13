@@ -1,5 +1,5 @@
 
-ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/ES-estimate.csv")
+ccfrdata <- read.csv("../data/estimates-ccfr-based/PlotData/PT-estimate.csv")
 #confdata <- read.csv("../data/estimates-confirmed/PlotData/PT-estimate.csv")
 
 
@@ -50,10 +50,10 @@ plot(current_est[1:num],type="l",lty=1,xlab="Days (cases considered active for 1
 legend(x="topleft", legend=c("total active cases estimate", "undetected active cases estimate","active reported cases"), lty=1:3, cex=0.5)
 abline(h=0,lty=1)
 
-detected_daily <- c(ccfrdata$cases,infect_window)
 
+detected_daily <- c(ccfrdata$cases,infect_window)
 negative_daily_undetected_est <- c(infect_window,daily_est-ccfrdata$cases)
-# case that have been detected are no infective if isolated, so discount those
+# cases that have been detected are not infective if isolated, so discount those
 undetected_current_est <- cumsum(positive_daily_est-negative_daily_undetected_est-detected_daily)
 lines(undetected_current_est[1:num],lty=2)
 
