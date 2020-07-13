@@ -45,7 +45,8 @@ plot_estimates <- function(country_geoid = "ES",
                            z_median_hdt = 9.1,
                            c_cfr_baseline = 1.38,
                            c_cfr_estimate_range = c(1.23, 1.53),
-                           dts){
+                           dts, 
+                           ac_window){
   mu_hdt = log(z_median_hdt)
   sigma_hdt = sqrt(2*(log(z_mean_hdt) - mu_hdt))
   
@@ -77,6 +78,7 @@ plot_estimates <- function(country_geoid = "ES",
     est_ccfr <- rep(NA, ndt)
     est_ccfr_low <- rep(NA, ndt)
     est_ccfr_high <- rep(NA, ndt)
+    ccfr_factor <- rep(NA, dt)
     p_ccfr <- rep(NA, ndt)
     p_ccfr_low <- rep(NA, ndt)
     p_ccfr_high <- rep(NA, ndt)
@@ -94,6 +96,7 @@ plot_estimates <- function(country_geoid = "ES",
       est_ccfr_low[i] <- dt$cum_cases[i]*(1/fraction_reported_high)#switch low and high here coz of inverse.
       est_ccfr_high[i] <- dt$cum_cases[i]*(1/fraction_reported_low)
       est_ccfr[i] <- dt$cum_cases[i]*(1/fraction_reported)
+      ccfr_factor[i] <- (1/fraction_reported)
       p_ccfr[i] <- est_ccfr[i]/dt$population[1]
       p_ccfr_low[i] <- est_ccfr_low[i]/dt$population[1]
       p_ccfr_high[i] <- est_ccfr_high[i]/dt$population[1]
@@ -104,12 +107,27 @@ plot_estimates <- function(country_geoid = "ES",
     dt$p_cases <- p_ccfr
     dt$p_cases_low <- p_ccfr_low
     dt$p_cases_high <- p_ccfr_high
+    
+    # clean ccfr factor
+    ccfr_factor[is.na(ccfr_factor)|(ccfr_factor<1)] <- 1
+    # daily ccfr estimate
+    daily_ccfr_estimate <- ccfr_factor*dt$cases
+    #total active cases
+    dt$active_total_cases <- cumsum(c(daily_ccfr_estimate[1:ac_window],
+                                   diff(daily_ccfr_estimate, lag = ac_window)))
+    #undetected active cases
+    undetected_daily_estimate - daily_ccfr_estimate - dt$cases
+    dt$undected_active_cases <- cumsum(c(undetected_daily_estimate[1:ac_window],
+                                         diff(undetected_daily_estimate, lag = ac_window)))
+    
+    dt$p_cases_active <- dt$active_total_cases/dt$population
+    dt$p_cases_active_undetected <- dt$undected_active_cases
 
     
     dt_w <- dt %>% 
       select("date", "cases", "deaths", "cum_cases",
              "cum_deaths", "p_cases", "p_cases_low",
-             "p_cases_high", "population")
+             "p_cases_high", "p_cases_active", "p_cases_active_undetected", "population")
     
     dir.create("../data/estimates-ccfr-based/PlotData/", showWarnings = F)
     cat("::- script-ccfr-based: Writing data for", country_geoid, "::\n")
@@ -118,7 +136,7 @@ plot_estimates <- function(country_geoid = "ES",
   } 
   
 
-generate_estimates <- function(){
+generate_estimates <- function(active_window_cases = 12){
   url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",
                Sys.Date(), ".xlsx", sep = "")
   GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
@@ -154,7 +172,7 @@ generate_estimates <- function(){
                                   "Alpha.3.code", "Numeric.code", "ISO.3166.2")
     data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
     all_geo_ids <- unique(data_ecdc$Alpha.2.code) 
-    go <- sapply(all_geo_ids, plot_estimates, dts =  data_ecdc)
+    go <- sapply(all_geo_ids, plot_estimates, dts =  data_ecdc, ac_window = active_window_cases)
   }
   
 }

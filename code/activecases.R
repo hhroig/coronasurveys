@@ -60,9 +60,10 @@ negative_daily_undetected_est <- c(infect_window,   daily_est - ccfrdata$cases)
 undetected_current_est <- cumsum(positive_daily_est - negative_daily_undetected_est - detected_daily )
 lines(undetected_current_est[1:num],lty=2)
 
-
 # ab <- daily_est - ccfrdata$cases
 # cumsum(c(ab[1:12],diff(ab, lag = 12) ))
+
+
 
 
 negative_detected_daily <- c(infect_window,ccfrdata$cases)
