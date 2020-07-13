@@ -16,6 +16,7 @@ for (i in 1:length(ccfrdata$cases))
 num <- length(ccfrdata$cases)
 cum <- cumsum(ccfrdata$cases)
 
+
 mult_fact_raw <- (ccfrdata$p_cases*ccfrdata$population)/cum
 mult_fact <- rep(0,num)
 
@@ -43,25 +44,30 @@ negative_daily_est <- c(infect_window,daily_est)
 positive_daily_est <- c(daily_est,infect_window)
 
 # total cases we estimate to be active
-current_est <- cumsum(positive_daily_est-negative_daily_est)
+current_est <- cumsum(positive_daily_est-negative_daily_est) # cumsum(c(daily_est[1:12], diff(daily_est, lag = 12)))
+
+
 
 plot(current_est[1:num],type="l",lty=1,xlab="Days (cases considered active for 12 days)",ylab="Cases",main="Estimate of active COVID-19")
 
-legend(x="topleft", legend=c("total active cases estimate", "undetected active cases estimate","active reported cases"), lty=1:3, cex=0.5)
+legend(x="topleft", legend=c("total active cases estimate", "undetected active cases estimate","active reported cases"), lty=1:3, cex=1)
 abline(h=0,lty=1)
 
 
 detected_daily <- c(ccfrdata$cases,infect_window)
-negative_daily_undetected_est <- c(infect_window,daily_est-ccfrdata$cases)
+negative_daily_undetected_est <- c(infect_window,   daily_est - ccfrdata$cases)
 # cases that have been detected are not infective if isolated, so discount those
-undetected_current_est <- cumsum(positive_daily_est-negative_daily_undetected_est-detected_daily)
+undetected_current_est <- cumsum(positive_daily_est - negative_daily_undetected_est - detected_daily )
 lines(undetected_current_est[1:num],lty=2)
 
+
+# ab <- daily_est - ccfrdata$cases
+# cumsum(c(ab[1:12],diff(ab, lag = 12) ))
 
 
 negative_detected_daily <- c(infect_window,ccfrdata$cases)
 # the naif approach is just to assume detected cases as all cases
-naif_current_est <- cumsum(detected_daily-negative_detected_daily)
+naif_current_est <- cumsum(detected_daily-negative_detected_daily) # cumsum(c(ccfrdata$cases[1:12], diff(ccfrdata$cases, lag = 12)))
 lines(naif_current_est[1:num],lty=3)
 
 #--- ends here
