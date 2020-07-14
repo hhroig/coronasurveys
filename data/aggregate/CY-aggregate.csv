@@ -1269,3 +1269,5 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/06/30 07:05:52 PM UTC","2020/06/30 07:05:52 PM UTC",Cyprus,CY,,,en,100,3,2,,0,0,,,,,,N,Y,Y,limesurvey-22374,m9hcl6hxjykc2ax5io,
 "2020/07/04 08:41:27 AM UTC","2020/07/04 08:41:27 AM UTC",Cyprus,CY,,,en,100,3,2,,0,0,,,,,,N,Y,Y,limesurvey-22636,1o0ze1i77gkc7edmgj,
 "2020/07/08 07:09:58 PM UTC","2020/07/08 07:09:58 PM UTC",Cyprus,CY,"Λευκωσία - Lefkosía",CY01,en,100,0,0,,0,0,,,,,,Y,N,N,limesurvey-23292,tkbs0xwi1fkcdqlb5i,
+"2020/07/13 12:00:00 AM UTC","2020/07/13 11:26:15 AM UTC",Cyprus,CY,"Λεμεσός - Lemesós",CY02,en,40,0,0,,,,,,,,,N,Y,Y,limesurvey-23542,vlusyj4uga7umetx3l,
+"2020/07/14 12:00:00 AM UTC","2020/07/14 11:42:41 AM UTC",Cyprus,CY,,,en,50,0,0,,0,0,,,,,,,,,limesurvey-23587,vlusyj4uga7umetx3l,

@@ -1515,3 +1515,6 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/07 09:37:35 AM UTC","2020/07/07 09:37:35 AM UTC",Portugal,PT,Leiria,PT10,en,50,0,0,,0,0,,,,,,Y,N,N,limesurvey-23163,e3nvkf9yq0kcbqpds7,"2020/07/09 01:26:24 PM UTC","2020/07/09 01:26:24 PM UTC",Portugal,PT,Porto,PT13,en,3,0,,,0,,,,,,,Y,Y,N,limesurvey-23384,6gwkt4dv7qkcetrd2d,
 "2020/07/09 01:26:24 PM UTC","2020/07/09 01:26:24 PM UTC",Portugal,PT,Porto,PT13,en,3,0,,,0,,,,,,,Y,Y,N,limesurvey-23384,6gwkt4dv7qkcetrd2d,
 "2020/07/09 03:29:15 PM UTC","2020/07/09 03:29:15 PM UTC",Portugal,PT,Braga,PT03,en,200,2,2,,0,0,,,,,,N,Y,N,limesurvey-23390,ww7szmrjg2nkx1t4ij,
+"2020/07/11 12:00:00 AM UTC","2020/07/11 07:22:31 PM UTC",Portugal,PT,Évora,PT07,en,200,0,0,,0,0,,,,,,N,N,N,limesurvey-23473,aa2r6b4hg7kci1d0di,
+"2020/07/12 12:00:00 AM UTC","2020/07/12 02:49:21 PM UTC",Portugal,PT,Leiria,PT10,en,50,4,4,,0,1,,,,,,N,N,N,limesurvey-23496,brrx5ikjgxkb84cfyq,
+"2020/07/13 12:00:00 AM UTC","2020/07/13 10:52:12 AM UTC",Portugal,PT,Lisboa,PT11,en,8,0,,,,,,,,,,N,N,N,limesurvey-23540,3uf1g81ldwkb6is50o,
