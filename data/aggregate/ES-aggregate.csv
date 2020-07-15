@@ -5395,3 +5395,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/12 12:00:00 AM UTC","2020/07/12 11:34:38 PM UTC",Spain,ES,"Provincia:Las Palmas",ESGC,en,100,4,4,,0,0,,,,,,N,Y,Y,limesurvey-23504,mv40thhb1wsosyd5tt,
 "2020/07/13 12:00:00 AM UTC","2020/07/13 09:26:53 AM UTC",Spain,ES,Provincia:Madrid,ESM,en,315,18,17,,0,0,,,,,,N,Y,Y,limesurvey-23538,5r6vxzfatqkb5mijcz,
 "2020/07/14 12:00:00 AM UTC","2020/07/14 08:35:59 AM UTC",Spain,ES,Provincia:Madrid,ESM,en,200,2,2,,0,0,,,,,,Y,Y,N,limesurvey-23564,r7628lc7zckclol361,
+"2020/07/15 12:00:00 AM UTC","2020/07/15 04:58:40 AM UTC",Spain,ES,"Comunidad Autónoma:Madrid, Comunidad de",ESMD,en,20,3,3,,0,0,,,,,,N,N,N,limesurvey-23828,58rmbl004rj0tt9k2n,
