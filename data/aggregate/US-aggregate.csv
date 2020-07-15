@@ -646,3 +646,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/12 12:00:00 AM UTC","2020/07/12 12:23:25 AM UTC","United States",US,"North Carolina",USNC,en,5,0,0,,0,0,,,,,,Y,N,N,limesurvey-23484,72mb32r8d4izuuxmd5,
 "2020/07/13 12:00:00 AM UTC","2020/07/13 03:23:58 PM UTC","United States",US,Texas,USTX,en,15,1,1,,0,0,,,,,,N,N,N,limesurvey-23549,p6d6ur3ud849tnvypn,
 "2020/07/14 12:00:00 AM UTC","2020/07/14 12:39:24 PM UTC","United States",US,Connecticut,USCT,en,10,0,,,,,,,,,,N,N,N,limesurvey-23593,yuy18g820ckb2pbnug,
+"2020/07/15 12:00:00 AM UTC","2020/07/15 01:53:23 AM UTC","United States",US,Tennessee,USTN,en,60,0,,,,,,,,,,N,N,N,limesurvey-23825,vqgj0fqr47tsycz47f,
