@@ -27,7 +27,7 @@ plot_estimates <- function(country_geoid = "AF", dts, ac_window){
     rename(population = popData2019) %>% 
     mutate(p_cases = cum_cases/population,
            p_cases_daily = cases/population,
-           p_cases_active = active_cases/population) %>% 
+           p_cases_active = abs(active_cases/population)) %>% 
     select(date, cases, deaths, cum_cases, cum_deaths, p_cases, p_cases_daily, p_cases_active, population)
   
   dir.create("../data/estimates-confirmed/PlotData/", showWarnings = F)
