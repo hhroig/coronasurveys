@@ -1,6 +1,6 @@
 #######
 #with recent cases
-  provincial_regional_estimate_w_only <- function(countrycode = "ES",
+provincial_regional_estimate_w_only <- function(countrycode = "ES",
                                                 province = T,
                                                 district = F,
                                                 W = 15,

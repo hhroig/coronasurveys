@@ -40,7 +40,9 @@ generate_estimates <- function(active_cases_window = 12){
                  Sys.Date(), ".xlsx", sep = "")
     GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
     cat("::- script-confirmed: Checking the ECDC data for the day ::\n")
-    try( data_ecdc <- read_excel(tf), silent = T)
+    #try( data_ecdc <- read_excel(tf), silent = T) # ECDC daily excel seems unvailable for now
+    try( data_ecdc <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv",
+                               na.strings = "", fileEncoding = "UTF-8-BOM"), silent = T)
     
     if(!exists("data_ecdc")){
       cat("::- script-confirmed: Seems the ECDC data for the day is not available yet ::\n")
