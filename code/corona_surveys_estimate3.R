@@ -589,9 +589,9 @@ generate_estimates <- function(srce = c("ecdc", "jh")){
 #generate_estimates(srce = "ecdc")
 
 # compute nee decentralized estimates
-source("script-confirmed.R")
-source("script-ccfr-based.R")
-source("script-30responses.R")
-source("script-300responses.R")
-source("script-W-alpha.R")
-source("script-W.R")
+try(source("script-confirmed.R"), silent = T)
+try(source("script-ccfr-based.R"), silent = T)
+try(source("script-30responses.R"), silent = T)
+try(source("script-300responses.R"), silent = T)
+try(source("script-W-alpha.R"), silent = T)
+try(source("script-W.R"), silent = T)
