@@ -167,3 +167,4 @@ Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases
 "2020/07/18 12:00:00 AM UTC","2020/07/18 10:20:19 PM UTC",Chile,CL,Atacama,CLAT,en,25,0,0,,0,0,,,,,,N,Y,N,limesurvey-23950,2dvnyvkr2by6ew35tr,
 "2020/07/19 12:00:00 AM UTC","2020/07/19 10:55:24 PM UTC",Chile,CL,Atacama,CLAT,en,25,0,0,,0,0,,,,,,N,Y,Y,limesurvey-23975,2dvnyvkr2by6ew35tr,
 "2020/07/20 12:00:00 AM UTC","2020/07/20 08:46:03 PM UTC",Chile,CL,Atacama,CLAT,en,25,0,0,,0,0,,,,,,N,Y,N,limesurvey-24013,2dvnyvkr2by6ew35tr,
+"2020/07/21 12:00:00 AM UTC","2020/07/21 03:18:42 AM UTC",Chile,CL,"Región Metropolitana de Santiago",CLRM,en,70,11,6,,2,2,,,,,,N,Y,N,limesurvey-24019,c3egfhucmykcvdc1ha,
