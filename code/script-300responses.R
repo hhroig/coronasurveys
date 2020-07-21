@@ -22,10 +22,20 @@ get_spain_region_based_rosa <- function(country_geoid = "ES",
     dates <- as.character(seq.Date(as.Date(dt$date[1]), as.Date(tail(dt$date,1)), by = "days"))
     dates <- gsub("-","/", dates)
     if(country_geoid == "ES"){
+      # change province madrid to comunidad madrid
+      dt$iso.3166.2[stringr::str_detect((dt$region), pattern = "Provincia:Madrid")] <- "ESMD" 
+      dt$region[stringr::str_detect((dt$region), pattern = "Provincia:Madrid")] <- "Comunidad Autónoma:Madrid, Comunidad de"
+      
+      # change provincia navarra
+      dt$iso.3166.2[stringr::str_detect((dt$region), pattern = "Provincia:Navarra / Nafarroa")] <- "ESNC" 
+      dt$region[stringr::str_detect((dt$region), pattern = "Provincia:Navarra / Nafarroa")] <- "Comunidad Autónoma:Navarra, Comunidad Foral de / Nafarroako Foru Komunitatea"
+      #dt$region[stringr::str_detect((dt$iso.3166.2), pattern = "ESNC")]
+      #"ESNC" 
       # remove provincia
       dt <- dt[!stringr::str_detect((dt$region), pattern = "Provincia"),]
       # change region Baleares from ESPM to ESIB
       dt$iso.3166.2[dt$region == "Baleares"] <- "ESIB" 
+      dt$iso
       # 
     }
     
