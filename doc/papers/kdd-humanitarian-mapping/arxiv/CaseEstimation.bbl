@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{bernard2010counting}
+H~Russell Bernard, Tim Hallett, Alexandrina Iovita, Eugene~C Johnsen, Rob
+  Lyerla, Christopher McCarty, Mary Mahy, Matthew~J Salganik, Tetiana Saliuk,
+  Otilia Scutelniciuc, et~al.
+\newblock Counting hard-to-count populations: the network scale-up method for
+  public health.
+\newblock {\em Sexually transmitted infections}, 86(Suppl 2):ii11--ii15, 2010.
+
+\bibitem{bernard1991estimating}
+H~Russell Bernard, Eugene~C Johnsen, Peter~D Killworth, and Scott Robinson.
+\newblock Estimating the size of an average personal network and of an event
+  subpopulation: Some empirical results.
+\newblock {\em Social science research}, 20(2):109--121, 1991.
+
+\bibitem{crowdfight}
+Crowdfight COVID-19.
+\newblock An initiative from the scientific community to put all available
+  resources at the service of the fight against covid-19.
+\newblock \url{https://crowdfightcovid19.org/}.
+\newblock Accessed: 2020-05-20.
+
+\bibitem{ECDC}
+European~Centre for Disease~Prevention and Control.
+\newblock Covid-19.
+\newblock \url{https://www.ecdc.europa.eu/en/covid-19-pandemic}.
+\newblock Accessed: 2020-04-09.
+
+\bibitem{FB-survey}
+Facebook~Data for Good.
+\newblock {COVID-19} symptom survey – request for data access.
+\newblock
+  \url{https://dataforgood.fb.com/docs/covid-19-symptom-survey-request-for-data-access/}.
+\newblock Accessed: 2020-05-20.
+
+\bibitem{ENEcovid19}
+Consumo y Bienestar~Social Gobierno~de España, Ministerio de~Sanidad.
+\newblock Estudio nacional de sero-epidemiología de la infección por
+  sars-cov-2 en españa, informe preliminar tras la primera ronda.
+\newblock Technical report, Gobierno de España, Ministerio de Sanidad, Consumo
+  y Bienestar Social, 5 2020.
+
+\bibitem{Holt1979}
+D.~Holt and T.~M.~F. Smith.
+\newblock Post stratification.
+\newblock {\em Journal of the Royal Statistical Society}, 1979.
+
+\bibitem{linares1920estimando}
+Manuel Linares, Ignacio Garitano, Laura Santos, and Jos{\'e}~M Ramos.
+\newblock Estimando el n{\'u}mero de casos de covid-19 a tiempo real utilizando
+  un formulario web a trav{\'e}s de las redes sociales: Proyecto
+  covid19-trends.
+\newblock {\em Semergen}, 4 2020.
+
+\bibitem{long2020antibody}
+Quan-Xin Long, Bai-Zhong Liu, Hai-Jun Deng, Gui-Cheng Wu, Kun Deng, Yao-Kai
+  Chen, Pu~Liao, Jing-Fu Qiu, Yong Lin, Xue-Fei Cai, et~al.
+\newblock Antibody responses to sars-cov-2 in patients with covid-19.
+\newblock {\em Nature Medicine}, pages 1--4, 2020.
+
+\bibitem{maxmen2020much}
+A~Maxmen.
+\newblock How much is coronavirus spreading under the radar?
+\newblock {\em Nature}, 2020.
+\newblock \url{https://www.nature.com/articles/d41586-020-00760-8}.
+
+\bibitem{nishiura2009early}
+Hiroshi Nishiura, Don Klinkenberg, Mick Roberts, and Johan~AP Heesterbeek.
+\newblock Early epidemiological assessment of the virulence of emerging
+  infectious diseases: a case study of an influenza pandemic.
+\newblock {\em PLoS One}, 4(8), 2009.
+\newblock
+  \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852}.
+
+\bibitem{DBLP:journals/corr/abs-2004-01014}
+Nuria Oliver, Xavier Barber, Kirsten Roomp, and Kristof Roomp.
+\newblock The covid19impact survey: Assessing the pulse of the {COVID-19}
+  pandemic in spain via 24 questions.
+\newblock {\em CoRR}, abs/2004.01014, 2020.
+
+\bibitem{CoronaSurveys}
+The~CoronaSurveys research team.
+\newblock {CoronaSurveys}: Monitoring the incidence of {COVID}-19 via open
+  surveys.
+\newblock \url{https://coronasurveys.org/}.
+\newblock Accessed: 2020-05-20.
+
+\bibitem{russel2020using}
+T~Russel, Joel Hellewell, S~Abbot, et~al.
+\newblock Using a delay-adjusted case fatality ratio to estimate
+  under-reporting.
+\newblock {\em Available at the Centre for Mathematical Modelling of Infectious
+  Diseases Repository, here}, 2020.
+\newblock
+  \url{https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html}.
+
+\bibitem{Verity2020}
+Robert Verity, Lucy~C Okell, Ilaria Dorigatti, Peter Winskill, Charles
+  Whittaker, Natsuko Imai, Gina Cuomo-Dannenburg, Hayley Thompson, Patrick G~T
+  Walker, Han Fu, Amy Dighe, Jamie~T Griffin, Marc Baguelin, Sangeeta Bhatia,
+  Adhiratha Boonyasiri, Anne Cori, Zulma Cucunub{\'a}, Rich FitzJohn, Katy
+  Gaythorpe, Will Green, Arran Hamlet, Wes Hinsley, Daniel Laydon, Gemma
+  Nedjati-Gilani, Steven Riley, Sabine van Elsland, Erik Volz, Haowei Wang,
+  Yuanrong Wang, Xiaoyue Xi, Christl~A Donnelly, Azra~C Ghani, and Neil~M
+  Ferguson.
+\newblock Estimates of the severity of coronavirus disease 2019: a model-based
+  analysis.
+\newblock {\em The Lancet Infectious Diseases}, 2020/04/11.
+
+\bibitem{yang2012serological}
+Peng Yang, Chunna Ma, Weixian Shi, Shujuan Cui, Guilan Lu, Xiaomin Peng, Daitao
+  Zhang, Yimeng Liu, Huijie Liang, Yi~Zhang, et~al.
+\newblock A serological survey of antibodies to {H5, H7 and H9} avian influenza
+  viruses amongst the duck-related workers in {Beijing}, {China}.
+\newblock {\em PLoS One}, 7(11), 2012.
+\newblock
+  \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050770}.
+
+\end{thebibliography}

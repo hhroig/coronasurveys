@@ -1,2 +1,2 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/05/15 02:45:04 PM UTC","2020/05/15 02:45:04 PM UTC","French Guiana",GF,,,en,1,0,0,,,,,,,,,N,N,N,limesurvey,dz7vnyu0j6ka8bcoay,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/05/15,"French Guiana",GF,,,en,1,0,0,,,,,,,,,N,N,N,limesurvey-7039,dz7vnyu0j6ka8bcoay,

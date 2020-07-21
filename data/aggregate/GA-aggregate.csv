@@ -1,0 +1,2 @@
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/06/11,Gabon,GA,Ogooué-Maritime,GA8,en,15,0,0,,,,,,,,,Y,N,N,limesurvey-15327,di00bb4kh3kbaxtysy,

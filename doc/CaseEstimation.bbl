@@ -1,0 +1,72 @@
+\begin{thebibliography}{10}
+
+\bibitem{DGS}
+Portugal Direção Geral~da Saúde, Ministério da~Saúde.
+\newblock {COVID}-19.
+\newblock \url{https://covid19.min-saude.pt}.
+\newblock Accessed: 2020-04-09.
+
+\bibitem{dunbar2010many}
+Robin Dunbar.
+\newblock {\em How many friends does one person need?: {Dunbar's} number and
+  other evolutionary quirks}.
+\newblock Faber \& Faber, 2010.
+
+\bibitem{ECDC}
+European~Centre for Disease~Prevention and Control.
+\newblock Covid-19.
+\newblock \url{https://www.ecdc.europa.eu/en/covid-19-pandemic}.
+\newblock Accessed: 2020-04-09.
+
+\bibitem{dssg-pt}
+Data~Science for Social Good~Portugal.
+\newblock Dados relativos à pandemia {COVID}-19 em portugal.
+\newblock \url{https://github.com/dssg-pt/covid19pt-data}.
+\newblock Accessed: 2020-04-09.
+
+\bibitem{maxmen2020much}
+A~Maxmen.
+\newblock How much is coronavirus spreading under the radar?
+\newblock {\em Nature}, 2020.
+\newblock \url{https://www.nature.com/articles/d41586-020-00760-8}.
+
+\bibitem{nishiura2009early}
+Hiroshi Nishiura, Don Klinkenberg, Mick Roberts, and Johan~AP Heesterbeek.
+\newblock Early epidemiological assessment of the virulence of emerging
+  infectious diseases: a case study of an influenza pandemic.
+\newblock {\em PLoS One}, 4(8), 2009.
+\newblock
+  \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0006852}.
+
+\bibitem{CoronaSurveys}
+The~$@$CoronaSurveys research team.
+\newblock {$@$CoronaSurveys}: Monitoring the incidence of {COVID}-19 via open
+  surveys.
+\newblock \url{https://coronasurveys.org/}.
+\newblock Accessed: 2020-04-20.
+
+\bibitem{russel2020using}
+T~Russel, Joel Hellewell, S~Abbot, et~al.
+\newblock Using a delay-adjusted case fatality ratio to estimate
+  under-reporting.
+\newblock {\em Available at the Centre for Mathematical Modelling of Infectious
+  Diseases Repository, here}, 2020.
+\newblock
+  \url{https://cmmid.github.io/topics/covid19/severity/global_cfr_estimates.html}.
+
+\bibitem{Dunbar-wiki}
+Wikipedia.
+\newblock Dunbar's number.
+\newblock \url{https://en.wikipedia.org/wiki/Dunbar%27s_number}.
+\newblock Accessed: 2020-04-09.
+
+\bibitem{yang2012serological}
+Peng Yang, Chunna Ma, Weixian Shi, Shujuan Cui, Guilan Lu, Xiaomin Peng, Daitao
+  Zhang, Yimeng Liu, Huijie Liang, Yi~Zhang, et~al.
+\newblock A serological survey of antibodies to {H5, H7 and H9} avian influenza
+  viruses amongst the duck-related workers in {Beijing}, {China}.
+\newblock {\em PLoS One}, 7(11), 2012.
+\newblock
+  \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050770}.
+
+\end{thebibliography}

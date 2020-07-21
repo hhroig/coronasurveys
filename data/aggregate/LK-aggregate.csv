@@ -1,0 +1,2 @@
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/06/09,"Sri Lanka",LK,"Basnāhira paḷāta",LK1,en,50,0,0,,,,,,,,,Y,N,N,limesurvey-14806,1uo2ouqkq1kb86u2mg,

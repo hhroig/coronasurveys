@@ -429,6 +429,12 @@ get_spain_region_based_rosa <- function(max_ratio = .3, write_file = T){
                                        prop_cases = cases_p_reach_prop * total_pop,
                                        prop_cases_low = (cases_p_reach_prop - 1.96 * sqrt(Vp2)) * total_pop,
                                        prop_cases_high = (cases_p_reach_prop + 1.96 * sqrt(Vp2)) * total_pop,
+                                       p_w = cases_p_reach,
+                                       p_w_low = cases_p_reach - (1.96 * sqrt(Vp1)),
+                                       p_w_high = cases_p_reach + (1.96 * sqrt(Vp1)),
+                                       p_m = cases_p_reach_prop, 
+                                       p_m_low = cases_p_reach_prop - 1.96 * sqrt(Vp2),
+                                       p_m_high = cases_p_reach_prop + 1.96 * sqrt(Vp2),
                                        stringsAsFactors = F)
   if(write_file == T){
     cat("writing the region based estimate for Spain..\n")

@@ -1,0 +1,2 @@
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/06/06,Macedonia,MK,,,en,150,0,0,,,,,,,,,N,N,N,limesurvey-14000,q31vna5lhokb3q5hrt,

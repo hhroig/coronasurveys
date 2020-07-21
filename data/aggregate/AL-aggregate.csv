@@ -1,0 +1,2 @@
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/05/06,Albania,AL,Gjirokastër,AL05,fa,44,5,,,,,,,,,,,,,limesurvey-27,hc3sam25syk9vjm8uy,
