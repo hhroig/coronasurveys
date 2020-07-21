@@ -1,5 +1,5 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/09 10:43:19 PM UTC",,Malta,MT,,,,6,0,,,,,,,,,,,,,world-g-sheet,,
-"2020/04/09 10:44:16 PM UTC",,Malta,MT,,,,6,0,,,,,,,,,,,,,world-g-sheet,,
-"2020/04/19 11:43:59 AM UTC",,Malta,MT,,,,50,3,,,,,,,,,,,,,world-g-sheet,,
-"2020/06/09 04:06:00 PM UTC","2020/06/09 04:06:00 PM UTC",Malta,MT,,,en,8,0,0,,,,,,,,,N,N,Y,limesurvey-14702,jm7eo5p1h1kb2rrf3l,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/04/09,Malta,MT,,,,6,0,,,,,,,,,,,,,world-g-sheet,,
+2020/04/09,Malta,MT,,,,6,0,,,,,,,,,,,,,world-g-sheet,,
+2020/04/19,Malta,MT,,,,50,3,,,,,,,,,,,,,world-g-sheet,,
+2020/06/09,Malta,MT,,,en,8,0,0,,,,,,,,,N,N,Y,limesurvey-14702,jm7eo5p1h1kb2rrf3l,

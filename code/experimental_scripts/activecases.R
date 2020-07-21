@@ -50,6 +50,7 @@ current_est <- cumsum(positive_daily_est-negative_daily_est) # cumsum(c(daily_es
 
 plot(current_est[1:num],type="l",lty=1,xlab="Days (cases considered active for 12 days)",ylab="Cases",main="Estimate of active COVID-19")
 
+
 legend(x="topleft", legend=c("total active cases estimate", "undetected active cases estimate","active reported cases"), lty=1:3, cex=1)
 abline(h=0,lty=1)
 
@@ -60,6 +61,9 @@ negative_daily_undetected_est <- c(infect_window,   daily_est - ccfrdata$cases)
 undetected_current_est <- cumsum(positive_daily_est - negative_daily_undetected_est - detected_daily )
 lines(undetected_current_est[1:num],lty=2)
 
+
+# plot(ccfrdata$p_cases_active*ccfrdata$population, type="l",lty=1)
+# lines(ccfrdata$p_cases_active_undetected*ccfrdata$population, type = "l", lty = 2)
 # ab <- daily_est - ccfrdata$cases
 # cumsum(c(ab[1:12],diff(ab, lag = 12) ))
 

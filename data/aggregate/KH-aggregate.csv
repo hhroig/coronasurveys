@@ -1,2 +1,2 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/05/30 02:52:49 PM UTC","2020/05/30 02:52:49 PM UTC",Cambodia,KH,"Preah Vihear",KH13,en,10000,96842,0,,,,,,,,,Y,N,Y,limesurvey-12404,u9auojuj5zkatr8dvw,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/05/30,Cambodia,KH,"Preah Vihear",KH13,en,10000,96842,0,,,,,,,,,Y,N,Y,limesurvey-12404,u9auojuj5zkatr8dvw,

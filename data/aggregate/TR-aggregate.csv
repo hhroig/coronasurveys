@@ -1,8 +1,8 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/11 05:13:49 PM UTC",,Turkey,TR,,,,400,1,,,,,,,,,,,,,world-g-sheet,,
-"2020/04/15 10:02:54 PM UTC",,Turkey,TR,,,,100,0,,,,,,,,,,,,,world-g-sheet,,
-"2020/04/17 10:49:30 PM UTC",,Turkey,TR,,,,200,3,,,,,,,,,,,,,world-g-sheet,,
-"2020/05/15 07:35:01 PM UTC","2020/05/15 07:35:01 PM UTC",Turkey,TR,Ankara,TR06,en,7,2,0,,,,,,,,,N,Y,Y,limesurvey,3ar1w5ctdzka86ex6k,
-"2020/05/21 01:22:30 PM UTC","2020/05/21 01:22:30 PM UTC",Turkey,TR,Ankara,TR06,en,200,0,,,,,,,,,,Y,Y,N,limesurvey-10098,teddzhob81kagt1ley,
-"2020/05/28 07:28:06 PM UTC","2020/05/28 07:28:06 PM UTC",Turkey,TR,Diyarbakır,TR21,en,150,0,,,,,,,,,,Y,N,N,limesurvey-12271,ox4w02t6dckar66mor,
-"2020/06/05 09:15:54 PM UTC","2020/06/05 09:15:54 PM UTC",Turkey,TR,İstanbul,TR34,en,20,1,1,,,,,,,,,Y,N,N,limesurvey-13750,6hks63eqhzkb2pk5k6,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/04/11,Turkey,TR,,,,400,1,,,,,,,,,,,,,world-g-sheet,,
+2020/04/15,Turkey,TR,,,,100,0,,,,,,,,,,,,,world-g-sheet,,
+2020/04/17,Turkey,TR,,,,200,3,,,,,,,,,,,,,world-g-sheet,,
+2020/05/15,Turkey,TR,Ankara,TR06,en,7,2,0,,,,,,,,,N,Y,Y,limesurvey-7221,3ar1w5ctdzka86ex6k,
+2020/05/21,Turkey,TR,Ankara,TR06,en,200,0,,,,,,,,,,Y,Y,N,limesurvey-10098,teddzhob81kagt1ley,
+2020/05/28,Turkey,TR,Diyarbakır,TR21,en,150,0,,,,,,,,,,Y,N,N,limesurvey-12271,ox4w02t6dckar66mor,
+2020/06/05,Turkey,TR,İstanbul,TR34,en,20,1,1,,,,,,,,,Y,N,N,limesurvey-13750,6hks63eqhzkb2pk5k6,

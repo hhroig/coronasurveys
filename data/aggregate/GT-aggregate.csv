@@ -1,5 +1,5 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/06/05 02:09:05 AM UTC","2020/06/05 02:09:05 AM UTC",Guatemala,GT,Sacatepéquez,GTSA,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-13605,0k9yfzr6n7kb1klc3e,
-"2020/06/05 02:09:06 AM UTC","2020/06/05 02:09:06 AM UTC",Guatemala,GT,Sacatepéquez,GTSA,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-13606,0k9yfzr6n7kb1klc3e,
-"2020/06/06 05:57:56 PM UTC","2020/06/06 05:57:56 PM UTC",Guatemala,GT,Zacapa,GTZA,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-14030,ev7qhskmedkb3xx93o,
-"2020/06/09 04:35:57 PM UTC","2020/06/09 04:35:57 PM UTC",Guatemala,GT,Quetzaltenango,GTQZ,en,200,3,3,,,,,,,,,Y,N,N,limesurvey-14737,ciqmzvz3xdkb85bis0,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/06/05,Guatemala,GT,Sacatepéquez,GTSA,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-13606,0k9yfzr6n7kb1klc3e,
+2020/06/05,Guatemala,GT,Sacatepéquez,GTSA,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-13605,0k9yfzr6n7kb1klc3e,
+2020/06/06,Guatemala,GT,Zacapa,GTZA,en,100,0,0,,,,,,,,,Y,N,N,limesurvey-14030,ev7qhskmedkb3xx93o,
+2020/06/09,Guatemala,GT,Quetzaltenango,GTQZ,en,200,3,3,,,,,,,,,Y,N,N,limesurvey-14737,ciqmzvz3xdkb85bis0,

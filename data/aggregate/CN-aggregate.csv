@@ -1,4 +1,5 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/04/09 04:25:39 PM UTC",,China,CN,,,,100,7,,,,,,,,,,,,,world-g-sheet,,
-"2020/06/06 11:21:27 AM UTC","2020/06/06 11:21:27 AM UTC",China,CN,,,en,30,0,0,,,,,,,,,Y,N,N,limesurvey-13978,jv60n7oxulkb3jri52,
-"2020/06/11 02:49:08 AM UTC","2020/06/11 02:49:08 AM UTC",China,CN,"Nei Mongol Zizhiqu",CNNM,en,50,0,0,,,,,,,,,Y,N,N,limesurvey-15255,au6vqotn76kba6osr6,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/04/09,China,CN,,,,100,7,,,,,,,,,,,,,world-g-sheet,,
+2020/05/06,China,CN,"Guangdong Sheng",CNGD,zh-Hans,10,5,,,,,,,,,,,,,limesurvey-267,ytq44aqseuk9uf9tpy,
+2020/06/06,China,CN,,,en,30,0,0,,,,,,,,,Y,N,N,limesurvey-13978,jv60n7oxulkb3jri52,
+2020/06/11,China,CN,"Nei Mongol Zizhiqu",CNNM,en,50,0,0,,,,,,,,,Y,N,N,limesurvey-15255,au6vqotn76kba6osr6,

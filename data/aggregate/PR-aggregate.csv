@@ -1,2 +1,2 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/06/07 10:06:42 AM UTC","2020/06/07 10:06:42 AM UTC","Puerto Rico",PR,,,en,50,3,3,,,,,,,,,Y,N,N,limesurvey-14124,me9scmgt6fkb4wj9qq,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/06/07,"Puerto Rico",PR,,,en,50,3,3,,,,,,,,,Y,N,N,limesurvey-14124,me9scmgt6fkb4wj9qq,

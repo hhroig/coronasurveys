@@ -1,2 +1,2 @@
-Timestamp,Starttime,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
-"2020/06/06 09:15:37 AM UTC","2020/06/06 09:15:36 AM UTC","Dominican Republic",DO,"Distrito Nacional (Santo Domingo)",DO01,en,2,0,,,,,,,,,,N,N,N,limesurvey-13938,jd9vonl8e2kb3f34pg,
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/06/06,"Dominican Republic",DO,"Distrito Nacional (Santo Domingo)",DO01,en,2,0,,,,,,,,,,N,N,N,limesurvey-13938,jd9vonl8e2kb3f34pg,
