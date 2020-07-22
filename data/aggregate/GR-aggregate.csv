@@ -312,3 +312,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/21,Greece,GR,Peloponnisos,GRJ,en,50,0,0,,0,0,,,,,,Y,Y,Y,limesurvey-24059,a1gk6zp6eekcvyoqu0,
 2020/07/21,Greece,GR,Attiki,GRI,en,14,0,,,0,0,,,,,,Y,Y,N,limesurvey-24060,lb0d0sompakcvznvt9,
 2020/07/21,Greece,GR,Attiki,GRI,en,1000,0,0,,0,0,,,,,,Y,N,N,limesurvey-24035,p5g0m1gec9kcvpr6mj,
+2020/07/22,Greece,GR,"Ionia Nisia",GRF,en,30,0,0,,0,0,,,,,,N,Y,Y,limesurvey-24293,c8zo8oy4iwkbtpikiu,
+2020/07/22,Greece,GR,Attiki,GRI,en,20,0,0,,0,0,,,,,,N,Y,Y,limesurvey-24292,c8zo8oy4iwkbtpikiu,

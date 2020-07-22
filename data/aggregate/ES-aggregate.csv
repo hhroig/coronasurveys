@@ -5410,3 +5410,6 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/21,Spain,ES,Provincia:Álava,ESVI,en,50,7,7,,0,0,,,,,,N,N,N,limesurvey-24062,38pua3wx5jkb89n2rl,
 2020/07/21,Spain,ES,Provincia:Madrid,ESM,en,30,1,1,,0,0,,,,,,Y,N,N,limesurvey-24052,9s14qamvtnkcvx9ctw,
 2020/07/21,Spain,ES,Provincia:Toledo,ESTO,en,60,4,4,,0,0,,,,,,N,Y,Y,limesurvey-24049,kuotb4ejplkcvvzib5,
+2020/07/22,Spain,ES,Provincia:Madrid,ESM,en,100,7,7,,0,0,,,,,,N,Y,Y,limesurvey-24282,zfixd6t5f0kcbm4hp2,
+2020/07/22,Spain,ES,Provincia:Madrid,ESM,en,20,2,2,,2,2,,,,,,Y,N,N,limesurvey-24284,58rmbl004rj0tt9k2n,
+2020/07/22,Spain,ES,Provincia:Madrid,ESM,en,100,7,7,,0,0,,,,,,N,Y,Y,limesurvey-24283,zfixd6t5f0kcbm4hp2,
