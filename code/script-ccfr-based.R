@@ -171,7 +171,7 @@ generate_estimates <- function(active_window_cases = 12){
   } else{
     cat("::- script-ccfr: ECDC data for the day available! ::\n")
     data_ecdc$countryterritoryCode[data_ecdc$geoId == "CZ"] <- "CZE" # add "CZ" manually
-    data_country_code <- read_excel("wikipedia-iso-country-codes.xlsx")
+    data_country_code <- read_excel("../data/common-data/wikipedia-iso-country-codes.xlsx")
     names(data_country_code) <- c("English.short.name.lower.case", "Alpha.2.code",
                                   "Alpha.3.code", "Numeric.code", "ISO.3166.2")
     data_ecdc <- inner_join(data_ecdc, data_country_code, by = c("countryterritoryCode" = "Alpha.3.code"))
