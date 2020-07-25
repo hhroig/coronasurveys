@@ -113,23 +113,24 @@ plot_estimates <- function(country_geoid = "ES",
     # clean ccfr factor
     ccfr_factor[is.na(ccfr_factor)|(ccfr_factor<1)] <- 1
     # daily ccfr estimate
-    daily_ccfr_estimate <- ccfr_factor*dt$cases
+    dt$p_cases_daily <- ccfr_factor*dt$cases
+    
     #total active cases
-    dt$active_total_cases <- cumsum(c(daily_ccfr_estimate[1:ac_window],
-                                   diff(daily_ccfr_estimate, lag = ac_window)))
+    dt$cases_active <- cumsum(c(dt$p_cases_daily[1:ac_window],
+                                      diff(dt$p_cases_daily, lag = ac_window)))
     #undetected active cases
-    undetected_daily_estimate <-  daily_ccfr_estimate - dt$cases
-    dt$undected_active_cases <- cumsum(c(undetected_daily_estimate[1:ac_window],
+    undetected_daily_estimate <-  dt$p_cases_daily - dt$cases
+    dt$cases_active_undected <- cumsum(c(undetected_daily_estimate[1:ac_window],
                                          diff(undetected_daily_estimate, lag = ac_window)))
     
-    dt$p_cases_active <- dt$active_total_cases/dt$population
-    dt$p_cases_active_undetected <- dt$undected_active_cases/dt$population
+    dt$p_cases_active <- dt$cases_active/dt$population
+    dt$p_cases_active_undetected <- dt$cases_active_undected/dt$population
 
     
     dt_w <- dt %>% 
-      select("date", "cases", "deaths", "cum_cases",
-             "cum_deaths", "p_cases", "p_cases_low",
-             "p_cases_high", "p_cases_active", "p_cases_active_undetected", "population")
+      select("date", "cases", "deaths", "cum_cases", "cum_deaths", "cases_active", "cases_active_undected", 
+             "p_cases", "p_cases_low", "p_cases_high", "p_cases_daily",
+             "p_cases_active", "p_cases_active_undetected", "population")
     
     dir.create("../data/estimates-ccfr-based/PlotData/", showWarnings = F)
     cat("::- script-ccfr-based: Writing data for", country_geoid, "::\n")
