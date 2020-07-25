@@ -682,3 +682,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/19,Brazil,BR,"São Paulo",BRSP,en,107,7,6,1,0,0,,,,,,N,N,Y,limesurvey-23960,a0argb1tyskbmintck,
 2020/07/21,Brazil,BR,"São Paulo",BRSP,en,50,1,1,0,0,0,,,,,,N,N,N,limesurvey-24064,f9me4ijpd3kb2su7iy,
 2020/07/23,Brazil,BR,"São Paulo",BRSP,en,140,16,13,3,1,1,,,,,,N,Y,Y,limesurvey-24351,xpl9txs3zgkcqcszsc,
+2020/07/25,Brazil,BR,"Rio Grande do Sul",BRRS,en,3,0,0,0,0,0,,,,,,N,N,N,limesurvey-24403,lv8ucn7tznkbeeik9p,
+2020/07/25,Brazil,BR,"Santa Catarina",BRSC,en,30,5,1,0,4,4,,,,,,N,N,Y,limesurvey-24405,o0qa2evzypzsyffz8v,
