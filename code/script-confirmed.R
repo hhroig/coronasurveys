@@ -20,15 +20,15 @@ plot_estimates <- function(country_geoid = "AF", dts, ac_window){
   dt$cum_deaths <- cumsum(dt$deaths)
   
   dt$date <- gsub("-", "/", as.Date(dt$dateRep, format = "%d/%m/%Y"))
-  dt$active_cases <- cumsum(c(dt$cases[1:ac_window], diff(dt$cases, lag = ac_window))) # Carlo active cases
+  dt$cases_active <- cumsum(c(dt$cases[1:ac_window], diff(dt$cases, lag = ac_window))) # Carlo active cases
   
   dt <- dt %>% 
-    select(date, cases, deaths, cum_cases, cum_deaths, active_cases, popData2019, ) %>% 
+    select(date, cases, deaths, cum_cases, cum_deaths, cases_active, popData2019, ) %>% 
     rename(population = popData2019) %>% 
     mutate(p_cases = cum_cases/population,
            p_cases_daily = cases/population,
-           p_cases_active = abs(active_cases/population)) %>% 
-    select(date, cases, deaths, cum_cases, cum_deaths, p_cases, p_cases_daily, p_cases_active, population)
+           p_cases_active = abs(cases_active/population)) %>% 
+    select(date, cases, deaths, cum_cases, cum_deaths, cases_active, p_cases, p_cases_daily, p_cases_active, population)
   
   dir.create("../data/estimates-confirmed/PlotData/", showWarnings = F)
   cat("::- script-confirmed: Writing data for", country_geoid, "::\n")
