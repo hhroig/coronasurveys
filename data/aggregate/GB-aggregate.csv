@@ -708,3 +708,6 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/24,"United Kingdom",GB,"Wales; Cymru",GBWLS,en,7,0,0,,0,0,,,,,,N,N,N,limesurvey-24389,l1g72dvw057z4uv9rt,
 2020/07/25,"United Kingdom",GB,England,GBENG,en,16,2,2,,0,0,,,,,,N,N,N,limesurvey-24411,wwcx42jj3nd62oo3tq,
 2020/07/26,"United Kingdom",GB,England,GBENG,en,16,2,,0,0,0,,,,,,,N,,limesurvey-5095,wwcx42jj3nd62oo3tq,
+2020/07/27,"United Kingdom",GB,England,GBENG,en,16,2,,0,0,0,,,,,,,N,,limesurvey-5378,wwcx42jj3nd62oo3tq,
+2020/07/27,"United Kingdom",GB,Scotland,GBSCT,en,7,0,,,,,,,,,,,N,,limesurvey-5370,v7zy54zv1zik4v3hiw,
+2020/07/27,"United Kingdom",GB,Scotland,GBSCT,en,200,3,,0,0,1,,,,,,,Y,,limesurvey-5376,nftkdeskb11bioj87m,
