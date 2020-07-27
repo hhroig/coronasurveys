@@ -496,3 +496,4 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/15,France,FR,département:Ille-et-Vilaine,FR35,en,200,10,8,,1,2,,,,,,N,Y,Y,limesurvey-23833,oezb68mc8uka3uysmo,
 2020/07/17,France,FR,département:Ille-et-Vilaine,FR35,en,200,10,8,,1,2,,,,,,N,Y,Y,limesurvey-23911,oezb68mc8uka3uysmo,
 2020/07/18,France,FR,département:Moselle,FR57,en,20,0,0,,0,0,,,,,,N,N,N,limesurvey-23932,21joxgihsmkb8751j8,
+2020/07/27,France,FR,région:Bretagne,FRBRE,en,150,4,,0,0,0,,,,,,,Y,,limesurvey-5405,nriefdbm0f9f8v3zyl,
