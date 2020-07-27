@@ -5426,3 +5426,8 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/26,Spain,ES,Provincia:Bizkaia,ESBI,en,5000,17,,0,0,0,,,2,,,,N,,limesurvey-5100,np14c5rakn737u57me,
 2020/07/26,Spain,ES,Provincia:Madrid,ESM,en,100,19,,1,0,0,,,4,,,,Y,,limesurvey-5096,sn87uwntu0t8b28gbn,
 2020/07/26,Spain,ES,Provincia:Madrid,ESM,en,600,55,,5,0,0,,,10,,,,Y,,limesurvey-5261,vchx7le9tv11swe9nl,
+2020/07/27,Spain,ES,Provincia:Madrid,ESM,en,500,10,,1,1,0,,,7,,,,Y,,limesurvey-5360,jvl9yucoigayigy899,
+2020/07/27,Spain,ES,Provincia:Madrid,ESM,en,500,10,,1,1,0,,,7,,,,N,,limesurvey-5363,jvl9yucoigayigy899,
+2020/07/27,Spain,ES,Provincia:Madrid,ESM,en,500,10,,1,1,0,,,7,,,,N,,limesurvey-5361,jvl9yucoigayigy899,
+2020/07/27,Spain,ES,Provincia:Madrid,ESM,en,500,10,,1,1,0,,,7,,,,N,,limesurvey-5362,jvl9yucoigayigy899,
+2020/07/27,Spain,ES,Provincia:Madrid,ESM,en,500,10,,1,1,0,,,7,,,,Y,,limesurvey-5359,jvl9yucoigayigy899,
