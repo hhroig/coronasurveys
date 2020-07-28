@@ -1523,3 +1523,6 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/15,Portugal,PT,Braga,PT03,en,50,0,,,0,,,,,,,N,N,N,limesurvey-23835,2snxyznrl4kb3lxppx,
 2020/07/20,Portugal,PT,Braga,PT03,en,50,0,,,,,,,,,,N,N,N,limesurvey-24006,2snxyznrl4kb3lxppx,
 2020/07/24,Portugal,PT,Setúbal,PT15,,70,4,,,,,,,,,,,,,PT-g-sheet,,
+2020/07/28,Portugal,PT,Lisboa,PT11,,100,1,,,,,,,,,,,,,PT-g-sheet,,
+2020/07/28,Portugal,PT,Bragança,PT04,en,1000,2,,0,0,0,,,,,,,N,,limesurvey-5434,tgrd197cjra0f1a5d0,
+2020/07/28,Portugal,PT,"Região Autónoma da Madeira",PT30,en,50,0,,0,0,0,,,,,,,N,,limesurvey-5437,e7x3v4h1smwg4104ca,
