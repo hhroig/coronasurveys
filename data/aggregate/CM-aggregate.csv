@@ -1,0 +1,2 @@
+Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered,Fatalities,RecentCases,StillSick,Tested,Positive,Hospital,Severe,ICU,Surveyfirst,Surveyknown,Surveyforward,Dataset,Cookie,Campaign
+2020/07/29,Cameroon,CM,Centre,CMCE,en,50,3,,1,0,0,,,,,,,N,,limesurvey-5494,lt04fkm2iqg2rd41gr,
