@@ -671,3 +671,7 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/28,"United States",US,California,USCA,en,8,0,,,,,,,,,,,N,,limesurvey-5429,v7zy54zv1zik4v3hiw,
 2020/07/28,"United States",US,California,USCA,en,10,0,,0,0,0,,,,,,,N,,limesurvey-5415,dafr34zlhaniihg6br,
 2020/07/29,"United States",US,California,USCA,en,8,0,,,,,,,,,,,N,,limesurvey-5472,v7zy54zv1zik4v3hiw,
+2020/07/29,"United States",US,Vermont,USVT,en,10,0,,0,0,0,,,,,,,N,,limesurvey-5717,fujcxl5biugzn4atv1,
+2020/07/29,"United States",US,Tennessee,USTN,en,60,0,,0,0,0,,,,,,,N,,limesurvey-5719,vqgj0fqr47tsycz47f,
+2020/07/29,"United States",US,Tennessee,USTN,en,60,0,,0,0,0,,,,,,,N,,limesurvey-5718,vqgj0fqr47tsycz47f,
+2020/07/29,"United States",US,Massachusetts,USMA,en,25,1,,0,0,0,,,,,,,Y,,limesurvey-5490,jkslo21p07m9q07yy6,
