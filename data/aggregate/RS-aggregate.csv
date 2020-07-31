@@ -6,3 +6,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/06/25,Serbia,RS,Beograd,RS00,en,400,3,1,,,,,,,,,Y,N,N,limesurvey-19704,1pip06u31qkbuw2ywl,
 2020/07/05,Serbia,RS,Beograd,RS00,en,50,1,1,,,,,,,,,N,N,N,limesurvey-22839,1wd6wa5embkb83dh0m,
 2020/07/06,Serbia,RS,"Pčinjski okrug",RS24,en,20,6,2,,,,,,,,,N,N,N,limesurvey-23147,vlnuyj1aakkb84ztqw,
+2020/07/31,Serbia,RS,"Južnobački okrug",RS06,en,20,3,,0,1,3,,,,,,,N,,limesurvey-5853,0n2lpmwclykt6cxpex,
+2020/07/31,Serbia,RS,"Pčinjski okrug",RS24,en,30,9,,0,0,2,,,,,,,N,,limesurvey-5852,0n2lpmwclykt6cxpex,
