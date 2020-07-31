@@ -28,3 +28,7 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/05,Mexico,MX,Guanajuato,MXGUA,en,50,4,0,,0,3,,,,,,N,N,N,limesurvey-22813,um3uzd7w4fkc98w0bl,
 2020/07/05,Mexico,MX,Guanajuato,MXGUA,en,50,4,0,,0,3,,,,,,N,N,N,limesurvey-22810,um3uzd7w4fkc98w0bl,
 2020/07/05,Mexico,MX,Guanajuato,MXGUA,en,50,4,0,,0,3,,,,,,N,N,N,limesurvey-22812,um3uzd7w4fkc98w0bl,
+2020/07/30,Mexico,MX,"Ciudad de México",MXCMX,en,500,0,,0,0,0,,,,,,,N,,limesurvey-5772,nupodsretbkb2ofhaj,
+2020/07/30,Mexico,MX,Sonora,MXSON,en,300,20000,,1800,2000,6000,,,,,,,N,,limesurvey-5781,59qycw35comi9nx2kh,
+2020/07/30,Mexico,MX,"Ciudad de México",MXCMX,en,500,0,,0,0,0,,,,,,,N,,limesurvey-5770,nupodsretbkb2ofhaj,
+2020/07/30,Mexico,MX,"Ciudad de México",MXCMX,en,500,0,,0,0,0,,,,,,,N,,limesurvey-5771,nupodsretbkb2ofhaj,

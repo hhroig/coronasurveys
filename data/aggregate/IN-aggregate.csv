@@ -54,3 +54,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/12,India,IN,Chhattisgarh,INCT,en,4,0,0,,,,,,,,,,N,Y,limesurvey-23495,fqunl4i9q830zis0fm,
 2020/07/19,India,IN,"Madhya Pradesh",INMP,en,100,100,100,,,,,,,,,Y,Y,Y,limesurvey-23966,p9ajbwjm2z9y57ropk,
 2020/07/25,India,IN,,,en,25,0,0,,,,,,,,,Y,N,Y,limesurvey-24413,yk0we6oivf5k3d97oj,
+2020/07/30,India,IN,Telangana,INTG,en,100,10,,5,20,5,,,,,,,Y,,limesurvey-5778,inoofmvnejkb8ps9eh,
+2020/07/30,India,IN,Karnataka,INKA,en,3000,30,,1,15,15,,,,,,,N,,limesurvey-5782,ihgjblg1nhkb8yodh2,
