@@ -355,3 +355,4 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/31,Spain,ES,"Rivas Barrio Centro",ESMRC,en,50,1,1,0,0,0,0,1,1,0,0,0,,N,N,limesurvey-6209,tqcdp1suc5kdau18e9,
 2020/07/31,Spain,ES,"Rivas Barrio Centro",ESMRC,en,3,2,2,0,0,0,0,0,0,0,0,0,,N,,limesurvey-6208,um4grgnx3ykdatahap,
 2020/08/01,Spain,ES,"Rivas Barrio Centro",ESMRC,es,4,3,3,0,,0,0,22,,1,1,1,,Y,,limesurvey-6213,g1t1ssy978kdawsp7p,
+2020/08/01,Spain,ES,"Arganda del Rey",ESMAR,en,42,4,0,0,0,0,0,1,1,0,0,0,,Y,N,limesurvey-6224,s5xhn8xidxkdb8lmv9,
