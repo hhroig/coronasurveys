@@ -5454,3 +5454,7 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/31,Spain,ES,,,en,100,8,,0,0,0,,,0,,,,N,,limesurvey-5839,dfqi58fr6keh0vjpa6,
 2020/07/31,Spain,ES,Provincia:Barcelona,ESB,en,500,4,,0,0,0,,,1,,,,N,,limesurvey-5849,5xtb41rr8vt5l5vw3t,
 2020/07/31,Spain,ES,Provincia:Madrid,ESM,en,30,7,,1,0,0,,,3,,,,Y,,limesurvey-5833,0xwnoe6of0vpcey3sp,
+2020/07/31,Spain,ES,Provincia:Toledo,ESTO,en,100,3,,1,0,0,,,0,,,,Y,,limesurvey-5869,8hqhi98agokc29bylg,
+2020/07/31,Spain,ES,Provincia:Valladolid,ESVA,en,20,3,,0,0,0,,,0,,,,N,,limesurvey-5871,vfzbukvkcxro9rujs0,
+2020/07/31,Spain,ES,Provincia:Madrid,ESM,en,100,11,,0,0,0,,,1,,,,Y,,limesurvey-5870,8hqhi98agokc29bylg,
+2020/07/31,Spain,ES,Provincia:Valladolid,ESVA,en,30,0,,0,0,0,,,0,,,,N,,limesurvey-5872,vfzbukvkcxro9rujs0,
