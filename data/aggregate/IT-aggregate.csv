@@ -785,3 +785,4 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/30,Italy,IT,Regioni:Lazio,IT62,en,20,0,,0,0,0,,,,,,,N,,limesurvey-5814,kbwaqqc8i2kb9jjcwn,
 2020/07/31,Italy,IT,Province:Padova,ITPD,en,30,3,,0,0,0,,,,,,,N,,limesurvey-5843,4qonyph99hkb83n0xo,
 2020/07/31,Italy,IT,Regioni:Emilia-Romagna,IT45,en,50,3,,0,0,0,,,,,,,N,,limesurvey-5863,5ffusrdoovjeeliiku,
+2020/08/01,Italy,IT,Regioni:Lombardia,IT25,en,300,5,,0,1,0,,,,,,,Y,,limesurvey-5922,n3pt84hbu076xto3pv,
