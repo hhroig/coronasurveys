@@ -32,7 +32,7 @@ process_ratio <- function(dt, numerator, denominator){
 }
 
 process_region <- function(dt, reg, pop, num_responses = 100){
-  cat("reg pop", reg, pop, nrow(dt), "\n")
+  cat("Working with", nrow(dt), "responses\n"  )
   #list of dates
   dates <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
   dates <- gsub("-","/", dates)
@@ -53,8 +53,9 @@ process_region <- function(dt, reg, pop, num_responses = 100){
   population <- c()
   
   for (j in dates){
-    dt_date <- tail(dt[as.Date(dt$timestamp) <= as.Date(j), ], num_responses)
-    cat("::- script-300responses: Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
+    nr <- nrow(dt[as.Date(dt$timestamp) == as.Date(j), ])
+    dt_date <- tail(dt[as.Date(dt$timestamp) <= as.Date(j), ], max(num_responses,nr))
+    cat("- Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
     
     reach_date <- sum(dt_date$reach)
     cases_date <- sum(dt_date$cases)
@@ -127,9 +128,9 @@ populations <- region_tree$population
 
 for (i in 1:length(regions)){
   reg <- regions[i]
-  cat("::- script-300responses: processing", reg, "::\n")
+  cat("Processing", reg, "\n")
   dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, pop=populations[i])
-  cat("::- script-300responses: Writing estimates for:", reg, "::\n")
+  cat("- Writing estimates for:", reg, "\n")
   write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"))
 }
 
