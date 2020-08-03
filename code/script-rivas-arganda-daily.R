@@ -24,12 +24,22 @@ process_ratio <- function(dt, numerator, denominator){
   dta <- dta[!is.na(dta[[denominator]]),]
   dta <- dta[dta[[numerator]] <= dta[[denominator]],]
   if (nrow(dta)>0){
-    return(sum(dta[[numerator]])/sum(dta[[denominator]]))
+    p_est <- sum(dta[[numerator]])/sum(dta[[denominator]])
+    level <- ci_level
+    z <- qnorm(level+(1-level)/2)
+    se <- sqrt(p_est*(1-p_est))/sqrt(sum(dta[[denominator]]))
+    return(list(val=p_est, low=max(0,p_est-z*se), upp=p_est+z*se))
   }
   else {
-    return(NA)
+    return(c(NA, NA, NA))
   }
 }
+
+# calculate_ci <- function(p_est, level, pop_size) {
+#  z <- qnorm(level+(1-level)/2)
+#  se <- sqrt(p_est*(1-p_est))/sqrt(pop_size)
+#  return(list(p_est=est, low=max(0,p_est-z*se), upp=p_est+z*se)) #, error=z*se))
+# }
 
 process_region <- function(dt, reg, pop, num_responses = 100){
   cat("Working with", nrow(dt), "responses\n"  )
@@ -40,16 +50,49 @@ process_region <- function(dt, reg, pop, num_responses = 100){
   sample_size <- c()
   reach <- c()
   p_cases <- c()
+  p_cases_low <- c()
+  p_cases_high <- c()
+  
   p_recovered <- c()
+  p_recovered_low <- c()
+  p_recovered_high <- c()
+  
   p_fatalities <- c()
+  p_fatalities_low <- c()
+  p_fatalities_high <- c()
+  
   p_recentcases <- c()
+  p_recentcases_low <- c()
+  p_recentcases_high <- c()
+  
   p_recentcasesnursing <- c()
+  p_recentcasesnursing_low <- c()
+  p_recentcasesnursing_high <- c()
+  
   p_stillsick <- c()
+  p_stillsick_low <- c()
+  p_stillsick_high <- c()
+  
   p_hospital <- c()
+  p_hospital_low <- c()
+  p_hospital_high <- c()
+  
   p_severe <- c()
+  p_severe_low <- c()
+  p_severe_high <- c()
+  
   p_icu <- c()
+  p_icu_low <- c()
+  p_icu_high <- c()
+  
   p_tested <- c()
+  p_tested_low <- c()
+  p_tested_high <- c()
+  
   p_positive <- c()
+  p_positive_low <- c()
+  p_positive_high <- c()
+  
   population <- c()
   
   for (j in dates){
@@ -57,51 +100,120 @@ process_region <- function(dt, reg, pop, num_responses = 100){
     dt_date <- tail(dt[as.Date(dt$timestamp) <= as.Date(j), ], max(num_responses,nr))
     cat("- Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
     
-    reach_date <- sum(dt_date$reach)
-    cases_date <- sum(dt_date$cases)
-    
     sample_size <- c(sample_size, nrow(dt_date))
     reach <- c(reach, sum(dt_date$reach))
-    p_cases <- c(p_cases, process_ratio(dt_date, "cases", "reach"))
-    p_recovered <- c(p_recovered, process_ratio(dt_date, "recovered", "cases"))
-    p_fatalities <- c(p_fatalities, process_ratio(dt_date, "fatalities", "cases"))
-    p_recentcases <- c(p_recentcases, process_ratio(dt_date, "recentcases", "cases"))
-    p_recentcasesnursing <- c(p_recentcasesnursing, process_ratio(dt_date, "recentcasesnursing", "cases"))
-    p_stillsick <- c(p_stillsick, process_ratio(dt_date, "stillsick", "cases"))
-    p_hospital <- c(p_hospital, process_ratio(dt_date, "hospital", "cases"))
-    p_severe <- c(p_severe, process_ratio(dt_date, "severe", "cases"))
-    p_icu <- c(p_icu, process_ratio(dt_date, "icu", "cases"))
-    p_tested <- c(p_tested, process_ratio(dt_date, "tested", "reach"))
-    p_positive <- c(p_positive, process_ratio(dt_date, "positive", "tested"))
+    
+    est <- process_ratio(dt_date, "cases", "reach")
+    p_cases <- c(p_cases, est$val)
+    p_cases_low <- c(p_cases_low, est$low)
+    p_cases_high <- c(p_cases_high, est$upp)
+    
+    est <- process_ratio(dt_date, "recovered", "cases")
+    p_recovered <- c(p_recovered, est$val)
+    p_recovered_low <- c(p_recovered_low, est$low)
+    p_recovered_high <- c(p_recovered_high, est$upp)
+
+    est <- process_ratio(dt_date, "fatalities", "cases")
+    p_fatalities <- c(p_fatalities, est$val)
+    p_fatalities_low <- c(p_fatalities_low, est$low)
+    p_fatalities_high <- c(p_fatalities_high, est$upp)
+    
+    est <- process_ratio(dt_date, "recentcases", "cases")
+    p_recentcases <- c(p_recentcases, est$val)
+    p_recentcases_low <- c(p_recentcases_low, est$low)
+    p_recentcases_high <- c(p_recentcases_high, est$upp)
+    
+    est <- process_ratio(dt_date, "recentcasesnursing", "cases")
+    p_recentcasesnursing <- c(p_recentcasesnursing, est$val)
+    p_recentcasesnursing_low <- c(p_recentcasesnursing_low, est$low)
+    p_recentcasesnursing_high <- c(p_recentcasesnursing_high, est$upp)
+    
+    est <- process_ratio(dt_date, "stillsick", "cases")
+    p_stillsick <- c(p_stillsick, est$val)
+    p_stillsick_low <- c(p_stillsick_low, est$low)
+    p_stillsick_high <- c(p_stillsick_high, est$upp)
+    
+    est <- process_ratio(dt_date, "hospital", "cases")
+    p_hospital <- c(p_hospital, est$val)
+    p_hospital_low <- c(p_hospital_low, est$low)
+    p_hospital_high <- c(p_hospital_high, est$upp)
+    
+    est <- process_ratio(dt_date, "severe", "cases")
+    p_severe <- c(p_severe, est$val)
+    p_severe_low <- c(p_severe_low, est$low)
+    p_severe_high <- c(p_severe_high, est$upp)
+    
+    est <- process_ratio(dt_date, "icu", "cases")
+    p_icu <- c(p_icu, est$val)
+    p_icu_low <- c(p_icu_low, est$low)
+    p_icu_high <- c(p_icu_high, est$upp)
+    
+    est <- process_ratio(dt_date, "tested", "reach")
+    p_tested <- c(p_tested, est$val)
+    p_tested_low <- c(p_tested_low, est$low)
+    p_tested_high <- c(p_tested_high, est$upp)
+    
+    est <- process_ratio(dt_date, "positive", "tested")
+    p_positive <- c(p_positive, est$val)
+    p_positive_low <- c(p_positive_low, est$low)
+    p_positive_high <- c(p_positive_high, est$upp)
+    
+    
     population <- c(population, pop)
   }
   
   dd <- data.frame(date = dates,
-                                      sample_size,
-                                      reach,
-                                      p_cases,
-                                      p_recovered,
-                                      p_fatalities,
-                                      p_recentcases,
-                                      p_recentcasesnursing,
-                                      p_stillsick,
-                                      p_hospital,
-                                      p_severe,
-                                      p_icu,
-                                      p_tested,
-                                      p_positive,
-                                      population,
-                                      stringsAsFactors = F)
+                   sample_size,
+                   reach,
+                   p_cases,
+                   p_cases_low,
+                   p_cases_high,
+                   
+                   p_recovered,
+                   p_recovered_low,
+                   p_recovered_high,
+                   
+                   p_fatalities,
+                   p_fatalities_low,
+                   p_fatalities_high,
+                   
+                   p_recentcases,
+                   p_recentcases_low,
+                   p_recentcases_high,
+                   
+                   p_recentcasesnursing,
+                   p_recentcasesnursing_low,
+                   p_recentcasesnursing_high,
+                   
+                   p_stillsick,
+                   p_stillsick_low,
+                   p_stillsick_high,
+                   
+                   p_hospital,
+                   p_hospital_low,
+                   p_hospital_high,
+                   
+                   p_severe,
+                   p_severe_low,
+                   p_severe_high,
+                   
+                   p_icu,
+                   p_icu_low,
+                   p_icu_high,
+                   
+                   p_tested,
+                   p_tested_low,
+                   p_tested_high,
+                   
+                   p_positive,
+                   p_positive_low,
+                   p_positive_high,
+                   
+                   population,
+                   stringsAsFactors = F)
   
   return(dd)
 }
-
-calculate_ci <- function(p_est, level, pop_size) {
-  z <- qnorm(level+(1-level)/2)
-  se <- sqrt(p_est*(1-p_est))/sqrt(pop_size)
-  return(list(low=p_est-z*se, upp=p_est+z*se)) #, error=z*se))
-}
-
 
 
 
@@ -111,6 +223,12 @@ cat("Rivas-Arganda daily script run at ", as.character(Sys.time()), "\n\n")
 responses_path <- "../data/aggregate/rivas-arganda/"
 data_path <- "../data/common-data/rivas-arganda/regions-tree-population.csv"
 estimates_path <- "../data/estimates-rivas-arganda/"
+
+# responses_path <- "../coronasurveys/data/aggregate/rivas-arganda/"
+# data_path <- "../coronasurveys/data/common-data/rivas-arganda/regions-tree-population.csv"
+# estimates_path <- "./PlotData/"
+
+ci_level <- 0.95
 
 country_iso <- "ES"
 
