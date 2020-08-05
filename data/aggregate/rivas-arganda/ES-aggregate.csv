@@ -740,3 +740,8 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/05,Spain,ES,"Rivas Barrio Oeste",ESMRO,en,4,0,0,0,0,0,0,0,0,0,0,0,,N,N,limesurvey-6823,lkwl5th8cgkdh9i5yl,
 2020/08/05,Spain,ES,"Rivas Barrio Centro",ESMRC,en,50,6,6,0,0,0,2,15,7,5,3,2,,Y,Y,limesurvey-6821,3x1xf9czadkdh8ap2h,
 2020/08/05,Spain,ES,"Rivas Barrio Este",ESMRE,en,32,3,3,0,0,0,0,1,1,0,1,1,,N,Y,limesurvey-6818,5yhmrwk6hfkdbxx1lr,
+2020/08/05,Spain,ES,"Rivas Barrio Centro",ESMRC,en,30,3,2,0,0,0,1,1,0,0,0,0,,Y,Y,limesurvey-6833,mcx7qbgv5wkd9aofhk,
+2020/08/05,Spain,ES,"Rivas Barrio Este",ESMRE,en,3,2,2,0,0,0,0,0,0,0,0,0,,N,N,limesurvey-6829,lbh1js2fopkdhdoc54,
+2020/08/05,Spain,ES,"Rivas Barrio Oeste",ESMRO,en,14,0,0,0,0,0,0,4,0,0,0,0,,N,N,limesurvey-6834,tsuzy2hcaskd9efy0l,
+2020/08/05,Spain,ES,"Arganda del Rey",ESMAR,en,50,4,4,0,0,0,0,2,1,1,1,0,,Y,N,limesurvey-6831,psdwq2hxq4kd8yh21a,
+2020/08/05,Spain,ES,"Rivas Barrio Oeste",ESMRO,en,40,4,3,0,1,0,0,3,2,0,0,0,,N,N,limesurvey-6832,da8n1tm6vxkdhfnzw6,
