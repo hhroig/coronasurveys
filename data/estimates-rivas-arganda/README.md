@@ -9,11 +9,16 @@ ESMAR		Arganda del Rey
 Las estimaciones de un área se calculan para cada día con al menos 100 respuestas (si están disponibles). Estas son todas las respuestas del día y, si no hay 100, 
 respuestas de los días anteriores hasta completar 100.
 
-La estimaciones están en ficheros CSV con las siguientes columnas:
+La estimaciones están en ficheros CSV con las siguientes columnas (entre corchetes se dan las columnas que dan el intervalo de confianza al 95%):
 - date: Fecha de la estimatión
 - sample_size: Número de respuestas usadas (suele ser 100). No incluye encuestas con valores atípicos (outliers).
 - reach: Número total de personas conocidas en esas respuestas.
-- p_cases [p_cases_low, p_cases_high]: Prevalencia estimada (y su intervalo de confianza al 95%). Se calcula dividiendo los casos reportados por las personas conocidas (reach).
+- cases_est [cases_low, cases_high]: Número acumulado estimado de casos de COVID-19.
+- fatalities_est [fatalities_low, fatalities_high]: Número acumulado estimado de muertes de COVID-19.
+- recentcases_est [recentcases_low, recentcases_high]: Número estimado de casos que empezaron a mostrar síntomas en los últimos 7 días.
+- hospital_est [hospital_low, hospital_high]: Número estimado de casos que han sido trasladados al hospital por COVID-19.
+- icu_est [icu_low, icu_high]: Número estimado de casos que han estado en la Unidad de Cuidados Intensivos (UCI).
+- p_cases [p_cases_low, p_cases_high]: Prevalencia estimada. Se calcula dividiendo los casos reportados por las personas conocidas (reach).
 - p_recovered [p_recovered_low, p_recovered_high]: Estimación de tasa de casos recuperados. Se calcula dividiendo los casos recuperados por los casos reportados.
 - p_fatalities [p_fatalities_low, p_fatalities_high]: Estimación de tasa de fallecimientos sobre casos reportados. Se calcula dividiendo los fallecimientos por los casos reportados.
 - p_recentcases [p_recentcases_low, p_recentcases_high]: Estimación de tasa de casos que empezaron a mostrar síntomas en los últimos 7 días.
@@ -21,7 +26,7 @@ La estimaciones están en ficheros CSV con las siguientes columnas:
 - p_stillsick [p_stillsick_low, p_stillsick_high]: Estimación de tasa de casos que están todavía enfermos.
 - p_hospital [p_hospital_low, p_hospital_high]: Estimación de tasa de casos que han sido trasladados al hospital por COVID-19.
 - p_severe [p_severe_low, p_severe_high]: Estimación de tasa de casos que han sido trasladados al hospital por COVID-19 y han sido casos graves.
-- p_icu [p_icu_low, p_icu_high]: Estimación de tasa de casos que han sido trasladados al hospital por COVID-19 y han estado en la Unidad de Cuidados Intensivos (UCI).
+- p_icu [p_icu_low, p_icu_high]: Estimación de tasa de casos que han estado en la Unidad de Cuidados Intensivos (UCI).
 - p_tested [p_tested_low, p_tested_high]: Estimación de la tasa de población a la que se le han hecho pruebas de COVID-19.
 - p_positive [p_positive_low, p_positive_high]: Estimación de la tasa de pruebas que fueron positivas.
 - population: Población del área.
