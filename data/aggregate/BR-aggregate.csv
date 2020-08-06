@@ -704,3 +704,4 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/04,Brazil,BR,"São Paulo",BRSP,en,50,1,,0,0,0,,,,,,,N,,limesurvey-6003,f9me4ijpd3kb2su7iy,
 2020/08/05,Brazil,BR,"São Paulo",BRSP,en,106,7,,1,0,0,,,,,,,Y,,limesurvey-6022,gowc7zx50xx6noogob,
 2020/08/05,Brazil,BR,"São Paulo",BRSP,en,106,7,,1,0,0,,,,,,,Y,,limesurvey-6023,gowc7zx50xx6noogob,
+2020/08/06,Brazil,BR,"Santa Catarina",BRSC,en,30,10,,0,1,3,,,,,,,N,,limesurvey-6039,o0qa2evzypzsyffz8v,
