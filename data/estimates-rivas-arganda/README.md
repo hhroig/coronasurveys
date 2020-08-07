@@ -1,10 +1,10 @@
 En esta carpeta están las estimaciones obtenidas de la encuesta lanzada en Rivas y Arganda del Rey el 31 de julio de 2020.
 
 Hay un archivo por área geográfica:
-ESMRC		Rivas Barrio Centro
-ESMRE		Rivas Barrio Este
-ESMRO		Rivas Barrio Oeste
-ESMAR		Arganda del Rey
+- ESMRC		Rivas Barrio Centro
+- ESMRE		Rivas Barrio Este
+- ESMRO		Rivas Barrio Oeste
+- ESMAR		Arganda del Rey
 
 Las estimaciones se calculan periódicamente (y automáticamente) a partir de las respuestas recogidas con la encuesta accesible en https://survey.coronasurveys.org/RA. Estas respuestas están accesibles en https://github.com/GCGImdea/coronasurveys/tree/master/data/aggregate/rivas-arganda. El programa usado para calcular la estimación está disponible en https://github.com/GCGImdea/coronasurveys/blob/master/code/script-rivas-arganda-daily.R.
 
