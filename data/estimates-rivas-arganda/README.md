@@ -6,6 +6,8 @@ ESMRE		Rivas Barrio Este
 ESMRO		Rivas Barrio Oeste
 ESMAR		Arganda del Rey
 
+Las estimaciones se calculan periódicamente (y automáticamente) a partir de las respuestas recogidas con la encuesta accesible en https://survey.coronasurveys.org/RA. Estas respuestas están accesibles en https://github.com/GCGImdea/coronasurveys/tree/master/data/aggregate/rivas-arganda. El programa usado para calcular la estimación está disponible en https://github.com/GCGImdea/coronasurveys/blob/master/code/script-rivas-arganda-daily.R.
+
 Las estimaciones de un área se calculan para cada día con al menos 100 respuestas (si están disponibles). Estas son todas las respuestas del día y, si no hay 100, 
 respuestas de los días anteriores hasta completar 100.
 
