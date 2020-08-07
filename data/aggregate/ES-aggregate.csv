@@ -5464,3 +5464,8 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/05,Spain,ES,Provincia:Madrid,ESM,en,50,10,,0,0,1,,,2,,,,Y,,limesurvey-6034,j8bzasc6famky88u7o,
 2020/08/06,Spain,ES,Provincia:Madrid,ESM,en,10000,100,,5,0,0,,,15,,,,N,,limesurvey-6042,6unyrhegsc2k3xnehd,
 2020/08/06,Spain,ES,Provincia:Madrid,ESM,en,20,2,,0,0,0,,,0,,,,N,,limesurvey-6045,i0u1mn4dfruj613hg1,
+2020/08/06,Spain,ES,Provincia:Madrid,ESM,en,30,1,,0,0,0,,,0,,,,N,,limesurvey-6047,t5bbmgc5p0kci58nnf,
+2020/08/06,Spain,ES,Provincia:Madrid,ESM,en,70,10,,3,0,1,,,5,,,,Y,,limesurvey-6059,sc2xn5ifaz9qntd7eu,
+2020/08/06,Spain,ES,Provincia:Madrid,ESM,en,110,19,,0,0,0,,,1,,,,Y,,limesurvey-6052,4umvar1o48a3a3mr84,
+2020/08/06,Spain,ES,"Provincia:Navarra / Nafarroa",ESNA,en,1000,1,,0,0,0,,,0,,,,N,,limesurvey-6062,9h5evbj1sxebzkvfph,
+2020/08/06,Spain,ES,"Provincia:Navarra / Nafarroa",ESNA,en,1000,1,,0,0,0,,,0,,,,N,,limesurvey-6061,9h5evbj1sxebzkvfph,
