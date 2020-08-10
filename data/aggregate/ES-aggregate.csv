@@ -5479,3 +5479,7 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/09,Spain,ES,Provincia:Madrid,ESM,en,50,7,,0,0,0,,,1,,,,Y,,limesurvey-7178,zxsr7msmtajcpm9cih,
 2020/08/09,Spain,ES,Provincia:Madrid,ESM,en,110,19,,0,0,0,,,1,,,,Y,,limesurvey-7534,4umvar1o48a3a3mr84,
 2020/08/09,Spain,ES,Provincia:Madrid,ESM,en,110,19,,0,0,0,,,1,,,,Y,,limesurvey-7533,4umvar1o48a3a3mr84,
+2020/08/10,Spain,ES,Provincia:Murcia,ESMU,en,5,0,,0,0,0,,,0,,,,N,,limesurvey-7721,9a1gr0exfj42fivdp9,
+2020/08/10,Spain,ES,"Provincia:Valencia / València",ESV,en,8,3,,0,0,0,,,0,,,,N,,limesurvey-7723,9a1gr0exfj42fivdp9,
+2020/08/10,Spain,ES,Provincia:Albacete,ESAB,en,5,1,,0,0,1,,,1,,,,N,,limesurvey-7722,9a1gr0exfj42fivdp9,
+2020/08/10,Spain,ES,Provincia:Toledo,ESTO,en,50,0,,0,0,0,,,0,,,,Y,,limesurvey-7719,zfixd6t5f0kcbm4hp2,
