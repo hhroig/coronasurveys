@@ -1,4 +1,4 @@
-En esta carpeta están las estimaciones obtenidas de la encuesta lanzada en Rivas y Arganda del Rey el 31 de julio de 2020.
+En esta carpeta están las estimaciones obtenidas de la encuesta lanzada en Rivas y Arganda del Rey el 30 de julio de 2020.
 
 Hay un archivo por área geográfica:
 - ESMRC		Rivas Barrio Centro
