@@ -172,3 +172,4 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/31,Chile,CL,Atacama,CLAT,en,25,0,,0,0,0,,,,,,,Y,,limesurvey-5884,2dvnyvkr2by6ew35tr,
 2020/08/05,Chile,CL,Atacama,CLAT,en,25,0,,0,0,0,,,,,,,Y,,limesurvey-6010,2dvnyvkr2by6ew35tr,
 2020/08/08,Chile,CL,Atacama,CLAT,en,25,0,,0,0,0,,,,,,,Y,,limesurvey-7056,2dvnyvkr2by6ew35tr,
+2020/08/10,Chile,CL,"Región Metropolitana de Santiago",CLRM,en,70,11,,3,0,0,,,,,,,Y,,limesurvey-7980,9lw1fec60vk1f5b2cw,
