@@ -1042,3 +1042,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/11,Spain,ES,"Rivas Barrio Este",ESMRE,en,32,3,3,0,0,0,0,1,1,1,1,1,,N,Y,limesurvey-7234,5yhmrwk6hfkdbxx1lr,
 2020/08/11,Spain,ES,"Rivas Barrio Oeste",ESMRO,en,8,0,,0,,,,4,0,0,,,,Y,N,limesurvey-7232,grbekj1wlvkdg5h9o9,
 2020/08/11,Spain,ES,"Rivas Barrio Centro",ESMRC,en,12,8,8,0,0,0,0,4,4,0,0,0,,Y,Y,limesurvey-7231,o3h31oowpgkd9zxxbd,
+2020/08/11,Spain,ES,"Rivas Barrio Centro",ESMRC,en,3,3,3,0,0,0,0,3,3,0,0,3,,N,N,limesurvey-7239,4g6y7b5d8bkdqemihx,
+2020/08/11,Spain,ES,"Rivas Barrio Centro",ESMRC,en,3,3,3,0,0,0,0,3,3,0,0,3,,N,N,limesurvey-7238,4g6y7b5d8bkdqemihx,
