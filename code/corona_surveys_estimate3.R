@@ -24,3 +24,4 @@ try(source("script-smooth-300responses.R"), silent = T)
 
 try(source("script-rivas-arganda-daily.R"), silent = T)
 
+try(source("script-provinces-daily.R"), silent = T)

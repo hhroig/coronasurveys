@@ -1,6 +1,20 @@
 library(tidyr)
 library(dplyr)
 
+responses_path <- "../data/aggregate/rivas-arganda/"
+data_path <- "../data/common-data/rivas-arganda/regions-tree-population.csv"
+estimates_path <- "../data/estimates-rivas-arganda/"
+
+# responses_path <- "../coronasurveys/data/aggregate/rivas-arganda/"
+# data_path <- "../coronasurveys/data/common-data/rivas-arganda/regions-tree-population.csv"
+# estimates_path <- "./PlotData/"
+
+country_iso <- "ES"
+ci_level <- 0.95
+max_ratio <- 1/3
+num_responses = 100
+
+
 remove_outliers <- function(dt, max_ratio = 1/3) {
   #remove outliers of reach.
   dt <- dt[!is.na(dt$reach),]
@@ -41,13 +55,14 @@ process_ratio <- function(dt, numerator, denominator, control){
 #  return(list(p_est=est, low=max(0,p_est-z*se), upp=p_est+z*se)) #, error=z*se))
 # }
 
-process_region <- function(dt, reg, pop, dates, num_responses = 100){
+process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
   cat("Working with", nrow(dt), "responses\n"  )
   #list of dates
   # dates <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
   # dates <- gsub("-","/", dates)
   
   region <- c()
+  regionname <- c()
   sample_size <- c()
   reach <- c()
   p_cases <- c()
@@ -122,6 +137,7 @@ process_region <- function(dt, reg, pop, dates, num_responses = 100){
     cat("- Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
     
     region <- c(region, reg)
+    regionname <- c(regionname, name)
     sample_size <- c(sample_size, nrow(dt_date))
     reach <- c(reach, sum(dt_date$reach))
     
@@ -210,6 +226,7 @@ process_region <- function(dt, reg, pop, dates, num_responses = 100){
   
   dd <- data.frame(date = dates,
                    region,
+                   regionname,
                    sample_size,
                    reach,
                    
@@ -288,18 +305,6 @@ process_region <- function(dt, reg, pop, dates, num_responses = 100){
 
 cat("Rivas-Arganda daily script run at ", as.character(Sys.time()), "\n\n")
 
-responses_path <- "../data/aggregate/rivas-arganda/"
-data_path <- "../data/common-data/rivas-arganda/regions-tree-population.csv"
-estimates_path <- "../data/estimates-rivas-arganda/"
-
-# responses_path <- "../coronasurveys/data/aggregate/rivas-arganda/"
-# data_path <- "../coronasurveys/data/common-data/rivas-arganda/regions-tree-population.csv"
-# estimates_path <- "./PlotData/"
-
-ci_level <- 0.95
-
-country_iso <- "ES"
-
 file_path <- paste0(responses_path, country_iso, "-aggregate.csv")
 dt <- read.csv(file_path, as.is = T)
 cat("Received ", nrow(dt), " responses\n\n")
@@ -309,6 +314,7 @@ names(dt) <- tolower(names(dt))
 region_tree <- read.csv(data_path, as.is = T)
 names(region_tree) <- tolower(names(region_tree))
 regions <- region_tree$provincecode
+region_names <- region_tree$regionname
 populations <- region_tree$population
 
 #list of dates
@@ -326,12 +332,13 @@ for (i in 1:length(regions)){
 }
 cat("\n")
 
-dt <- remove_outliers(dt)
+dt <- remove_outliers(dt,max_ratio)
 
 for (i in 1:length(regions)){
   reg <- regions[i]
+  name <- region_names[i]
   cat("Processing", reg, "\n")
-  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, pop=populations[i], dates)
+  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates)
   cat("- Writing estimates for:", reg, "\n")
   write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"))
 }
