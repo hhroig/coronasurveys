@@ -12,7 +12,8 @@ estimates_path <- "../data/estimates-provinces/"
 country_iso <- "ES"
 ci_level <- 0.95
 max_ratio <- 1/3
-num_responses = 30
+num_responses = 1000
+age <- 7
 
 
 remove_outliers <- function(dt, max_ratio = 1/3) {
@@ -55,7 +56,7 @@ process_ratio <- function(dt, numerator, denominator, control){
 #  return(list(p_est=est, low=max(0,p_est-z*se), upp=p_est+z*se)) #, error=z*se))
 # }
 
-process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
+process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age = 7){
   cat("Working with", nrow(dt), "responses\n"  )
   #list of dates
   # dates <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
@@ -97,7 +98,8 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
   
   for (j in dates){
     nr <- nrow(dt[as.Date(dt$timestamp) == as.Date(j), ])
-    dt_date <- tail(dt[as.Date(dt$timestamp) <= as.Date(j), ], max(num_responses,nr))
+    subcondition <- (as.Date(dt$timestamp) > (as.Date(j)-age)  & as.Date(dt$timestamp) <= as.Date(j) )
+    dt_date <- tail(dt[subcondition, ], max(num_responses,nr))
     #cat("- Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
     
     region <- c(region, reg)
@@ -230,9 +232,9 @@ dt <- remove_outliers(dt, max_ratio)
 for (i in 1:length(regions)){
   reg <- regions[i]
   name <- region_names[i]
-  cat("Processing", reg, "\n")
-  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates, num_responses)
-  cat("- Writing estimates for:", reg, name, "\n")
+  cat("Processing", reg, name, "\n")
+  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates, num_responses, age)
+  #cat("- Writing estimates for:", reg, name, "\n")
   write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"))
 }
 
