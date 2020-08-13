@@ -5493,3 +5493,7 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,50,3,,0,0,0,,,2,,,,N,,limesurvey-9333,7hwq961iowz6oaadnb,
 2020/08/13,Spain,ES,Provincia:Madrid,ESM,en,20,1,,0,1,1,,,0,,,,,,limesurvey-9603,58rmbl004rj0tt9k2n,
 2020/08/13,Spain,ES,Provincia:Zaragoza,ESZ,en,60,1,,0,0,0,,,1,,,,N,,limesurvey-9610,x63hipn21mt9w7cizn,
+2020/08/13,Spain,ES,Provincia:León,ESLE,en,30,2,,0,2,0,,,4,,,,Y,,limesurvey-9621,1jksjo9ew8kbonptza,
+2020/08/13,Spain,ES,Provincia:Madrid,ESM,en,50,13,,2,0,0,,,3,,,,N,,limesurvey-9658,fjrnshbwz4gfexrpma,
+2020/08/13,Spain,ES,Provincia:Burgos,ESBU,en,300,5,,0,0,0,,,3,,,,N,,limesurvey-9652,synb37qk85s15jr3aw,
+2020/08/13,Spain,ES,Provincia:Burgos,ESBU,en,300,5,,0,0,0,,,3,,,,N,,limesurvey-9653,synb37qk85s15jr3aw,
