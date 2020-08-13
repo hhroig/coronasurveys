@@ -5486,3 +5486,8 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/11,Spain,ES,Provincia:Álava,ESVI,en,50,7,,0,0,0,,,0,,,,N,,limesurvey-8458,38pua3wx5jkb89n2rl,
 2020/08/11,Spain,ES,Provincia:Toledo,ESTO,en,100,2,,1,0,0,,,0,,,,Y,,limesurvey-8662,8hqhi98agokc29bylg,
 2020/08/11,Spain,ES,Provincia:Madrid,ESM,en,100,11,,0,0,0,,,1,,,,Y,,limesurvey-8663,8hqhi98agokc29bylg,
+2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,100,2,,0,0,0,,,1,,,,N,,limesurvey-9244,jo1b6ofbfkgfmpnzyk,
+2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,100,19,,1,0,0,,,3,,,,Y,,limesurvey-9204,7ggtjeju9mkb590sao,
+2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,110,19,,0,0,0,,,1,,,,Y,,limesurvey-9251,4umvar1o48a3a3mr84,
+2020/08/12,Spain,ES,Provincia:Toledo,ESTO,en,50,5,,1,0,0,,,1,,,,Y,,limesurvey-9207,7ggtjeju9mkb590sao,
+2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,50,3,,0,0,0,,,2,,,,N,,limesurvey-9333,7hwq961iowz6oaadnb,

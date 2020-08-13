@@ -719,3 +719,6 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/12,"United States",US,Michigan,USMI,en,50,2,,0,2,0,,,,,,,N,,limesurvey-9030,6dx5le8io20fvfd5kp,
 2020/08/12,"United States",US,Washington,USWA,en,4,2,,0,1,1,,,,,,,N,,limesurvey-9019,qxgvybi46yeutmjyon,
 2020/08/12,"United States",US,Louisiana,USLA,en,4,1,,,1,1,,,,,,,N,,limesurvey-8887,l19txfxecoo9squ7nx,
+2020/08/12,"United States",US,Tennessee,USTN,en,60,1,,0,0,0,,,,,,,N,,limesurvey-9326,vqgj0fqr47tsycz47f,
+2020/08/12,"United States",US,Utah,USUT,en,2,0,,0,,,,,,,,,N,,limesurvey-9192,plspp76itmk9vo9p9e,
+2020/08/12,"United States",US,Florida,USFL,en,7,3,,0,0,0,,,,,,,N,,limesurvey-9155,vk8eq8f38grbtaxae0,
