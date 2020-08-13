@@ -235,6 +235,6 @@ for (i in 1:length(regions)){
   cat("Processing", reg, name, "\n")
   dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates, num_responses, age)
   #cat("- Writing estimates for:", reg, name, "\n")
-  write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"))
+  write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"), row.names = FALSE)
 }
 
