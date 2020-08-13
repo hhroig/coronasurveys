@@ -5491,3 +5491,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,110,19,,0,0,0,,,1,,,,Y,,limesurvey-9251,4umvar1o48a3a3mr84,
 2020/08/12,Spain,ES,Provincia:Toledo,ESTO,en,50,5,,1,0,0,,,1,,,,Y,,limesurvey-9207,7ggtjeju9mkb590sao,
 2020/08/12,Spain,ES,Provincia:Madrid,ESM,en,50,3,,0,0,0,,,2,,,,N,,limesurvey-9333,7hwq961iowz6oaadnb,
+2020/08/13,Spain,ES,Provincia:Madrid,ESM,en,20,1,,0,1,1,,,0,,,,,,limesurvey-9603,58rmbl004rj0tt9k2n,
+2020/08/13,Spain,ES,Provincia:Zaragoza,ESZ,en,60,1,,0,0,0,,,1,,,,N,,limesurvey-9610,x63hipn21mt9w7cizn,
