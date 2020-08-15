@@ -6,10 +6,12 @@ Hay un archivo por área geográfica:
 - ESMRO		Rivas Barrio Oeste
 - ESMAR		Arganda del Rey
 
+Y uno por día con las 4 áreas
+
 Las estimaciones se calculan periódicamente (y automáticamente) a partir de las respuestas recogidas con la encuesta accesible en https://survey.coronasurveys.org/RA. Estas respuestas están accesibles en https://github.com/GCGImdea/coronasurveys/tree/master/data/aggregate/rivas-arganda. El programa usado para calcular la estimación está disponible en https://github.com/GCGImdea/coronasurveys/blob/master/code/script-rivas-arganda-daily.R.
 
-Las estimaciones de un área se calculan para cada día. Si hay al menos 100 respuestas, se usan todas las respuestas del día. Si no hay 100 respuestas ese día, se usan
-respuestas de los días anteriores hasta completar 100 (si hay).
+Las estimaciones de un área se calculan para cada día. Si hay al menos **100 respuestas,** se usan todas las respuestas del día. Si no hay 100 respuestas ese día, se usan
+respuestas de los **6 días anteriores** hasta completar 100 (si hay). Si hay varias respuestad con la misma cookie, sólo se usa la más reciente.
 
 La estimaciones están en ficheros CSV con las siguientes columnas (entre corchetes se dan las columnas que dan el intervalo de confianza al 95%):
 - date: Fecha de la estimatión
