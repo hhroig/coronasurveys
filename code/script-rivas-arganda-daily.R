@@ -12,7 +12,7 @@ estimates_path <- "../data/estimates-rivas-arganda/"
 country_iso <- "ES"
 ci_level <- 0.95
 max_ratio <- 1/3
-num_responses = 1000
+num_responses = 100
 age <- 7
 
 
