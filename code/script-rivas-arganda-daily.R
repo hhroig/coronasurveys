@@ -13,7 +13,7 @@ country_iso <- "ES"
 ci_level <- 0.95
 max_ratio <- 1/3
 num_responses = 100
-age <- 7
+age <- 10
 
 
 remove_outliers <- function(dt, max_ratio = 1/3) {
