@@ -101,7 +101,7 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     subcondition <- (as.Date(dt$timestamp) > (as.Date(j)-age)  & as.Date(dt$timestamp) <= as.Date(j) )
     dt_date <- dt[subcondition, ]
     #Remove duplicated cookies keeping the most recent response
-    dt_date <- dt_date[!duplicated(dt_date$cookie, fromLast = TRUE),]
+    dt_date <- dt_date[!duplicated(dt_date$cookie, fromLast=TRUE, incomparables = c("")),]
     #Keep all the responses of the day or at most num_responses
     nr <- nrow(dt[as.Date(dt_date$timestamp) == as.Date(j), ])
     dt_date <- tail(dt_date, max(num_responses,nr))
