@@ -1,8 +1,8 @@
-En esta carpeta están las estimaciones obtenidas de la encuesta en España a nivel de provincia. Hay un archivo por provincia.
+En esta carpeta están las estimaciones obtenidas de la encuesta en España a nivel de provincia. Hay un archivo por provincia y un archivo por día con todas las provincias.
 
 Las estimaciones se calculan periódicamente (y automáticamente) a partir de las respuestas recogidas con la encuesta accesible en https://survey.coronasurveys.org/ES. Estas respuestas están accesibles en https://github.com/GCGImdea/coronasurveys/blob/master/data/aggregate/ES-aggregate.csv. El programa usado para calcular la estimación está disponible en https://github.com/GCGImdea/coronasurveys/blob/master/code/script-provinces-daily.R.
 
-Las estimaciones de un área se calculan para cada día. Si hay al menos **1000 respuestas (I wish!!),** se usan todas las respuestas del día. Si no hay 1000 respuestas ese día, se usan respuestas de los **6 días anteriores (7 días en total)** hasta completar 1000 (si hay).
+Las estimaciones de una provincia se calculan para cada día. Si hay al menos **1000 respuestas (I wish!!),** se usan todas las respuestas del día. Si no hay 1000 respuestas ese día, se usan respuestas de los **6 días anteriores (7 días en total)** hasta completar 1000 (si hay). Si hay varias respuestas con la misma cookie, se usa la respuesta mas reciente. 
 
 La estimaciones están en ficheros CSV con las siguientes columnas (entre corchetes se dan las columnas que dan el intervalo de confianza al 95%):
 
