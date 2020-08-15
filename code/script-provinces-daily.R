@@ -97,10 +97,17 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
   population <- c()
   
   for (j in dates){
-    nr <- nrow(dt[as.Date(dt$timestamp) == as.Date(j), ])
+    #Keep responses at most "age" old
     subcondition <- (as.Date(dt$timestamp) > (as.Date(j)-age)  & as.Date(dt$timestamp) <= as.Date(j) )
-    dt_date <- tail(dt[subcondition, ], max(num_responses,nr))
-    #cat("- Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
+    dt_date <- dt[subcondition, ]
+    #Remove duplicated cookies keeping the most recent response
+    dt_date <- dt_date[!duplicated(dt_date$cookie, fromLast = TRUE),]
+    #Keep all the responses of the day or at most num_responses
+    nr <- nrow(dt[as.Date(dt_date$timestamp) == as.Date(j), ])
+    dt_date <- tail(dt_date, max(num_responses,nr))
+    # if (reg=="ESM"){
+    #   cat("--Date", j, "working with", nrow(dt_date), "final responses\n"  )
+    # }
     
     region <- c(region, reg)
     regionname <- c(regionname, name)
@@ -185,7 +192,7 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
 }
 
 
-
+#### Start of main body
 
 cat("Spain province daily script run at ", as.character(Sys.time()), "\n\n")
 
@@ -213,10 +220,10 @@ dt$iso.3166.2[dt$iso.3166.2=="ESNC"] <- "ESNA"
 dt$iso.3166.2[dt$iso.3166.2=="ESRI"] <- "ESLO"
 
 #list of dates
-dates <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
-dates <- gsub("-","/", dates)
+dates_dash <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
+dates <- gsub("-","/", dates_dash)
 
-#list responses per date
+#list responses per province
 for (i in 1:length(regions)){
   dta <- dt[dt$iso.3166.2==regions[i],]
   cat("From ", regions[i], " received ", nrow(dta), " responses\n")
@@ -229,12 +236,53 @@ cat("\n")
 
 dt <- remove_outliers(dt, max_ratio)
 
+dw <- data.frame(date=c(),
+                 region=c(),
+                 regionname=c(),
+                 sample_size=c(),
+                 reach=c(),
+                 
+                 cases_est=c(),
+                 cases_low=c(),
+                 cases_high=c(),
+                 
+                 recentcases_est=c(),
+                 recentcases_low=c(),
+                 recentcases_high=c(),
+                 
+                 fatalities_est=c(),
+                 fatalities_low=c(),
+                 fatalities_high=c(),
+                 
+                 p_cases=c(),
+                 p_cases_low=c(),
+                 p_cases_high=c(),
+                 
+                 p_fatalities=c(),
+                 p_fatalities_low=c(),
+                 p_fatalities_high=c(),
+                 
+                 p_recentcases=c(),
+                 p_recentcases_low=c(),
+                 p_recentcases_high=c(),
+                 
+                 p_stillsick=c(),
+                 p_stillsick_low=c(),
+                 p_stillsick_high=c(),
+                 
+                 population=c(),
+                 stringsAsFactors = F)
+
 for (i in 1:length(regions)){
   reg <- regions[i]
-  name <- region_names[i]
-  cat("Processing", reg, name, "\n")
-  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates, num_responses, age)
-  #cat("- Writing estimates for:", reg, name, "\n")
+  cat("Processing", reg, "\n")
+  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name=region_names[i], pop=populations[i], 
+                       dates, num_responses, age)
+  cat("- Writing estimates for:", reg, region_names[i], "\n")
   write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"), row.names = FALSE)
+  dw <- rbind(dw, dd)
 }
 
+for (j in 1:length(dates)){
+  write.csv(dw[dw$date == dates[j], ], paste0(estimates_path, country_iso, "-", dates_dash[j], "-estimate.csv"), row.names = FALSE)
+}
