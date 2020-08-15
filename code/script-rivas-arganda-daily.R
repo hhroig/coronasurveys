@@ -7,12 +7,13 @@ estimates_path <- "../data/estimates-rivas-arganda/"
 
 # responses_path <- "../coronasurveys/data/aggregate/rivas-arganda/"
 # data_path <- "../coronasurveys/data/common-data/rivas-arganda/regions-tree-population.csv"
-# estimates_path <- "./PlotData/"
+# estimates_path <- "./estimates-rivas-arganda/"
 
 country_iso <- "ES"
 ci_level <- 0.95
 max_ratio <- 1/3
-num_responses = 100
+num_responses = 1000
+age <- 7
 
 
 remove_outliers <- function(dt, max_ratio = 1/3) {
@@ -38,6 +39,7 @@ process_ratio <- function(dt, numerator, denominator, control){
   dta <- dta[!is.na(dta[[denominator]]),]
   dta <- dta[dta[[numerator]] <= dta[[control]],]
   if (nrow(dta)>0){
+    #cat("- Max ", numerator, max(dta[[numerator]]), "\n"  )
     p_est <- sum(dta[[numerator]])/sum(dta[[denominator]])
     level <- ci_level
     z <- qnorm(level+(1-level)/2)
@@ -55,7 +57,7 @@ process_ratio <- function(dt, numerator, denominator, control){
 #  return(list(p_est=est, low=max(0,p_est-z*se), upp=p_est+z*se)) #, error=z*se))
 # }
 
-process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
+process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age = 7){
   cat("Working with", nrow(dt), "responses\n"  )
   #list of dates
   # dates <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
@@ -97,6 +99,10 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
   p_recentcasesnursing_low <- c()
   p_recentcasesnursing_high <- c()
   
+  recentcasesnursing_est <- c()
+  recentcasesnursing_low <- c()
+  recentcasesnursing_high <- c()
+  
   p_stillsick <- c()
   p_stillsick_low <- c()
   p_stillsick_high <- c()
@@ -132,9 +138,17 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
   population <- c()
   
   for (j in dates){
-    nr <- nrow(dt[as.Date(dt$timestamp) == as.Date(j), ])
-    dt_date <- tail(dt[as.Date(dt$timestamp) <= as.Date(j), ], max(num_responses,nr))
-    cat("- Working on date: ", j, "with", nrow(dt_date), "responses\n"  )
+    #Keep responses at most "age" old
+    subcondition <- (as.Date(dt$timestamp) > (as.Date(j)-age)  & as.Date(dt$timestamp) <= as.Date(j) )
+    dt_date <- dt[subcondition, ]
+    #Remove duplicated cookies keeping the most recent response
+    dt_date <- dt_date[!duplicated(dt_date$cookie, fromLast=TRUE, incomparables = c("")),]
+    #Keep all the responses of the day or at most num_responses
+    nr <- nrow(dt[as.Date(dt_date$timestamp) == as.Date(j), ])
+    dt_date <- tail(dt_date, max(num_responses,nr))
+    # if (reg=="ESM"){
+    #   cat("--Date", j, "working with", nrow(dt_date), "final responses\n"  )
+    # }
     
     region <- c(region, reg)
     regionname <- c(regionname, name)
@@ -175,10 +189,15 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
     recentcases_low <- c(recentcases_low, pop * est$low)
     recentcases_high <- c(recentcases_high, pop * est$upp)
     
-    est <- process_ratio(dt_date, "recentcasesnursing", "cases", "cases")
+    est <- process_ratio(dt_date, "recentcasesnursing", "cases", "recentcases")
     p_recentcasesnursing <- c(p_recentcasesnursing, est$val)
     p_recentcasesnursing_low <- c(p_recentcasesnursing_low, est$low)
     p_recentcasesnursing_high <- c(p_recentcasesnursing_high, est$upp)
+    
+    est <- process_ratio(dt_date, "recentcasesnursing", "reach", "recentcases")
+    recentcasesnursing_est <- c(recentcasesnursing_est, pop * est$val)
+    recentcasesnursing_low <- c(recentcasesnursing_low, pop * est$low)
+    recentcasesnursing_high <- c(recentcasesnursing_high, pop * est$upp)
     
     est <- process_ratio(dt_date, "stillsick", "cases", "cases")
     p_stillsick <- c(p_stillsick, est$val)
@@ -234,13 +253,17 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100){
                    cases_low,
                    cases_high,
                    
-                   fatalities_est,
-                   fatalities_low,
-                   fatalities_high,
-                   
                    recentcases_est,
                    recentcases_low,
                    recentcases_high,
+                   
+                   recentcasesnursing_est,
+                   recentcasesnursing_low,
+                   recentcasesnursing_high,
+                   
+                   fatalities_est,
+                   fatalities_low,
+                   fatalities_high,
                    
                    hospital_est,
                    hospital_low,
@@ -318,8 +341,8 @@ region_names <- region_tree$regionname
 populations <- region_tree$population
 
 #list of dates
-dates <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
-dates <- gsub("-","/", dates)
+dates_dash <- as.character(seq.Date(as.Date(dt$timestamp[1]), as.Date(tail(dt$timestamp,1)), by = "days"))
+dates <- gsub("-","/", dates_dash)
 
 #list responses per date
 for (i in 1:length(regions)){
@@ -334,12 +357,95 @@ cat("\n")
 
 dt <- remove_outliers(dt,max_ratio)
 
+dw <- data.frame(date=c(),
+                 region=c(),
+                 regionname=c(),
+                 sample_size=c(),
+                 reach=c(),
+                 
+                 cases_est=c(),
+                 cases_low=c(),
+                 cases_high=c(),
+                 
+                 recentcases_est=c(),
+                 recentcases_low=c(),
+                 recentcases_high=c(),
+                 
+                 recentcasesnursing_est=c(),
+                 recentcasesnursing_low=c(),
+                 recentcasesnursing_high=c(),
+                 
+                 fatalities_est=c(),
+                 fatalities_low=c(),
+                 fatalities_high=c(),
+                 
+                 hospital_est=c(),
+                 hospital_low=c(),
+                 hospital_high=c(),
+                 
+                 icu_est=c(),
+                 icu_low=c(),
+                 icu_high=c(),
+                 
+                 p_cases=c(),
+                 p_cases_low=c(),
+                 p_cases_high=c(),
+                 
+                 p_recovered=c(),
+                 p_recovered_low=c(),
+                 p_recovered_high=c(),
+                 
+                 p_fatalities=c(),
+                 p_fatalities_low=c(),
+                 p_fatalities_high=c(),
+                 
+                 p_recentcases=c(),
+                 p_recentcases_low=c(),
+                 p_recentcases_high=c(),
+                 
+                 p_recentcasesnursing=c(),
+                 p_recentcasesnursing_low=c(),
+                 p_recentcasesnursing_high=c(),
+                 
+                 p_stillsick=c(),
+                 p_stillsick_low=c(),
+                 p_stillsick_high=c(),
+                 
+                 p_hospital=c(),
+                 p_hospital_low=c(),
+                 p_hospital_high=c(),
+                 
+                 p_severe=c(),
+                 p_severe_low=c(),
+                 p_severe_high=c(),
+                 
+                 p_icu=c(),
+                 p_icu_low=c(),
+                 p_icu_high=c(),
+                 
+                 p_tested=c(),
+                 p_tested_low=c(),
+                 p_tested_high=c(),
+                 
+                 p_positive=c(),
+                 p_positive_low=c(),
+                 p_positive_high=c(),
+                 
+                 population=c(),
+                 stringsAsFactors = F)
+
 for (i in 1:length(regions)){
   reg <- regions[i]
   name <- region_names[i]
   cat("Processing", reg, "\n")
-  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates)
+  dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates, num_responses, age)
   cat("- Writing estimates for:", reg, "\n")
   write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"), row.names = FALSE)
+  dw <- rbind(dw, dd)
 }
+
+for (j in 1:length(dates)){
+  write.csv(dw[dw$date == dates[j], ], paste0(estimates_path, country_iso, "-", dates_dash[j], "-estimate.csv"), row.names = FALSE)
+}
+
 
