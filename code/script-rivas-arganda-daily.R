@@ -12,8 +12,8 @@ estimates_path <- "../data/estimates-rivas-arganda/"
 country_iso <- "ES"
 ci_level <- 0.95
 max_ratio <- 1/3
-num_responses = 100
-age <- 10
+num_responses = 1000
+age <- 14
 
 
 remove_outliers <- function(dt, max_ratio = 1/3) {
@@ -44,10 +44,10 @@ process_ratio <- function(dt, numerator, denominator, control){
     level <- ci_level
     z <- qnorm(level+(1-level)/2)
     se <- sqrt(p_est*(1-p_est))/sqrt(sum(dta[[denominator]]))
-    return(list(val=p_est, low=max(0,p_est-z*se), upp=p_est+z*se, error=z*se, std=se))
+    return(list(val=p_est, low=max(0,p_est-z*se), upp=p_est+z*se, error=z*se, std=se, suma=sum(dta[[numerator]])))
   }
   else {
-    return(list(val=NA, low=NA, upp=NA, error=NA, std=NA))
+    return(list(val=NA, low=NA, upp=NA, error=NA, std=NA, suma=NA))
   }
 }
 
@@ -65,12 +65,16 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
   
   region <- c()
   regionname <- c()
+  population <- c()
+  
   sample_size <- c()
   reach <- c()
+  
   p_cases <- c()
   p_cases_low <- c()
   p_cases_high <- c()
-  
+
+  cases  <- c()
   cases_est <- c()
   cases_low <- c()
   cases_high <- c()
@@ -82,7 +86,8 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
   p_fatalities <- c()
   p_fatalities_low <- c()
   p_fatalities_high <- c()
-  
+
+  fatalities <- c()
   fatalities_est <- c()
   fatalities_low <- c()
   fatalities_high <- c()
@@ -90,7 +95,8 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
   p_recentcases <- c()
   p_recentcases_low <- c()
   p_recentcases_high <- c()
-  
+
+  recentcases <- c()
   recentcases_est <- c()
   recentcases_low <- c()
   recentcases_high <- c()
@@ -135,8 +141,6 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
   p_positive_low <- c()
   p_positive_high <- c()
   
-  population <- c()
-  
   for (j in dates){
     #Keep responses at most "age" old
     subcondition <- (as.Date(dt$timestamp) > (as.Date(j)-age)  & as.Date(dt$timestamp) <= as.Date(j) )
@@ -152,6 +156,8 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     
     region <- c(region, reg)
     regionname <- c(regionname, name)
+    population <- c(population, pop)
+    
     sample_size <- c(sample_size, nrow(dt_date))
     reach <- c(reach, sum(dt_date$reach))
     
@@ -160,6 +166,7 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     p_cases_low <- c(p_cases_low, est$low)
     p_cases_high <- c(p_cases_high, est$upp)
     
+    cases  <- c(cases, est$suma)
     cases_est <- c(cases_est, pop*est$val)
     cases_low <- c(cases_low, pop*est$low)
     cases_high <- c(cases_high, pop*est$upp)
@@ -175,6 +182,7 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     p_fatalities_high <- c(p_fatalities_high, est$upp)
     
     est <- process_ratio(dt_date, "fatalities", "reach", "cases")
+    fatalities <- c(fatalities, est$suma)
     fatalities_est <- c(fatalities_est, pop * est$val)
     fatalities_low <- c(fatalities_low, pop * est$low)
     fatalities_high <- c(fatalities_high, pop * est$upp)
@@ -185,6 +193,7 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     p_recentcases_high <- c(p_recentcases_high, est$upp)
     
     est <- process_ratio(dt_date, "recentcases", "reach", "cases")
+    recentcases <- c(recentcases, est$suma)
     recentcases_est <- c(recentcases_est, pop * est$val)
     recentcases_low <- c(recentcases_low, pop * est$low)
     recentcases_high <- c(recentcases_high, pop * est$upp)
@@ -238,16 +247,17 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     p_positive <- c(p_positive, est$val)
     p_positive_low <- c(p_positive_low, est$low)
     p_positive_high <- c(p_positive_high, est$upp)
-    
-    
-    population <- c(population, pop)
   }
   
   dd <- data.frame(date = dates,
                    region,
                    regionname,
+                   population,
                    sample_size,
                    reach,
+                   cases,
+                   recentcases,
+                   fatalities,
                    
                    cases_est,
                    cases_low,
@@ -317,7 +327,6 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
                    p_positive_low,
                    p_positive_high,
                    
-                   population,
                    stringsAsFactors = F)
   
   return(dd)
@@ -360,8 +369,13 @@ dt <- remove_outliers(dt,max_ratio)
 dw <- data.frame(date=c(),
                  region=c(),
                  regionname=c(),
+                 population=c(),
                  sample_size=c(),
                  reach=c(),
+                 cases=c(),
+                 recentcases=c(),
+                 fatalities=c(),
+                 
                  
                  cases_est=c(),
                  cases_low=c(),
@@ -431,7 +445,6 @@ dw <- data.frame(date=c(),
                  p_positive_low=c(),
                  p_positive_high=c(),
                  
-                 population=c(),
                  stringsAsFactors = F)
 
 for (i in 1:length(regions)){
