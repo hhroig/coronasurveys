@@ -1148,3 +1148,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/16,Spain,ES,"Arganda del Rey",ESMAR,en,100,5,4,0,1,0,1,13,5,3,0,0,,N,N,limesurvey-7395,oxsxy7lz3lkdh390no,
 2020/08/16,Spain,ES,"Rivas Barrio Este",ESMRE,en,4,0,0,,0,0,0,,,,,,,Y,Y,limesurvey-7396,pigjn88cmskdg8jo38,
 2020/08/16,Spain,ES,"Rivas Barrio Centro",ESMRC,en,5,0,0,0,0,0,0,0,0,0,0,0,,N,N,limesurvey-7400,r7vkr19b1ukdklsm74,
+2020/08/16,Spain,ES,"Rivas Barrio Oeste",ESMRO,en,10,2,2,0,0,0,0,1,1,0,0,0,,Y,Y,limesurvey-7402,i6ngl43neukdc2z6e9,
+2020/08/16,Spain,ES,"Rivas Barrio Oeste",ESMRO,en,14,0,0,0,0,0,0,4,0,0,0,0,,N,N,limesurvey-7401,tsuzy2hcaskd9efy0l,
