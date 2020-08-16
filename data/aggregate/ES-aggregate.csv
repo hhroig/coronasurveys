@@ -5531,3 +5531,6 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/15,Spain,ES,Provincia:Castellón,ESCS,en,200,0,,0,0,0,,,0,,,,N,,limesurvey-10913,bn74sdqpqgb8duad8m,
 2020/08/15,Spain,ES,Provincia:Gipuzkoa,ESSS,en,25,1,,0,1,1,,,1,,,,N,,limesurvey-11146,55zz1j9zhnka7x0pya,
 2020/08/15,Spain,ES,Provincia:Madrid,ESM,en,500,55,,6,0,0,,,15,,,,Y,,limesurvey-11049,vchx7le9tv11swe9nl,
+2020/08/16,Spain,ES,"Provincia:La Rioja",ESLO,en,20,1,,0,1,1,,,0,,,,Y,,limesurvey-11538,fb1m31vjtnsl190223,
+2020/08/16,Spain,ES,Provincia:Toledo,ESTO,en,100,2,,1,0,0,,,0,,,,Y,,limesurvey-11544,8hqhi98agokc29bylg,
+2020/08/16,Spain,ES,Provincia:Madrid,ESM,en,100,11,,0,0,0,,,1,,,,Y,,limesurvey-11545,8hqhi98agokc29bylg,
