@@ -719,3 +719,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/12,Brazil,BR,"Rio de Janeiro",BRRJ,en,109,1,,0,,0,,,,,,,N,,limesurvey-9382,9od9jipkrxo4pxqdvi,
 2020/08/12,Brazil,BR,Piauí,BRPI,en,500,20,,1,2,5,,,,,,,N,,limesurvey-9212,7im55tblow5klvvvsg,
 2020/08/13,Brazil,BR,"Rio Grande do Sul",BRRS,en,3,0,,0,0,0,,,,,,,N,,limesurvey-10086,lv8ucn7tznkbeeik9p,
+2020/08/17,Brazil,BR,"São Paulo",BRSP,en,66,7,,1,0,0,,,,,,,Y,,limesurvey-12353,2fnunp70so6puv1tb8,
+2020/08/17,Brazil,BR,Tocantins,BRTO,en,50,15,,0,0,4,,,,,,,N,,limesurvey-12519,168yeqabz9f7b6hjam,
