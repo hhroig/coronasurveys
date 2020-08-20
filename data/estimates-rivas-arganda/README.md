@@ -11,12 +11,15 @@ Y uno por día con las 4 áreas
 Las estimaciones se calculan periódicamente (y automáticamente) a partir de las respuestas recogidas con la encuesta accesible en https://survey.coronasurveys.org/RA. Estas respuestas están accesibles en https://github.com/GCGImdea/coronasurveys/tree/master/data/aggregate/rivas-arganda. El programa usado para calcular la estimación está disponible en https://github.com/GCGImdea/coronasurveys/blob/master/code/script-rivas-arganda-daily.R.
 
 Las estimaciones de un área se calculan para cada día. Si hay al menos **1000 respuestas,** se usan todas las respuestas del día. Si no hay 1000 respuestas ese día, se usan
-respuestas de los **13 días anteriores** (14 días en total) hasta completar 1000 (si hay). Si hay varias respuestad con la misma cookie, sólo se usa la más reciente.
+respuestas de los **13 días anteriores** (14 días en total) hasta completar 1000 (si hay). Si hay varias respuestas con la misma cookie, sólo se usa la más reciente.
 
 La estimaciones están en ficheros CSV con las siguientes columnas (entre corchetes se dan las columnas que dan el intervalo de confianza al 95%):
 - date: Fecha de la estimatión
-- sample_size: Número de respuestas usadas (suele ser 100). No incluye encuestas con valores atípicos (outliers).
+- sample_size: Número de respuestas usadas. No incluye encuestas con valores atípicos (outliers).
 - reach: Número total de personas conocidas en esas respuestas.
+- cases: Número de casos reportados en las respuestas usadas.
+- recentcases: Número de casos de los últimos 7 días reportados en las respuestas usadas.
+- fatalities: Número de fallecimientos reportados en las respuestas usadas.
 - cases_est [cases_low, cases_high]: Número acumulado estimado de casos de COVID-19.
 - fatalities_est [fatalities_low, fatalities_high]: Número acumulado estimado de muertes de COVID-19.
 - recentcases_est [recentcases_low, recentcases_high]: Número estimado de casos que empezaron a mostrar síntomas en los últimos 7 días.
