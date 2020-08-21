@@ -5592,3 +5592,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/20,Spain,ES,"Provincia:Las Palmas",ESGC,en,100,1,,0,1,1,,,0,,,,Y,,limesurvey-12870,mv40thhb1wsosyd5tt,
 2020/08/20,Spain,ES,"Provincia:Las Palmas",ESGC,en,100,1,,0,1,1,,,0,,,,Y,,limesurvey-12869,mv40thhb1wsosyd5tt,
 2020/08/20,Spain,ES,Provincia:Madrid,ESM,en,20,2,,1,2,2,,,1,,,,N,,limesurvey-12861,58rmbl004rj0tt9k2n,
+2020/08/21,Spain,ES,Provincia:Madrid,ESM,en,100,8,,1,2,2,,,4,,,,Y,,limesurvey-12878,vebo4mgf9gk3kgdefd,
+2020/08/21,Spain,ES,Provincia:Alicante,ESA,en,50,0,,0,0,0,,,0,,,,Y,,limesurvey-12879,3lqt39hdz58fzfcwi4,
