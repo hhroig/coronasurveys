@@ -37,9 +37,18 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
   dt$ratio <- dt$cases/dt$reach    # remove outlier based on 0.3
   dt <- dt[is.finite(dt$ratio), ]  # discard cases with zero reach
   dt <- dt[dt$ratio <= max_ratio, ]
-  dt$iso.3166.2[dt$iso.3166.2 == ""] <- countrycode
-  # removal of multiple responses using cookies
   
+  #change region name to province name for single-province regions
+  #dt <- change_region_province(dt)
+  dt$iso.3166.2[dt$iso.3166.2=="ESAS"] <- "ESO"
+  dt$iso.3166.2[dt$iso.3166.2=="ESCB"] <- "ESS"
+  dt$iso.3166.2[dt$iso.3166.2=="ESIB"] <- "ESPM"
+  dt$iso.3166.2[dt$iso.3166.2=="ESMC"] <- "ESMU"
+  dt$iso.3166.2[dt$iso.3166.2=="ESMD"] <- "ESM"
+  dt$iso.3166.2[dt$iso.3166.2=="ESNC"] <- "ESNA"
+  dt$iso.3166.2[dt$iso.3166.2=="ESRI"] <- "ESLO"
+  
+  dt$iso.3166.2[dt$iso.3166.2 == ""] <- countrycode
   
   # compute provincial estimates
   dates <- unique(dt$date)
@@ -261,21 +270,22 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
       dt_est_count <- data.frame(countrycode = countrycode,
                                  population_country = sum(dtregs$population_region),
                                  p_w_country_only = p_w_country_only,
-                                 p_m_country_only = p_m_country_only,
+                                 # p_m_country_only = p_m_country_only,
                                  recent_p_w_country_only = recent_p_w_country_only,
-                                 recent_p_m_country_only = recent_p_m_country_only,
+                                 # recent_p_m_country_only = recent_p_m_country_only,
                                  sumreach_country = sumreach_country,
                                  n_obs_country = n_obs_country,
                                  p_w_country_rhs = p_w_country_rhs,
-                                 p_m_country_rhs = p_m_country_rhs, 
+                                 # p_m_country_rhs = p_m_country_rhs, 
                                  sumreach_country_rhs = sumreach_country_rhs1,
                                  recent_p_w_country_rhs = recent_p_w_country_rhs,
-                                 recent_p_m_country_rhs = recent_p_m_country_rhs, 
+                                 # recent_p_m_country_rhs = recent_p_m_country_rhs, 
                                  recent_sumreach_country_rhs = sumreach_country_rhs2, 
                                  p_w_country =  p_w_counts,
-                                 p_m_country =  p_m_counts,
-                                 recent_p_w_country =  recent_p_w_counts,
-                                 recent_p_m_country =  recent_p_m_counts)
+                                 # p_m_country =  p_m_counts,
+                                 recent_p_w_country =  recent_p_w_counts
+                                 # recent_p_m_country =  recent_p_m_counts
+                                 )
       dir.create(paste0(estimates_path, countrycode), showWarnings = F)
       # cat(paste0("::- script-W: Writing the region based daily estimate for ", countrycode, "..\n")) 
       dt_est_prov_reg_country <- merge(dt_est_prov_reg, dt_est_count, all = T, by = "countrycode")
@@ -319,10 +329,10 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
                                       #I_r_recent_p_w_country = I_r_recent_p_w_country, 
                                       #I_r_recent_p_m_country = I_r_recent_p_m_country,
                                       p_cases = p_w_country,
-                                      p_cases_recent = recent_p_w_country,
-                                      p_m_country = p_m_country,
-                                      
-                                      recent_p_m_country = recent_p_m_country)
+                                      p_cases_recent = recent_p_w_country
+                                      # p_m_country = p_m_country,
+                                      # recent_p_m_country = recent_p_m_country
+                                      )
   if(write_summary_file == T){
     dir.create(estimates_path, "PlotData/", showWarnings = F)
     cat(paste0("::- script-W: Writing the region based estimate summary for ", countrycode, "..\n"))
