@@ -1,12 +1,12 @@
 #######
 
-# responses_path <- "../data/aggregate/"
-# data_path <- "../data/common-data/regions-tree-population.csv"
-# estimates_path <- "../data/estimates-W/"
+responses_path <- "../data/aggregate/"
+data_path <- "../data/common-data/regions-tree-population.csv"
+estimates_path <- "../data/estimates-W/"
 
-responses_path <- "../coronasurveys/data/aggregate/"
-data_path <- "../coronasurveys/data/common-data/regions-tree-population.csv"
-estimates_path <- "./estimates-W/"
+# responses_path <- "../coronasurveys/data/aggregate/"
+# data_path <- "../coronasurveys/data/common-data/regions-tree-population.csv"
+# estimates_path <- "./estimates-W/"
 
 ci_level <- 0.95
 max_ratio <- 1/3
