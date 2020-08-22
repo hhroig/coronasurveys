@@ -346,7 +346,7 @@ provincial_regional_estimate_w_only <- function(countrycode = "ES",
 }
 
 
-interest <- c("BR", "PT", "UA", "US", "EC", "FR", "GB", "DE")
+interest <- c("BR", "CL", "CY", "DE", "EC", "FR", "GB", "PT", "UA", "US")
 dd <- sapply(interest, provincial_regional_estimate_w_only, province = F)
 
 interest2 <- c("ES", "IT")
