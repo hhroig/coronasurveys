@@ -9,28 +9,58 @@ estimates_path <- "../data/estimates-provinces/"
 # data_path <- "../coronasurveys/data/common-data/regions-tree-population.csv"
 # estimates_path <- "./estimates-provinces/"
 
-country_iso <- "ES"
+countries <- c("ES")
 ci_level <- 0.95
 max_ratio <- 1/3
 num_responses = 1000
 age <- 14
 
 
+# remove_outliers <- function(dt, max_ratio = 1/3) {
+#   #remove outliers of reach.
+#   dt <- dt[!is.na(dt$reach),]
+#   dt <- dt[dt$reach != 0, ]
+#   cat("Responses after removing reach=NA or reach=0 :", nrow(dt), "\n")
+#   reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
+#   dt <- dt[dt$reach <= reach_cutoff, ]
+#   cat("Responses after removing ouliers with reach cutoff", reach_cutoff, ":", nrow(dt), "\n")
+#   
+#   # remove outliers based on max cases/reach ratio
+#   dt <- dt[!is.na(dt$cases),]
+#   dt$ratio <- dt$cases/dt$reach
+#   dt <- dt[dt$ratio <= max_ratio, ]
+#   cat("Responses after removing ouliers with cases=NA or cases/reach ratio >", 
+#       max_ratio, ":", nrow(dt), "\n")
+#   return(dt)
+# }
+
 remove_outliers <- function(dt, max_ratio = 1/3) {
   #remove outliers of reach.
   dt <- dt[!is.na(dt$reach),]
   dt <- dt[dt$reach != 0, ]
-  cat("Responses after removing reach=NA or reach=0 :", nrow(dt), "\n")
-  reach_cutoff <- boxplot.stats(dt$reach)$stats[5] # changed cutoff to upper fence
-  dt <- dt[dt$reach <= reach_cutoff, ]
-  cat("Responses after removing ouliers with reach cutoff", reach_cutoff, ":", nrow(dt), "\n")
+  dt <- dt[!is.na(dt$cases),]
+  cat("Responses after removing reach=NA or cases=NA or reach=0 :", nrow(dt), "\n")
+  
+  cutoff <- boxplot.stats(dt$reach, coef=1.5)$stats[5] # changed cutoff to upper fence
+  dt <- dt[dt$reach <= cutoff, ]
+  cat("Responses after removing ouliers with reach cutoff", cutoff, ":", nrow(dt), "\n")
   
   # remove outliers based on max cases/reach ratio
-  dt <- dt[!is.na(dt$cases),]
   dt$ratio <- dt$cases/dt$reach
-  dt <- dt[dt$ratio <= max_ratio, ]
-  cat("Responses after removing ouliers with cases=NA or cases/reach ratio >", 
-      max_ratio, ":", nrow(dt), "\n")
+  #cutoff <- boxplot.stats(dt$ratio, coef=1.5)$stats[5] # changed cutoff to upper fence
+  cutoff <- max_ratio
+  dt <- dt[dt$ratio<cutoff, ]
+  cat("Responses after removing ouliers with cases/reach cutoff", cutoff, ":", nrow(dt), "\n")
+  
+  # remove outliers based on max fatalities/reach ratio
+  #dt <- dt[!is.na(dt$fatalities),]
+  dt$ratio <- dt$fatalities/dt$reach
+  #cutoff <- boxplot.stats(dt$ratio, coef=1.5)$stats[5] # changed cutoff to upper fence
+  cutoff <- 1/10
+  #dt <- dt[dt$ratio<cutoff, ]
+  dt <- dt %>% filter(is.na(dt$ratio) | dt$ratio<cutoff)
+  cat("Responses after removing ouliers with fatalities/reach cutoff", cutoff, ":", nrow(dt), "\n")
+  
   return(dt)
 }
 
@@ -101,6 +131,8 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
     subcondition <- (as.Date(dt$timestamp) > (as.Date(j)-age)  & as.Date(dt$timestamp) <= as.Date(j) )
     dt_date <- dt[subcondition, ]
     #Remove duplicated cookies keeping the most recent response
+    # subcondition <- ((dt_date$cookie=="") | (!duplicated(dt_date$cookie, fromLast=TRUE)))
+    # dt_date <- dt_date[subcondition, ]
     dt_date <- dt_date[!duplicated(dt_date$cookie, fromLast=TRUE, incomparables = c("")),]
     #Keep all the responses of the day or at most num_responses
     nr <- nrow(dt[as.Date(dt_date$timestamp) == as.Date(j), ])
@@ -154,6 +186,7 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
   dd <- data.frame(date = dates,
                    region,
                    regionname,
+                   population,
                    sample_size,
                    reach,
                    
@@ -185,7 +218,6 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
                    p_stillsick_low,
                    p_stillsick_high,
                    
-                   population,
                    stringsAsFactors = F)
   
   return(dd)
@@ -194,7 +226,11 @@ process_region <- function(dt, reg, name, pop, dates, num_responses = 100, age =
 
 #### Start of main body
 
-cat("Spain province daily script run at ", as.character(Sys.time()), "\n\n")
+for (co in 1:length(countries)){
+  
+  country_iso <- countries[co]
+
+cat("Country ", country_iso, " province daily script run at ", as.character(Sys.time()), "\n\n")
 
 #list of regions
 region_tree <- read.csv(data_path, as.is = T)
@@ -239,6 +275,7 @@ dt <- remove_outliers(dt, max_ratio)
 dw <- data.frame(date=c(),
                  region=c(),
                  regionname=c(),
+                 population=c(),
                  sample_size=c(),
                  reach=c(),
                  
@@ -270,7 +307,6 @@ dw <- data.frame(date=c(),
                  p_stillsick_low=c(),
                  p_stillsick_high=c(),
                  
-                 population=c(),
                  stringsAsFactors = F)
 
 for (i in 1:length(regions)){
@@ -279,10 +315,12 @@ for (i in 1:length(regions)){
   dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name=region_names[i], pop=populations[i], 
                        dates, num_responses, age)
   cat("- Writing estimates for:", reg, region_names[i], "\n")
-  write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"), row.names = FALSE)
+  write.csv(dd, paste0(estimates_path, country_iso, "/", reg, "-estimate.csv"), row.names = FALSE)
   dw <- rbind(dw, dd)
 }
 
 for (j in 1:length(dates)){
-  write.csv(dw[dw$date == dates[j], ], paste0(estimates_path, country_iso, "-", dates_dash[j], "-estimate.csv"), row.names = FALSE)
+  write.csv(dw[dw$date == dates[j], ], paste0(estimates_path, country_iso, "/", country_iso, "-", dates_dash[j], "-estimate.csv"), row.names = FALSE)
+}
+
 }
