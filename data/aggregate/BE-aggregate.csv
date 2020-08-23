@@ -28,3 +28,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/10,Belgium,BE,"Bruxelles-Capitale, Région de;Brussels Hoofdstedelijk Gewest",BEBRU,en,8,0,,,,,,,,,,N,N,N,limesurvey-23423,iq25df7tx9kbau5q8s,
 2020/07/16,Belgium,BE,"Bruxelles-Capitale, Région de;Brussels Hoofdstedelijk Gewest",BEBRU,en,8,0,0,,,,,,,,,N,N,N,limesurvey-23874,iq25df7tx9kbau5q8s,
 2020/07/23,Belgium,BE,"Bruxelles-Capitale, Région de;Brussels Hoofdstedelijk Gewest",BEBRU,en,4,0,0,,,,,,,,,N,N,N,limesurvey-24364,iq25df7tx9kbau5q8s,
+2020/07/31,Belgium,BE,Oost-Vlaanderen,BEVOV,en,8,2,,0,0,0,,,,,,,N,,limesurvey-5874,7fvu8jfrfckc81t0gm,
+2020/08/13,Belgium,BE,"Bruxelles-Capitale, Région de;Brussels Hoofdstedelijk Gewest",BEBRU,en,7,2,,0,0,0,,,,,,,N,,limesurvey-9802,iq25df7tx9kbau5q8s,

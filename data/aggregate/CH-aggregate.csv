@@ -54,3 +54,7 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/07/11,Switzerland,CH,Genève,CHGE,en,25,1,1,,,,,,,,,Y,Y,N,limesurvey-23477,rrtsh3rjzukci4hys2,
 2020/07/17,Switzerland,CH,Genève,CHGE,en,18,1,1,,,,,,,,,N,Y,Y,limesurvey-23914,zh61vzghszkc8226l2,
 2020/07/25,Switzerland,CH,Genève,CHGE,en,18,1,1,,,,,,,,,N,Y,Y,limesurvey-24409,zh61vzghszkc8226l2,
+2020/07/27,Switzerland,CH,Zürich,CHZH,en,5,0,,0,0,0,,,,,,,N,,limesurvey-5367,dna4dmjkvb0ugu3sit,
+2020/08/02,Switzerland,CH,Genève,CHGE,en,18,1,,0,0,0,,,,,,,Y,,limesurvey-5944,zh61vzghszkc8226l2,
+2020/08/08,Switzerland,CH,Genève,CHGE,en,18,1,,0,0,0,,,,,,,Y,,limesurvey-6878,zh61vzghszkc8226l2,
+2020/08/15,Switzerland,CH,Genève,CHGE,en,18,1,,0,0,0,,,,,,,Y,,limesurvey-10925,zh61vzghszkc8226l2,

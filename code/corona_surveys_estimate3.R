@@ -20,3 +20,8 @@ try(source("script-30responses.R"), silent = T)
 try(source("script-300responses.R"), silent = T)
 try(source("script-W-alpha.R"), silent = T)
 try(source("script-W.R"), silent = T)
+try(source("script-smooth-300responses.R"), silent = T)
+
+try(source("script-rivas-arganda-daily.R"), silent = T)
+
+try(source("script-provinces-daily.R"), silent = T)
