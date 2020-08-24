@@ -312,3 +312,5 @@ Timestamp,Country,ISO-3166-1-a2,Region,ISO-3166-2,Language,Reach,Cases,Recovered
 2020/08/23,Ecuador,EC,,,en,15,8,,1,0,0,,,,,,,Y,,limesurvey-13000,ye1z9t9b0vxrzf3psa,
 2020/08/23,Ecuador,EC,Pichincha,ECP,en,200,6,,2,0,1,,,,,,,Y,,limesurvey-12999,r9x5b8gt78c91w1q4v,
 2020/08/23,Ecuador,EC,Pichincha,ECP,en,100,3,,,0,0,,,,,,,Y,,limesurvey-13005,ux2j4l7p79gqpca3o5,
+2020/08/24,Ecuador,EC,Loja,ECL,en,300,13,,0,3,5,,,,,,,Y,,limesurvey-13019,vpq6mp34elomrsjer,
+2020/08/24,Ecuador,EC,Tungurahua,ECT,en,10,9,,,0,3,,,,,,,Y,,limesurvey-13016,d2v8fj6mh8kaltm54d,
