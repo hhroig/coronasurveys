@@ -521,6 +521,13 @@ for (i in 1:length(regions)){
   name <- region_names[i]
   cat("Processing", reg, "\n")
   dd <- process_region(dt[dt$iso.3166.2 == reg, ], reg, name, pop=populations[i], dates, num_responses, age)
+  
+  # smoothed p_cases and CI:
+  source("smooth_column.R")
+  dd <- smooth_column(dd, "p_cases", 15)
+  dd <- smooth_column(dd, "p_cases_low", 15)
+  dd <- smooth_column(dd, "p_cases_high", 15)
+  
   cat("- Writing estimates for:", reg, "\n")
   write.csv(dd, paste0(estimates_path, reg, "-estimate.csv"), row.names = FALSE)
   dw <- rbind(dw, dd)
